@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <title>My Nature</title>
+    <style>
+      :root {
+        --alertColor: #b4bf35;
+        --navarColorInactive: #31572c;
+        --navarColorActive: #4f772d;
+        --colorButton: #d4e09b;
+        --colorCardButton: #03a100;
+        --colorCardButtonOfert: #a13a00;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Merriweather", serif;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      .alert {
+        background-color: var(--alertColor);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: bolder;
+      }
+      .nav {
+        display: grid;
+        grid-template-columns: 70px auto 200px;
+        gap: 20px;
+        height: fit-content;
+        border: 1px solid black;
+        background-color: var(--navarColorInactive);
+      }
+      .nav > img {
+        height: 30px;
+        cursor: pointer;
+      }
+      .nav-left {
+        display: flex;
+        list-style: none;
+        align-items: center;
+      }
+      .nav-left > li {
+        color: white;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .nav-left > li:hover {
+        background-color: var(--navarColorActive); /* javascript se confunde*/
+      }
+
+      .nav-right {
+        display: flex;
+        align-items: center;
+      }
+      .nav-right > img {
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="alert">
+      <marquee>
+        Primera compra? Descuento de un 5% en toda la compra realizada y
+        descuentos especiales para revendedores. Contactenos Ya!!
+      </marquee>
+    </header>
+    <nav class="nav">
+      <img
+        class="image-nav"
+        height="30px"
+        src="https://static.vecteezy.com/system/resources/thumbnails/007/534/194/small/nature-concept-banner-with-lush-green-foliage-illustration-vector.jpg"
+      />
+      <ul class="nav-left">
+        <li>Nosotros</li>
+        <li>Reporte</li>
+        <li>Pedidos</li>
+        <li>Capacitacion</li>
+      </ul>
+      <ul class="nav-right">
+        <img src="https://xsgames.co/randomusers/assets/avatars/male/54.jpg" />
+        <p>Iniciar Sesion</p>
+        <i class="fal fa-shopping-cart"></i>
+        <i class="fal fa-bell"></i>
+      </ul>
+    </nav>
+  </body>
+</html>
