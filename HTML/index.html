@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Anonymous+Pro&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,600&display=swap" 
+      rel="stylesheet"
+    >
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -22,44 +26,62 @@
         --colorCardButton: #03a100;
         --colorCardButtonOfert: #a13a00;
       }
+
       * {
         margin: 0;
         padding: 0;
-        font-family: "Merriweather", serif;
+        font-family: 'Montserrat', sans-serif;
         box-sizing: border-box;
       }
       html {
         font-size: 62.5%;
       }
+      
       .alert {
         background-color: var(--alertColor);
-        height: 40px;
+        height: 42px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.2rem;
-        font-weight: bolder;
+        font-size: 2.5rem;
+        box-shadow: 0px 0.1px 5px black;
+        z-index: 2;
       }
+      
+      .alert marquee {
+        font-size: 2rem;
+      }
+
       .nav {
         display: grid;
-        grid-template-rows: 40px;
-        grid-template-columns: 100px auto auto;
+        grid-template-rows: 50px;
+        grid-template-columns: 200px auto auto;
         gap: 10px;
-        height: fit-content;
-        border: 1px solid black;
         background-color: var(--navbarColorInactive);
+        padding: 0 21px;
+        align-items: center;
+        box-shadow: 0px 0.1px 5px black;
+        z-index: 1;
       }
+
       .nav > img {
         height: 40px;
-        width: 100px;
+        width: 100%; /*100*/
         cursor: pointer;
       }
+
       .nav-left {
         height: 100%;
         display: flex;
         list-style: none;
-        align-items: center;
+        align-items: center;      
       }
+
+      .nav-left > li {
+        width: 200px;
+        text-align: center;
+      }
+
       .nav-left > li > a {
         display: block;
         cursor: pointer;
@@ -67,61 +89,188 @@
         border-radius: 4px;
         color: white;
         padding: 10px 10px;
-        font-size: 1.4rem;
-        font-weight: lighter;
+        font-size: 2.2rem; /*  1.4rem; */
+        font-weight: 300;
         transition-property: background-color, transform;
         transition-duration: 500ms;
       }
+      
       .nav-left > li > a:hover {
         transform: scale(1.1, 1.1);
         background-color: var(--navbarColorActive);
       }
+
       .nav-right {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 15px;
         justify-content: flex-end;
         padding: 0 8px 0;
+        list-style: none;
       }
-      .nav-right > img {
+
+      .nav-right > li:nth-child(1) {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+      
+      .nav-right > li > img {
         height: 30px;
-        border-radius: 4px;
-      }
-      .nav-right > p {
-        color: white;
+        border-radius: 50%;
         cursor: pointer;
       }
-      .nav-right > i {
+
+      .nav-right > li > p {
         color: white;
         cursor: pointer;
+        font-size: 2rem; /**/
       }
+
+      .nav-right > li > i {
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+      }
+
+      /* MAIN */
+
+      main {
+        position: relative;
+        z-index: -1;
+      }
+
+      .index-banner {
+        background-image: url(https://lh3.google.com/u/0/d/1Y_oQKPu9gRlLsj8dc0e_o7ios2i69U86=w1363-h1009-iv1);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: bottom;
+        height: 650px;
+        width: 100%;
+        position: relative;
+
+      }
+
+      .index-banner > h1 {
+        font-size: 4.0rem;
+        color: white;
+        font-family: 'Anonymous Pro', monospace;
+        position: relative;
+        top: 70px;
+        left: 35px;
+      
+      }
+
+      .index-banner > p {
+        font-size: 3.0rem;
+        color: white;
+        font-family: 'Abel', sans-serif;
+        width: 38%;
+        position: relative;
+        top: 85px;
+        left: 35px;
+      }
+      .index-banner > button:nth-child(3){
+        border: 2px solid white;
+        height: 45px;
+        width: 150px;
+        background-color: transparent;
+        font-family: 'Anonymous Pro', monospace;
+        color: white;
+        font-size: 2.5rem;
+        position: relative;
+        top: 110px;
+        left: 35px;
+      }
+      .opciones-producto {
+        
+        display: grid;
+        grid-template-columns: 32rem 32rem 32rem;
+        gap: 155px;
+        justify-content: center;
+        position: relative;
+        top: 400px;
+        
+      }
+
+      .opciones-producto > button {
+        background-color: var(--navbarColorInactive);
+        color: white;
+        font-weight: 200;
+        height: 5.8rem;
+        width: 32rem;
+        font-size: 2.5rem;
+        border-color: none;
+        border-radius: 2rem;
+        border:none;
+
+      }
+      
+
+
     </style>
   </head>
   <body>
+
     <header class="alert">
       <marquee>
         Primera compra? Descuento de un 5% en toda la compra realizada y
         descuentos especiales para revendedores. Contactenos Ya!!
       </marquee>
     </header>
+
     <nav class="nav">
       <img
         class="image-nav"
         height="30px"
         src="https://static.vecteezy.com/system/resources/thumbnails/007/534/194/small/nature-concept-banner-with-lush-green-foliage-illustration-vector.jpg"
       />
+
       <ul class="nav-left">
-        <li><a>Nosotros</a></li>
-        <li><a>Reporte</a></li>
-        <li><a>Pedidos</a></li>
-        <li><a>Capacitacion</a></li>
+        <li><a>NOSOTROS</a></li>
+        <li><a>REPORTE</a></li>
+        <li><a>PEDIDOS</a></li>
+        <li><a>CAPACITACIÓN</a></li>
       </ul>
+
       <ul class="nav-right">
-        <img src="https://xsgames.co/randomusers/assets/avatars/male/54.jpg" />
-        <p>Iniciar Sesion</p>
-        <i class="fal fa-shopping-cart"></i>
-        <i class="fal fa-bell"></i>
+        <li>
+          <img src="https://xsgames.co/randomusers/assets/avatars/male/54.jpg" />
+          <p>Iniciar Sesión</p>
+        </li>
+        <li><i class="fal fa-shopping-cart"></i></li>
+        <li><i class="fal fa-bell"></i></li>
       </ul>
     </nav>
+
+    <main>
+      <div class="index-banner">
+        <h1>Tu naturaleza, mi naturaleza.</h1>
+        <p>Tener una planta en casa podria salvar 
+          el mundo ¿Lo imaginas?</p>
+        <button>Contactar</button>
+
+        <div class="opciones-producto">
+          <button>PLANTAS</button>
+          <button>MACETAS</button>
+          <button>TIERRAS</button>
+        </div>
+        
+      </div>
+
+      <section class="contenido-plantas">
+        <div class="busqueda-filtros">
+
+        </div>
+        <div class="catalogo-productos">
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
   </body>
 </html>
