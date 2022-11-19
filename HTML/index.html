@@ -25,19 +25,253 @@
         --colorButton: #d4e09b;
         --colorCardButton: #03a100;
         --colorCardButtonOfert: #a13a00;
+        --colorNavMovilDesplegable: #2F3F2D;
       }
 
       * {
         margin: 0;
         padding: 0;
-        font-family: 'Montserrat', sans-serif;
         box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
       }
       html {
         font-size: 62.5%;
       }
       
-      .alert {
+      /*######################## -480 ##########################*/
+      @media (max-width: 480px){
+        
+        .alert {
+          background-color: var(--alertColor);
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2.5rem;
+          box-shadow: 0px 0.1px 5px black;
+          z-index: 2;
+        }
+        
+        .alert marquee {
+          font-size: 1.5rem;
+        }
+
+        .nav {
+          width: 100%;
+          position: relative;
+          z-index: 2000;
+          padding: 0 10px;
+          display: grid;
+          grid-template-rows: 40px;
+          grid-template-columns: 10% 90%;
+          gap: 10px;
+          background-color: var(--navbarColorInactive);
+          align-items: center;
+          box-shadow: 0px 0.1px 5px black;
+          
+          
+        }
+
+        .nav > span {
+          border: 1px solid #b0bfaf;
+          text-align: center;
+          border-radius: 4px;
+          padding: 2px;
+          background-color: var(--colorNavMovilDesplegable);
+          width: 26px;
+        }
+
+        .nav > span > i {
+          color: white;
+          font-size: 1.8rem;
+          font-weight: 200;
+          cursor: pointer;
+          width: 100%;
+          height: 100%;
+        }
+        
+        .nav-left {
+          display: block;
+          position: absolute;
+          top: 40px;
+          list-style: none;
+          height: 0px;
+          overflow: hidden;
+          transition: height .3s linear;
+        }
+
+        .nav-left > li {
+          width: 180px;
+          background-color: var(--colorNavMovilDesplegable);
+        }
+
+        .nav_left_opcion-select > a {
+          padding-left: 5px;
+          background-color: var(--navbarColorActive);
+        }
+
+        .nav-left > li > a {
+          display: block;
+          cursor: pointer;
+          text-decoration: none;
+          border-radius: 2px;
+          color: white;
+          padding: 10px 10px;
+          font-size: 1.4rem;
+          font-weight: 300;
+          transition-property: background-color, transform;
+          transition-duration: 500ms;
+        }
+        
+        .nav-left > li > a:hover {
+          transform: scale(1.1, 1.1);
+          background-color: var(--navbarColorActive);
+        }
+
+        .nav-right {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          justify-content: flex-end;
+          padding: 0 8px 0;
+          list-style: none;
+        }
+
+        .nav-right > li:nth-child(1) {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+        }
+        
+        .nav-right > li > img {
+          height: 20px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .nav-right > li > p {
+          color: white;
+          cursor: pointer;
+          font-size: 1.4rem;
+          padding-top: 3px;
+        }
+
+        .nav-right > li > i {
+          color: white;
+          cursor: pointer;
+          font-size: 1.6rem;
+        }
+
+        /* -----------------Estilos Banner------------ */
+
+        main {
+          position: relative;
+          z-index: -1;
+          
+        }
+
+        .index-banner {
+          background-image: url(https://lh3.google.com/u/0/d/1D4AzKfvj-JlVX3RquBOGHOOjon7MMbaW=w1918-h1009-iv1);
+          background-repeat: no-repeat;
+          background-size: 200%;
+          background-position-x: center;
+          background-position-y: center ;
+          height:271px;
+          width: 100%;
+          display: grid;
+        }
+
+        .frases-banner {
+          padding: 8% 0 0 5%;
+        }
+
+        .frases-banner > h1 {
+          font-size: 1.4rem;
+          color: white;
+          font-family: 'Anonymous Pro', monospace;
+          margin-bottom: 8px;
+        }
+
+        .frases-banner > p {
+          font-size: 1.2rem;
+          color: white;
+          font-family: 'Abel', sans-serif;
+          width: 40%;
+          margin-bottom: 8px;
+        }
+
+        .frases-banner > button:nth-child(3){
+          border: 1px solid white;
+          height: 17px;
+          width: 61px;
+          background-color: transparent;
+          font-family: 'Anonymous Pro', monospace;
+          color: white;
+          font-size: 1rem;
+          margin-top: 3px;
+        }
+        
+        .opciones-producto {
+          justify-content: center;
+          align-self: center;
+          display: grid;
+          grid-template-columns: 50px 50px 50px 50px;
+          grid-template-rows: 27px;
+          grid-template-areas: 
+            "planta planta maceta maceta"
+            ". tierra tierra .";
+          gap: 15px;
+        }
+
+        .opciones-producto > button:nth-child(1){
+          grid-area: planta;
+        }
+        .opciones-producto > button:nth-child(2){
+          grid-area: maceta;
+        }
+        .opciones-producto > button:nth-child(3) {
+          grid-area: tierra;
+        }
+
+        
+        .opciones-producto > button {
+          background-color: var(--navbarColorInactive);
+          color: white;
+          font-weight: 200;
+          height: 27px;
+          width: 120px;
+          font-size: 1.2rem;
+          border-color: none;
+          border-radius: 2rem;
+          border:none;
+
+        } 
+
+        .opciones-producto > .btn_producto-select {
+          background-color: var(--navbarColorActive);
+        }
+        
+        .mostrar {
+          height: 190px;
+        }
+
+      }
+
+      /*######################## 480 ##########################*/
+      @media (min-width: 480px){ 
+      }
+
+
+      /*######################## 768 ##########################*/
+      @media (min-width: 768px){
+      }
+
+      /*######################## 1024 #########################*/
+      @media (min-width: 1024px){
+      }
+
+
+      /* .alert {
         background-color: var(--alertColor);
         height: 42px;
         display: flex;
@@ -55,7 +289,7 @@
       .nav {
         display: grid;
         grid-template-rows: 50px;
-        grid-template-columns: 200px auto auto;
+        grid-template-columns: 10% 70% 20%;
         gap: 10px;
         background-color: var(--navbarColorInactive);
         padding: 0 21px;
@@ -66,7 +300,7 @@
 
       .nav > img {
         height: 40px;
-        width: 100%; /*100*/
+        width: 100%; 
         cursor: pointer;
       }
 
@@ -89,7 +323,7 @@
         border-radius: 4px;
         color: white;
         padding: 10px 10px;
-        font-size: 2.2rem; /*  1.4rem; */
+        font-size: 2.2rem; 
         font-weight: 300;
         transition-property: background-color, transform;
         transition-duration: 500ms;
@@ -124,18 +358,18 @@
       .nav-right > li > p {
         color: white;
         cursor: pointer;
-        font-size: 2rem; /**/
+        font-size: 2rem; 
       }
 
       .nav-right > li > i {
         color: white;
         cursor: pointer;
         font-size: 20px;
-      }
+      } */
 
       /* MAIN */
 
-      main {
+      /* main {
         position: relative;
         z-index: -1;
       }
@@ -204,10 +438,8 @@
         border-radius: 2rem;
         border:none;
 
-      }
+      }  */
       
-
-
     </style>
   </head>
   <body>
@@ -220,13 +452,15 @@
     </header>
 
     <nav class="nav">
-      <img
+      <!-- <img
         class="image-nav"
         height="30px"
         src="https://static.vecteezy.com/system/resources/thumbnails/007/534/194/small/nature-concept-banner-with-lush-green-foliage-illustration-vector.jpg"
-      />
-
-      <ul class="nav-left">
+      /> -->
+      <span><i class="fas fa-bars" id="btnNav"></i></span>
+  
+      <ul class="nav-left" id="MenuNav">
+        <li class="nav_left_opcion-select"><a>INICIO</a></li>
         <li><a>NOSOTROS</a></li>
         <li><a>REPORTE</a></li>
         <li><a>PEDIDOS</a></li>
@@ -245,17 +479,18 @@
 
     <main>
       <div class="index-banner">
-        <h1>Tu naturaleza, mi naturaleza.</h1>
-        <p>Tener una planta en casa podria salvar 
-          el mundo ¿Lo imaginas?</p>
-        <button>Contactar</button>
-
+        <div class="frases-banner">
+          <h1>Tu naturaleza, mi naturaleza.</h1>
+          <p>Tener una planta en casa podria salvar 
+            el mundo ¿Lo imaginas?</p>
+          <button>Contactar</button>
+        </div>
+        
         <div class="opciones-producto">
-          <button>PLANTAS</button>
+          <button class="btn_producto-select">PLANTAS</button>
           <button>MACETAS</button>
           <button>TIERRAS</button>
         </div>
-        
       </div>
 
       <section class="contenido-plantas">
@@ -271,6 +506,6 @@
     <footer>
 
     </footer>
-
+    <script src="./Menu.js"></script>
   </body>
 </html>
