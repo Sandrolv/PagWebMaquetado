@@ -51,7 +51,6 @@
           box-shadow: 0px 0.1px 5px black;
           z-index: 2;
         }
-        
         .alert marquee {
           font-size: 1.5rem;
         }
@@ -68,8 +67,10 @@
           background-color: var(--navbarColorInactive);
           align-items: center;
           box-shadow: 0px 0.1px 5px black;
-          
-          
+        }
+
+        .nav > .image-nav {
+          display: none;
         }
 
         .nav > span {
@@ -80,7 +81,6 @@
           background-color: var(--colorNavMovilDesplegable);
           width: 26px;
         }
-
         .nav > span > i {
           color: white;
           font-size: 1.8rem;
@@ -99,33 +99,31 @@
           overflow: hidden;
           transition: height .3s linear;
         }
-
         .nav-left > li {
-          width: 180px;
+          width: 160px;
           background-color: var(--colorNavMovilDesplegable);
         }
-
-        .nav_left_opcion-select > a {
-          padding-left: 5px;
-          background-color: var(--navbarColorActive);
-        }
-
         .nav-left > li > a {
           display: block;
           cursor: pointer;
           text-decoration: none;
           border-radius: 2px;
           color: white;
-          padding: 10px 10px;
+          padding: 10px 10px 10px 15px;
           font-size: 1.4rem;
           font-weight: 300;
           transition-property: background-color, transform;
           transition-duration: 500ms;
         }
-        
         .nav-left > li > a:hover {
           transform: scale(1.1, 1.1);
           background-color: var(--navbarColorActive);
+        }
+        .nav_left_opcion-select > a {
+          background-color: var(--navbarColorActive);
+        }
+        .nav_left_opcion-sobrante {
+          height: 81px;
         }
 
         .nav-right {
@@ -136,26 +134,22 @@
           padding: 0 8px 0;
           list-style: none;
         }
-
         .nav-right > li:nth-child(1) {
           display: flex;
           gap: 5px;
           align-items: center;
         }
-        
         .nav-right > li > img {
           height: 20px;
           border-radius: 50%;
           cursor: pointer;
         }
-
         .nav-right > li > p {
           color: white;
           cursor: pointer;
           font-size: 1.4rem;
           padding-top: 3px;
         }
-
         .nav-right > li > i {
           color: white;
           cursor: pointer;
@@ -167,7 +161,6 @@
         main {
           position: relative;
           z-index: -1;
-          
         }
 
         .index-banner {
@@ -184,22 +177,19 @@
         .frases-banner {
           padding: 8% 0 0 5%;
         }
-
         .frases-banner > h1 {
           font-size: 1.4rem;
           color: white;
           font-family: 'Anonymous Pro', monospace;
           margin-bottom: 8px;
         }
-
-        .frases-banner > p {
+        .index-banner > .frases-banner > p {
           font-size: 1.2rem;
           color: white;
           font-family: 'Abel', sans-serif;
           width: 40%;
           margin-bottom: 8px;
         }
-
         .frases-banner > button:nth-child(3){
           border: 1px solid white;
           height: 17px;
@@ -211,6 +201,7 @@
           margin-top: 3px;
         }
         
+      
         .opciones-producto {
           justify-content: center;
           align-self: center;
@@ -222,7 +213,6 @@
             ". tierra tierra .";
           gap: 15px;
         }
-
         .opciones-producto > button:nth-child(1){
           grid-area: planta;
         }
@@ -232,8 +222,6 @@
         .opciones-producto > button:nth-child(3) {
           grid-area: tierra;
         }
-
-        
         .opciones-producto > button {
           background-color: var(--navbarColorInactive);
           color: white;
@@ -241,29 +229,412 @@
           height: 27px;
           width: 120px;
           font-size: 1.2rem;
-          border-color: none;
           border-radius: 2rem;
           border:none;
-
         } 
-
         .opciones-producto > .btn_producto-select {
           background-color: var(--navbarColorActive);
         }
         
         .mostrar {
-          height: 190px;
+          height: 271px;
         }
-
       }
 
       /*######################## 480 ##########################*/
       @media (min-width: 480px){ 
-      }
+        .alert {
+          background-color: var(--alertColor);
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2.5rem;
+          box-shadow: 0px 0.1px 5px black;
+          z-index: 2;
+        }
+        
+        .alert marquee {
+          font-size: 1.5rem;
+        }
 
+        .nav {
+          width: 100%;
+          position: relative;
+          z-index: 2000;
+          padding: 0 20px 0 15px;
+          display: grid;
+          grid-template-rows: 40px;
+          grid-template-columns: 10% 90%;
+          gap: 10px;
+          background-color: var(--navbarColorInactive);
+          align-items: center;
+          box-shadow: 0px 0.1px 5px black;
+        }
+
+        .nav > .image-nav {
+          display: none;
+        }
+
+        .nav > span {
+          border: 1px solid #b0bfaf;
+          text-align: center;
+          border-radius: 4px;
+          padding: 2px;
+          background-color: var(--colorNavMovilDesplegable);
+          width: 26px;
+        }
+        .nav > span > i {
+          color: white;
+          font-size: 1.8rem;
+          font-weight: 200;
+          cursor: pointer;
+          width: 100%;
+          height: 100%;
+        }
+        
+        .nav-left {
+          display: block;
+          position: absolute;
+          top: 40px;
+          list-style: none;
+          height: 0px;
+          overflow: hidden;
+          transition: height .3s linear;
+        }
+        .nav-left > li {
+          width: 180px;
+          background-color: var(--colorNavMovilDesplegable);
+        }
+        .nav-left > li > a {
+          display: block;
+          cursor: pointer;
+          text-decoration: none;
+          border-radius: 2px;
+          color: white;
+          padding: 10px 10px 10px 20px;
+          font-size: 1.4rem;
+          font-weight: 300;
+          transition-property: background-color, transform;
+          transition-duration: 500ms;
+        }
+        .nav-left > li > a:hover {
+          transform: scale(1.1, 1.1);
+          background-color: var(--navbarColorActive);
+        }
+        .nav_left_opcion-select > a {
+          background-color: var(--navbarColorActive);
+        }
+        .nav_left_opcion-sobrante {
+          height: 81px;
+        }
+
+        .nav-right {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          justify-content: flex-end;
+          padding: 0 8px 0;
+          list-style: none;
+        }
+        .nav-right > li:nth-child(1) {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+        }
+        .nav-right > li > img {
+          height: 20px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+        .nav-right > li > p {
+          color: white;
+          cursor: pointer;
+          font-size: 1.4rem;
+          padding-top: 3px;
+        }
+        .nav-right > li > i {
+          color: white;
+          cursor: pointer;
+          font-size: 1.6rem;
+        }
+
+        /* -----------------Estilos Banner------------ */
+        main {
+          position: relative;
+          z-index: -1;
+        }
+
+        .index-banner {
+          background-image: url(https://lh3.google.com/u/0/d/1D4AzKfvj-JlVX3RquBOGHOOjon7MMbaW=w1918-h1009-iv1);
+          background-repeat: no-repeat;
+          background-size: 200%;
+          background-position-x: center;
+          background-position-y: center ;
+          height:271px;
+          width: 100%;
+          display: grid;
+        }
+
+        .frases-banner {
+          padding: 6% 0 0 5%;
+        }
+        .frases-banner > h1 {
+          font-size: 1.8rem;
+          color: white;
+          font-family: 'Anonymous Pro', monospace;
+          margin-bottom: 8px;
+        }
+        .frases-banner > p {
+          font-size: 1.4rem;
+          color: white;
+          font-family: 'Abel', sans-serif;
+          width: 35%;
+          margin-bottom: 8px;
+        }
+        .frases-banner > button:nth-child(3){
+          border: 1px solid white;
+          height: 20px;
+          width: 70px;
+          background-color: transparent;
+          font-family: 'Anonymous Pro', monospace;
+          color: white;
+          font-size: 1.2rem;
+          margin-top: 3px;
+        }
+        
+        .opciones-producto {
+          justify-content: center;
+          align-self: center;
+          display: grid;
+          grid-template-columns: 135px 135px 135px;
+          grid-template-rows: 27px;
+          grid-template-areas: 
+            "planta maceta tierra";
+          gap: 15px;
+        }
+        .opciones-producto > button:nth-child(1){
+          grid-area: planta;
+        }
+        .opciones-producto > button:nth-child(2){
+          grid-area: maceta;
+        }
+        .opciones-producto > button:nth-child(3) {
+          grid-area: tierra;
+        }
+        .opciones-producto > button {
+          background-color: var(--navbarColorInactive);
+          color: white;
+          font-weight: 200;
+          height: 27px;
+          width: 135px;
+          font-size: 1.2rem;
+          border-radius: 2rem;
+          border:none;
+        } 
+        .opciones-producto > .btn_producto-select {
+          background-color: var(--navbarColorActive);
+        }
+        
+        .mostrar {
+          height: 271px;
+        }
+      }
 
       /*######################## 768 ##########################*/
       @media (min-width: 768px){
+        .alert {
+          background-color: var(--alertColor);
+          height: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2.5rem;
+          box-shadow: 0px 0.1px 5px black;
+          z-index: 2;
+        }
+        
+        .alert marquee {
+          font-size: 1.5rem;
+        }
+
+        .nav {
+          width: 100%;
+          position: relative;
+          z-index: 2000;
+          padding: 0 20px 0 ;
+          display: grid;
+          grid-template-rows: 45px;
+          grid-template-columns: 8% 62% 30%;
+          gap: 5px;
+          background-color: var(--navbarColorInactive);
+          align-items: center;
+          box-shadow: 0px 0.1px 5px black;
+        }
+
+        .nav > .image-nav {
+          display: block;
+          width: 100%;
+          height: auto;
+          cursor: pointer;
+          
+        }
+
+        .nav > span {
+          display: none
+        }
+        
+        .nav-left {
+          position: static;
+          display: flex;
+          height: 100%;
+          list-style: none;
+        }
+
+        .nav-left > li {
+          width: auto;
+          height: 100%;
+          background-color: var(--navbarColorInactive);
+          
+        }
+        .nav-left > li > a {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          text-decoration: none;
+          border-radius: 2px;
+          color: white;
+          padding: 10px;
+          font-size: 1.5rem;
+          font-weight: 300;
+          transition-property: background-color, transform;
+          transition-duration: 500ms;
+          height: 100%;
+        }
+
+        .nav-left > li > a:hover {
+          transform: scale(1.1, 1.1);
+          background-color: var(--navbarColorActive);
+        }
+        .nav_left_opcion-select {
+          display: none;
+        }
+        .nav_left_opcion-sobrante {
+          display: none;
+        }
+
+        .nav-right {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          justify-content: flex-end;
+          padding: 0 10px 0;
+          list-style: none;
+        }
+        .nav-right > li:nth-child(1) {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+        }
+        .nav-right > li > img {
+          height: 25px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+        .nav-right > li > p {
+          color: white;
+          cursor: pointer;
+          font-size: 1.6rem;
+          padding-top: 3px;
+        }
+        .nav-right > li > i {
+          color: white;
+          cursor: pointer;
+          font-size: 1.8rem;
+        }
+
+        /* -----------------Estilos Banner------------ */
+        main {
+          position: relative;
+          z-index: -1;
+        }
+
+        .index-banner {
+          background-image: url(https://lh3.google.com/u/0/d/1D4AzKfvj-JlVX3RquBOGHOOjon7MMbaW=w1918-h1009-iv1);
+          background-repeat: no-repeat;
+          background-size: 200%;
+          background-position-x: center;
+          background-position-y: center ;
+          height:380px;
+          width: 100%;
+          display: grid;
+        }
+
+        .frases-banner {
+          padding: 5% 0 0 5%;
+        }
+        .frases-banner > h1 {
+          font-size: 2.5rem;
+          color: white;
+          font-family: 'Anonymous Pro', monospace;
+          margin-bottom: 8px;
+        }
+        .frases-banner > p {
+          font-size: 2.1rem;
+          color: white;
+          font-family: 'Abel', sans-serif;
+          width: 40%;
+          margin-bottom: 8px;
+          
+        }
+        .frases-banner > button:nth-child(3){
+          border: 1px solid white;
+          height: 30px;
+          width: 110px;
+          background-color: transparent;
+          font-family: 'Anonymous Pro', monospace;
+          color: white;
+          font-size: 1.9rem;  
+          margin-top: 3px;
+          
+        }
+        
+        .opciones-producto {
+          justify-content: center;
+          align-self: center;
+          display: grid;
+          grid-template-columns: 155px 155px 155px;
+          grid-template-rows: 35px;
+          grid-template-areas: 
+            "planta maceta tierra";
+          gap: 35px;
+          
+        }
+        .opciones-producto > button:nth-child(1){
+          grid-area: planta;
+          
+        }
+        .opciones-producto > button:nth-child(2){
+          grid-area: maceta;
+        }
+        .opciones-producto > button:nth-child(3) {
+          grid-area: tierra;
+        }
+        .opciones-producto > button {
+          background-color: var(--navbarColorInactive);
+          color: white;
+          font-weight: 200;
+          height: 35px;
+          width: 155px;
+          font-size: 1.7rem;
+          border-radius: 2rem;
+          border:none;
+        } 
+        .opciones-producto > .btn_producto-select {
+          background-color: var(--navbarColorActive);
+        }
+        
+        
       }
 
       /*######################## 1024 #########################*/
@@ -452,11 +823,11 @@
     </header>
 
     <nav class="nav">
-      <!-- <img
+      <img
         class="image-nav"
         height="30px"
         src="https://static.vecteezy.com/system/resources/thumbnails/007/534/194/small/nature-concept-banner-with-lush-green-foliage-illustration-vector.jpg"
-      /> -->
+      /> 
       <span><i class="fas fa-bars" id="btnNav"></i></span>
   
       <ul class="nav-left" id="MenuNav">
@@ -465,6 +836,7 @@
         <li><a>REPORTE</a></li>
         <li><a>PEDIDOS</a></li>
         <li><a>CAPACITACIÓN</a></li>
+        <li class="nav_left_opcion-sobrante"></li>
       </ul>
 
       <ul class="nav-right">
@@ -484,6 +856,7 @@
           <p>Tener una planta en casa podria salvar 
             el mundo ¿Lo imaginas?</p>
           <button>Contactar</button>
+          
         </div>
         
         <div class="opciones-producto">
