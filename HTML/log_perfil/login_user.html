@@ -34,13 +34,12 @@
       body {
         display: grid;
         width: 100%;
-        grid-template-columns: 1fr 1.315fr;
-        grid-template-rows: 100vh;
+        grid-template-columns: 1fr 1fr;
       }
       .login-left {
         display: grid;
+        padding: 50px;
         align-items: center;
-        height: 100%;
         background-color: #333333;
       }
       .login-left > article > h1,
@@ -74,7 +73,6 @@
         font-weight: lighter;
         font-size: 1.8rem;
         margin-bottom: 47px;
-        width: 560px;
         margin-left: 135px;
       }
       .login-left > article > .end {
@@ -90,7 +88,9 @@
       }
 
       .login-right > .content {
-        width: 55%;
+        max-width: 400px;
+        width: 80%;
+        margin: 20px;
         background-color: white;
         border-radius: 10px;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -113,19 +113,18 @@
         height: 45px;
         margin-bottom: 10px;
       }
-      form > .correo {
+
+      .formu-login {
         display: grid;
-        width: 100%;
       }
-      form > .pass {
+
+      .formu-login > .pass, .correo {
         display: grid;
-        width: 48%;
-        float: left;
+        grid-template-columns: 1fr;
       }
-  
+      
       form > .submit {
         display: grid;
-        width: 100%;
         justify-content: center;
       }
       form > .submit > input {
@@ -172,16 +171,27 @@
         text-decoration: none;
       }
 
+      .imagen {
+        text-align: center;
+      }
+      .imagen img{
+        max-width: 200px;
+        width: 80%;
+      }
+
       /*----------------------------------------media xd*/
       @media (max-width: 960px) {
         body {
           display: grid;
           grid-template-columns: 1fr;
+          grid-template-areas: "arriba"
+                               "abajo";
         }
         .login-left {
-          display: none;
+         grid-area: abajo;
         }
       }
+  
     </style>
   </head>
   <body>
@@ -209,19 +219,19 @@
     </div>
     <div class="login-right">
       <div class="content">
-       <div align ="center">
-         <img src="https://acortar.link/megMPV" width="100" height="100" >
-        </div>>
+       <div class ="imagen">
+         <img src="https://acortar.link/megMPV" >
+        </div>
        
         <h2>Ingrese a MY NATURE</h2>
-        <hr />
-        <form>
+  
+        <form class="formu-login">
           <div class="correo">
             <label>Email:</label>
             <input type="email" />
           </div>
           <div class="pass">
-            <label>Contrasenia</label>
+            <label>Contraseña:</label>
             <input type="password" />
           </div>
           <div class="submit">
