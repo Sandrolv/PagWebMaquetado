@@ -45,26 +45,25 @@
         height: 32px;
         display: flex;
         align-items: center;
-        justify-content: center;
         font-size: 2.5rem;
         box-shadow: 0px 0.1px 5px black;
         z-index: 1000;
       }
-      .alert marquee {
+      .alert > marquee {
         font-size: 1.5rem;
       }
       .nav {
         width: 100%;
-        position: relative;
-        z-index: 2000;
-        padding: 0 10px;
+        padding: 0 10px 0;
         display: grid;
         grid-template-rows: 40px;
-        grid-template-columns: 10% 90%;
+        grid-template-columns: 10% auto;
         gap: 10px;
         background-color: var(--navbarColorInactive);
         align-items: center;
         box-shadow: 0px 0.1px 5px black;
+        position: relative; /*Desplegable*/
+        z-index: 2000;
       }
       .nav > .image-nav {
         display: none;
@@ -86,35 +85,34 @@
         height: 100%;
       }
       .nav-left {
-        display: block;
-        position: absolute;
+        position: absolute; /*Desplegable*/
         top: 40px;
         list-style: none;
-        height: 0px;
-        overflow: hidden;
-        transition: height 0.3s linear;
+        height: 0px;  /*Desplegable*/
+        overflow: hidden; /*Desplegable*/
+        transition: height 0.3s linear; /*Desplegable*/
       }
       .nav-left > li {
         width: 160px;
         background-color: var(--colorNavMovilDesplegable);
       }
       .nav-left > li > a {
-        display: block;
         cursor: pointer;
         text-decoration: none;
         border-radius: 2px;
         color: white;
         padding: 10px 10px 10px 15px;
+        display: block; /*Hace respetar el Padding*/
         font-size: 1.4rem;
         font-weight: 300;
-        transition-property: background-color, transform;
-        transition-duration: 500ms;
       }
       .nav-left > li > a:hover {
         transform: scale(1.1, 1.1);
         background-color: var(--navbarColorActive);
+        transition-property: background-color, transform; /*hover*/
+        transition-duration: 500ms;
       }
-      .nav_left_opcion-select > a {
+      .nav-left > .nav_left_opcion-select > a {
         background-color: var(--navbarColorActive);
       }
       .nav_left_opcion-sobrante {
@@ -125,13 +123,11 @@
         align-items: center;
         gap: 8px;
         justify-content: flex-end;
-        padding: 0 8px 0;
         list-style: none;
       }
       .nav-right > li:nth-child(1) {
         display: flex;
         gap: 5px;
-        align-items: center;
       }
       .nav-right > li > img {
         height: 20px;
@@ -156,8 +152,7 @@
       }
       .index-banner {
         background-image: url(https://lh3.google.com/u/0/d/1D4AzKfvj-JlVX3RquBOGHOOjon7MMbaW=w1918-h1009-iv1);
-        background-repeat: no-repeat;
-        background-size: 200%;
+        background-size: 150%;
         background-position-x: center;
         background-position-y: center;
         height: 271px;
@@ -193,8 +188,6 @@
         padding: 4px;
       }
       .opciones-producto {
-        justify-content: center;
-        align-self: center;
         display: grid;
         grid-template-columns: 50px 50px 50px 50px;
         grid-template-rows: 27px;
@@ -202,6 +195,8 @@
           "planta planta maceta maceta"
           ". tierra tierra .";
         gap: 15px;
+        justify-content: center;
+        align-self: center;
       }
       .opciones-producto > button:nth-child(1) {
         grid-area: planta;
@@ -233,10 +228,29 @@
         height: 271px;
       }
 
+      /*-------------------Estilos Filtro----------------*/
+      .filtros_ventas {
+        background-image: url(https://lh3.google.com/u/0/d/1AQKAxBTs86W0krQmAN2RnwJkXVLrmciv=w1363-h1009-iv1);
+        height: 2550px;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: cover;
+
+      }
+
+      .filtros-producto {
+        
+      }
+      .filtros-producto > p:nth-child(1) {
+
+      }
+
+
       /*  480 */
       @media (min-width: 480px) {
         .nav {
-          padding: 0 20px 0 15px;
+          padding: 0 18px;
         }
         .nav-left > li {
           width: 180px;
@@ -277,9 +291,9 @@
           height: 36px;
         }
         .nav {
-          padding: 0 20px 0;
+          padding: 0 18px;
           grid-template-rows: 45px;
-          grid-template-columns: 90px 58% auto;
+          grid-template-columns: 90px 61% auto;
           gap: 5px;
         }
         .nav > .image-nav {
@@ -306,7 +320,7 @@
           display: flex;
           align-items: center;
           padding: 10px;
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           height: 100%;
         }
         .nav_left_opcion-select {
@@ -314,9 +328,6 @@
         }
         .nav_left_opcion-sobrante {
           display: none;
-        }
-        .nav-right {
-          padding: 0;
         }
         .nav-right > li > img {
           height: 25px;
@@ -418,8 +429,9 @@
           height: 58px;
           width: 300px;
           font-size: 2.5rem;
-        }
+        } 
       }
+
     </style>
   </head>
   <body>
@@ -473,9 +485,89 @@
           <button>TIERRAS</button>
         </div>
       </div>
+
+      <div class="filtros_ventas">
+        <div class="filtros-producto">
+          <p>Escriba lo que quieres encontrar:</p>
+          <form action="">
+            <input type="search" name="nombre" placeholder="Buscar">
+            <button><i class="fal fa-search"></i>Buscar</button>
+          </form>
+          <p>Elija lo que quiera buscar con filtros 👇 </p>
+          <form action="">
+
+            <input list="lista_tipo_plantas"  placeholder="Elegir Tipo"> 
+            <datalist id="lista_tipo_plantas">
+              <option value="Cactus"></option>
+              <option value="Frutales"></option>
+              <option value="Rosaceas"></option>    
+            </datalist>
+            <input list="lista_color_plantas" placeholder="Elegir Color">
+            <datalist id="lista_color_plantas">
+              <option value="Amarillo"></option>
+              <option value="Blanco"></option>
+              <option value="Negro"></option>
+              <option value="Rojo"></option>         
+            </datalist>
+            <input list="lista_calidad_plantas" placeholder="Elegir Calidad">
+            <datalist id="lista_calidad_plantas">
+              <option value="Media"></option>
+              <option value="Buena"></option>
+              <option value="Excelente"></option>      
+            </datalist>
+            <input list="lista_recipientes_plantas" placeholder="Elegir Recipiente">
+            <datalist id="lista_recipientes_plantas">
+              <option value="Macetas"></option>
+              <option value="Embolsados"></option>
+              <option value="Valdes decorados"></option>
+              <option value="Vasos decorados"></option>
+              <option value="Botellas decoradas"></option>            
+            </datalist>
+            
+            <input type="color">
+
+            <select name="" id="">
+              <option value="">a</option>
+              <option value="">a</option>
+              <option value="">a</option>
+              <option value="">a</option>
+            </select>
+  
+            <input class="chosen-value" type="text" value="" placeholder="Type to filter">
+            <ul class="value-list">
+              <li>Alabama</li>
+              <li>Alaska</li>
+              <li>Arizona</li>
+              <li>Arkansas</li>
+              <li>California</li>
+              <li>Colorado</li>
+            </ul>
+  
+            <button>Limpiar filtros</button>
+            <button>Buscar con filtros</button>
+          </form>
+  
+        </div>
+  
+        <div class="venta-productos">
+          <div class="Producto1">
+            <img src="" alt="">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <button>PEDIR</button>
+          </div>
+  
+        </div>
+      </div>
     </main>
 
     <footer></footer>
     <script src="./Menu.js"></script>
+    
   </body>
 </html>
