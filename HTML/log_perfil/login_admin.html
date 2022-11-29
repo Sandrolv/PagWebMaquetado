@@ -31,26 +31,128 @@
       html {
         font-size: 62.5%;
       }
+      body {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 100vh;
+      }
+      .login {
+        width: 100%;
+        background-color: #90a955;
+        display: grid;
+        place-items: center;
+      }
+
+      .login > .content {
+        width: 500px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      }
+      .login > .content > figure {
+        display: flex;
+        justify-content: center;
+      }
+      .login > .content > figure > .img-login-user {
+        width: 150px;
+      }
+
+      .login > .content > h2 {
+        text-align: center;
+        padding: 10px;
+        font-size: 2.5rem;
+      }
+      form {
+        padding: 20px 20px 0 20px;
+      }
+      form > div > label {
+        font-size: 1.5rem;
+      }
+      form > div > input {
+        border: 1px solid #808080;
+        border-radius: 5px;
+        height: 45px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        width: 100%;
+      }
+      form > .email {
+        display: grid;
+        width: 100%;
+      }
+      form > .password {
+        display: grid;
+        width: 100%;
+      }
+      form > .submit {
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+      form > .submit > input {
+        background-color: var(--colorCardButton);
+        color: white;
+        padding: 4px 20px;
+        cursor: pointer;
+        margin: 0;
+      }
+      /*----------------------------------------media xd*/
+      @media (max-width: 960px) {
+        body {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+        .login-left {
+          display: none;
+        }
+      }
+      @media (max-width: 480px) {
+        .login > .content {
+          width: 90%;
+        }
+        .login > .content > h2 {
+          font-size: 1.5rem;
+          padding: 5px;
+        }
+        form {
+          padding: 10px 10px 0 10px;
+        }
+        form > div > label {
+          font-size: 1rem;
+        }
+        form > div > input {
+          height: 30px;
+          padding-left: 5px;
+        }
+      }
     </style>
   </head>
   <body>
-    <article>
-      <h1>MY NATURE</h1>
-      <h2>Por que minature?</h2>
-      <h3>De viveros a Casa</h3>
-      <p>
-        Las plantas son producidas en ambientes totalmente controlados que
-        favorecen en su crecimiento y desarrollo, logrando mantenerlo en sus
-        mejores condiciones posibles.
-      </p>
-      <h3>Siempre hay descuentos</h3>
-      <p>
-        Segun el usuario avanza en la clasificacion desde novato hasta veterano,
-        tiene acceso a descuentos segun las compras que realice.
-      </p>
-      <h3>No moverse de casa</h3>
-      <p>Llegamos hasta tu casa segun los dias establecidos de reparticion.</p>
-      <p>Empieza a salvar al planeta, ya!</p>
-    </article>
+    <div class="login">
+      <div class="content">
+        <figure>
+          <img
+            class="img-login-user"
+            src="https://marketplace.magento.com/media/catalog/product/4/a/4acb_rsz_admin-logo_1.png"
+          />
+        </figure>
+        <h2>Ingrese a MY NATURE</h2>
+        <form>
+          <div class="email">
+            <label>Email:</label>
+            <input type="email" required />
+          </div>
+          <div class="password">
+            <label>Contrasenia:</label>
+            <input type="password" required />
+          </div>
+          <div class="submit">
+            <input type="submit" value="Registrar" />
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
