@@ -32,10 +32,13 @@
         font-size: 62.5%;
       }
       body {
-        display: grid;
         width: 100%;
+        height: 100vh;
+      }
+      .container {
+        display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 100vh;
+        height: 100%;
       }
       .login-left {
         display: grid;
@@ -120,6 +123,7 @@
         border: 1px solid #808080;
         border-radius: 5px;
         height: 45px;
+        width: 100%;
         margin-bottom: 10px;
         padding-left: 10px;
       }
@@ -189,8 +193,74 @@
           width: 80%;
         }
       }
+      /* height */
+      @media (max-height: 768px) {
+        .login-left > article > h1 {
+          font-size: 3.5rem;
+          margin-bottom: 39px;
+          margin-left: 45px;
+        }
+        .login-left > article > h2 {
+          font-size: 2rem;
+          margin-bottom: 25px;
+          margin-left: 45px;
+        }
+        .login-left > article > h3 {
+          font-size: 2rem;
+          margin-bottom: 10px;
+          margin-left: 65px;
+        }
+        .login-left > article > .parr {
+          font-size: 1rem;
+          margin-bottom: 24px;
+          margin-right: 15px;
+          max-width: 560px;
+          margin-left: 65px;
+          text-align: justify;
+        }
+        .login-left > article > .end {
+          font-size: 2rem;
+          margin-left: 45px;
+        }
+        /* login right*/
+        .login-right {
+          width: 100%;
+        }
+        .login-right > .content {
+          width: 60%;
+        }
+        .login-right > .content > figure > .img-login-user {
+          width: 100px;
+        }
+        .login-right > .content > h2 {
+          padding: 10px 0;
+          font-size: 2rem;
+        }
+        form {
+          padding: 15px;
+        }
+        form > div > label {
+          font-size: 1.2rem;
+        }
+        form > div > input {
+          height: 35px;
+          margin-bottom: 10px;
+          padding-left: 10px;
+        }
+        .red-soc {
+          padding: 0 15px;
+          gap: 10px;
+        }
+        .red-soc > button {
+          height: 45px;
+        }
+        .span {
+          margin: 10px 0;
+          font-size: 1rem;
+        }
+      }
       @media (max-width: 960px) {
-        body {
+        .container {
           display: grid;
           grid-template-columns: 1fr;
         }
@@ -232,72 +302,74 @@
     </style>
   </head>
   <body>
-    <div class="login-left">
-      <article>
-        <h1>MY NATURE</h1>
-        <h2>Por que minature?</h2>
-        <h3>De viveros a Casa</h3>
-        <p class="parr">
-          Las plantas son producidas en ambientes totalmente controlados que
-          favorecen en su crecimiento y desarrollo, logrando mantenerlo en sus
-          mejores condiciones posibles.
-        </p>
-        <h3>Siempre hay descuentos</h3>
-        <p class="parr">
-          Segun el usuario avanza en la clasificacion desde novato hasta
-          veterano, tiene acceso a descuentos segun las compras que realice.
-        </p>
-        <h3>No moverse de casa</h3>
-        <p class="parr">
-          Llegamos hasta tu casa segun los dias establecidos de reparticion.
-        </p>
-        <p class="end">Empieza a salvar al planeta, ya!</p>
-      </article>
-    </div>
-    <div class="login-right">
-      <div class="content">
-        <figure>
-          <img
-            class="img-login-user"
-            src="https://img.freepik.com/vector-premium/ilustracion-linda-morena-joven-personaje-regando-flores-mujer-sonriente-cuidando-plantas-maceta-concepto-hobby-personas-jardineria-floricultura-vector-dibujos-animados-plano-blanco_223337-4157.jpg"
-          />
-        </figure>
-        <h2>Ingrese a MY NATURE</h2>
-        <form>
-          <div class="nombre">
-            <label>Email:</label>
-            <input type="email" required />
+    <div class="container">
+      <div class="login-left">
+        <article>
+          <h1>MY NATURE</h1>
+          <h2>Por que minature?</h2>
+          <h3>De viveros a Casa</h3>
+          <p class="parr">
+            Las plantas son producidas en ambientes totalmente controlados que
+            favorecen en su crecimiento y desarrollo, logrando mantenerlo en sus
+            mejores condiciones posibles.
+          </p>
+          <h3>Siempre hay descuentos</h3>
+          <p class="parr">
+            Segun el usuario avanza en la clasificacion desde novato hasta
+            veterano, tiene acceso a descuentos segun las compras que realice.
+          </p>
+          <h3>No moverse de casa</h3>
+          <p class="parr">
+            Llegamos hasta tu casa segun los dias establecidos de reparticion.
+          </p>
+          <p class="end">Empieza a salvar al planeta, ya!</p>
+        </article>
+      </div>
+      <div class="login-right">
+        <div class="content">
+          <figure>
+            <img
+              class="img-login-user"
+              src="https://img.freepik.com/vector-premium/ilustracion-linda-morena-joven-personaje-regando-flores-mujer-sonriente-cuidando-plantas-maceta-concepto-hobby-personas-jardineria-floricultura-vector-dibujos-animados-plano-blanco_223337-4157.jpg"
+            />
+          </figure>
+          <h2>Ingrese a MY NATURE</h2>
+          <form>
+            <div class="nombre">
+              <label>Email:</label>
+              <input type="email" required />
+            </div>
+            <div class="correo">
+              <label>Contrasenia:</label>
+              <input type="password" required />
+            </div>
+            <div class="submit">
+              <input type="submit" value="Registrar" />
+            </div>
+          </form>
+          <div class="red-soc">
+            <button type="button">
+              <i class="fab fa-facebook"></i> Continuar con Facebook
+            </button>
+            <button type="button">
+              <i class="fab fa-google"></i> Continuar con Google
+            </button>
           </div>
-          <div class="correo">
-            <label>Contrasenia:</label>
-            <input type="password" required />
+          <div class="red-soc-movil">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2702/2702602.png"
+              alt="logito de gugul"
+              style="width: 40px"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png"
+              alt="loguito de feisbuk"
+              style="width: 40px"
+            />
           </div>
-          <div class="submit">
-            <input type="submit" value="Registrar" />
+          <div class="span">
+            <span>Ya tienes cuenta? <a href="#">Inicia Secion</a></span>
           </div>
-        </form>
-        <div class="red-soc">
-          <button type="button">
-            <i class="fab fa-facebook"></i> Continuar con Facebook
-          </button>
-          <button type="button">
-            <i class="fab fa-google"></i> Continuar con Google
-          </button>
-        </div>
-        <div class="red-soc-movil">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/2702/2702602.png"
-            alt="logito de gugul"
-            style="width: 40px"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png"
-            alt="loguito de feisbuk"
-            style="width: 40px"
-          />
-        </div>
-        <div class="span">
-          <span>Ya tienes cuenta? <a href="#">Inicia Secion</a></span>
         </div>
       </div>
     </div>
