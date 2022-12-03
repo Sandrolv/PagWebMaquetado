@@ -336,7 +336,7 @@
         padding: 5px 0;
         font-family: "Abel", sans-serif;
       }
-      .venta-productos {
+      .venta-productos { 
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -344,47 +344,72 @@
         width: 100%;
       }
       .Producto1 {
-        height: 200px;
-        width: 130px;
+        height: 170px;
+        width: 100%;
+        margin: 0 20px;
         background: rgba(255, 255, 255, 1); /*E*/
-        border-radius: 24px;
+        border-radius: 5px;
         display: grid;
-        grid-template-rows: 52% auto 34px;
+        grid-template-columns: 40% auto;
+        gap: 10px;
         align-items: center;
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        margin: 0 20px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
       }
       .Producto1_imagen {
-        margin: 15px auto 0px auto;
+        /* margin: 0 5px 0 20px; */
+        display: grid;
+       
       }
       .Producto1_imagen > img {
-        height: 90px;
-        width: 90px;
+        height: 170px;
+        width: 100%;
         cursor: pointer;
-        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+        border-radius: 5px 0 0 5px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      }
+      .Producto1_right_mobile {
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: 10px;
+        justify-items: center;
+        margin: 5px;
       }
       .Producto_informacion {
-        margin: 0 10px 0 10px;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 15px 15px 15px;
-        align-items: center;
-      }
-      .Producto_informacion > h5:nth-child(2),
-      .Producto_informacion > p:nth-child(4),
-      .Producto_informacion > p:nth-child(6) {
+        /* margin: 0 40px 0 5px; */
+        width: 100%;
         display: flex;
-        justify-content: end;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+       
+      }
+      .Producto_informacion > h4:nth-child(1),
+      .Producto_informacion > h5:nth-child(2) {
+        font-size: 1.4rem;
+        display: block;
+        width: 100%;
       }
       .Producto_informacion > p {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
       }
-      .Producto1 > button {
+
+      .Producto_button {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        margin: 0 20px 0 0;
+      }
+    
+      .Producto_button > button {
         height: 34px;
-        width: 130px;
+        width: 45%;
         background-color: var(--navbarColorInactive); /*E*/
         border: none;
         color: white;
-        border-radius: 0 0 24px 24px;
+        border-radius: 5px;
         cursor: pointer;
       }
 
@@ -482,6 +507,68 @@
           border-radius: 12px;
           font-size: 1.45rem;
         }
+
+        /*-------------------Estilos Producto----------------*/
+      /* .parte_ventas_principal > h1 {
+        margin: 40px 0 20px 0 ;
+        text-align: center;
+        background-color: var(--navbarColorInactive);
+        color: white;
+        padding: 5px 0;
+        font-family: "Abel", sans-serif;
+      }
+      .venta-productos { 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+      }
+      .Producto1 {
+        height: 200px;
+        width: 130px;
+        background: rgba(255, 255, 255, 1); 
+        border-radius: 24px;
+        display: grid;
+        grid-template-rows: 52% auto 34px;
+        align-items: center;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+      }
+      .Producto1_imagen {
+        margin: 15px auto 0px auto;
+      }
+      .Producto1_imagen > img {
+        height: 90px;
+        width: 90px;
+        cursor: pointer;
+        border-radius: 10px 10px 0 0;
+      }
+      .Producto_informacion {
+        margin: 0 10px 0 10px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 15px 15px 15px;
+        align-items: center;
+      }
+      .Producto_informacion > h5:nth-child(2),
+      .Producto_informacion > p:nth-child(4),
+      .Producto_informacion > p:nth-child(6) {
+        display: flex;
+        justify-content: end;
+      }
+      .Producto_informacion > p {
+        font-size: 0.8rem;
+      }
+      .Producto1 > button {
+        height: 34px;
+        width: 130px;
+        background-color: var(--navbarColorInactive);
+        border: none;
+        color: white;
+        border-radius: 0 0 24px 24px;
+        cursor: pointer;
+      } */
+
       }
 
       /*  768 */
@@ -852,113 +939,91 @@
             <figure class="Producto1_imagen">
               <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
             </figure>
-            <div class="Producto_informacion">
-              <h4>Buganvilla</h4>
-              <h5>S/. 78.00</h5>
-              <p>Rosada</p>
-              <p>Disp. 10</p>
-              <p>Embolsada</p>
-              <p>Al. 35 cm</p>
+            <div class="Producto1_right_mobile">
+              <div class="Producto_informacion">
+                <h4>Buganvilla</h4>
+                <h5>S/. 78.00</h5>
+                <p>Rosada</p>
+                <p>Disp. 10</p>
+                <p>Embolsada </p>
+                <p>Al. 35 cm</p>
+              </div>
+              <div class="Producto_button">
+                <button>PEDIR</button>
+              </div>
             </div>
-            <button>PEDIR</button>
           </div>
           <div class="Producto1">
             <figure class="Producto1_imagen">
               <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
             </figure>
-            <div class="Producto_informacion">
-              <h4>Buganvilla</h4>
-              <h5>S/. 78.00</h5>
-              <p>Rosada</p>
-              <p>Disp. 10</p>
-              <p>Embolsada</p>
-              <p>Al. 35 cm</p>
+            <div class="Producto1_right_mobile">
+              <div class="Producto_informacion">
+                <h4>Buganvilla</h4>
+                <h5>S/. 78.00</h5>
+                <p>Rosada</p>
+                <p>Disp. 10</p>
+                <p>Embolsada </p>
+                <p>Al. 35 cm</p>
+              </div>
+              <div class="Producto_button">
+                <button>PEDIR</button>
+              </div>
             </div>
-            <button>PEDIR</button>
           </div>
           <div class="Producto1">
             <figure class="Producto1_imagen">
               <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
             </figure>
-            <div class="Producto_informacion">
-              <h4>Buganvilla</h4>
-              <h5>S/. 78.00</h5>
-              <p>Rosada</p>
-              <p>Disp. 10</p>
-              <p>Embolsada</p>
-              <p>Al. 35 cm</p>
+            <div class="Producto1_right_mobile">
+              <div class="Producto_informacion">
+                <h4>Buganvilla</h4>
+                <h5>S/. 78.00</h5>
+                <p>Rosada</p>
+                <p>Disp. 10</p>
+                <p>Embolsada </p>
+                <p>Al. 35 cm</p>
+              </div>
+              <div class="Producto_button">
+                <button>PEDIR</button>
+              </div>
             </div>
-            <button>PEDIR</button>
           </div>
           <div class="Producto1">
             <figure class="Producto1_imagen">
               <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
             </figure>
-            <div class="Producto_informacion">
-              <h4>Buganvilla</h4>
-              <h5>S/. 78.00</h5>
-              <p>Rosada</p>
-              <p>Disp. 10</p>
-              <p>Embolsada</p>
-              <p>Al. 35 cm</p>
+            <div class="Producto1_right_mobile">
+              <div class="Producto_informacion">
+                <h4>Buganvilla</h4>
+                <h5>S/. 78.00</h5>
+                <p>Rosada</p>
+                <p>Disp. 10</p>
+                <p>Embolsada </p>
+                <p>Al. 35 cm</p>
+              </div>
+              <div class="Producto_button">
+                <button>PEDIR</button>
+              </div>
             </div>
-            <button>PEDIR</button>
           </div>
           <div class="Producto1">
             <figure class="Producto1_imagen">
               <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
             </figure>
-            <div class="Producto_informacion">
-              <h4>Buganvilla</h4>
-              <h5>S/. 78.00</h5>
-              <p>Rosada</p>
-              <p>Disp. 10</p>
-              <p>Embolsada</p>
-              <p>Al. 35 cm</p>
+            <div class="Producto1_right_mobile">
+              <div class="Producto_informacion">
+                <h4>Buganvilla</h4>
+                <h5>S/. 78.00</h5>
+                <p>Rosada</p>
+                <p>Disp. 10</p>
+                <p>Embolsada </p>
+                <p>Al. 35 cm</p>
+              </div>
+              <div class="Producto_button">
+                <button>PEDIR</button>
+              </div>
             </div>
-            <button>PEDIR</button>
-          </div>
-          <div class="Producto1">
-            <figure class="Producto1_imagen">
-              <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
-            </figure>
-            <div class="Producto_informacion">
-              <h4>Buganvilla</h4>
-              <h5>S/. 78.00</h5>
-              <p>Rosada</p>
-              <p>Disp. 10</p>
-              <p>Embolsada</p>
-              <p>Al. 35 cm</p>
-            </div>
-            <button>PEDIR</button>
-          </div>
-          <div class="Producto1">
-            <figure class="Producto1_imagen">
-              <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
-            </figure>
-            <div class="Producto_informacion">
-              <h4>Buganvilla</h4>
-              <h5>S/. 78.00</h5>
-              <p>Rosada</p>
-              <p>Disp. 10</p>
-              <p>Embolsada</p>
-              <p>Al. 35 cm</p>
-            </div>
-            <button>PEDIR</button>
-          </div>
-          <div class="Producto1">
-            <figure class="Producto1_imagen">
-              <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
-            </figure>
-            <div class="Producto_informacion">
-              <h4>Buganvilla</h4>
-              <h5>S/. 78.00</h5>
-              <p>Rosada</p>
-              <p>Disp. 10</p>
-              <p>Embolsada</p>
-              <p>Al. 35 cm</p>
-            </div>
-            <button>PEDIR</button>
           </div>
 
         </div>
