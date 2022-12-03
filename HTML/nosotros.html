@@ -1,12 +1,594 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abel&family=Anonymous+Pro&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <title>My Nature</title>
+    <style>
+        :root {
+            --alertColor: #b4bf35;
+            --navbarColorInactive: #31572c;
+            --navbarColorActive: #4f772d;
+            --colorButton: #d4e09b;
+            --colorCardButton: #03a100;
+            --colorCardButtonOfert: #a13a00;
+            --colorNavMovilDesplegable: #2f3f2d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        /* -480 */
+
+        .alert {
+            background-color: var(--alertColor);
+            height: 32px;
+            display: flex;
+            align-items: center;
+            font-size: 2.5rem;
+            box-shadow: 0px 0.1px 5px black;
+            z-index: 1000;
+        }
+
+        .alert>marquee {
+            font-size: 1.5rem;
+        }
+
+        .nav {
+            width: 100%;
+            padding: 0 10px 0;
+            display: grid;
+            grid-template-rows: 40px;
+            grid-template-columns: 10% auto;
+            gap: 10px;
+            background-color: var(--navbarColorInactive);
+            align-items: center;
+            box-shadow: 0px 0.1px 5px black;
+            position: relative;
+            /*Desplegable*/
+            z-index: 2000;
+        }
+
+        .nav>.image-nav {
+            display: none;
+        }
+
+        .nav>span {
+            border: 1px solid #b0bfaf;
+            text-align: center;
+            border-radius: 4px;
+            padding: 2px;
+            background-color: var(--colorNavMovilDesplegable);
+            width: 26px;
+        }
+
+        .nav>span>i {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 200;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav-left {
+            position: absolute;
+            /*Desplegable*/
+            top: 40px;
+            list-style: none;
+            height: 0px;
+            /*Desplegable*/
+            overflow: hidden;
+            /*Desplegable*/
+            transition: height 0.3s linear;
+            /*Desplegable*/
+        }
+
+        .nav-left>li {
+            width: 160px;
+            background-color: var(--colorNavMovilDesplegable);
+        }
+
+        .nav-left>li>a {
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 2px;
+            color: white;
+            padding: 10px 10px 10px 15px;
+            display: block;
+            /*Hace respetar el Padding*/
+            font-size: 1.4rem;
+            font-weight: 300;
+        }
+
+        .nav-left>li>a:hover {
+            transform: scale(1.1, 1.1);
+            background-color: var(--navbarColorActive);
+            transition-property: background-color, transform;
+            /*hover*/
+            transition-duration: 500ms;
+        }
+
+        .nav-left>.nav_left_opcion-select>a {
+            background-color: var(--navbarColorActive);
+        }
+
+        .nav_left_opcion-sobrante {
+            height: 81px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: flex-end;
+            list-style: none;
+        }
+
+        .nav-right>li:nth-child(1) {
+            display: flex;
+            gap: 5px;
+        }
+
+        .nav-right>li>img {
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .nav-right>li>p {
+            color: white;
+            cursor: pointer;
+            font-size: 1.4rem;
+            padding-top: 3px;
+        }
+
+        .nav-right>li>i {
+            color: white;
+            cursor: pointer;
+            font-size: 1.6rem;
+        }
+
+        /* -----------------Estilos Banner------------ */
+        main {
+            position: relative;
+        }
+
+        .index-banner {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url(https://lh3.google.com/u/0/d/1D4AzKfvj-JlVX3RquBOGHOOjon7MMbaW=w1918-h1009-iv1);
+            background-size: 160%;
+            background-position-x: center;
+            background-position-y: center;
+            background-size: cover;
+            height: 271px;
+            width: 100%;
+            display: grid;
+            z-index: -2000;
+        }
+
+        .frases-banner {
+            padding: 8% 0 0 5%;
+        }
+
+        .frases-banner>h1 {
+            font-size: 1.4rem;
+            color: white;
+            font-family: "Anonymous Pro", monospace;
+            margin-bottom: 8px;
+        }
+
+        .index-banner>.frases-banner>p {
+            font-size: 1.2rem;
+            color: white;
+            font-family: "Abel", sans-serif;
+            width: 40%;
+            margin-bottom: 12px;
+        }
+
+        .frases-banner>a:nth-child(3) {
+            border: 1px solid white;
+            height: 17px;
+            width: 61px;
+            background-color: transparent;
+            font-family: "Anonymous Pro", monospace;
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 4px;
+        }
+
+        .mostrar {
+            height: 271px;
+        }
+
+        /*-------------------Estilos Filtro----------------*/
+
+
+        .form-filtros {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .filtros>p {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 3px;
+        }
+
+        .filtros>input:nth-child(2) {
+            width: 150px;
+            height: 25px;
+            border-radius: 8px;
+            border: none;
+            padding: 10px 10px 10px 12px;
+            font-size: 1rem;
+            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /*  480 */
+        @media (min-width: 480px) {
+            .nav {
+                padding: 0 18px;
+            }
+
+            .nav-left>li {
+                width: 180px;
+            }
+
+            .nav-left>li>a {
+                padding: 10px 10px 10px 20px;
+            }
+
+            /* -----------------Estilos Banner------------ */
+            .frases-banner {
+                padding: 6% 0 0 5%;
+            }
+
+            .frases-banner>h1 {
+                font-size: 1.8rem;
+            }
+
+            .index-banner>.frases-banner>p {
+                font-size: 1.4rem;
+                width: 35%;
+                margin-bottom: 20px;
+            }
+
+            .frases-banner>a:nth-child(3) {
+                height: 20px;
+                width: 70px;
+                font-size: 1.2rem;
+                padding: 6px;
+            }
+
+            /*------------------------------- Estilos filtro --------------------- */
+
+            .form-filtros {
+                gap: 18px;
+
+            }
+
+            .filtros>p {
+                font-size: 1.4rem;
+                margin-bottom: 5px;
+            }
+
+            .filtros>input:nth-child(2) {
+                width: 170px;
+                height: 32px;
+                border-radius: 12px;
+                font-size: 1.2rem;
+                padding-left: 14px;
+            }
+
+        }
+
+        /*  768 */
+        @media (min-width: 768px) {
+            .alert {
+                height: 36px;
+            }
+
+            .nav {
+                padding: 0 18px;
+                grid-template-rows: 45px;
+                grid-template-columns: 90px 61% auto;
+                gap: 5px;
+            }
+
+            .nav>.image-nav {
+                display: block;
+                width: 90px;
+                height: 40px;
+                cursor: pointer;
+
+            }
+
+            .nav>span {
+                display: none;
+            }
+
+            .nav-left {
+                position: static;
+                display: flex;
+                height: 100%;
+            }
+
+            .nav-left>li {
+                width: auto;
+                height: 100%;
+                background-color: var(--navbarColorInactive);
+            }
+
+            .nav-left>li>a {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                font-size: 1.4rem;
+                height: 100%;
+            }
+
+            .nav_left_opcion-select {
+                display: none;
+            }
+
+            .nav_left_opcion-sobrante {
+                display: none;
+            }
+
+            .nav-right>li>img {
+                height: 25px;
+            }
+
+            .nav-right>li>p {
+                font-size: 1.6rem;
+            }
+
+            .nav-right>li>i {
+                font-size: 1.8rem;
+            }
+
+            /* -----------------Estilos Banner------------ */
+            .index-banner {
+                height: 380px;
+            }
+
+            .frases-banner {
+                padding: 5% 0 0 5%;
+            }
+
+            .frases-banner>h1 {
+                font-size: 2.5rem;
+            }
+
+            .index-banner>.frases-banner>p {
+                font-size: 2.1rem;
+                margin-bottom: 25px;
+            }
+
+            .frases-banner>a:nth-child(3) {
+                height: 30px;
+                width: 110px;
+                font-size: 1.9rem;
+            }
+
+            /*------------------------------- Estilos filtro --------------------- */
+
+            .form-filtros {
+                gap: 20px;
+            }
+
+            .filtros>p {
+                font-size: 1.6rem;
+                margin-bottom: 7px;
+            }
+
+            .filtros>input:nth-child(2) {
+                width: 200px;
+                height: 35px;
+                border-radius: 14px;
+                font-size: 1.4rem;
+                padding-left: 16px;
+            }
+
+        }
+
+        /*  1024 */
+        @media (min-width: 1024px) {
+            .alert {
+                height: 42px;
+            }
+
+            .alert marquee {
+                font-size: 2rem;
+            }
+
+            .nav {
+                padding: 0 40px 0;
+                grid-template-rows: 50px;
+                grid-template-columns: 100px 60% auto;
+            }
+
+            .nav>.image-nav {
+                width: 100px;
+            }
+
+            .nav-left>li>a {
+                font-size: 2rem;
+            }
+
+            .nav-right {
+                gap: 15px;
+                padding: 0;
+            }
+
+            .nav-right>li>img {
+                height: 30px;
+            }
+
+            .nav-right>li>p {
+                font-size: 2rem;
+            }
+
+            .nav-right>li>i {
+                font-size: 2rem;
+            }
+
+            /* -----------------Estilos Banner------------ */
+            .index-banner {
+                height: 650px;
+            }
+
+            .frases-banner>h1 {
+                font-size: 4rem;
+            }
+
+            .index-banner>.frases-banner>p {
+                font-size: 3rem;
+                width: 30%;
+                margin-bottom: 30px;
+            }
+
+            .frases-banner>a:nth-child(3) {
+                border: 2px solid white;
+                height: 45px;
+                width: 150px;
+                font-size: 2.5rem;
+            }
+
+            /*------------------------------- Estilos filtro --------------------- */
+
+            .form-filtros {
+                gap: 40px;
+            }
+
+            .filtros>p {
+                font-size: 2.2rem;
+                margin-bottom: 9px;
+            }
+
+            .filtros>input:nth-child(2) {
+                width: 270px;
+                height: 50px;
+                border-radius: 16px;
+                font-size: 2.4rem;
+                padding-left: 18px;
+            }
+
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header class="alert">
+        <marquee>
+            Primera compra? Descuento de un 5% en toda la compra realizada y
+            descuentos especiales para revendedores. Contactenos Ya!!
+        </marquee>
+    </header>
+
+    <nav class="nav">
+        <img class="image-nav" height="30px"
+            src="https://static.vecteezy.com/system/resources/thumbnails/007/534/194/small/nature-concept-banner-with-lush-green-foliage-illustration-vector.jpg" />
+        <span><i class="fas fa-bars" id="btnNav"></i></span>
+
+        <ul class="nav-left" id="MenuNav">
+            <li class="nav_left_opcion-select"><a>INICIO</a></li>
+            <li><a href="./nosotros.html">NOSOTROS</a></li>
+            <li><a href="./reporte.html">REPORTE</a></li>
+            <li><a href="./pedidos.html">PEDIDOS</a></li>
+            <li><a href="./capacitacion.html">CAPACITACIÓN</a></li>
+            <li class="nav_left_opcion-sobrante"></li>
+        </ul>
+
+        <ul class="nav-right">
+            <li>
+                <img src="https://xsgames.co/randomusers/assets/avatars/male/54.jpg" />
+                <p>Iniciar Sesión</p>
+            </li>
+            <li><i class="fal fa-shopping-cart"></i></li>
+            <li><i class="fal fa-bell"></i></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="index-banner">
+            <div class="frases-banner">
+                <h1>Tu naturaleza, mi naturaleza.</h1>
+                <p>Tener una planta en casa podria salvar el mundo ¿Lo imaginas?</p>
+                <a href="#">Contactar</a>
+            </div>
+
+
+        </div>
+
+        <h1>¿QUIENES SOMOS?</h1>
+        <p>Vivero MyNature es heredero de dicha tradición y tratamos de llevar a nuestros clientes el significado y
+            la acción de las plantas sobre la vida de las personas y el medioambiente convirtiendo nuestro entorno en
+            un lugar mas placentero y lleno de vida para las generaciones actuales y futuras disfruten de una mejor
+            calidad de vida a través de ambientes sanos y agradables. </p>
+
+        <h1>¿A DONDE QUEREMOS LLEGAR?</h1>
+        <p>Ser una empresa reconocida en la region Junin mediante el aporte e importancia que le damos al sector de la
+            floricultura, llevandolo a un nivel distinto donde se utilice las tecnologias de informacion y comunicacion.
+            El mundo necesita personas que empiecen a preocuparse por la existencia de plantas en cada uno de los
+            hogares.
+        </p>
+        <h1>HISTORIA</h1>
+        <p>My Nature nació de la idea de crear un mundo mejor, lleno de plantas donde brindemos a las futuras
+            generaciones
+            un ambiente agradable y beneficioso para sus cuerpos.El dia 15 de Octubre de 2022 un grupo de jovenes al
+            termina
+            su carrera universitaria empezaron a dar vida la idea de crear un entorno tecnologico que ayude a los
+            floricultores
+            a alcanzar a una mayor cantidad de personas. Logrando ....
+        </p>
+        <h1>¿POR QUE ELEGIMOS LAS PLANTAS?</h1>
+        <p>Las plantas hoy en dia cada vez estan tomando mayor importancia a nivel mundial dado que las forestaciones,
+            contaminaciones
+            y malos habitos del ser humano estan haciendo que se reduzcan en grandes cantidades y que la capa de ozono
+            este desgastandose
+            de manera constante, consiguiendo que los rayos ultravioleta lleguen a los seres vivos y haya muchos cambios
+            climaticos, pero
+            si logramos que las personas tengan al menos una planta en sus hogares, reduciremos las consecuencias.Las
+            plantas purifican el
+            aire y contrarrestan las incoscientes acciones negativas medioambientales que realizamos, ademas de
+            aromatiza los lugares donde
+            crecen, previenen problemas respiratorios, combaten la polucion, aumentan la productividad, disminuyen el
+            estres, decoran tu hogar
+            y te empoderan.
+        </p>
+
+
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="./Menu.js"></script>
+
 </body>
+
 </html>
