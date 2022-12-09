@@ -10,16 +10,17 @@
 
   <style>
     :root {
-        --alertColor: #b4bf35;
-        --navbarColorInactive: #31572c;
-        --navbarColorActive: #4f772d;
-        --colorButton: #d4e09b;
-        --colorCardButton: #03a100;
-        --colorBackgroundColor:#03a100;
-        --colorCardButtonOfert: #a13a00;
-        --colorNavMovilDesplegable: #2f3f2d;
-        --colorFontGray:#666666;
-      }
+      --alertColor: #b4bf35;
+      --navbarColorInactive: #31572c;
+      --navbarColorActive: #4f772d;
+      --colorButton: #d4e09b;
+      --colorCardButton: #03a100;
+      --colorBackgroundColor: #03a100;
+      --colorCardButtonOfert: #a13a00;
+      --colorNavMovilDesplegable: #2f3f2d;
+      --colorFontGray: #666666;
+    }
+
     .border {
       border: 1px solid black;
     }
@@ -27,22 +28,28 @@
     body {
       height: 100vh;
       margin: 0;
+      background-color: #E5E5E5;
     }
-    html{
+
+    html {
       font-size: 62.5%;
     }
-    a{
+
+    a {
       text-decoration: none;
     }
+
     h1,
     h2,
     h3,
     h4,
-    p,i {
+    p,
+    i,
+    span {
       margin: 0;
       color: var(--colorFontGray);
     }
-    
+
     .contenedor {
       display: grid;
       height: 100%;
@@ -52,6 +59,7 @@
       grid-template-rows: 100px auto;
       grid-template-columns: 350px 1fr 1fr 1fr;
     }
+
     /* header */
     .contenedor>.headerArea {
       grid-area: header;
@@ -71,18 +79,22 @@
       margin: 20px 20px 10px 20px;
       padding: 0 30px;
     }
-    .headerContainer>h1{
+
+    .headerContainer>h1 {
       font-size: 4rem;
     }
+
     .headerContainer>.headerRight {
       display: flex;
       gap: 35px;
     }
-    .headerRight>.notification>i{
+
+    .headerRight>.notification>i {
       position: relative;
       font-size: 2.2rem;
     }
-    .headerRight>.notification>i>span{
+
+    .headerRight>.notification>i>span {
       font-size: 1.4rem;
       position: absolute;
       top: -2px;
@@ -99,27 +111,32 @@
       align-items: center;
     }
 
-    .headerUser>i:nth-child(1){
+    .headerUser>i:nth-child(1) {
       font-size: 2.2rem;
     }
-    .headerUser>i:nth-child(3){
+
+    .headerUser>i:nth-child(3) {
       font-size: 1.5rem;
     }
-    .headerUser>p{
+
+    .headerUser>p {
       font-size: 2.2rem;
     }
+
     /* fin del header */
 
     /* navbar de la izquierda */
     .contenedor>.navbarArea {
       grid-area: navbar;
-      height: calc(100vh - 110px);
+      height: calc(100vh - 100px);
     }
-    .navbarArea a, .navbarArea p{
+
+    .navbarArea a,
+    .navbarArea p {
       font-size: 2rem;
     }
-    .navbarArea >.navbarContainer{
 
+    .navbarArea>.navbarContainer {
       height: calc(100% - 90px);
       display: flex;
       flex-direction: column;
@@ -131,34 +148,39 @@
       padding: 30px;
       overflow-y: auto;
     }
-    .navbarContainer > .navTitle {
+
+    .navbarContainer>.navTitle {
       display: flex;
       gap: 20px;
       margin-bottom: 20px;
     }
-    .navTitle > i, .navTitle>p {
+
+    .navTitle>i,
+    .navTitle>p {
       font-size: 2.5rem;
       color: black;
     }
 
-    .navbarContainer > .navUser {
+    .navbarContainer>.navUser {
       display: flex;
       gap: 20px;
       align-items: center;
       margin-bottom: 10px;
     }
-    .navUser > img{
+
+    .navUser>img {
       width: 30px;
       border: 1px solid var(--colorFontGray);
       border-radius: 50%;
     }
 
-    .navbarContainer > .navOptions{
+    .navbarContainer>.navOptions {
       display: grid;
       gap: 10px;
       margin-bottom: 20px;
     }
-    .navOptions > .listOption{
+
+    .navOptions>.listOption {
       padding: 15px;
       border-radius: 8px;
       background-color: none;
@@ -166,29 +188,34 @@
       transition-property: background, color;
       transition-duration: 500ms;
     }
-    .navOptions > .listOption:hover  {
+
+    .navOptions>.listOption:hover {
       background-color: var(--colorBackgroundColor);
       color: white;
     }
-    .listOption>i{
+
+    .listOption>i {
       color: var(--colorFontGray);
       transition-property: color;
       transition-duration: 500ms;
     }
-    .listOption:hover>i{    
+
+    .listOption:hover>i {
       color: white;
     }
 
-    .navbarContainer > .navAccess {
+    .navbarContainer>.navAccess {
       display: grid;
       gap: 10px;
     }
-    .navAccess > p {
+
+    .navAccess>p {
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       color: black;
     }
-    .navAccess > .listAccess{
+
+    .navAccess>.listAccess {
       padding: 15px;
       border-radius: 8px;
       background-color: none;
@@ -196,44 +223,222 @@
       transition-property: background, color;
       transition-duration: 500ms;
     }
-    .navAccess > .listAccess:hover  {
+
+    .navAccess>.listAccess:hover {
       background-color: black;
       color: white;
     }
-    .listAccess>i{
+
+    .listAccess>i {
       color: var(--colorFontGray);
       transition-property: color;
       transition-duration: 500ms;
     }
-    .listAccess:hover>i{    
+
+    .listAccess:hover>i {
       color: white;
     }
+
     /* fin del navbar de la izquierda */
 
     /* section del centro xd */
+    /* buscar */
     .contenedor>.section {
       grid-area: section;
+      margin: 10px 20px 0 0;
+      overflow-y: auto;
+      display: grid;
+      grid-template-rows: 65px auto auto;
+      height: calc(100% - 30px);
+      gap: 10px;
     }
 
-    .contenedor>.section>div {
-      height: 100px;
+    .section>.buscarDashboard {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: fit-content;
     }
-    /* fin del section del centro xd */
 
-    @media (max-width:1600px) {
-      .contenedor {
-      grid-template-columns: 300px 1fr 1fr 1fr;
+    .buscarDashboard>p,
+    .buscarDashboard>input {
+      font-size: 2rem;
     }
-    .contenedor>.navbarArea {
-      grid-area: navbar;
-      height: calc(100vh - 70px);
-    }
-    .headerArea>.headerContainer{
-      padding: 0 10px;
-    }
-    .navbarArea >.navbarContainer{
+
+    .buscarDashboard>input {
+      border: none;
+      border-radius: 5px;
       padding: 10px;
+      margin: 10px 0;
+      width: 350px;
     }
+
+    /* fin buscar */
+    /* cardsDashBoards */
+    .cardsDashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(326px, 1fr));
+      justify-items: center;
+    }
+
+    .cardsDashboard>.card {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      margin: 10px;
+      padding: 10px 20px;
+      width: 90%;
+      min-width: 326px;
+      box-sizing: border-box;
+      position: relative;
+      gap: 10px;
+      height: fit-content;
+    }
+
+    .card>.cardCircle {
+      position: absolute;
+      background-color: var(--colorBackgroundColor);
+      display: flex;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      right: 5px;
+      top: 5px;
+    }
+
+    .card:nth-child(2)>.cardCircle {
+      background-color: #7f5f16;
+    }
+
+    .card:nth-child(2)>p {
+      color: #7f5f16;
+    }
+
+    .card:nth-child(3)>.cardCircle {
+      background-color: #dbb95f;
+    }
+
+    .card:nth-child(3)>p {
+      color: #dbb95f;
+    }
+
+    .card:nth-child(4)>.cardCircle {
+      background-color: #422e13;
+    }
+
+    .card:nth-child(4)>p {
+      color: #422e13;
+    }
+
+    .cardCircle>i {
+      font-size: 2.8rem;
+      color: white;
+    }
+
+    .card>h1 {
+      font-size: 2rem;
+    }
+
+    .card>strong {
+      font-size: 3rem;
+      font-weight: 900;
+    }
+
+    .card>p {
+      font-size: 1.8rem;
+      color: var(--colorBackgroundColor);
+    }
+
+    .card>span {
+      font-size: 1.6rem;
+    }
+
+
+    /* fin cardsDashboards */
+    .graficosDashboard {
+      height: 1000px;
+      background-color: black;
+    }
+
+    /* fin del section del centro xd */
+    /* graficos dashboard */
+    /* fin graficos dashboard */
+
+    @media (max-width:1366px) {
+      .contenedor {
+        grid-template-columns: 300px 1fr 1fr 1fr;
+      }
+
+      .contenedor>.navbarArea {
+        grid-area: navbar;
+        height: calc(100vh - 70px);
+      }
+
+      .headerArea>.headerContainer {
+        padding: 0 10px;
+      }
+
+      .navbarArea>.navbarContainer {
+        padding: 10px;
+      }
+
+      /* section */
+      .buscarDashboard>p,
+      .buscarDashboard>input {
+        font-size: 1rem;
+      }
+
+      .buscarDashboard>input {
+
+        padding: 5px;
+        margin: 5px 0;
+        width: 150px;
+      }
+
+      .cardsDashboard {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(238px, 1fr));
+
+      }
+
+      .cardsDashboard>.card {
+        min-width: 238px;
+        max-width: 320px;
+      }
+
+
+      .card>.cardCircle {
+        width: 50px;
+        height: 50px;
+      }
+
+      .cardCircle>i {
+        font-size: 2rem;
+      }
+
+      .card>h1 {
+        font-size: 1.5rem;
+      }
+
+      .card>strong {
+        font-size: 2.5rem;
+        font-weight: 900;
+      }
+
+      .card>p {
+        font-size: 1.2rem;
+        color: var(--colorBackgroundColor);
+      }
+
+      .card>span {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
@@ -271,26 +476,69 @@
           <i class="fad fa-angle-down"></i>
         </div>
         <div class="navOptions">
-          <a href="" class="listOption"><i class="fas fa-hand-holding-seedling"></i>  Gestion de Plantas</a>
-          <a href="" class="listOption"><i class="fas fa-hand-holding-magic"></i>  Categorias</a>
-          <a href="" class="listOption"><i class="fas fa-hand-holding-usd"></i>  Ventas</a>
-          <a href="" class="listOption"><i class="fas fa-hand-holding-box"></i>  Proveedores</a>
-          <a href="" class="listOption"><i class="fas fa-hands-usd"></i>  Ingresos</a>
-          <a href="" class="listOption"><i class="fas fa-handshake"></i> Clientes</a>
+          <a href="#" class="listOption"><i class="fas fa-hand-holding-seedling"></i> Gestion de Plantas</a>
+          <a href="#" class="listOption"><i class="fas fa-hand-holding-magic"></i> Categorias</a>
+          <a href="#" class="listOption"><i class="fas fa-hand-holding-usd"></i> Ventas</a>
+          <a href="#" class="listOption"><i class="fas fa-hand-holding-box"></i> Proveedores</a>
+          <a href="#" class="listOption"><i class="fas fa-hands-usd"></i> Ingresos</a>
+          <a href="#" class="listOption"><i class="fas fa-handshake"></i> Clientes</a>
         </div>
         <div class="navAccess">
           <p>Accesos</p>
-          <a href="" class="listAccess"><i class="fas fa-users"></i> Vendedores</a>
-          <a href="" class="listAccess"><i class="fas fa-person-carry"></i> Distribuidores</a>
-          <a href="" class="listAccess"><i class="fas fa-flower-tulip"></i> Floricultores</a>
+          <a href="#" class="listAccess"><i class="fas fa-users"></i> Vendedores</a>
+          <a href="#" class="listAccess"><i class="fas fa-person-carry"></i> Distribuidores</a>
+          <a href="#" class="listAccess"><i class="fas fa-flower-tulip"></i> Floricultores</a>
         </div>
       </div>
     </nav>
 
-    <section class="section border">
-      <div class="border"></div>
-      <div class="border"></div>
-      <div class="border"></div>
+    <section class="section">
+      <div class="buscarDashboard border">
+        <p>Dashboard/<strong>Home</strong></p>
+        <input placeholder="Buscar" />
+      </div>
+      <div class="cardsDashboard border">
+        <div class="card border">
+          <div class="cardCircle">
+            <i class="fal fa-flower-tulip"></i>
+          </div>
+          <h1>PLANTAS</h1>
+          <strong>1200</strong>
+          <p>Unidades</p>
+          <span>Rosas, claveles, hortencia y mas...</span>
+        </div>
+        <div class="card border">
+          <div class="cardCircle">
+            <i class="fal fa-bags-shopping"></i>
+          </div>
+          <h1>VENTAS</h1>
+          <strong>S/. 9800.00</strong>
+          <p>+5% Ganancias</p>
+          <span>Ventas mesuales</span>
+        </div>
+        <div class="card border">
+          <div class="cardCircle">
+            <i class="fal fa-users"></i>
+          </div>
+          <h1>Clientes</h1>
+          <strong>500</strong>
+          <p>+8% nuevos</p>
+          <span>Total de clientes</span>
+        </div>
+        <div class="card border">
+          <div class="cardCircle">
+            <i class="fal fa-users-crown"></i>
+          </div>
+          <h1>USUARIOS</h1>
+          <strong>8</strong>
+          <p>Usuarios</p>
+          <span>Administrador, distribuciones vendedores ...</span>
+        </div>
+      </div>
+      <div class="graficosDashboard">
+        <canvas></canvas>
+        <canvas></canvas>
+      </div>
     </section>
   </div>
 </body>
