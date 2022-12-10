@@ -144,7 +144,7 @@
       border: 1px solid rgba(0, 0, 0, 0.1);
       box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
-      margin: 10px 20px 20px 20px;
+      margin: 10px 20px 0px 20px;
       padding: 30px;
       overflow-y: auto;
     }
@@ -245,12 +245,11 @@
     /* buscar */
     .contenedor>.section {
       grid-area: section;
-      margin: 10px 20px 0 0;
       overflow-y: auto;
       display: grid;
       grid-template-rows: 65px auto auto;
       height: calc(100% - 30px);
-      gap: 10px;
+      padding: 10px 20px 0 0;
     }
 
     .section>.buscarDashboard {
@@ -361,16 +360,22 @@
 
 
     /* fin cardsDashboards */
-    .graficosDashboard {
-      height: 1000px;
-      background-color: black;
-    }
 
     /* fin del section del centro xd */
+
     /* graficos dashboard */
+    .graficosDashboard {
+      background-color: #cecece;
+    }
+
+    .graficosDashboard>.contCanvas {
+      margin-top: 10px;
+      border-radius: 20px;
+    }
+
     /* fin graficos dashboard */
 
-    @media (max-width:1366px) {
+    @media (max-width:20px) {
       .contenedor {
         grid-template-columns: 300px 1fr 1fr 1fr;
       }
@@ -536,11 +541,143 @@
         </div>
       </div>
       <div class="graficosDashboard">
-        <canvas></canvas>
-        <canvas></canvas>
+        <canvas id="ventasTotales" class="contCanvas" width="700" height="550"></canvas>
+        <canvas id="ventasTipos" class="contCanvas"></canvas>
       </div>
     </section>
   </div>
+  <script>
+    const capVentasTotales = document.querySelector('#ventasTotales')
+
+    const ctxTotales = capVentasTotales.getContext('2d');
+    ctxTotales.fillStyle = "#ffffff";
+    ctxTotales.fillRect(0, 0, 700, 550);
+    // Ventas Totales
+    ctxTotales.fillStyle = "#000"
+    ctxTotales.font = 'bolder 20px Arial';
+    ctxTotales.fillText('VENTAS TOTALES', 10, 30)
+    // +2%
+    ctxTotales.fillStyle = "#03a100"
+    ctxTotales.font = 'bolder 10px Arial';
+    ctxTotales.fillText('+2%', 10, 50)
+    // Vetnas mensuales
+    ctxTotales.fillStyle = "#666666"
+    ctxTotales.font = 'bolder 10px Arial';
+    ctxTotales.fillText('Ventas mensuales', 40, 50)
+    // plano cartesiano xd
+    // Eje Y
+    // linea Y
+    ctxTotales.strokeStyle = '#000000'
+    ctxTotales.beginPath();
+    ctxTotales.moveTo(60, 90);
+    ctxTotales.lineWidth = 1;
+    ctxTotales.lineTo(60, 450)
+    ctxTotales.stroke();
+    // 100
+    ctxTotales.font = 'bolder 10px Arial';
+    ctxTotales.fillText('100', 30, 90)
+    // 75
+    ctxTotales.font = 'bolder 10px Arial';
+    ctxTotales.fillText('75', 30, 180)
+    //50
+    ctxTotales.font = 'bolder 10px Arial';
+    ctxTotales.fillText('50', 30, 270)
+    //25
+    ctxTotales.font = 'bolder 10px Arial';
+    ctxTotales.fillText('25', 30, 360)
+    // 0
+    ctxTotales.font = 'bolder 10px Arial';
+    ctxTotales.fillText('0', 30, 450)
+
+    // Eje X
+    // Linea X
+    ctxTotales.strokeStyle = '#000000'
+    ctxTotales.beginPath();
+    ctxTotales.moveTo(60, 450);
+    ctxTotales.lineWidth = 1;
+    ctxTotales.lineTo(660, 450)
+    ctxTotales.stroke();
+    // Enero
+    ctxTotales.font = 'bolder 10px Arial';
+    ctxTotales.fillText('Enero', 60, 480)
+    // Febrer
+    ctxTotales.font = 'bolder 10px Arial';
+    ctxTotales.fillText('Febrero', 180, 480)
+    // Marzo
+    ctxTotales.font = 'bolder 10px Arial';
+    ctxTotales.fillText('Marzo', 300, 480)
+    // Abril
+    ctxTotales.font = 'bolder 10px Arial';
+    ctxTotales.fillText('Abril', 420, 480)
+    // Mayo
+    ctxTotales.font = 'bolder 10px Arial';
+    ctxTotales.fillText('Mayo', 540, 480)
+    // fin plano cartesiano
+
+    // Puntos
+    // Primer punto
+    ctxTotales.fillStyle = "#03a100"
+    ctxTotales.beginPath();
+    ctxTotales.arc(60, 370, 8, 0, 2 * Math.PI)
+    ctxTotales.fill();
+    // segundo punto
+    ctxTotales.beginPath();
+    ctxTotales.arc(200, 200, 8, 0, 2 * Math.PI)
+    ctxTotales.fill();
+    // Tercer punto
+    ctxTotales.beginPath();
+    ctxTotales.arc(320, 420, 8, 0, 2 * Math.PI)
+    ctxTotales.fill();
+    // Cuarto punto
+    ctxTotales.beginPath();
+    ctxTotales.arc(440, 180, 8, 0, 2 * Math.PI)
+    ctxTotales.fill();
+    // Quinto punto
+    ctxTotales.beginPath();
+    ctxTotales.arc(560, 120, 8, 0, 2 * Math.PI)
+    ctxTotales.fill();
+    // Fin puntos
+
+    // aviso
+    ctxTotales.fillStyle = "#EEEEEE"
+    ctxTotales.fillRect(200, 130, 100, 50)
+
+    ctxTotales.fillStyle = "#000"
+    ctxTotales.font = '12px Arial';
+    ctxTotales.fillText('Marzo:', 205, 145)
+    ctxTotales.font = '12px Arial';
+    ctxTotales.fillText('S/. 5000.00:', 205, 165)
+
+    // no se como hacer esas lineas curveadas xd
+    // asi que pinta la linea :v
+    const margenx = capVentasTotales.offsetLeft
+    const margeny = capVentasTotales.offsetTop;
+
+    let par = [];
+    const pintar = ({ x, y }) => {
+      let cordx = x - margenx;
+      let cordy = y - margeny;
+      par.push({ cordx, cordy });
+      if (par.length == 2) {
+        ctxTotales.strokeStyle = '#03a100'
+        ctxTotales.lineCap = 'round';
+        ctxTotales.beginPath();
+        ctxTotales.moveTo(par[0].cordx, par[0].cordy);
+        ctxTotales.lineWidth = 6;
+        ctxTotales.lineTo(par[1].cordx, par[1].cordy);
+        ctxTotales.stroke();
+        par.shift();
+      }
+    }
+
+    capVentasTotales.addEventListener('mousedown', () => {
+      capVentasTotales.addEventListener('mousemove', pintar);
+      capVentasTotales.addEventListener('mouseup', () => {
+        capVentasTotales.removeEventListener('mousemove', pintar);
+        par = [];
+      })
+    })
+  </script>
 </body>
 
 </html>
