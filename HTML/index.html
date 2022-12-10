@@ -226,7 +226,6 @@
       .opciones-producto > .btn_producto-select {
         background-color: var(--navbarColorActive);
       }
-
       .mostrar {
         height: 271px;
       }
@@ -245,10 +244,8 @@
         font-size: 1.1rem;
       }
       .filtros-producto > p:nth-child(1)  {
-
       }
       .filtros-producto > p:nth-child(3)  {
-
       }
       .search-principal {
         display: flex;
@@ -283,20 +280,17 @@
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
         cursor: pointer;
       }
-
       .form-filtros {
         display: flex;
         flex-wrap: wrap;
         gap: 15px;
         justify-content: center;
       }
-
       .filtros > p {
         font-weight: bold;
         font-size: 1.2rem;
         margin-bottom: 3px;
       }
-
       .filtros > input:nth-child(2) {
         width: 150px;
         height: 25px;
@@ -306,7 +300,6 @@
         font-size: 1rem;
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
       }
-
       .botones-filtro {
         display: flex;
         width: 100%;
@@ -315,7 +308,6 @@
         gap: 15px;
         margin-top: 5px;
       }
-
       .botones-filtro > .botones-filtro_boton-limpiar,
       .botones-filtro > .botones-filtro_boton-filtrar {
         width: 100px;
@@ -329,7 +321,6 @@
       }
 
       /*-------------------Estilos Producto----------------*/
-      
       .parte_ventas_principal > h1 {
         margin: 40px 0 20px 0 ;
         text-align: center;
@@ -348,7 +339,7 @@
       .Producto1 {
         height: 170px;
         width: 100%;
-        margin: 0 20px;
+        margin: 0 5%;
         background: rgba(255, 255, 255, 1);
         border-radius: 5px;
         display: grid;
@@ -357,17 +348,14 @@
         align-items: center;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
       }
-
       .Producto1 > button {
         background: none;
         border: none;
         cursor: pointer;
       }
-
       .Producto1_imagen {
         display: grid;
       }
-
       .Producto1_imagen > img {
         height: 170px;
         width: 100%;
@@ -405,7 +393,6 @@
         text-overflow: ellipsis;
         overflow: hidden;
        }
-
       .Producto_precio__oferta {
         display: flex;
         gap: 10px;
@@ -422,17 +409,14 @@
           font-size: 1.1rem;
           /* display: none; */
       }
-
       .Producto_informacion > p {
         font-size: 1.2rem;
       }
-
       .Producto_button {
         display: flex;
         justify-content: end;
         width: 100%;
       }
-
       .Producto_button > button {
         height: 34px;
         width: 45%;
@@ -442,21 +426,59 @@
         border-radius: 5px;
         cursor: pointer;
       }
+      /*----------------Estilos Paginacion---------------*/
+      .Paginacion_Productos{
+        margin: 35px 0;
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        font-size: 1.3rem;
+      }
+      .Paginacion_Productos > a > p {
+        display: none;
+      }
+      .Paginacion_Productos > span {
+        margin: auto 0;
+        font-size: 1.6rem;
+      }
+      .Paginacion_opcion {
+        border: 1px solid var(--navbarColorInactive);
+        height: 36px;
+        padding: 0 2%;
+        display: flex;
+        align-items: center;
+        border-radius: 3px;
+        text-decoration: none;
+        color: black;
+        background-image: -webkit-linear-gradient(top, #fff 0px, #efefef 100%); 
+      }
+      .Paginacion_Productos > a:first-child,
+      .Paginacion_Productos > a:last-child{
+        border: none;
+        background-image: none;
+        padding: 0 3px;
+        color: #444;
+      }
+      .Paginacion_option_active  {
+        background: var(--navbarColorActive);
+        color: white;
+      }
 
       /*-------------------Estilos Footer----------------*/
       footer {
-        margin-top: 15px; /*A corregir*/
+        background-color: #f0f2f5;
       }
       .redes_sociales__footer {
         display: grid;
-        grid-template-columns: auto 191px auto;
+        grid-template-columns: auto 170px auto;
         align-items: center;
-        gap: 15px; 
-        margin-bottom: 15px;
+        gap: 10px; 
+        margin-bottom: 10px;
       }
       .redes_sociales__footer > hr{
-        height: 3px;
+        height: 2px;
         background-color: var(--navbarColorInactive);
+        border:  none;
       }
       .redes_sociales_footer_iconos {
         display: flex;
@@ -465,10 +487,8 @@
         list-style: none;
       }
       .redes_sociales_footer_iconos > li {
-        border-radius: 50%;
-        border: 1.7px solid var(--navbarColorInactive);
         height: 35px;
-        width: 35px;
+        width: 30px;
         text-align: center;
         display: flex;
         align-items: center;
@@ -477,43 +497,41 @@
       .redes_sociales_footer_iconos > li > a {
       }
       .redes_sociales_footer_iconos > li > a > i {
+        font-size: 2.1rem;
         color: var(--navbarColorInactive);
-        font-size: 1.8rem;
       }
-      
       .informacion__footer {
         margin: 0 15px;
         text-align: center;
         display: grid;  
         gap: 2px;
-        padding-bottom: 15px;
+        padding-bottom: 25px;
       }
-
       .informacion__footer > p {
         font-weight: 500;
         font-size: 1.1rem;
+        color: black  ;
       }
       .informacion__footer > p:nth-child(1) {
-        font-size: 2rem;
+        font-size: 2.2rem;
         font-weight: 500;
         margin-bottom: 10px;
+        color: var(--navbarColorInactive);
       }
-
       .informacion__footer > p:nth-child(7) {
         margin: 10px 0;
         font-weight: bold;
-        font-size: 1.45rem;
+        font-size: 1.6rem;
+        color: var(--navbarColorInactive);
       }
-
       .Politicas_footer {
         display: flex;
         justify-content: center;
         gap: 10px;
       }
-
       .Politicas_footer > a {
+        font-size: 1.3rem;
         color: black;
-        font-size: 1.1rem;
       }
 
       /*  480 */
@@ -527,6 +545,7 @@
         .nav-left > li > a {
           padding: 10px 10px 10px 20px;
         }
+        
         /* -----------------Estilos Banner------------ */
         .frases-banner {
           padding: 6% 0 0 5%;
@@ -554,12 +573,13 @@
           width: 135px;
           height: 32px;
         }
+
         /*------------------------------- Estilos filtro --------------------- */
         .filtros-producto  {
           margin: 0 40px;
         }
         .filtros-producto > p {
-          font-size: 1.2rem;
+          font-size: 1.3rem;
           margin-bottom: 15px;
           margin-top: 15px;
         }
@@ -585,7 +605,6 @@
         }
         .form-filtros {
           gap: 18px;
-
         }
         .filtros > p {
           font-size: 1.4rem;
@@ -601,7 +620,6 @@
         .botones-filtro {
           margin-top: 7px;
         }
-
         .botones-filtro > .botones-filtro_boton-limpiar,
         .botones-filtro > .botones-filtro_boton-filtrar {
           width: 120px;
@@ -623,7 +641,6 @@
           gap: 10px;
           margin: 0 5%; 
         }
-        
         .Producto1 {        
           height: 320px;
           border-radius: 8px;
@@ -633,7 +650,6 @@
           align-items: stretch;
           gap: 12px;        
         }
-
         .Producto1_imagen {
           height: 100%;
           display: grid;
@@ -648,7 +664,6 @@
           margin: 0;
           gap: 12px;
         }
-
         .Producto_informacion {
           padding: 0 10px;
           display: grid;
@@ -658,18 +673,15 @@
             "nombre nombre"
             "precio precio"
         }
-
         .Producto_informacion > button:nth-child(1){
           grid-area: nombre;
         }
-
         .Producto_precio__oferta {
           grid-area: precio;
           display: flex;
           justify-content: space-between;
           padding-right: 10px;
         }
-
         .Producto_informacion > h5:nth-child(2),
         .Producto_informacion > p:nth-child(4),
         .Producto_informacion > p:nth-child(6) {
@@ -677,27 +689,86 @@
           justify-content: end;
           padding-right: 10px;
         }
-
         .Producto_informacion > button:nth-child(1),
         .Producto_informacion > .Producto_precio__oferta > h5 {
           font-size: 1.5rem;
         }
-
         .Producto_informacion > p {
           font-size: 1.25rem;
         }
-
         .Producto_button {
           justify-content: none;
           margin: 0;
         }
-
         .Producto_button > button {
           border-radius: 0 0 8px 8px;
           padding: 0;
           height: 100%;
           width: 100%;
           font-size: 1.8rem;
+        }
+
+        /*----------------Estilos Paginacion---------------*/
+        .Paginacion_Productos{
+          margin: 40px 0;
+          gap: 10px;
+          font-size: 1.7rem;
+        }
+        .Paginacion_Productos > a > p {
+        }
+        .Paginacion_Productos > span {
+          font-size: 1.8rem;
+        }
+        .Paginacion_opcion {
+          height: 39px;
+          border-radius: 4px;
+          padding: 0 9px;
+        }
+        .Paginacion_Productos > a:first-child,
+        .Paginacion_Productos > a:last-child{
+          padding: 0 4px;
+        }
+
+        /*-------------------Estilos Footer----------------*/
+        .redes_sociales__footer {
+          grid-template-columns: auto 200px auto;
+          gap: 12px; 
+          margin-bottom: 14px;
+        }
+        .redes_sociales__footer > hr{
+          height: 2px;
+        }
+        .redes_sociales_footer_iconos {
+          gap: 6px;
+        }
+        .redes_sociales_footer_iconos > li {
+          height: 38px;
+          width: 33px;
+        }
+        .redes_sociales_footer_iconos > li > a > i {
+          font-size: 2.6rem;
+        }  
+        .informacion__footer {
+          gap: 4px;
+          padding-bottom: 28px;
+        }
+        .informacion__footer > p {
+          font-size: 1.2rem;
+        }
+        .informacion__footer > p:nth-child(1) {
+          font-size: 2.6rem;
+          margin-bottom: 12px;
+        }
+        .informacion__footer > p:nth-child(7) {
+          margin: 12px 0;
+          font-size: 1.8rem;
+        }
+        .Politicas_footer {
+          gap: 12px;
+        }
+        .Politicas_footer > a {
+          font-size: 1.4rem;
+          color: black;
         }
       }
 
@@ -717,7 +788,6 @@
           width: 90px;
           height: 40px;
           cursor: pointer;
-
         }
         .nav > span {
           display: none;
@@ -754,6 +824,7 @@
         .nav-right > li > i {
           font-size: 1.8rem;
         }
+
         /* -----------------Estilos Banner------------ */
         .index-banner {
           height: 380px;
@@ -784,6 +855,7 @@
           width: 155px;
           font-size: 1.7rem;
         }
+
         /*------------------------------- Estilos filtro --------------------- */
         .filtros-producto  {
           margin: 0 60px;
@@ -852,19 +924,81 @@
         .Producto1_imagen > img {
           border-radius: 10px 10px 0 0;
         }
-
         .Producto_informacion > button:nth-child(1),
         .Producto_informacion > .Producto_precio__oferta > h5 {
           font-size: 1.6rem;
         }
-
         .Producto_informacion > p {
           font-size: 1.35rem;
         }
-
         .Producto_button > button {
           border-radius: 0 0 10px 10px;
           font-size: 1.9rem;
+        }
+
+        /*----------------Estilos Paginacion---------------*/
+        .Paginacion_Productos{
+          margin: 45px 0;
+          font-size: 1.9rem;
+        }
+        .Paginacion_Productos > a > p {
+          display: flex;
+          font-size: 1.7rem;
+          font-weight: 500;
+        }
+        .Paginacion_Productos > span {
+          font-size: 2rem;
+        }
+        .Paginacion_opcion {
+          height: 42px;
+          padding: 0 10px;
+        }
+        .Paginacion_Productos > a:first-child,
+        .Paginacion_Productos > a:last-child{
+          display: flex;
+          gap: 5px;
+          font-size: 1.5rem;
+        }
+
+        /*-------------------Estilos Footer----------------*/
+        .redes_sociales__footer {
+          grid-template-columns: auto 220px auto;
+          gap: 14px; 
+          margin-bottom: 18px;
+        }
+        .redes_sociales__footer > hr{
+          height: 3px;
+        }
+        .redes_sociales_footer_iconos {
+          gap: 8px;
+        }
+        .redes_sociales_footer_iconos > li {
+          height: 41px;
+          width: 36px;
+        }
+        .redes_sociales_footer_iconos > li > a > i {
+          font-size: 3.1rem;
+        }  
+        .informacion__footer {
+          gap: 6px;
+          padding-bottom: 31px;
+        }
+        .informacion__footer > p {
+          font-size: 1.4rem;
+        }
+        .informacion__footer > p:nth-child(1) {
+          font-size: 3.2rem;
+          margin-bottom: 14px;
+        }
+        .informacion__footer > p:nth-child(7) {
+          margin: 14px 0;
+          font-size: 2.4rem;
+        }
+        .Politicas_footer {
+          gap: 14px;
+        }
+        .Politicas_footer > a {
+          font-size: 1.8rem;
         }
       }
 
@@ -900,11 +1034,11 @@
         .nav-right > li > i {
           font-size: 2rem;
         }
+
         /* -----------------Estilos Banner------------ */
         .index-banner {
           height: 650px;
         }
-
         .frases-banner > h1 {
           font-size: 4rem;
         }
@@ -928,6 +1062,7 @@
           width: 300px;
           font-size: 2.5rem;
         }
+
         /*------------------------------- Estilos filtro --------------------- */
         .filtros-producto  {
           margin: 0 100px;
@@ -981,6 +1116,7 @@
           font-size: 2.5rem;
           margin-top: 0px;
         }
+
         /*-------------------Estilos Producto----------------*/
         .parte_ventas_principal > h1 {
           padding: 10px 0;
@@ -997,22 +1133,78 @@
         .Producto1_imagen > img {
           border-radius: 12px 12px 0 0;
         }
-
         .Producto_informacion {
           grid-template-rows:  auto 15% 20px 20px;
         }
-
         .Producto_informacion > button:nth-child(1),
         .Producto_informacion > .Producto_precio__oferta > h5{
           font-size: 1.9rem;
         }
-
         .Producto_informacion > p {
           font-size: 1.65rem;
         }
 
         .Producto_button > button {
           border-radius: 0 0 12px 12px;
+          font-size: 2.2rem;
+        }
+
+        /*----------------Estilos Paginacion---------------*/
+        .Paginacion_Productos{
+          margin: 50px 0;
+          font-size: 2.1rem;
+        }
+        .Paginacion_Productos > a > p {
+          font-size: 1.8rem;
+        }
+        .Paginacion_opcion {
+          height: 50px;
+          padding: 0 12px;
+        }
+        .Paginacion_Productos > span {
+          font-size: 2.4rem;
+        }
+        .Paginacion_Productos > a:first-child,
+        .Paginacion_Productos > a:last-child{
+          font-size: 1.6rem;
+          padding: 0 8px;
+        }
+        
+        /*-------------------Estilos Footer----------------*/
+        .redes_sociales__footer {
+          grid-template-columns: auto 240px auto;
+          gap: 30px; 
+          margin-bottom: 22px;
+        }
+        .redes_sociales_footer_iconos {
+          gap: 10px;
+        }
+        .redes_sociales_footer_iconos > li {
+          height: 44px;
+          width: 39px;
+        }
+        .redes_sociales_footer_iconos > li > a > i {
+          font-size: 3.3rem;
+        }  
+        .informacion__footer {
+          gap: 6px;
+          padding-bottom: 31px;
+        }
+        .informacion__footer > p {
+          font-size: 1.5rem;
+        }
+        .informacion__footer > p:nth-child(1) {
+          font-size: 3.6rem;
+          margin-bottom: 16px;
+        }
+        .informacion__footer > p:nth-child(7) {
+          margin: 16px 0;
+          font-size: 2.8rem;
+        }
+        .Politicas_footer {
+          gap: 16px;
+        }
+        .Politicas_footer > a {
           font-size: 2.2rem;
         }
       }
@@ -1339,7 +1531,15 @@
         </div>
 
         <div class="Paginacion_Productos">
-          
+          <a href="" class="Paginacion_opcion"><i class="fas fa-chevron-double-left"></i><p>Anterior</p> </a>
+          <a href="" class="Paginacion_opcion">1</a>
+          <span>...</span>
+          <a href="" class="Paginacion_opcion">500</a>
+          <a href="" class="Paginacion_opcion Paginacion_option_active">501</a>
+          <a href="" class="Paginacion_opcion">502</a>
+          <span>...</span>
+          <a href="" class="Paginacion_opcion">999</a>
+          <a href="" class="Paginacion_opcion"><p>Siguiente</p><i class="fas fa-chevron-double-right"></i></a>
         </div>
       </div>
     </main>
