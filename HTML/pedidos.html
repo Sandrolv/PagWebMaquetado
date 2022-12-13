@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Anonymous+Pro&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <title>My Nature</title>
+    <style>
+      :root {
+        --alertColor: #b4bf35;
+        --navbarColorInactive: #31572c;
+        --navbarColorActive: #4f772d;
+        --colorButtonTiFilter: #d4e09b;
+        --colorCardButton: #03a100;
+        --colorCardButtonOfert: #a13a00;
+        --colorNavMovilDesplegable: #2f3f2d;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+      html {
+        font-size: 62.5%;
+      }
+
+      /* -480 */
+
+      .alert {
+        background-color: var(--alertColor);
+        height: 32px;
+        display: flex;
+        align-items: center;
+        font-size: 2.5rem;
+        box-shadow: 0px 0.1px 5px black;
+        z-index: 1000;
+      }
+      .alert > marquee {
+        font-size: 1.5rem;
+      }
+      .nav {
+        width: 100%;
+        padding: 0 10px 0;
+        display: grid;
+        grid-template-rows: 40px;
+        grid-template-columns: 10% auto;
+        gap: 10px;
+        background-color: var(--navbarColorInactive);
+        align-items: center;
+        box-shadow: 0px 0.1px 5px black;
+        position: relative; /*Desplegable*/
+        z-index: 2000;
+      }
+      .nav > span {
+        border: 1px solid #b0bfaf;
+        text-align: center;
+        border-radius: 4px;
+        padding: 2px;
+        background-color: var(--colorNavMovilDesplegable);
+        width: 26px;
+      }
+      .nav > span > i {
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 200;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+      }
+      .nav-left {
+        position: absolute; /*Desplegable*/
+        top: 40px;
+        list-style: none;
+        height: 0px;  /*Desplegable*/
+        overflow: hidden; /*Desplegable*/
+        transition: height 0.3s linear; /*Desplegable*/
+      }
+      .nav-left > li {
+        width: 160px;
+        background-color: var(--colorNavMovilDesplegable);
+      }
+      .nav-left > li:first-child {
+        display: none;
+      }
+      .nav-left > li > a {
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 2px;
+        color: white;
+        padding: 10px 10px 10px 15px;
+        display: block; /*Hace respetar el Padding*/
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+      .nav-left > li:first-child > a:hover {
+        transform: none;
+      }
+      .nav-left > li > a:hover {
+        transform: scale(1.1, 1.1);
+        background-color: var(--navbarColorActive);
+        transition-property: background-color, transform; /*hover*/
+        transition-duration: 500ms;
+      }
+      .nav-left > .nav_left_opcion-select > a {
+        background-color: var(--navbarColorActive);
+      }
+      .nav_left_opcion-sobrante {
+        height: 81px;
+      }
+      
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: flex-end;
+        list-style: none;
+      }
+      .nav-right > li:nth-child(1) {
+        display: flex;
+        gap: 5px;
+      }
+      .nav-right > li > img {
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .nav-right > li > p {
+        color: white;
+        cursor: pointer;
+        font-size: 1.4rem;
+        padding-top: 3px;
+      }
+      .nav-right > li > i {
+        color: white;
+        cursor: pointer;
+        font-size: 1.6rem;
+      }
+
+      /* -----------------Estilos Banner------------ */
+      main {
+        position: relative;
+      }
+      .index-banner {
+        background-image:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(https://lh3.google.com/u/0/d/1D4AzKfvj-JlVX3RquBOGHOOjon7MMbaW=w1918-h1009-iv1);
+        background-size: 160%;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: cover;
+        height: 271px;
+        width: 100%;
+        display: grid;
+        z-index: -2000;
+      }
+      .frases-banner {
+        padding: 8% 0 0 5%;
+      }
+      .frases-banner > h1 {
+        font-size: 1.4rem;
+        color: white;
+        font-family: "Anonymous Pro", monospace;
+        margin-bottom: 8px;
+      }
+      .index-banner > .frases-banner > p {
+        font-size: 1.2rem;
+        color: white;
+        font-family: "Abel", sans-serif;
+        width: 40%;
+        margin-bottom: 12px;
+      }
+      .frases-banner > a:nth-child(3) {
+        border: 1px solid white;
+        height: 17px;
+        width: 61px;
+        background-color: transparent;
+        font-family: "Anonymous Pro", monospace;
+        color: white;
+        font-size: 1rem;
+        text-decoration: none;
+        padding: 4px;
+      }
+      .mostrar {
+        height: 271px;
+      }
+      /*-------------------Estilos Footer----------------*/
+      footer {
+        background-color: #f0f2f5;
+      }
+      .redes_sociales__footer {
+        display: grid;
+        grid-template-columns: auto 170px auto;
+        align-items: center;
+        gap: 10px; 
+        margin-bottom: 10px;
+      }
+      .redes_sociales__footer > hr{
+        height: 2px;
+        background-color: var(--navbarColorInactive);
+        border:  none;
+      }
+      .redes_sociales_footer_iconos {
+        display: flex;
+        justify-content : center;
+        gap: 4px;
+        list-style: none;
+      }
+      .redes_sociales_footer_iconos > li {
+        height: 35px;
+        width: 30px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .redes_sociales_footer_iconos > li > a {
+      }
+      .redes_sociales_footer_iconos > li > a > i {
+        font-size: 2.1rem;
+        color: var(--navbarColorInactive);
+      }
+      .informacion__footer {
+        margin: 0 15px;
+        text-align: center;
+        display: grid;  
+        gap: 2px;
+        padding-bottom: 25px;
+      }
+      .informacion__footer > p {
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: black  ;
+      }
+      .informacion__footer > p:nth-child(1) {
+        font-size: 2.2rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: var(--navbarColorInactive);
+      }
+      .informacion__footer > p:nth-child(7) {
+        margin: 10px 0;
+        font-weight: bold;
+        font-size: 1.6rem;
+        color: var(--navbarColorInactive);
+      }
+      .Politicas_footer {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      .Politicas_footer > a {
+        font-size: 1.3rem;
+        color: black;
+      }
+
+      /*  480 */
+      @media (min-width: 480px) {
+        .nav {
+          padding: 0 18px;
+        }
+        .nav-left > li {
+          width: 180px;
+        }
+        .nav-left > li > a {
+          padding: 10px 10px 10px 20px;
+        }
+        
+        /* -----------------Estilos Banner------------ */
+        .frases-banner {
+          padding: 6% 0 0 5%;
+        }
+        .frases-banner > h1 {
+          font-size: 1.8rem;
+        }
+        .index-banner > .frases-banner > p {
+          font-size: 1.4rem;
+          width: 35%;
+          margin-bottom: 20px;
+        }
+        .frases-banner > a:nth-child(3) {
+          height: 20px;
+          width: 70px;
+          font-size: 1.2rem;
+          padding: 6px;
+        }
+
+        /*-------------------Estilos Footer----------------*/
+        .redes_sociales__footer {
+          grid-template-columns: auto 200px auto;
+          gap: 12px; 
+          margin-bottom: 14px;
+        }
+        .redes_sociales__footer > hr{
+          height: 2px;
+        }
+        .redes_sociales_footer_iconos {
+          gap: 6px;
+        }
+        .redes_sociales_footer_iconos > li {
+          height: 38px;
+          width: 33px;
+        }
+        .redes_sociales_footer_iconos > li > a > i {
+          font-size: 2.6rem;
+        }  
+        .informacion__footer {
+          gap: 4px;
+          padding-bottom: 28px;
+        }
+        .informacion__footer > p {
+          font-size: 1.2rem;
+        }
+        .informacion__footer > p:nth-child(1) {
+          font-size: 2.6rem;
+          margin-bottom: 12px;
+        }
+        .informacion__footer > p:nth-child(7) {
+          margin: 12px 0;
+          font-size: 1.8rem;
+        }
+        .Politicas_footer {
+          gap: 12px;
+        }
+        .Politicas_footer > a {
+          font-size: 1.4rem;
+          color: black;
+        }
+      }
+
+      /*  768 */
+      @media (min-width: 768px) {
+        .alert {
+          height: 36px;
+        }
+        .nav {
+          padding: 0 18px;
+          grid-template-rows: 45px;
+          grid-template-columns: 73% auto;
+          gap: 5px;
+        }
+        .nav > span {
+          display: none;
+        }
+        .nav-left {
+          position: static;
+          display: flex;
+          height: 100%;
+        }
+        .nav-left > li {
+          width: auto;
+          height: 100%;
+          background-color: var(--navbarColorInactive);
+        }
+        .nav-left > li:first-child {
+          display: block;
+          margin-right: 3px;
+        }
+        .nav-left > li:first-child > a  {
+          padding: 0;
+        }
+        .nav-left > li:first-child > a > .image-nav {
+          height: 45px;
+          width: 100px;
+        }
+        .nav-left > li > a {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          font-size: 1.4rem;
+          height: 100%;
+          margin: 0 2px;
+        }
+        .nav_left_opcion-select {
+          display: none;
+        }
+        .nav_left_opcion-sobrante {
+          display: none;
+        }
+        .nav-right > li > img {
+          height: 25px;
+        }
+        .nav-right > li > p {
+          font-size: 1.6rem;
+        }
+        .nav-right > li > i {
+          font-size: 1.8rem;
+        }
+
+        /* -----------------Estilos Banner------------ */
+        .index-banner {
+          height: 380px;
+        }
+        .frases-banner {
+          padding: 5% 0 0 5%;
+        }
+        .frases-banner > h1 {
+          font-size: 2.5rem;
+        }
+        .index-banner > .frases-banner > p {
+          font-size: 2.1rem;
+          margin-bottom: 25px;
+        }
+        .frases-banner > a:nth-child(3) {
+          height: 30px;
+          width: 110px;
+          font-size: 1.9rem;
+        }
+
+        /*-------------------Estilos Footer----------------*/
+        .redes_sociales__footer {
+          grid-template-columns: auto 220px auto;
+          gap: 14px; 
+          margin-bottom: 18px;
+        }
+        .redes_sociales__footer > hr{
+          height: 3px;
+        }
+        .redes_sociales_footer_iconos {
+          gap: 8px;
+        }
+        .redes_sociales_footer_iconos > li {
+          height: 41px;
+          width: 36px;
+        }
+        .redes_sociales_footer_iconos > li > a > i {
+          font-size: 3.1rem;
+        }  
+        .informacion__footer {
+          gap: 6px;
+          padding-bottom: 31px;
+        }
+        .informacion__footer > p {
+          font-size: 1.4rem;
+        }
+        .informacion__footer > p:nth-child(1) {
+          font-size: 3.2rem;
+          margin-bottom: 14px;
+        }
+        .informacion__footer > p:nth-child(7) {
+          margin: 14px 0;
+          font-size: 2.4rem;
+        }
+        .Politicas_footer {
+          gap: 14px;
+        }
+        .Politicas_footer > a {
+          font-size: 1.8rem;
+        }
+      }
+
+      /*  1024 */
+      @media (min-width: 1024px) {
+        .alert {
+          height: 42px;
+        }
+        .alert marquee {
+          font-size: 2rem;
+        }
+        .nav {
+          padding: 0 40px 0;
+          grid-template-rows: 50px;
+          grid-template-columns: 74% auto;
+        }
+        .nav-left > li:first-child {
+          margin-left: 5px;
+          margin-right: 3px;
+        }
+        .nav-left > li:first-child > a > .image-nav {
+          height: 50px;
+          width: 110px;
+        }
+        .nav-left > li > a {
+          font-size: 2rem;
+          margin: 0 3px;
+        }
+        .nav-right {
+          gap: 15px;
+          padding: 0;
+        }
+        .nav-right > li > img {
+          height: 30px;
+        }
+        .nav-right > li > p {
+          font-size: 2rem;
+        }
+        .nav-right > li > i {
+          font-size: 2rem;
+        }
+
+        /* -----------------Estilos Banner------------ */
+        .index-banner {
+          height: 650px;
+        }
+        .frases-banner > h1 {
+          font-size: 4rem;
+        }
+        .index-banner > .frases-banner > p {
+          font-size: 3rem;
+          width: 30%;
+          margin-bottom: 30px;
+        }
+        .frases-banner > a:nth-child(3) {
+          border: 2px solid white;
+          height: 45px;
+          width: 150px;
+          font-size: 2.5rem;
+        }
+        
+        /*-------------------Estilos Footer----------------*/
+        .redes_sociales__footer {
+          grid-template-columns: auto 240px auto;
+          gap: 30px; 
+          margin-bottom: 22px;
+        }
+        .redes_sociales_footer_iconos {
+          gap: 10px;
+        }
+        .redes_sociales_footer_iconos > li {
+          height: 44px;
+          width: 39px;
+        }
+        .redes_sociales_footer_iconos > li > a > i {
+          font-size: 3.3rem;
+        }  
+        .informacion__footer {
+          gap: 6px;
+          padding-bottom: 31px;
+        }
+        .informacion__footer > p {
+          font-size: 1.5rem;
+        }
+        .informacion__footer > p:nth-child(1) {
+          font-size: 3.6rem;
+          margin-bottom: 16px;
+        }
+        .informacion__footer > p:nth-child(7) {
+          margin: 16px 0;
+          font-size: 2.8rem;
+        }
+        .Politicas_footer {
+          gap: 16px;
+        }
+        .Politicas_footer > a {
+          font-size: 2.2rem;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <header class="alert">
+      <marquee>
+        Primera compra? Descuento de un 5% en toda la compra realizada y
+        descuentos especiales para revendedores. Contactenos Ya!!
+      </marquee>
+    </header>
+
+    <nav class="nav">
+      <span><i class="fas fa-bars" id="btnNav"></i></span>
+      <ul class="nav-left" id="MenuNav">
+        <li >
+          <a href="./index.html">
+            <img
+              class="image-nav"
+              height="30px"
+              src="https://static.vecteezy.com/system/resources/thumbnails/007/534/194/small/nature-concept-banner-with-lush-green-foliage-illustration-vector.jpg"
+            />
+          </a>  
+        </li>
+        <li class="nav_left_opcion-select"><a href="./index.html">INICIO</a></li>
+        <li><a href="./nosotros.html">NOSOTROS</a></li>
+        <li><a href="./reporte.html">REPORTE</a></li>
+        <li><a href="./pedidos.html">PEDIDOS</a></li>
+        <li><a href="./capacitacion.html">CAPACITACIÓN</a></li>
+        <li class="nav_left_opcion-sobrante"></li>
+      </ul>
+
+      <ul class="nav-right">
+        <li>
+          <img
+            src="https://xsgames.co/randomusers/assets/avatars/male/54.jpg"
+          />
+          <p>Iniciar Sesión</p>
+        </li>
+        <li><i class="fal fa-shopping-cart"></i></li>
+        <li><i class="fal fa-bell"></i></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="index-banner">
+        <div class="frases-banner">
+          <h1>La naturaleza esta en tus manos.</h1>
+          <p>Prefiero tener rosas en mi mesa que diamantes en mi cuello ¿Tu que piensas?</p>
+          <a href="#">Contactar</a>
+        </div>
+      </div>
+
+      <div class="texto1"> 
+        PEDIDOS
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="redes_sociales__footer">
+        <hr>
+        <ul class="redes_sociales_footer_iconos"> 
+          <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href=""><i class="fab fa-instagram"></i></a></li>
+          <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+          <li><a href=""><i class="fal fa-envelope"></i></a></li>
+          <li><a href=""><i class="fab fa-twitter"></i></a></li>
+        </ul>
+        <hr>
+      </div>
+
+      <div class="informacion__footer">
+        <p>MY NATURE</p>
+        <p>CONTACTENOS</p>
+        <p>Direccion: Av. Ramiro Priale Priale S/N Miraflores Sapallanga</p>
+        <p>Referencia: A la vuelta de la esquina cruzando el parque central de miraflores</p>
+        <p>923 910 869</p>
+        <p>Email: MyNatureEsVida1508@viverokantu.pe</p>
+        <p> © Copyright 2022 MyNature Inc.</p>
+        <div class="Politicas_footer">
+          <a href="">Información legal</a>
+          <a href="">Política de Privacidad</a>
+        </div>
+      </div>
+      
+
+    </footer>
+    <script src="./Menu.js"></script>
+
+  </body>
+</html>
