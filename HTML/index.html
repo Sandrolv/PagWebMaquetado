@@ -247,10 +247,6 @@
         margin-top: 12px;
         font-size: 1.1rem;
       }
-      .filtros-producto > p:nth-child(1)  {
-      }
-      .filtros-producto > p:nth-child(3)  {
-      }
       .search-principal {
         display: flex;
         align-items: center;
@@ -262,7 +258,7 @@
       .search-principal_buscar_con_lupa > input:nth-child(1){
         width: 150px;
         height: 24px;
-        padding: 10px 10px 10px 20px;
+        padding: 5px 5px 5px 20px;
         border-radius: 8px;
         border: none;
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
@@ -293,7 +289,6 @@
       /* .form-filtros > div:nth-child(3){
         display: none;
       } */
-
       .filtros > p {
         font-weight: bold;
         font-size: 1.2rem;
@@ -304,20 +299,18 @@
         height: 25px;
         border-radius: 8px;
         border: none;
-        padding: 10px 10px 10px 12px;
+        padding: 5px 10px 5px 12px;
         font-size: 1rem;
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
       }
       .botones-filtro {
         display: flex;
         width: 100%;
-        align-items: center;
         justify-content: center;
         gap: 15px;
         margin-top: 5px;
       }
-      .botones-filtro > .botones-filtro_boton-limpiar,
-      .botones-filtro > .botones-filtro_boton-filtrar {
+      .botones-filtro > input {
         width: 100px;
         height: 24px;
         border-radius: 8px;
@@ -330,7 +323,7 @@
 
       /*-------------------Estilos Producto----------------*/
       .parte_ventas_principal > h1 {
-        margin: 40px 0 20px 0 ;
+        margin: 25px 0 20px 0 ;
         text-align: center;
         background-color: var(--navbarColorInactive);
         color: white;
@@ -340,9 +333,7 @@
       .venta-productos {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 15px;
-        width: 100%;
       }
       .Producto1 {
         height: 170px;
@@ -375,7 +366,6 @@
         display: grid;
         grid-template-rows: auto auto;
         gap: 10px;
-        justify-items: center;
         margin: 10px;
       }
       .Producto_informacion {
@@ -392,10 +382,8 @@
         max-width: fit-content;
         text-align: justify;
         display: grid;
-        grid-template-columns: 100%;
       }
       .Producto_informacion > button > h4 {
-        width: 100%;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -407,14 +395,14 @@
         align-items: end;
       }
       .Producto_precio__oferta > h5:nth-child(1) {
-          color: red;
-          font-size: 1.3rem;
+        color: red;
+        font-size: 1.3rem;
       }
       .Producto_precio__oferta > h5:nth-child(2) {
-          text-decoration: line-through;
-          color: grey;
-          font-size: 1.1rem;
-          /* display: none; */
+        text-decoration: line-through;
+        color: grey;
+        font-size: 1.1rem;
+        /* display: none; */
       }
       .Producto_informacion > p {
         font-size: 1.2rem;
@@ -422,7 +410,6 @@
       .Producto_button {
         display: flex;
         justify-content: end;
-        width: 100%;
       }
       .Producto_button > button {
         height: 34px;
@@ -495,12 +482,9 @@
       .redes_sociales_footer_iconos > li {
         height: 35px;
         width: 30px;
-        text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-      .redes_sociales_footer_iconos > li > a {
       }
       .redes_sociales_footer_iconos > li > a > i {
         font-size: 2.1rem;
@@ -516,11 +500,9 @@
       .informacion__footer > p {
         font-weight: 500;
         font-size: 1.1rem;
-        color: black  ;
       }
       .informacion__footer > p:nth-child(1) {
         font-size: 2.2rem;
-        font-weight: 500;
         margin-bottom: 10px;
         color: var(--navbarColorInactive);
       }
@@ -626,8 +608,7 @@
         .botones-filtro {
           margin-top: 7px;
         }
-        .botones-filtro > .botones-filtro_boton-limpiar,
-        .botones-filtro > .botones-filtro_boton-filtrar {
+        .botones-filtro > input {
           width: 120px;
           height: 32px;
           border-radius: 12px;
@@ -640,10 +621,8 @@
           font-size: 2.2rem;
         }
         .venta-productos {
-          width: auto;
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          justify-content: center;
           gap: 10px;
           margin: 0 5%; 
         }
@@ -654,11 +633,9 @@
           grid-template-rows: 50% auto;
           margin: 0;
           align-items: stretch;
-          gap: 12px;        
+          gap: 7px;        
         }
         .Producto1_imagen {
-          height: 100%;
-          display: grid;
           grid-template-rows: 100%;
         }
         .Producto1_imagen > img {
@@ -668,7 +645,7 @@
         .Producto1_right_mobile {
           grid-template-rows: auto 30%;
           margin: 0;
-          gap: 12px;
+          gap: 10px;
         }
         .Producto_informacion {
           padding: 0 10px;
@@ -684,11 +661,9 @@
         }
         .Producto_precio__oferta {
           grid-area: precio;
-          display: flex;
           justify-content: space-between;
           padding-right: 10px;
         }
-        .Producto_informacion > h5:nth-child(2),
         .Producto_informacion > p:nth-child(4),
         .Producto_informacion > p:nth-child(6) {
           display: flex;
@@ -702,13 +677,8 @@
         .Producto_informacion > p {
           font-size: 1.25rem;
         }
-        .Producto_button {
-          justify-content: none;
-          margin: 0;
-        }
         .Producto_button > button {
           border-radius: 0 0 8px 8px;
-          padding: 0;
           height: 100%;
           width: 100%;
           font-size: 1.8rem;
@@ -719,8 +689,6 @@
           margin: 40px 0;
           gap: 10px;
           font-size: 1.7rem;
-        }
-        .Paginacion_Productos > a > p {
         }
         .Paginacion_Productos > span {
           font-size: 1.8rem;
@@ -740,9 +708,6 @@
           grid-template-columns: auto 200px auto;
           gap: 12px; 
           margin-bottom: 14px;
-        }
-        .redes_sociales__footer > hr{
-          height: 2px;
         }
         .redes_sociales_footer_iconos {
           gap: 6px;
@@ -774,7 +739,6 @@
         }
         .Politicas_footer > a {
           font-size: 1.4rem;
-          color: black;
         }
       }
 
@@ -911,9 +875,9 @@
         }
         .botones-filtro {
           margin-top: 8px;
+          gap: 20px;
         }
-        .botones-filtro > .botones-filtro_boton-limpiar,
-        .botones-filtro > .botones-filtro_boton-filtrar {
+        .botones-filtro > input {
           width: 130px;
           height: 35px;
           border-radius: 14px;
@@ -924,6 +888,7 @@
         .parte_ventas_principal > h1 {
           padding: 8px 0;
           font-size: 2.4rem;
+          margin: 30px 0 25px 0;
         }
         .venta-productos {
           grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -957,6 +922,7 @@
           display: flex;
           font-size: 1.7rem;
           font-weight: 500;
+          padding-bottom: 2px;
         }
         .Paginacion_Productos > span {
           font-size: 2rem;
@@ -967,7 +933,6 @@
         }
         .Paginacion_Productos > a:first-child,
         .Paginacion_Productos > a:last-child{
-          display: flex;
           gap: 5px;
           font-size: 1.5rem;
         }
@@ -1125,24 +1090,24 @@
         .botones-filtro {
           margin-top: 8px;
           gap: 40px;
+          margin-top: 0px;
         }
-        .botones-filtro > .botones-filtro_boton-limpiar,
-        .botones-filtro > .botones-filtro_boton-filtrar {
+        .botones-filtro > input {
           width: 180px;
           height: 50px;
           border-radius: 16px;
           font-size: 2.5rem;
-          margin-top: 0px;
         }
 
         /*-------------------Estilos Producto----------------*/
         .parte_ventas_principal > h1 {
           padding: 10px 0;
           font-size: 3.4rem;
+          margin: 40px 0 35px 0;
         }
         .venta-productos {
           grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-          gap: 15px;
+          gap: 20px;
         }
         .Producto1 {
           height: 400px;
@@ -1205,8 +1170,8 @@
           font-size: 3.3rem;
         }  
         .informacion__footer {
-          gap: 6px;
-          padding-bottom: 31px;
+          gap: 7px;
+          padding-bottom: 35px;
         }
         .informacion__footer > p {
           font-size: 1.5rem;
@@ -1333,8 +1298,8 @@
             </div>
 
             <div class="botones-filtro">
-            <input type="submit" class="botones-filtro_boton-limpiar" value="Limpiar">
-            <input type="submit" class="botones-filtro_boton-filtrar" value="Filtrar">
+            <input type="submit" value="Limpiar">
+            <input type="submit" value="Filtrar">
             </div>
           </form>
         </div>
@@ -1349,7 +1314,7 @@
             <div class="Producto1_right_mobile">
               <div class="Producto_informacion">
                 <button>
-                  <h4>Buganvilla colas de zorro mapache </h4>
+                  <h4>Buganvilla </h4>
                 </button>
                 <div class="Producto_precio__oferta">
                   <h5>S/. 78.00</h5>
