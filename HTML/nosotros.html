@@ -197,6 +197,47 @@
       .mostrar {
         height: 271px;
       }
+      
+      /*---------Estilos informacion Nosotros------------*/
+      .nosotros_informacion {
+        background-color: #f0f2f5;
+      }
+      .imagen_large {
+        width: 100%;
+      }
+      .imagen_left,
+      .imagen_vivero,
+      .imagen_right {
+        height: 60px;
+        width: 60px;
+      }
+
+      .imagen_left {
+        display: grid;
+        justify-content: start;
+      }
+      .imagen_vivero {
+        display: grid;
+        justify-content: center;
+      }
+      .imagen_right{
+        display: grid;
+        justify-content: end;
+      }
+
+      .nosotros_informacion > figure {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 50% auto;
+      }
+
+      .nosotros_informacion__parte1,
+      .nosotros_informacion__parte2,
+      .nosotros_informacion__parte3 {
+        text-align: center;
+        margin: 0 30px;
+      }
+
 
       /*-------------------Estilos Footer----------------*/
       footer {
@@ -376,7 +417,7 @@
           height: 100%;
           margin: 0 2px;
         }
-        .nav_left_opcion-select {
+        .nav-left li:nth-child(2) {
           display: none;
         }
         .nav_left_opcion-sobrante {
@@ -573,8 +614,8 @@
             />
           </a>  
         </li>
-        <li class="nav_left_opcion-select"><a href="./index.html">INICIO</a></li>
-        <li><a href="./nosotros.html">NOSOTROS</a></li>
+        <li><a href="./index.html">INICIO</a></li>
+        <li class="nav_left_opcion-select"><a href="./nosotros.html">NOSOTROS</a></li>
         <li><a href="./reporte.html">REPORTE</a></li>
         <li><a href="./pedidos.html">PEDIDOS</a></li>
         <li><a href="./capacitacion.html">CAPACITACIÓN</a></li>
@@ -602,44 +643,59 @@
         </div>
       </div>
 
-      <div class="texto1"> 
-        <h1>¿QUIENES SOMOS?</h1>
-        <p>Vivero MyNature es heredero de dicha tradición y tratamos de llevar a nuestros clientes el significado y
+      <div class="nosotros_informacion"> 
+        <div class="nosotros_informacion__parte1">
+          <h2>¿QUIENES SOMOS?</h2>
+          <p>
+            Vivero MyNature es heredero de dicha tradición y tratamos de llevar a nuestros clientes el significado y
             la acción de las plantas sobre la vida de las personas y el medioambiente convirtiendo nuestro entorno en
             un lugar mas placentero y lleno de vida para las generaciones actuales y futuras disfruten de una mejor
-            calidad de vida a través de ambientes sanos y agradables. </p>
-
-        <h1>¿A DONDE QUEREMOS LLEGAR?</h1>
-        <p>Ser una empresa reconocida en la region Junin mediante el aporte e importancia que le damos al sector de la
+            calidad de vida a través de ambientes sanos y agradables. 
+          </p>
+          <h2>¿A DONDE QUEREMOS LLEGAR?</h2>
+          <p>
+            Ser una empresa reconocida en la region Junin mediante el aporte e importancia que le damos al sector de la
             floricultura, llevandolo a un nivel distinto donde se utilice las tecnologias de informacion y comunicacion.
             El mundo necesita personas que empiecen a preocuparse por la existencia de plantas en cada uno de los
             hogares.
-        </p>
-        <h1>HISTORIA</h1>
-        <p>My Nature nació de la idea de crear un mundo mejor, lleno de plantas donde brindemos a las futuras
-            generaciones
-            un ambiente agradable y beneficioso para sus cuerpos.El dia 15 de Octubre de 2022 un grupo de jovenes al
-            termina
-            su carrera universitaria empezaron a dar vida la idea de crear un entorno tecnologico que ayude a los
-            floricultores
-            a alcanzar a una mayor cantidad de personas. Logrando ....
-        </p>
-        <img class="imghistoria" src="https://www.geoaceperu.com/wp-content/uploads/2019/04/agrofilm-productos-para-inverdanero.jpg"/>
+          </p>
+        </div>
+        <img class="imagen_large" src="https://lh3.google.com/u/0/d/1dM2iKu2T-7IpiLvf0Uhd5EoZRFHPdvOR=w1245-h872-iv1" alt="">
+        <div class="nosotros_informacion__parte2">
+          <h2>HISTORIA</h2>
+          <p>
+            My Nature nació de la idea de crear un mundo mejor, lleno de plantas donde brindemos a las futuras
+            generaciones un ambiente agradable y beneficioso para sus cuerpos.El dia 15 de Octubre de 2022 un grupo 
+            de jovenes al termina su carrera universitaria empezaron a dar vida la idea de crear un entorno 
+            tecnologico que ayude a los floricultores a alcanzar a una mayor cantidad de personas. Logrando ....
+          </p>
+          <p>
+            El dia 15 de Octubre de 2022 un grupo de jovenes al terminar su carrera universitaria empezaron a dar vida
+            la idea de crear un entorno tecnologico que ayude a los floricultores a alcanzar a una mayor cantidad de
+            personas. Logrando ....
+          </p>
+        </div>
+        <figure>
+          <img class="imagen_left" src="https://lh3.google.com/u/0/d/1sF5XqO-iX02wd4vOn8IvMhEPgH52GwHE=w690-h872-iv1" alt="">
+          <img class="imagen_vivero" src="https://lh3.google.com/u/0/d/1_9U8qtl1jhVhdD2NBetuAbK0xHM7z2h8=w690-h872-iv1"/>
+          <img class="imagen_right" src="https://lh3.google.com/u/0/d/1voZEqDv1PmQ6zMUpuVHXV72TWU8xdru6=w690-h872-iv1" alt="">  
+        </figure>
+        <div class="nosotros_informacion__parte3">
+          <h2>¿POR QUE ELEGIMOS LAS PLANTAS?</h2>
+          <p>
+            Las plantas hoy en dia cada vez están tomando mayor importancia a nivel mundial dado que las forestaciones,
+            contaminaciones y malos hábitos del ser humano están haciendo que se reduzcan en grandes cantidades y que la
+            capa de ozono este desgastándose de manera constante, consiguiendo que los rayos ultravioleta lleguen a los
+            seres vivos y haya muchos cambios climáticos, pero si logramos que las personas tengan al menos una planta 
+            en sus hogares, reduciremos las consecuencias.
+          </p>
+          <p>
+            Las plantas purifican el aire y contrarrestan las inconscientes acciones negativas medioambientales que 
+            realizamos, además de aromatiza los lugares donde crecen, previenen problemas respiratorios, combaten la 
+            polución, aumentan la productividad, disminuyen el estrés, decoran tu hogar y te empoderan.
+          </p>
+        </div>
         
-        <h1>¿POR QUE ELEGIMOS LAS PLANTAS?</h1>
-        <p>Las plantas hoy en dia cada vez estan tomando mayor importancia a nivel mundial dado que las forestaciones,
-            contaminaciones
-            y malos habitos del ser humano estan haciendo que se reduzcan en grandes cantidades y que la capa de ozono
-            este desgastandose
-            de manera constante, consiguiendo que los rayos ultravioleta lleguen a los seres vivos y haya muchos cambios
-            climaticos, pero
-            si logramos que las personas tengan al menos una planta en sus hogares, reduciremos las consecuencias.Las
-            plantas purifican el
-            aire y contrarrestan las incoscientes acciones negativas medioambientales que realizamos, ademas de
-            aromatiza los lugares donde
-            crecen, previenen problemas respiratorios, combaten la polucion, aumentan la productividad, disminuyen el
-            estres, decoran tu hogar y te empoderan más.
-        </p>
       </div>
     </main>
 
