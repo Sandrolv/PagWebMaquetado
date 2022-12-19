@@ -121,7 +121,6 @@
       .nav_left_opcion-sobrante {
         height: 81px;
       }
-      
       .nav-right {
         display: flex;
         align-items: center;
@@ -149,7 +148,7 @@
         cursor: pointer;
         font-size: 1.6rem;
       }
-
+      
       /* -----------------Estilos Banner------------ */
       main {
         position: relative;
@@ -162,42 +161,47 @@
         background-position-x: center;
         background-position-y: center;
         background-size: cover;
-        height: 271px;
+        height: 235px; 
         width: 100%;
         display: grid;
         z-index: -2000;
+      
       }
       .frases-banner {
-        padding: 8% 0 0 5%;
+        padding: 0 0 0 20px; 
+        display: grid;
+        align-self: center;
       }
       .frases-banner > h1 {
         font-size: 1.4rem;
         color: white;
         font-family: "Anonymous Pro", monospace;
         margin-bottom: 8px;
+        width: 90%;
       }
       .index-banner > .frases-banner > p {
         font-size: 1.2rem;
         color: white;
         font-family: "Abel", sans-serif;
-        width: 40%;
-        margin-bottom: 12px;
+        width: 50%;
+        margin-bottom: 12px; 
       }
       .frases-banner > a:nth-child(3) {
         border: 1px solid white;
-        height: 17px;
-        width: 61px;
+        height: 22px;
+        width: 70px;
         background-color: transparent;
         font-family: "Anonymous Pro", monospace;
         color: white;
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-decoration: none;
-        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .mostrar {
         height: 271px;
       }
-      
       /*---------Estilos informacion Nosotros------------*/
       .nosotros_informacion {
         display: grid;
@@ -325,22 +329,33 @@
         }
         
         /* -----------------Estilos Banner------------ */
+        .index-banner {
+          height: 230px;
+        }
         .frases-banner {
-          padding: 6% 0 0 5%;
+          padding: 0 0 0 40px;
         }
         .frases-banner > h1 {
-          font-size: 1.8rem;
+          font-size: 1.9rem;
         }
         .index-banner > .frases-banner > p {
           font-size: 1.4rem;
-          width: 35%;
-          margin-bottom: 20px;
+          margin-bottom: 14px;
+          width: 40%;
         }
         .frases-banner > a:nth-child(3) {
-          height: 20px;
-          width: 70px;
-          font-size: 1.2rem;
-          padding: 6px;
+          height: 25px;
+          width: 80px;
+          font-size: 1.4rem;
+        }
+        .opciones-producto {
+          grid-template-columns: 120px 120px 120px;
+          grid-template-rows: 32px;
+          grid-template-areas: "planta maceta tierra";
+        }
+        .opciones-producto > button {
+          width: 120px;
+          height: 32px;
         }
 
          /*---------Estilos informacion Nosotros------------*/
@@ -432,7 +447,7 @@
         }
         .nav-left > li:first-child {
           display: block;
-          margin-right: 3px;
+          /* margin-right: 3px; */
         }
         .nav-left > li:first-child > a  {
           padding: 0;
@@ -467,22 +482,33 @@
 
         /* -----------------Estilos Banner------------ */
         .index-banner {
-          height: 380px;
+          height: 320px; /*380*/
         }
         .frases-banner {
-          padding: 5% 0 0 5%;
+          padding: 0 0 0 60px;
         }
         .frases-banner > h1 {
-          font-size: 2.5rem;
+          font-size: 2.4rem;
         }
         .index-banner > .frases-banner > p {
-          font-size: 2.1rem;
-          margin-bottom: 25px;
+          font-size: 2rem;
+          margin-bottom: 20px;
         }
         .frases-banner > a:nth-child(3) {
           height: 30px;
           width: 110px;
           font-size: 1.9rem;
+        }
+        .opciones-producto {
+          grid-template-columns: 155px 155px 155px;
+          grid-template-rows: 40px;
+          grid-template-areas: "planta maceta tierra";
+          gap: 35px;
+        }
+        .opciones-producto > button {
+          height: 40px;
+          width: 155px;
+          font-size: 1.7rem;
         }
 
         /*---------Estilos informacion Nosotros------------*/     
@@ -565,18 +591,17 @@
         }
         .nav-left > li:first-child {
           margin-left: 5px;
-          margin-right: 3px;
+          /* margin-right: 3px; */
         }
         .nav-left > li:first-child > a > .image-nav {
           height: 50px;
           width: 110px;
         }
         .nav-left > li > a {
-          font-size: 2rem;
-          margin: 0 3px;
+          font-size: 2rem;   
         }
         .nav-right {
-          gap: 15px;
+          gap: 12px;
           padding: 0;
         }
         .nav-right > li > img {
@@ -591,21 +616,35 @@
 
         /* -----------------Estilos Banner------------ */
         .index-banner {
-          height: 650px;
+          height: 450px; /*650*/
+        }
+        .frases-banner {
+          padding: 0 0 0 100px;
         }
         .frases-banner > h1 {
-          font-size: 4rem;
+          font-size: 3.6rem;
         }
         .index-banner > .frases-banner > p {
-          font-size: 3rem;
+          font-size: 2.8rem;
           width: 30%;
-          margin-bottom: 30px;
+          margin-bottom: 25px;
         }
         .frases-banner > a:nth-child(3) {
           border: 2px solid white;
           height: 45px;
-          width: 150px;
+          width: 155px;
+          font-size: 2.6rem;
+        }
+        .opciones-producto {
+          grid-template-columns: auto auto auto;
+          grid-template-rows: 58px;
+          padding: 0 100px;
+        }
+        .opciones-producto > button {
+          height: 58px;
+          width: 245px;
           font-size: 2.5rem;
+          border-radius: 2.5rem;
         }
 
         /*---------Estilos informacion Nosotros------------*/     
@@ -735,10 +774,10 @@
           </p>
           <h2>¿A DONDE QUEREMOS LLEGAR?</h2>
           <p>
-            Ser una empresa reconocida en la region Junin mediante el aporte e importancia que le damos al sector de la
-            floricultura, llevandolo a un nivel distinto donde se utilice las tecnologias de informacion y comunicacion.
-            El mundo necesita personas que empiecen a preocuparse por la existencia de plantas en cada uno de los
-            hogares.
+            Ser una empresa reconocida en la región Junín mediante el aporte e importancia que le damos al sector de 
+            la floricultura, llevándolo a un nivel distinto donde se utilice las tecnologías de información y 
+            comunicación. El mundo necesita personas que empiecen a preocuparse por la existencia de plantas en cada 
+            uno de los hogares. 
           </p>
         </div>
         <img class="imagen_large" src="https://lh3.google.com/u/0/d/1dM2iKu2T-7IpiLvf0Uhd5EoZRFHPdvOR=w1312-h864-iv2" alt="">
@@ -752,8 +791,8 @@
           </p>
           <br>
           <p>
-            El dia 15 de Octubre de 2022 un grupo de jovenes al terminar su carrera universitaria empezaron a dar vida
-            la idea de crear un entorno tecnologico que ayude a los floricultores a alcanzar a una mayor cantidad de
+            El dia 15 de Octubre de 2022 un grupo de jóvenes al terminar su carrera universitaria empezaron a dar vida 
+            la idea de crear un entorno tecnológico que ayude a los floricultores a alcanzar a una mayor cantidad de 
             personas. Logrando ....
           </p>
         </div>

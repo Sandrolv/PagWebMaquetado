@@ -121,7 +121,6 @@
       .nav_left_opcion-sobrante {
         height: 81px;
       }
-      
       .nav-right {
         display: flex;
         align-items: center;
@@ -162,42 +161,48 @@
         background-position-x: center;
         background-position-y: center;
         background-size: cover;
-        height: 271px;
+        height: 235px; 
         width: 100%;
         display: grid;
         z-index: -2000;
+      
       }
       .frases-banner {
-        padding: 8% 0 0 5%;
+        padding: 0 0 0 20px; 
+        display: grid;
+        align-self: center;
       }
       .frases-banner > h1 {
         font-size: 1.4rem;
         color: white;
         font-family: "Anonymous Pro", monospace;
         margin-bottom: 8px;
+        width: 90%;
       }
       .index-banner > .frases-banner > p {
         font-size: 1.2rem;
         color: white;
         font-family: "Abel", sans-serif;
-        width: 40%;
-        margin-bottom: 12px;
+        width: 50%;
+        margin-bottom: 12px; 
       }
       .frases-banner > a:nth-child(3) {
         border: 1px solid white;
-        height: 17px;
-        width: 61px;
+        height: 22px;
+        width: 70px;
         background-color: transparent;
         font-family: "Anonymous Pro", monospace;
         color: white;
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-decoration: none;
-        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .opciones-producto {
         display: grid;
         grid-template-columns: 50px 50px 50px 50px;
-        grid-template-rows: 27px;
+        grid-template-rows: 28px;
         grid-template-areas:
           "planta planta maceta maceta"
           ". tierra tierra .";
@@ -221,7 +226,7 @@
         background-color: var(--navbarColorInactive);
         color: white;
         font-weight: 200;
-        height: 27px;
+        height: 28px;
         width: 115px;
         font-size: 1.2rem;
         border-radius: 2rem;
@@ -535,30 +540,32 @@
         }
         
         /* -----------------Estilos Banner------------ */
+        .index-banner {
+          height: 230px;
+        }
         .frases-banner {
-          padding: 6% 0 0 5%;
+          padding: 0 0 0 40px;
         }
         .frases-banner > h1 {
-          font-size: 1.8rem;
+          font-size: 1.9rem;
         }
         .index-banner > .frases-banner > p {
           font-size: 1.4rem;
-          width: 35%;
-          margin-bottom: 20px;
+          margin-bottom: 14px;
+          width: 40%;
         }
         .frases-banner > a:nth-child(3) {
-          height: 20px;
-          width: 70px;
-          font-size: 1.2rem;
-          padding: 6px;
+          height: 25px;
+          width: 80px;
+          font-size: 1.4rem;
         }
         .opciones-producto {
-          grid-template-columns: 135px 135px 135px;
+          grid-template-columns: 120px 120px 120px;
           grid-template-rows: 32px;
           grid-template-areas: "planta maceta tierra";
         }
         .opciones-producto > button {
-          width: 135px;
+          width: 120px;
           height: 32px;
         }
 
@@ -570,6 +577,7 @@
           font-size: 1.3rem;
           margin-bottom: 15px;
           margin-top: 15px;
+          text-align: center;
         }
         .filtros-producto > p:nth-child(1) {
           text-align: center;
@@ -768,7 +776,7 @@
         }
         .nav-left > li:first-child {
           display: block;
-          margin-right: 3px;
+          /* margin-right: 3px; */
         }
         .nav-left > li:first-child > a  {
           padding: 0;
@@ -803,17 +811,17 @@
 
         /* -----------------Estilos Banner------------ */
         .index-banner {
-          height: 380px;
+          height: 320px; /*380*/
         }
         .frases-banner {
-          padding: 5% 0 0 5%;
+          padding: 0 0 0 60px;
         }
         .frases-banner > h1 {
-          font-size: 2.5rem;
+          font-size: 2.4rem;
         }
         .index-banner > .frases-banner > p {
-          font-size: 2.1rem;
-          margin-bottom: 25px;
+          font-size: 2rem;
+          margin-bottom: 20px;
         }
         .frases-banner > a:nth-child(3) {
           height: 30px;
@@ -822,12 +830,12 @@
         }
         .opciones-producto {
           grid-template-columns: 155px 155px 155px;
-          grid-template-rows: 35px;
+          grid-template-rows: 40px;
           grid-template-areas: "planta maceta tierra";
           gap: 35px;
         }
         .opciones-producto > button {
-          height: 35px;
+          height: 40px;
           width: 155px;
           font-size: 1.7rem;
         }
@@ -994,18 +1002,17 @@
         }
         .nav-left > li:first-child {
           margin-left: 5px;
-          margin-right: 3px;
+          /* margin-right: 3px; */
         }
         .nav-left > li:first-child > a > .image-nav {
           height: 50px;
           width: 110px;
         }
         .nav-left > li > a {
-          font-size: 2rem;
-          margin: 0 3px;
+          font-size: 2rem;   
         }
         .nav-right {
-          gap: 15px;
+          gap: 12px;
           padding: 0;
         }
         .nav-right > li > img {
@@ -1020,30 +1027,35 @@
 
         /* -----------------Estilos Banner------------ */
         .index-banner {
-          height: 650px;
+          height: 500px; /*650*/
+        }
+        .frases-banner {
+          padding: 0 0 0 100px;
         }
         .frases-banner > h1 {
-          font-size: 4rem;
+          font-size: 3.6rem;
         }
         .index-banner > .frases-banner > p {
-          font-size: 3rem;
+          font-size: 2.8rem;
           width: 30%;
-          margin-bottom: 30px;
+          margin-bottom: 25px;
         }
         .frases-banner > a:nth-child(3) {
           border: 2px solid white;
           height: 45px;
-          width: 150px;
-          font-size: 2.5rem;
+          width: 155px;
+          font-size: 2.6rem;
         }
         .opciones-producto {
-          grid-template-columns: 300px 300px 300px;
+          grid-template-columns: auto auto auto;
           grid-template-rows: 58px;
+          padding: 0 100px;
         }
         .opciones-producto > button {
           height: 58px;
-          width: 300px;
+          width: 245px;
           font-size: 2.5rem;
+          border-radius: 2.5rem;
         }
 
         /*------------------------------- Estilos filtro --------------------- */
@@ -1252,15 +1264,15 @@
         <div class="filtros-producto">
           <p>Escriba lo que quieres encontrar:</p>
           <form action="" class="search-principal">
-            <div class="search-principal_buscar_con_lupa">
+            <label class="search-principal_buscar_con_lupa" for="">
               <input  type="search" name="nombre" placeholder="Buscar">
               <i class="fal fa-search"></i>
-            </div>
+            </label>
             <input type="submit" value="Buscar">
           </form>
-          <p>Puedes hacer tu busqueda mas especifica incluyendo algunos filtros. Elige alguno de los soguientes 👇 </p>
+          <p>Puedes hacer tu búsqueda más específica incluyendo algunos filtros. Elige alguno de los siguientes 👇: </p>
           <form action="" class="form-filtros">
-            <div class="filtros">
+            <label class="filtros" for="">
               <p>Tipo</p>
               <input list="lista_tipo_plantas"  placeholder="Elegir Tipo">
               <datalist id="lista_tipo_plantas">
@@ -1268,8 +1280,9 @@
                 <option value="Frutales"></option>
                 <option value="Rosaceas"></option>
               </datalist>
-            </div>
-            <div class="filtros">
+            </label>
+
+            <label class="filtros" for="">
               <p>Color</p>
               <input list="lista_color_plantas" placeholder="Elegir Color">
               <datalist id="lista_color_plantas">
@@ -1277,8 +1290,9 @@
                 <option value="Blanco"></option>
                 <option value="Negro"></option>
               </datalist>
-            </div>
-            <div class="filtros">
+            </label>
+            
+            <label class="filtros" for="">
               <p>Calidad</p>
               <input list="lista_calidad_plantas" placeholder="Elegir Calidad">
               <datalist id="lista_calidad_plantas">
@@ -1286,8 +1300,9 @@
                 <option value="Buena"></option>
                 <option value="Excelente"></option>
               </datalist>
-            </div>
-            <div class="filtros">
+            </label>
+
+            <label class="filtros" for="">
               <p>Recipiente</p>
               <input list="lista_recipientes_plantas" placeholder="Elegir Recipiente">
               <datalist id="lista_recipientes_plantas">
@@ -1295,7 +1310,8 @@
                 <option value="Embolsados"></option>
                 <option value="Valdes decorados"></option>
               </datalist>
-            </div>
+            </label>
+  
 
             <div class="botones-filtro">
             <input type="submit" value="Limpiar">
