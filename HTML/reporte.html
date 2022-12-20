@@ -152,11 +152,12 @@
       /* -----------------Estilos Banner------------ */
       main {
         position: relative;
+        background-color: #f0f2f5;
       }
       .index-banner {
         background-image:
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url(https://lh3.google.com/u/0/d/1D4AzKfvj-JlVX3RquBOGHOOjon7MMbaW=w1918-h1009-iv1);
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url(https://lh3.google.com/u/0/d/1l8Z59mmL3wzvG9dwsgxYSFPNmWiptPMR=w1362-h1008-iv1);
         background-size: 160%;
         background-position-x: center;
         background-position-y: center;
@@ -165,12 +166,13 @@
         width: 100%;
         display: grid;
         z-index: -2000;
-      
       }
       .frases-banner {
         padding: 0 0 0 20px; 
         display: grid;
         align-self: center;
+        position: relative;
+        top: -5px;
       }
       .frases-banner > h1 {
         font-size: 1.4rem;
@@ -202,7 +204,53 @@
       .mostrar {
         height: 271px;
       }
-
+      /*-------------Estilos Contenido Reparte----------*/
+      .Presentacion_reporte {
+        margin: 12px 20px 20px 20px;
+        display: grid;
+        gap: 12px;
+        text-align: justify;
+        justify-items: center;
+        font-size: 1.1rem;
+      }
+      .Presentacion_reporte > img {
+        border-radius: 50%;
+        height: 120px;
+        filter: brightness(85%);
+      }
+      .Informar_reporte {
+        margin: 0 20px;
+        display: grid;
+        gap: 10px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        height: auto;
+        padding: 15px 0;
+      }
+      .Informar_reporte > h3{
+        text-align: center;
+        color: #31572C;
+        font-weight: 500;
+        font-size: 1.3rem;
+      }
+      .write_inconvenient {
+        color: #909090;
+        display: grid;
+        gap: 8px;
+        margin: 0 25px;
+      }
+      .write_inconvenient > textarea {
+        width: 100%;
+      }
+      .Select_type_report {
+        margin: 0 25px;
+        display: grid;
+        gap: 10px;
+      }
+      .Goup_file{
+        display: grid;
+        gap: 10px;
+      }
       /*-------------------Estilos Footer----------------*/
       footer {
         background-color: #f0f2f5;
@@ -653,17 +701,17 @@
       
       <form class="Informar_reporte" action="">
         <h3>INFORMAR A MY NATURE</h3>
-        <label for="">
+        <label class="write_inconvenient" for="">
           <span>Escriba el inconveniente, sugerencia o aporte que tiene:</span>
           <textarea name="" id="" cols="30" rows="10"></textarea>
         </label>
-        <label for="">
+        <label class="Select_type_report" for="">
           <span>Tipo de comentario:</span>
           <button>Inconveniente</button>
           <button>Sugerencia</button>
           <button>Aporte</button>
         </label>
-        <label for="">
+        <label class="Goup_file" for="">
           <span>Subir la imagen en caso de ser un inconveniente:</span>
           <input type="file" >
         </label>
