@@ -26,8 +26,8 @@
         --colorCardButton: #03a100;
         --colorCardButtonOfert: #a13a00;
         --colorNavMovilDesplegable: #2f3f2d;
-        --color-inactivo: #5f5050;
-        --color-hover: #ffa400;
+        --colorStarInactive: #5f5050;
+        --colorStarActive: #ffa400;
       }
 
       * {
@@ -209,7 +209,7 @@
       }
       /*-------------Estilos Contenido Reporte----------*/
       .Presentacion_reporte {
-        margin: 12px 20px 20px 20px;
+        margin: 12px 20px 0 20px;
         display: grid;
         gap: 12px;
         text-align: justify;
@@ -221,9 +221,10 @@
         height: 120px;
         filter: brightness(85%);
       }
-      /*-------------Formulario Reporte ----------*/
-      .Informar_reporte {
-        margin: 0 20px;
+      /*-------------Formulario Reporte y Calificacion----------*/
+      .Informar_reporte, 
+      .Contenedor_calificacion  {
+        margin: 15px 20px 0 20px;
         display: grid;
         gap: 10px;
         background: rgba(255, 255, 255, 1);
@@ -231,12 +232,31 @@
         height: auto;
         padding: 15px 25px;
       }
-      .Informar_reporte > h3{
+      .Informar_reporte > h3,
+      .Contenedor_calificacion > h3 {
         text-align: center;
         color: #31572C;
         font-weight: 500;
         font-size: 1.3rem;
       }
+      .Button__Informar_reporte,
+      .Button__Calificar {
+        display: flex;
+        justify-content: center;
+      }
+      .Button__Informar_reporte > input[type="submit"],
+      .Button__Calificar > input[type="submit"]  {
+        border: none;
+        width: fit-content;
+        padding: 8px 15px;
+        border-radius: 8px;
+        background-color: var(--colorButtonTiFilter);
+        font-size: 1.3rem;
+        box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 20%);
+        cursor: pointer;
+        margin-top: 8px;
+      }
+      /*-------------Solo Formulario Reporte----------*/
       .write_inconvenient {
         display: grid;
         gap: 8px;
@@ -262,7 +282,6 @@
         color: #808080;
         width: 100%;
       }
-      
       .Options__Select_type_report {
         position: relative;
       }
@@ -315,7 +334,6 @@
       .Options__Select_type_report > input:checked ~ label {
         color: #fff;
       }
-
       .Options__Select_type_report > input:checked ~ label::before{
         transform: translate(-50%, -50%) scale3d(56, 56, 1);
         opacity: 1;
@@ -327,7 +345,6 @@
       .Options__Select_type_report > input {
         display: none;
       } 
-
       .Goup_file{
         display: grid;
         gap: 10px;
@@ -355,110 +372,79 @@
         font-size: 1rem;
         height: 100%;
       }
-      .Button__Informar_reporte {
-        display: flex;
-        justify-content: center;
+      /*-----------Estilos Informacion Calificacion------*/
+      .Informacion_Calificar_Recordar {
+        margin: 15px 20% 0 20%;
+        display: grid;
+        gap: 5px;
+        
       }
-      .Button__Informar_reporte > input[type="submit"] {
-        border: none;
-        width: fit-content;
-        padding: 8px 15px;
-        border-radius: 8px;
-        background-color: var(--colorButtonTiFilter);
-        font-size: 1.3rem;
-        box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 20%);
-        cursor: pointer;
-        margin-top: 8px;
+      .Informacion_Calificar_Recordar > p  {
+        text-align: center;
+        margin-bottom: 7px;
+        font-weight: 300;
+        font-size: 1.1rem;
       }
-      /*--------------Estilos Parte calificacion--------*/
-      .Contenedor_calificacion {
-        margin: 15px 20px;
+
+      .Recordar_opcion {
+        display: grid;
+        grid-template-columns: 45% 10% 45%;
+      }
+      .Recordar_opcion p:nth-child(1)  {
+        text-align: left;
+        font-size: 1.2rem;
+        display: grid;
+        align-items: center;
+      }
+      .Recordar_opcion p:nth-child(2)  {
+        text-align: center;
+        font-size: 1.2rem;
+        display: grid;
+        align-items: center;
+      }
+      .Recordar_opcion p:nth-child(3)  {
+        text-align: right;
+        font-size: 1rem;
+        display: grid;
+        align-items: center;
+      }
+ 
+      /*--------------Solo Formulario Calificacion--------*/
+
+      .Select_stars {
         display: grid;
         gap: 10px;
-        background: rgba(255, 255, 255, 1);
-        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        height: auto;
-        padding: 15px 25px;
       }
-
-      .Calificar  p{
-        display: flex;
-        justify-content: center;
-        margin-top: 25px;
-        margin-bottom: 25px;
-    
+      .Select_stars > p:nth-child(1) {
+        color: #808080;
+        text-align: center;
       }
-
-      .recordar3 p{
-        text-align: right;
-      }
-
-      input[type="radio"] {
-        display: none;
-      }
-
-      .clasificacion {
+      .Stars { /*clasificacion*/
         direction: rtl;
         unicode-bidi: bidi-override;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 3rem;
       }
-
-      p input[type="radio"] {
-        background-color: initial;
-        border: 0;
-        color: var(--color-inactivo);
-        transition: 1s all;
-        font-size : 120px;
+      .Stars > input[type="radio"] {
+        display: none;
       }
-
-      p label {
-        color: var(--color-inactivo);
+      .Stars > label {
+        color: var(--colorStarInactive);
         transition: 1s all;
       }
-
-      label:hover{
-        color: var(--color-hover);
+      .Stars > label:hover{
+        color: var(--colorStarActive);
         transform: rotate(360deg);
         cursor: pointer;
       }
-
-      label:hover ~ label{
-        color: var(--color-hover);
+      .Stars > label:hover ~ label{
+        color: var(--colorStarActive);
         transform: rotate(360deg);
       }
-
-      input[type="radio"]:checked ~ label {
-        color: var(--color-hover);
-      }
-
-      .botoncalificar {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 70px;
-        margin: 15px 0px;
-      }
-
-      .contenedor h2{
-        text-align: center;
-        padding-bottom: 15px;
-      }
-      .contenedor p{
-          text-align: center;
-          margin: 0px 15px;
-      }
-      .estadosrecomendacion {
-          display: flex;
-          flex-direction: column;
-          align-items: center
-      }
-      .estadosrecomendacion p {
-          text-align: center;
-          margin: 5px;
-          margin-bottom: 15px;
-      }
-      .estadosrecomendacion li {
-          text-align: left;
-          margin: 5px;
+      .Stars > input[type="radio"]:checked ~ label {
+        color: var(--colorStarActive);
       }
       /*-------------------Estilos Footer----------------*/
       footer {
@@ -939,49 +925,57 @@
         </div>
       </form>
 
-      <div class="Contenedor_calificacion">
-        <form class="Calificar" action="">
-          <h3>CALIFÍCANOS</h3>
-          <p>Ser siempre calificados nos da la oportunidad de poder mejorar!</p>
-          <p class="clasificacion">
-            <input id="radio1" type="radio" name="estrellas" value="1"><label  for="radio1" class="fas fa-star"></label>
-            <input id="radio2" type="radio"  name="estrellas" value="2"><label  for="radio2" class="fas fa-star"></label>
-            <input id="radio3"  type="radio" name="estrellas" value="3"><label  for="radio3" class="fas fa-star"></label>
-            <input id="radio4" type="radio"  name="estrellas" value="4"><label  for="radio4" class="fas fa-star"></label>                         
-            <input id="radio5" type="radio" name="estrellas" value="5"><label  for="radio5" class="fas fa-star"></label>
-          </p>
-          <div class="Button__Informar_report">	
-            <input type="submit" name="" id="" value="Calificar">
-          </div>  
-        </form>
-  
-        <div class="estadosrecomendacion">
-          <p>RECUERDA QUE:</p>
-          <div class="recordar">
-            <ol>
-                <p>⭐</p>
-                <p>⭐⭐</p>
-                <p>⭐⭐⭐</p>
-                <p>⭐⭐⭐⭐</p>
-                <p>⭐⭐⭐⭐⭐</p>
-            </ol>
-            <ol>
-                <p>=</p>
-                <p>=</p>
-                <p>=</p>
-                <p>=</p>
-                <p>=</p>
-            </ol>
-            <div class="recordar3">
-                <p>Totalmente Disconforme ☹️</p>
-                <p>Parcialmente Disconforme 🙁</p>
-                <p>Ni Conforme Ni Disconforme 😶</p>
-                <p>Parcialmente Conforme 🙂</p>
-                <p>Totalmente Conforme 😀</p>
-            </div>
-          </div>
+      <div class="Informacion_Calificar_Recordar">
+        <p>RECUERDA QUE PUEDES CALIFICAR LA PÁGINA WEB</p>
+        <div class="Recordar_opcion">
+          <p>⭐</p>
+          <p>=</p>
+          <p>Pésima ☹️</p>
         </div>
-      </div>     
+        <div class="Recordar_opcion">
+          <p>⭐⭐</p>
+          <p>=</p>
+          <p>Mala 🙁</p>
+        </div>
+        <div class="Recordar_opcion">
+          <p>⭐⭐⭐</p>
+          <p>=</p>
+          <p>Regular 😶</p>
+        </div>
+        <div class="Recordar_opcion">
+          <p>⭐⭐⭐⭐</p>
+          <p>=</p>
+          <p>Buena 🙂</p>
+        </div>
+        <div class="Recordar_opcion">
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>=</p>
+          <p>Excelente 😀</p>
+        </div> 
+      </div>
+
+      <form class="Contenedor_calificacion" action="">
+        <h3>CALIFICAR A MY NATURE</h3>
+        <label class="Select_stars" for="">
+          <p>Ser siempre calificados nos da la oportunidad de poder mejorar!</p>
+          <p class="Stars">
+            <label  for="radio1" class="fas fa-star"></label>
+            <input id="radio1" type="radio" name="estrellas" value="5">   
+            <label  for="radio2" class="fas fa-star"></label>
+            <input id="radio2" type="radio"  name="estrellas" value="4">
+            <label  for="radio3" class="fas fa-star"></label>
+            <input id="radio3"  type="radio" name="estrellas" value="3">
+            <label  for="radio4" class="fas fa-star"></label>      
+            <input id="radio4" type="radio"  name="estrellas" value="2">
+            <label  for="radio5" class="fas fa-star" ></label>                
+            <input id="radio5" type="radio" name="estrellas" value="1">
+          </p>
+        </label>
+        <div class="Button__Calificar">	
+          <input type="submit" name="" id="" value="Calificar">
+        </div>  
+        </form>
+    
      
     </main>
 
