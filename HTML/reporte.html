@@ -26,6 +26,8 @@
         --colorCardButton: #03a100;
         --colorCardButtonOfert: #a13a00;
         --colorNavMovilDesplegable: #2f3f2d;
+        --color-inactivo: #5f5050;
+        --color-hover: #ffa400;
       }
 
       * {
@@ -153,6 +155,7 @@
       main {
         position: relative;
         background-color: #f0f2f5;
+        padding-bottom: 15px;
       }
       .index-banner {
         background-image:
@@ -204,7 +207,7 @@
       .mostrar {
         height: 271px;
       }
-      /*-------------Estilos Contenido Reparte----------*/
+      /*-------------Estilos Contenido Reporte----------*/
       .Presentacion_reporte {
         margin: 12px 20px 20px 20px;
         display: grid;
@@ -218,6 +221,7 @@
         height: 120px;
         filter: brightness(85%);
       }
+      /*-------------Formulario Reporte ----------*/
       .Informar_reporte {
         margin: 0 20px;
         display: grid;
@@ -225,7 +229,7 @@
         background: rgba(255, 255, 255, 1);
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         height: auto;
-        padding: 15px 0;
+        padding: 15px 25px;
       }
       .Informar_reporte > h3{
         text-align: center;
@@ -234,22 +238,227 @@
         font-size: 1.3rem;
       }
       .write_inconvenient {
-        color: #909090;
         display: grid;
         gap: 8px;
-        margin: 0 25px;
+      }
+      .write_inconvenient >span {
+        color: #808080;
+        text-align: justify;
       }
       .write_inconvenient > textarea {
+       border: 1px solid #dbdbdb1a ;
+       background: #ececec;
+       resize: none;
+       padding: 5px 8px;
+       border-radius: 10px;
+       color: #808080;
+       font-size: 1rem;
+      }
+      .Select_type_report {     
+        display: grid;
+        gap: 8px;
+      }
+      .Select_type_report > span {
+        color: #808080;
         width: 100%;
       }
-      .Select_type_report {
-        margin: 0 25px;
-        display: grid;
-        gap: 10px;
+      
+      .Options__Select_type_report {
+        position: relative;
       }
+      .Options__Select_type_report > label {
+        background: #ececec;
+        padding: 11px 11px;
+        display: block;
+        color: #808080;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transition: color 200ms ease-in;/* nombre de la propiedad | duración | función | retardo */
+        overflow: hidden; /*El contenido es recortado y no se muestran barras de posición.*/
+        border-radius: 15px;
+      }
+      .Options__Select_type_report > label::before {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        content: '';
+        background-color: var(--colorNavMovilDesplegable);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale3d(1, 1, 1); 
+        /*te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.*/
+        transition: all 100ms cubic-bezier(0.4, 0.0, 0.2, 1);
+        /*El cubic es como uan especie de velocidad en forma de graficos*/
+        opacity: 0;
+        z-index: -1;
+      } 
+      .Options__Select_type_report > label::after {
+        width: 25px;
+        height: 25px;
+        content: '';
+        border: 1px solid #dbdbdb;
+        background-color: #fff;
+        background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+        background-repeat: no-repeat;
+        background-position: 1px 2px;
+        border-radius: 50%;
+        z-index: 2;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        transition: all 200ms ease-in;
+      } 
+      .Options__Select_type_report > input:checked ~ label {
+        color: #fff;
+      }
+
+      .Options__Select_type_report > input:checked ~ label::before{
+        transform: translate(-50%, -50%) scale3d(56, 56, 1);
+        opacity: 1;
+      }
+      .Options__Select_type_report > input:checked ~ label::after{
+        background-color: var(--navbarColorActive);
+        border-color: var(--navbarColorActive);
+      } 
+      .Options__Select_type_report > input {
+        display: none;
+      } 
+
       .Goup_file{
         display: grid;
         gap: 10px;
+      }
+      .Goup_file > span {
+        color: #808080;
+        text-align: justify;
+      }
+      .Goup_file > input {
+        border-radius: 10px;
+        color: #909090;
+        outline: none;
+        font-size: 0.9rem;
+        background: #ececec;
+        cursor: pointer;
+        height: 32px;
+      }
+      ::-webkit-file-upload-button {
+        background: var(--colorNavMovilDesplegable);
+        color: #fff;
+        padding: 8px 8px;
+        border-radius: 10px 0 0 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        height: 100%;
+      }
+      .Button__Informar_reporte {
+        display: flex;
+        justify-content: center;
+      }
+      .Button__Informar_reporte > input[type="submit"] {
+        border: none;
+        width: fit-content;
+        padding: 8px 15px;
+        border-radius: 8px;
+        background-color: var(--colorButtonTiFilter);
+        font-size: 1.3rem;
+        box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 20%);
+        cursor: pointer;
+        margin-top: 8px;
+      }
+      /*--------------Estilos Parte calificacion--------*/
+      .Contenedor_calificacion {
+        margin: 15px 20px;
+        display: grid;
+        gap: 10px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        height: auto;
+        padding: 15px 25px;
+      }
+
+      .Calificar  p{
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    
+      }
+
+      .recordar3 p{
+        text-align: right;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      .clasificacion {
+        direction: rtl;
+        unicode-bidi: bidi-override;
+      }
+
+      p input[type="radio"] {
+        background-color: initial;
+        border: 0;
+        color: var(--color-inactivo);
+        transition: 1s all;
+        font-size : 120px;
+      }
+
+      p label {
+        color: var(--color-inactivo);
+        transition: 1s all;
+      }
+
+      label:hover{
+        color: var(--color-hover);
+        transform: rotate(360deg);
+        cursor: pointer;
+      }
+
+      label:hover ~ label{
+        color: var(--color-hover);
+        transform: rotate(360deg);
+      }
+
+      input[type="radio"]:checked ~ label {
+        color: var(--color-hover);
+      }
+
+      .botoncalificar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 70px;
+        margin: 15px 0px;
+      }
+
+      .contenedor h2{
+        text-align: center;
+        padding-bottom: 15px;
+      }
+      .contenedor p{
+          text-align: center;
+          margin: 0px 15px;
+      }
+      .estadosrecomendacion {
+          display: flex;
+          flex-direction: column;
+          align-items: center
+      }
+      .estadosrecomendacion p {
+          text-align: center;
+          margin: 5px;
+          margin-bottom: 15px;
+      }
+      .estadosrecomendacion li {
+          text-align: left;
+          margin: 5px;
       }
       /*-------------------Estilos Footer----------------*/
       footer {
@@ -707,18 +916,73 @@
         </label>
         <label class="Select_type_report" for="">
           <span>Tipo de comentario:</span>
-          <button>Inconveniente</button>
-          <button>Sugerencia</button>
-          <button>Aporte</button>
+          <div class="Options__Select_type_report">
+            <input id="opcion1" name="radio" type="radio"/>
+            <label for="opcion1">Inconveniente</label>
+          </div>
+          <div class="Options__Select_type_report">
+            <input id="opcion2" name="radio" type="radio"/>
+            <label for="opcion2">Sugerencia</label>
+          </div>
+          <div class="Options__Select_type_report">
+            <input id="opcion3" name="radio" type="radio"/>
+            <label for="opcion3">Aporte</label>
+          </div>  
         </label>
         <label class="Goup_file" for="">
-          <span>Subir la imagen en caso de ser un inconveniente:</span>
+          <span>Si es un inconveniente, subir un archivo pdf que contenga las imagenes:
+          </span>
           <input type="file" >
         </label>
-        <input type="submit" name="" id="" value="Informar">
+        <div class="Button__Informar_reporte">
+          <input type="submit" name="" id="" value="Informar">
+        </div>
       </form>
-      <form class="calificar" action="">
-      </form>
+
+      <div class="Contenedor_calificacion">
+        <form class="Calificar" action="">
+          <h3>CALIFÍCANOS</h3>
+          <p>Ser siempre calificados nos da la oportunidad de poder mejorar!</p>
+          <p class="clasificacion">
+            <input id="radio1" type="radio" name="estrellas" value="1"><label  for="radio1" class="fas fa-star"></label>
+            <input id="radio2" type="radio"  name="estrellas" value="2"><label  for="radio2" class="fas fa-star"></label>
+            <input id="radio3"  type="radio" name="estrellas" value="3"><label  for="radio3" class="fas fa-star"></label>
+            <input id="radio4" type="radio"  name="estrellas" value="4"><label  for="radio4" class="fas fa-star"></label>                         
+            <input id="radio5" type="radio" name="estrellas" value="5"><label  for="radio5" class="fas fa-star"></label>
+          </p>
+          <div class="Button__Informar_report">	
+            <input type="submit" name="" id="" value="Calificar">
+          </div>  
+        </form>
+  
+        <div class="estadosrecomendacion">
+          <p>RECUERDA QUE:</p>
+          <div class="recordar">
+            <ol>
+                <p>⭐</p>
+                <p>⭐⭐</p>
+                <p>⭐⭐⭐</p>
+                <p>⭐⭐⭐⭐</p>
+                <p>⭐⭐⭐⭐⭐</p>
+            </ol>
+            <ol>
+                <p>=</p>
+                <p>=</p>
+                <p>=</p>
+                <p>=</p>
+                <p>=</p>
+            </ol>
+            <div class="recordar3">
+                <p>Totalmente Disconforme ☹️</p>
+                <p>Parcialmente Disconforme 🙁</p>
+                <p>Ni Conforme Ni Disconforme 😶</p>
+                <p>Parcialmente Conforme 🙂</p>
+                <p>Totalmente Conforme 😀</p>
+            </div>
+          </div>
+        </div>
+      </div>     
+     
     </main>
 
     <footer>
