@@ -155,7 +155,6 @@
       main {
         position: relative;
         background-color: #f0f2f5;
-        padding-bottom: 15px;
       }
       .index-banner {
         background-image:
@@ -212,13 +211,13 @@
         margin: 12px 20px 0 20px;
         display: grid;
         gap: 12px;
-        text-align: justify;
+        text-align: center;
         justify-items: center;
         font-size: 1.1rem;
       }
       .Presentacion_reporte > img {
         border-radius: 50%;
-        height: 120px;
+        height: 150px;
         filter: brightness(85%);
       }
       /*-------------Formulario Reporte y Calificacion----------*/
@@ -237,7 +236,7 @@
         text-align: center;
         color: #31572C;
         font-weight: 500;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
       .Button__Informar_reporte,
       .Button__Calificar {
@@ -248,10 +247,10 @@
       .Button__Calificar > input[type="submit"]  {
         border: none;
         width: fit-content;
-        padding: 8px 15px;
+        padding: 9px 17px;
         border-radius: 8px;
         background-color: var(--colorButtonTiFilter);
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 20%);
         cursor: pointer;
         margin-top: 8px;
@@ -261,9 +260,10 @@
         display: grid;
         gap: 8px;
       }
-      .write_inconvenient >span {
+      .write_inconvenient > span {
         color: #808080;
         text-align: justify;
+        font-size: 1.1rem;
       }
       .write_inconvenient > textarea {
        border: 1px solid #dbdbdb1a ;
@@ -281,6 +281,7 @@
       .Select_type_report > span {
         color: #808080;
         width: 100%;
+        font-size: 1.1rem;
       }
       .Options__Select_type_report {
         position: relative;
@@ -352,12 +353,13 @@
       .Goup_file > span {
         color: #808080;
         text-align: justify;
+        font-size: 1.1rem;
       }
       .Goup_file > input {
         border-radius: 10px;
         color: #909090;
         outline: none;
-        font-size: 0.9rem;
+        font-size: 1rem;
         background: #ececec;
         cursor: pointer;
         height: 32px;
@@ -369,7 +371,7 @@
         border-radius: 10px 0 0 10px;
         border: none;
         cursor: pointer;
-        font-size: 1rem;
+        font-family: "Montserrat", sans-serif;
         height: 100%;
       }
       /*-----------Estilos Informacion Calificacion------*/
@@ -383,9 +385,8 @@
         text-align: center;
         margin-bottom: 7px;
         font-weight: 300;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
       }
-
       .Recordar_opcion {
         display: grid;
         grid-template-columns: 45% 10% 45%;
@@ -404,13 +405,11 @@
       }
       .Recordar_opcion p:nth-child(3)  {
         text-align: right;
-        font-size: 1rem;
+        font-size: 1.1rem;
         display: grid;
         align-items: center;
       }
- 
       /*--------------Solo Formulario Calificacion--------*/
-
       .Select_stars {
         display: grid;
         gap: 10px;
@@ -418,6 +417,7 @@
       .Select_stars > p:nth-child(1) {
         color: #808080;
         text-align: center;
+        font-size: 1.1rem;
       }
       .Stars { /*clasificacion*/
         direction: rtl;
@@ -446,6 +446,60 @@
       .Stars > input[type="radio"]:checked ~ label {
         color: var(--colorStarActive);
       }
+      /*--------------Solo Formulario Calificacion--------*/
+      
+      main > h1 {
+        margin: 25px 0 20px 0;
+        text-align: center;
+        background-color: var(--navbarColorInactive);
+        color: white;
+        padding: 5px 0;
+        font-family: "Abel", sans-serif;
+      }
+      .Frases_iconicas {
+        margin: 15px 20px 0 20px;
+        display: grid;
+        gap: 10px;                
+      }
+      .Frases_iconicas > p {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-top: 7px;
+        margin-bottom: 35px;
+      }
+      .Autores {
+        display: grid;
+        grid-template-columns: 23% auto 23%;
+        justify-items: center;
+        gap: 5px;
+
+      }
+      .Autores > h4 {
+        text-align: left;
+        font-size: 0.9rem;
+        
+      }
+      .Autores > img {
+        border-radius: 50%;
+        height: 110px;
+        width: 110px;
+        object-fit: cover;
+      }
+      .Informacion_autores{
+        text-align: right;
+        display: grid;
+        grid-template-columns: 100%;
+        align-content: end;
+
+      }
+      .Informacion_autores  > p:first-child {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+      .Informacion_autores  > p:last-child {
+        font-size: 0.8rem;
+      }
+
       /*-------------------Estilos Footer----------------*/
       footer {
         background-color: #f0f2f5;
@@ -552,7 +606,139 @@
           width: 120px;
           height: 32px;
         }
-       
+
+        /*-------------Estilos Contenido Reporte----------*/
+        .Presentacion_reporte {
+          margin: 15px 30px 0 30px;
+          gap: 15px;
+          font-size: 1.3rem;
+        }
+        .Presentacion_reporte > img {
+          height: 170px;
+        }
+        /*-------------Formulario Reporte y Calificacion----------*/
+        .Informar_reporte, 
+        .Contenedor_calificacion  {
+          margin: 18px 10% 0 10%;
+          gap: 13px;
+          padding: 18px 28px;
+        }
+        .Informar_reporte > h3,
+        .Contenedor_calificacion > h3 {
+          font-size: 1.8rem;
+        }
+        .Button__Informar_reporte > input[type="submit"],
+        .Button__Calificar > input[type="submit"]  {
+          padding: 10px 18px;
+          font-size: 1.7rem;
+          border-radius: 12px;
+        }
+        /*-------------Solo Formulario Reporte----------*/
+        .write_inconvenient {
+          gap: 11px;
+        }
+        .write_inconvenient > span {
+          font-size: 1.3rem;
+        }
+        .write_inconvenient > textarea {
+          padding: 7px 10px;
+          /* border-radius: 10px; */
+          font-size: 1.2rem;
+        }
+        .Select_type_report {     
+          gap: 11px;
+        }
+        .Select_type_report > span {
+          font-size: 1.3rem;
+        }
+        .Options__Select_type_report > label {
+          padding: 14px 14px;
+          font-size: 1.2rem;
+          border-radius: 18px;
+        }
+        .Options__Select_type_report > label::after {
+          width: 30px;
+          height: 30px;
+          background-position: 2px 4px;
+        } 
+        .Options__Select_type_report > input:checked ~ label::before{
+          transform: translate(-50%, -50%) scale3d(112, 112, 1);
+        }
+        .Goup_file{
+          gap: 13px;
+        }
+        .Goup_file > span {
+          font-size: 1.3rem;
+        }
+        .Goup_file > input {
+          border-radius: 12px;
+          font-size: 1.2rem;
+          height: 40px;
+        }
+        ::-webkit-file-upload-button {
+          border-radius: 12px 0 0 12px;
+          padding: 11px 11px;
+        }
+        /*-----------Estilos Informacion Calificacion------*/
+        .Informacion_Calificar_Recordar {
+          margin: 18px 20% 0 20%;     
+          gap: 8px;
+        }
+        .Informacion_Calificar_Recordar > p  {
+          font-size: 1.5rem;
+        }
+        .Recordar_opcion p:nth-child(1)  {
+          font-size: 1.4rem;
+        }
+        .Recordar_opcion p:nth-child(2)  {
+          font-size: 1.4rem;
+        }
+        .Recordar_opcion p:nth-child(3)  {
+          font-size: 1.3rem;
+
+        }
+        /*--------------Solo Formulario Calificacion--------*/
+        .Select_stars {
+          gap: 13px;
+        }
+        .Select_stars > p:nth-child(1) {
+          font-size: 1.3rem;
+        }
+        .Stars { /*clasificacion*/
+          font-size: 4rem;
+        }
+        /*--------------Solo Formulario Calificacion--------*/
+        
+        main > h1 {
+          padding: 7px 0;
+          font-size: 2.2rem;
+        }
+        .Frases_iconicas {
+          margin: 18px 10% 0 10%;
+          gap: 13px;                
+        }
+        .Frases_iconicas > p {
+          font-size: 1.3rem;
+          margin-top: 10px;
+          margin-bottom: 40px;
+        }
+        .Autores {
+          grid-template-columns: 28% auto 28%;
+          gap: 10px;
+        }
+        .Autores > h4 {
+          font-size: 1.1rem;
+        }
+        .Autores > img {
+          height: 140px;
+          width: 140px;
+        }
+        .Informacion_autores  > p:first-child {
+          font-size: 1.3rem;
+        }
+        .Informacion_autores  > p:last-child {
+          font-size: 1rem;
+        }
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 200px auto;
@@ -682,6 +868,140 @@
           font-size: 1.7rem;
         }
 
+        /*-------------Estilos Contenido Reporte----------*/
+        .Presentacion_reporte {
+          margin: 25px 60px 0 60px;
+          gap: 22px;
+          font-size: 1.5rem;
+        }
+        .Presentacion_reporte > img {
+          height: 195px;
+        }
+        /*-------------Formulario Reporte y Calificacion----------*/
+        .Informar_reporte, 
+        .Contenedor_calificacion  {
+          margin: 28px 15% 0 15%;
+          gap: 18px;
+          padding: 21px 31px;
+        }
+        .Informar_reporte > h3,
+        .Contenedor_calificacion > h3 {
+          font-size: 2rem;
+        }
+        .Button__Informar_reporte > input[type="submit"],
+        .Button__Calificar > input[type="submit"]  {
+          padding: 12px 20px;
+          font-size: 2rem;
+          border-radius: 14px;
+        }
+        /*-------------Solo Formulario Reporte----------*/
+        .write_inconvenient {
+          gap: 15px;
+        }
+        .write_inconvenient > span {
+          font-size: 1.5rem;
+        }
+        .write_inconvenient > textarea {
+          padding: 10px 14px;
+          border-radius: 12px;
+          font-size: 1.4rem;
+        }
+        .Select_type_report {     
+          gap: 13px;
+        }
+        .Select_type_report > span {
+          font-size: 1.5rem;
+        }
+        .Options__Select_type_report > label {
+          padding: 17px 17px;
+          font-size: 1.4rem;
+          border-radius: 20px;
+        }
+        .Options__Select_type_report > label::after {
+          width: 35px;
+          height: 35px;
+          background-position: 3px 4px;
+          background-size: 110%;
+        } 
+        /* .Options__Select_type_report > input:checked ~ label::before{
+          transform: translate(-50%, -50%) scale3d(112, 112, 1);
+        } */
+        .Goup_file{
+          gap: 17px;
+        }
+        .Goup_file > span {
+          font-size: 1.5rem;
+        }
+        .Goup_file > input {
+          border-radius: 14px;
+          font-size: 1.4rem;
+          height: 49px;
+        }
+        ::-webkit-file-upload-button {
+          border-radius: 14px 0 0 14px;
+          padding: 15px 15px;
+        }
+        /*-----------Estilos Informacion Calificacion------*/
+        .Informacion_Calificar_Recordar {
+          margin: 28px 22% 0 22%;  
+          gap: 15px;
+        }
+        .Informacion_Calificar_Recordar > p  {
+          font-size: 1.6rem;
+        }
+        .Recordar_opcion p:nth-child(1)  {
+          font-size: 1.6rem;
+        }
+        .Recordar_opcion p:nth-child(2)  {
+          font-size: 1.6rem;
+        }
+        .Recordar_opcion p:nth-child(3)  {
+          font-size: 1.5rem;
+
+        }
+        /*--------------Solo Formulario Calificacion--------*/
+        .Select_stars {
+          gap: 17px;
+        }
+        .Select_stars > p:nth-child(1) {
+          font-size: 1.5rem;
+        }
+        .Stars { /*clasificacion*/
+          font-size: 5rem;
+        }
+        /*--------------Solo Formulario Calificacion--------*/
+        
+        main > h1 {
+          padding: 8px 0;
+          font-size: 2.4rem;
+          margin: 30px 0 25px 0;
+        }
+        .Frases_iconicas {
+          margin: 28px 15% 0 15%;
+          gap: 17px;                
+        }
+        .Frases_iconicas > p {
+          font-size: 1.5rem;
+          margin-top: 15px;
+          margin-bottom: 45px;
+        }
+        .Autores {
+          grid-template-columns: 28% auto 28%;
+          gap: 15px;
+        }
+        .Autores > h4 {
+          font-size: 1.3rem;
+        }
+        .Autores > img {
+          height: 170px;
+          width: 170px;
+        }
+        .Informacion_autores  > p:first-child {
+          font-size: 1.5rem;
+        }
+        .Informacion_autores  > p:last-child {
+          font-size: 1.2rem;
+        }
 
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
@@ -794,6 +1114,142 @@
           width: 245px;
           font-size: 2.5rem;
           border-radius: 2.5rem;
+        }
+        /*-------------Estilos Contenido Reporte----------*/
+        .Presentacion_reporte {
+          margin: 50px 100px 0 100px;
+          gap: 30px;
+          font-size: 2.4rem;
+        }
+        .Presentacion_reporte > img {
+          height: 280px;
+        }
+
+        /*-------------Formulario Reporte y Calificacion----------*/
+        .Informar_reporte, 
+        .Contenedor_calificacion  {
+          margin: 52px 18% 0 18%;
+          gap: 25px;
+          padding: 51px 61px;
+        }
+        .Informar_reporte > h3,
+        .Contenedor_calificacion > h3 {
+          font-size: 2.9rem;
+        }
+        .Button__Informar_reporte > input[type="submit"],
+        .Button__Calificar > input[type="submit"]  {
+          padding: 14px 26px;
+          font-size: 3rem;
+          border-radius: 16px;
+        }
+        /*-------------Solo Formulario Reporte----------*/
+        .write_inconvenient {
+          gap: 20px;
+        }
+        .write_inconvenient > span {
+          font-size: 2.4rem;
+        }
+        .write_inconvenient > textarea {
+          padding: 16px 18px;
+          border-radius: 14px;
+          font-size: 2.3rem;
+        }
+        .Select_type_report {     
+           gap: 15px; 
+        }
+        .Select_type_report > span {
+          font-size: 2.4rem;
+        }
+        .Options__Select_type_report > label {
+          padding: 20px 20px;
+          font-size: 2.2rem;
+          border-radius: 24px;
+        }
+        .Options__Select_type_report > label::after {
+          width: 48px;
+          height: 48px;
+          background-position: 2px 4px;
+          background-size: 120%;
+          right: 8px;
+        } 
+        .Options__Select_type_report > input:checked ~ label::before{
+          transform: translate(-50%, -50%) scale3d(162, 162, 1);
+        } 
+        .Goup_file{
+          gap: 22px;
+        }
+        .Goup_file > span {
+          font-size: 2.4rem;
+        }
+        .Goup_file > input {
+          border-radius: 16px;
+          font-size: 2.2rem;
+          height: 64px;
+        }
+        ::-webkit-file-upload-button {
+          border-radius: 16px 0 0 16px;
+          padding: 20px 20px;
+        }
+        /*-----------Estilos Informacion Calificacion------*/
+        .Informacion_Calificar_Recordar {
+          margin: 52px 24% 0 24%;
+          gap: 20px;
+        }
+        .Informacion_Calificar_Recordar > p  {
+          font-size: 2.5rem;
+        }
+        .Recordar_opcion p:nth-child(1)  {
+          font-size: 2.5rem;
+        }
+        .Recordar_opcion p:nth-child(2)  {
+          font-size: 2.5rem;
+        }
+        .Recordar_opcion p:nth-child(3)  {
+          font-size: 2.4rem;
+
+        }
+        /*--------------Solo Formulario Calificacion--------*/
+        .Select_stars {
+          gap: 22px;
+        }
+        .Select_stars > p:nth-child(1) {
+          font-size: 2.4rem;
+        }
+        .Stars { /*clasificacion*/
+          font-size: 8rem;
+        }
+        /*--------------Solo Formulario Calificacion--------*/
+        
+        main > h1 {
+          padding: 10px 0;
+          font-size: 3.4rem;
+          margin: 40px 0 35px 0;
+        }
+        .Frases_iconicas {
+          margin: 52px 18% 0 18%;
+          gap: 25px;                
+        }
+        .Frases_iconicas > p {
+          font-size: 2.4rem;
+          margin-top: 20px;
+          margin-bottom: 50px;
+        }
+        .Autores {
+          grid-template-columns: 28% auto 28%;
+          gap: 20px;
+        }
+        .Autores > h4 {
+          font-size: 2.3rem;
+        }
+        .Autores > img {
+          height: 250px;
+          width: 250px;
+        }
+        .Informacion_autores  > p:first-child {
+          font-size: 2.4rem;
+        }
+        .Informacion_autores  > p:last-child {
+          font-size: 1.8rem;
         }
         
         /*-------------------Estilos Footer----------------*/
@@ -959,22 +1415,59 @@
         <label class="Select_stars" for="">
           <p>Ser siempre calificados nos da la oportunidad de poder mejorar!</p>
           <p class="Stars">
+            <input id="radio1" type="radio" name="estrellas" value="5"> 
             <label  for="radio1" class="fas fa-star"></label>
-            <input id="radio1" type="radio" name="estrellas" value="5">   
-            <label  for="radio2" class="fas fa-star"></label>
             <input id="radio2" type="radio"  name="estrellas" value="4">
-            <label  for="radio3" class="fas fa-star"></label>
+            <label  for="radio2" class="fas fa-star"></label>
             <input id="radio3"  type="radio" name="estrellas" value="3">
-            <label  for="radio4" class="fas fa-star"></label>      
+            <label  for="radio3" class="fas fa-star"></label>
             <input id="radio4" type="radio"  name="estrellas" value="2">
-            <label  for="radio5" class="fas fa-star" ></label>                
+            <label  for="radio4" class="fas fa-star"></label>      
             <input id="radio5" type="radio" name="estrellas" value="1">
+            <label  for="radio5" class="fas fa-star" ></label>                
           </p>
         </label>
         <div class="Button__Calificar">	
           <input type="submit" name="" id="" value="Calificar">
         </div>  
-        </form>
+      </form>
+
+      <h1>FRASES ICÓNICAS</h1>
+
+      <section class="Frases_iconicas">
+        <div class="Autores">
+          <h4>No queremos forzar nuestras ideas en los clientes, sino
+            simplemente hacer lo que desean.
+          </h4>
+          <img src="https://lh3.google.com/u/0/d/1Cu9ILXGleBJkg2rHzpATW507x-kcp4BF=w1362-h1008-iv1" alt="">
+          <div class="Informacion_autores">
+            <p>LAURA ASHLEY</p>
+            <p>NACIÓ - LUNES, SEPTIEMBRE 07, 1925</p>
+          </div>
+        </div>
+        <div class="Autores">
+          <h4>En vez de enfocarte en la competencia, enfócate en el cliente.</h4>
+          <img src="https://lh3.google.com/u/0/d/1ihlIOBXb0wwVcIgMBguZt94g4GwsYmAy=w1362-h1008-iv1" alt="">
+          <div class="Informacion_autores">
+            <p>SCOTT COOK</p>
+            <p>NACIÓ - SÁBADO, JULIO 26, 1952</p>
+          </div>
+        </div>
+        <div class="Autores"> 
+          <h4>Tus clientes más insatisfechos son tu mejor fuente de aprendizaje.</h4>
+          <img src="https://lh3.google.com/u/0/d/1rfmQF_UGWQ_IZ1fR_rW2-5SfTcRy6v7x=w1362-h1008-iv3" alt="">
+          <div class="Informacion_autores">
+            <p>BILL GATES</p>
+            <p>NACIÓ - VIERNES, OCTUBRE 28, 1955</p>
+          </div>
+        </div>
+        <p>Hay que ser muy conscientes de que tu satisfacción no depende solo 
+          del producto o servicio en sí. Tus expectativas que tengas de la adquisición,
+          el servicio al cliente ofrecido antes, durante y después de la compra también juegan un
+          papel fundamental en esta y son elementos que debemos cuidar en nuestra empresa y por 
+          ello apreciamos realmente tu opinión.
+        </p>
+      </section>
     
      
     </main>
