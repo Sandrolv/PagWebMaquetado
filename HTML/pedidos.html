@@ -152,6 +152,7 @@
       /* -----------------Estilos Banner------------ */
       main {
         position: relative;
+        background-color: #f0f2f5;
       }
       .index-banner {
         background-image:
@@ -201,6 +202,62 @@
       }
       .mostrar {
         height: 271px;
+      }
+      /*---------Estilos Informacion contactenos-------*/
+      
+      .Contactenos {
+        margin: 12px 20px 0 20px;
+        display: grid;
+        gap: 10px;
+      }
+      .Contactenos > p {
+        font-size: 1.1rem;
+        text-align: center;
+      }
+      .Contactenos_contenedor {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 100%;
+        justify-items: center;
+        gap: 10px;
+      }
+      .Contactenos_contenedor > img {
+        height: 150px;
+        border-radius: 5px;
+;
+      }
+      .Contactenos_informacion {
+        display: grid;
+        gap: 8px;
+      }
+      .Contactenos_informacion > h2 {
+        text-align: center;
+      }
+      .Contactenos_informacion > span {
+        display: grid;
+        grid-template-columns: 15px auto auto;
+        gap: 5px;
+      }
+      .Contactenos_informacion > span > i {
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+      }
+      .Contactenos_informacion > span:first-child > i {
+        padding-top: 2px;
+      }
+      .Contactenos_informacion > span > p {
+        font-size: 1.1rem;
+        text-align: justify;
+      }
+      .Contactenos_informacion_redes_sociales  {
+        font-size: 1.1rem;
+        display: flex;
+        gap: 3px;
+        text-align: justify;
+      }
+      .Contactenos_informacion_redes_sociales > a {
+        color: black;
       }
 
       /*-------------------Estilos Footer----------------*/
@@ -300,16 +357,6 @@
           width: 80px;
           font-size: 1.4rem;
         }
-        .opciones-producto {
-          grid-template-columns: 120px 120px 120px;
-          grid-template-rows: 32px;
-          grid-template-areas: "planta maceta tierra";
-        }
-        .opciones-producto > button {
-          width: 120px;
-          height: 32px;
-        }
-
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 200px auto;
@@ -427,17 +474,6 @@
           width: 110px;
           font-size: 1.9rem;
         }
-        .opciones-producto {
-          grid-template-columns: 155px 155px 155px;
-          grid-template-rows: 40px;
-          grid-template-areas: "planta maceta tierra";
-          gap: 35px;
-        }
-        .opciones-producto > button {
-          height: 40px;
-          width: 155px;
-          font-size: 1.7rem;
-        }
 
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
@@ -540,18 +576,7 @@
           width: 155px;
           font-size: 2.6rem;
         }
-        .opciones-producto {
-          grid-template-columns: auto auto auto;
-          grid-template-rows: 58px;
-          padding: 0 100px;
-        }
-        .opciones-producto > button {
-          height: 58px;
-          width: 245px;
-          font-size: 2.5rem;
-          border-radius: 2.5rem;
-        }
-        
+
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 240px auto;
@@ -642,8 +667,116 @@
         </div>
       </div>
 
-      <div class="texto1"> 
-        PEDIDOS
+      <div class="Contactenos"> 
+        <p> Gracias por elegir My Nature, aquí tienes como contactarnos 😄: 
+        <div class="Contactenos_contenedor">
+            <img src="https://lh3.google.com/u/0/d/1CGB6zvTQOd6_B44e-41iYzZpYjYL2CNZ=w1031-h998-iv2" alt="">
+            <div class="Contactenos_informacion">
+              <h2>Contáctenos</h2>
+              <span>
+                <i class="far fa-map-marker-alt"></i>
+                <p>Dirección: Av. Ramiro Priale Priale S/N Miraflores Sapallanga Huancayo Junín Perú</p>
+              </span>
+              <span>
+                <i class="far fa-map-marked-alt"></i>
+                <p>Referencia: Al frente de, al lado de, por el lado de, de color, de tantos pisos....</p>
+              </span>
+              <span>
+                <i class="far fa-phone-volume"></i>
+                <p>923 910 869</p>
+              </span>
+              <span>
+                <i class="far fa-envelope"></i>
+                <div class="Contactenos_informacion_redes_sociales">
+                  <p>Email:</p>
+                  <a href="">MyNature1508@viverokantu.pe</a>
+                </div>
+              </span>
+              <span>
+                <i class="fab fa-instagram"></i>
+                <div class="Contactenos_informacion_redes_sociales">
+                  <p>Instagram:</p>
+                  <a href="">MyNature142022</a>
+                </div>
+              </span>
+            </div>
+        </div>
+        <form action="">
+          <h3>HACER PEDIDO</h3>
+          <label for="">
+            <span>Nombre y Apellidos del comprador:</span>
+            <input type="text">
+          </label>
+          <label for="">
+            <span>Email:</span>
+            <input type="email">
+          </label>
+          <div>
+            <label for="">
+              <span>Celular/Telefono Fijo:</span>
+              <input type="number">
+            </label>
+            <label for="">
+              <span>DNI:</span>
+              <input type="number">
+            </label>
+          </div>
+          <label for="">
+            <span>Domicilio o lugar de recibimiento del pedido:</span>
+            <input type="text">
+          </label>
+          <label for="">
+            <span>Referencia (como es tu casa, hay algo reconocible cerca):</span>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </label>
+          <div>
+            <span>Selecciona el dia proximo que quieres que llegue tu pedido:</span>
+            <label for="">Lunes</label>
+            <input type="checkbox">
+            <label for="">Miercoles</label>
+            <input type="checkbox">
+            <label for="">Viernes</label>
+            <input type="checkbox">
+          </div>
+          <div>
+            <span>Verificar si esta correcto tu pedido:</span>
+            <div>
+              <tr>
+                <td>
+                  <img src="" alt="">
+                </td>
+                <td>
+                  <i class="fal fa-times-circle"></i>
+                  <tr>Margarita rosada, embolsado, de tipo asteracea, 35 cm de altura, calidad media. </tr>
+                  <tr>S/. 68.00</tr>
+                  <tr>05</tr>
+                </td>
+              </tr>
+            </div>
+          </div>
+          <div>
+              <div>
+                <p>El precio total de su pedido es: </p>
+                <p>S/. 35.00</p>
+              </div>
+              <div>
+                <p>Correcto:</p>
+                <label for="">
+                  <span>Si</span>
+                  <input type="checkbox" name="" id="">
+                </label>
+                <label for="">
+                  <span>No</span>
+                  <input type="checkbox" name="" id="">
+                </label>
+              </div>
+          </div>
+
+          <div class="Button__Pedir">	
+            <input type="submit" name="" id="" value="Calificar">
+          </div> 
+
+        </form>
       </div>
 
     </main>
