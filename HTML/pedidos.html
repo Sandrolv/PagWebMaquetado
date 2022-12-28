@@ -162,14 +162,14 @@
         background-position-x: center;
         background-position-y: center;
         background-size: cover;
-        height: 235px; 
+        height: 235px;
         width: 100%;
         display: grid;
         z-index: -2000;
-      
+
       }
       .frases-banner {
-        padding: 0 0 0 20px; 
+        padding: 0 0 0 20px;
         display: grid;
         align-self: center;
       }
@@ -185,7 +185,7 @@
         color: white;
         font-family: "Abel", sans-serif;
         width: 50%;
-        margin-bottom: 12px; 
+        margin-bottom: 12px;
       }
       .frases-banner > a:nth-child(3) {
         border: 1px solid white;
@@ -204,17 +204,13 @@
         height: 271px;
       }
       /*---------Estilos Informacion contactenos-------*/
-      
-      .Contactenos {
+      main > p {
         margin: 12px 20px 0 20px;
-        display: grid;
-        gap: 10px;
-      }
-      .Contactenos > p {
         font-size: 1.1rem;
         text-align: center;
       }
       .Contactenos_contenedor {
+        margin: 10px 20px 0 20px;
         display: grid;
         grid-template-rows: auto auto;
         grid-template-columns: 100%;
@@ -224,7 +220,6 @@
       .Contactenos_contenedor > img {
         height: 150px;
         border-radius: 5px;
-;
       }
       .Contactenos_informacion {
         display: grid;
@@ -259,6 +254,92 @@
       .Contactenos_informacion_redes_sociales > a {
         color: black;
       }
+      /*------------ Formulario Pedido------------*/
+      .Contenedor_Formulario_Pedido {
+        margin: 15px 20px 0 20px;
+        display: grid;
+        gap: 10px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        height: auto;
+        padding: 15px 25px;
+      }
+      .Contenedor_Formulario_Pedido > h3 {
+        text-align: center;
+        color: #31572C;
+        font-weight: 500;
+        font-size: 1.4rem;
+      }
+      .write_names,
+      .write_email,
+      .write_phone,
+      .write_dni,
+      .write_address,
+      .write_reference,
+      .Select_day_delivery {
+        display: grid;
+        gap: 8px;
+      }
+      .write_names > span,
+      .write_email > span,
+      .write_phone > span,
+      .write_dni > span,
+      .write_address > span,
+      .write_reference > span,
+      .Select_day_delivery > span {
+        color: #808080;
+        width: 100%;
+        font-size: 1.1rem;
+      }
+      .write_names > input[type=text],
+      .write_email > input[type=email],
+      .write_phone > input[type=number],
+      .write_dni > input[type=number],
+      .write_address > input[type=text],
+      .write_reference > textarea {
+        border: 1px solid #dbdbdb1a ;
+        background: #ececec;
+        resize: none;
+        padding: 6px 8px;
+        border-radius: 5px;
+        color: #808080;
+        font-size: 1rem;
+        width: 100%;
+      }
+      .Contenedor_phone_and_dni {
+        display: grid;
+        gap: 8px;
+        width: 100%;
+        grid-template-columns: auto auto;
+      }
+      .Contenedor__Options__Select_day_delivery {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        flex-wrap: wrap;
+
+      }
+      .Options__Select_day_delivery{
+        width: 30%;
+        max-width: 100px;
+        min-width: 60px;
+      }
+      .Options__Select_day_delivery > input[type="radio"] {
+        display: none;
+      }
+      .Options__Select_day_delivery > label {
+        background: #ececec;
+        padding: 6px 6px; 
+        color: #808080;
+        cursor: pointer;
+        border-radius: 8px;
+        display: grid;
+        text-align: center;
+      }
+      .Options__Select_day_delivery > input:checked ~ label {
+        background: var(--colorNavMovilDesplegable);
+        color: white;
+      }
 
       /*-------------------Estilos Footer----------------*/
       footer {
@@ -268,7 +349,7 @@
         display: grid;
         grid-template-columns: auto 170px auto;
         align-items: center;
-        gap: 10px; 
+        gap: 10px;
         margin-bottom: 10px;
       }
       .redes_sociales__footer > hr{
@@ -296,7 +377,7 @@
       .informacion__footer {
         margin: 0 15px;
         text-align: center;
-        display: grid;  
+        display: grid;
         gap: 2px;
         padding-bottom: 25px;
       }
@@ -336,7 +417,7 @@
         .nav-left > li > a {
           padding: 10px 10px 10px 20px;
         }
-        
+
         /* -----------------Estilos Banner------------ */
         .index-banner {
           height: 230px;
@@ -360,7 +441,7 @@
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 200px auto;
-          gap: 12px; 
+          gap: 12px;
           margin-bottom: 14px;
         }
         .redes_sociales_footer_iconos {
@@ -372,7 +453,7 @@
         }
         .redes_sociales_footer_iconos > li > a > i {
           font-size: 2.6rem;
-        }  
+        }
         .informacion__footer {
           gap: 4px;
           padding-bottom: 28px;
@@ -478,7 +559,7 @@
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 220px auto;
-          gap: 14px; 
+          gap: 14px;
           margin-bottom: 18px;
         }
         .redes_sociales__footer > hr{
@@ -493,7 +574,7 @@
         }
         .redes_sociales_footer_iconos > li > a > i {
           font-size: 3.1rem;
-        }  
+        }
         .informacion__footer {
           gap: 6px;
           padding-bottom: 31px;
@@ -539,7 +620,7 @@
           width: 110px;
         }
         .nav-left > li > a {
-          font-size: 2rem;   
+          font-size: 2rem;
         }
         .nav-right {
           gap: 12px;
@@ -580,7 +661,7 @@
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 240px auto;
-          gap: 30px; 
+          gap: 30px;
           margin-bottom: 22px;
         }
         .redes_sociales_footer_iconos {
@@ -592,7 +673,7 @@
         }
         .redes_sociales_footer_iconos > li > a > i {
           font-size: 3.3rem;
-        }  
+        }
         .informacion__footer {
           gap: 7px;
           padding-bottom: 35px;
@@ -636,7 +717,7 @@
               height="30px"
               src="https://static.vecteezy.com/system/resources/thumbnails/007/534/194/small/nature-concept-banner-with-lush-green-foliage-illustration-vector.jpg"
             />
-          </a>  
+          </a>
         </li>
         <li><a href="./index.html">INICIO</a></li>
         <li><a href="./nosotros.html">NOSOTROS</a></li>
@@ -667,124 +748,134 @@
         </div>
       </div>
 
-      <div class="Contactenos"> 
-        <p> Gracias por elegir My Nature, aquí tienes como contactarnos 😄: 
-        <div class="Contactenos_contenedor">
-            <img src="https://lh3.google.com/u/0/d/1CGB6zvTQOd6_B44e-41iYzZpYjYL2CNZ=w1031-h998-iv2" alt="">
-            <div class="Contactenos_informacion">
-              <h2>Contáctenos</h2>
-              <span>
-                <i class="far fa-map-marker-alt"></i>
-                <p>Dirección: Av. Ramiro Priale Priale S/N Miraflores Sapallanga Huancayo Junín Perú</p>
-              </span>
-              <span>
-                <i class="far fa-map-marked-alt"></i>
-                <p>Referencia: Al frente de, al lado de, por el lado de, de color, de tantos pisos....</p>
-              </span>
-              <span>
-                <i class="far fa-phone-volume"></i>
-                <p>923 910 869</p>
-              </span>
-              <span>
-                <i class="far fa-envelope"></i>
-                <div class="Contactenos_informacion_redes_sociales">
-                  <p>Email:</p>
-                  <a href="">MyNature1508@viverokantu.pe</a>
-                </div>
-              </span>
-              <span>
-                <i class="fab fa-instagram"></i>
-                <div class="Contactenos_informacion_redes_sociales">
-                  <p>Instagram:</p>
-                  <a href="">MyNature142022</a>
-                </div>
-              </span>
+      <p> Gracias por elegir My Nature, aquí tienes como contactarnos 😄:
+
+      <div class="Contactenos_contenedor">
+        <img src="https://lh3.google.com/u/0/d/1CGB6zvTQOd6_B44e-41iYzZpYjYL2CNZ=w1031-h998-iv2" alt="">
+        <div class="Contactenos_informacion">
+          <h2>Contáctenos</h2>
+          <span>
+            <i class="far fa-map-marker-alt"></i>
+            <p>Dirección: Av. Ramiro Priale Priale S/N Miraflores Sapallanga Huancayo Junín Perú</p>
+          </span>
+          <span>
+            <i class="far fa-map-marked-alt"></i>
+            <p>Referencia: Al frente de, al lado de, por el lado de, de color, de tantos pisos....</p>
+          </span>
+          <span>
+            <i class="far fa-phone-volume"></i>
+            <p>923 910 869</p>
+          </span>
+          <span>
+            <i class="far fa-envelope"></i>
+            <div class="Contactenos_informacion_redes_sociales">
+              <p>Email:</p>
+              <a href="">MyNature1508@viverokantu.pe</a>
+            </div>
+          </span>
+          <span>
+            <i class="fab fa-instagram"></i>
+            <div class="Contactenos_informacion_redes_sociales">
+              <p>Instagram:</p>
+              <a href="">MyNature142022</a>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <form class="Contenedor_Formulario_Pedido" action="">
+        <h3>HACER PEDIDO</h3>
+        <label class="write_names" for="">
+          <span>Nombre y Apellidos:</span>
+          <input type="text">
+        </label>
+        <label class="write_email" for="">
+          <span>Email:</span>
+          <input type="email">
+        </label>
+        <div class="Contenedor_phone_and_dni">
+          <label class="write_phone" for="">
+            <span>Celular/Tlf. Fijo:</span>
+            <input type="number">
+          </label>
+          <label class="write_dni" for="">
+            <span>DNI:</span>
+            <input type="number">
+          </label>
+        </div>
+        <label class="write_address" for="">
+          <span>Domicilio (lugar de recibimiento del pedido):</span>
+          <input type="text">
+        </label>
+        <label class="write_reference" for="">
+          <span>Referencia (como es tu casa, hay algo reconocible cerca):</span>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </label>
+
+        <div class="Select_day_delivery" >
+          <span>Selecciona el día próximo que quieres que llegue tu pedido:</span>
+          <div class="Contenedor__Options__Select_day_delivery">
+            <div class="Options__Select_day_delivery">
+              <input id="opcion1" name="radio" type="radio">
+              <label for="opcion1">Lunes</label>
+            </div>
+            <div class="Options__Select_day_delivery">
+              <input id="opcion2" name="radio" type="radio">
+              <label for="opcion2">Miercoles</label>
+            </div>
+            <div class="Options__Select_day_delivery">
+              <input id="opcion3" name="radio" type="radio">
+              <label for="opcion3">Viernes</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span>Verificar si esta correcto tu pedido:</span>
+          <div>
+            <tr>
+              <td>
+                <img src="" alt="">
+              </td>
+              <td>
+                <i class="fal fa-times-circle"></i>
+                <tr>Margarita rosada, embolsado, de tipo asteracea, 35 cm de altura, calidad media. </tr>
+                <tr>S/. 68.00</tr>
+                <tr>05</tr>
+              </td>
+            </tr>
+          </div>
+        </div>
+        <div>
+            <div>
+              <p>El precio total de su pedido es: </p>
+              <p>S/. 35.00</p>
+            </div>
+            <div>
+              <p>Correcto:</p>
+              <label for="">
+                <span>Si</span>
+                <input type="checkbox" name="" id="">
+              </label>
+              <label for="">
+                <span>No</span>
+                <input type="checkbox" name="" id="">
+              </label>
             </div>
         </div>
-        <form action="">
-          <h3>HACER PEDIDO</h3>
-          <label for="">
-            <span>Nombre y Apellidos del comprador:</span>
-            <input type="text">
-          </label>
-          <label for="">
-            <span>Email:</span>
-            <input type="email">
-          </label>
-          <div>
-            <label for="">
-              <span>Celular/Telefono Fijo:</span>
-              <input type="number">
-            </label>
-            <label for="">
-              <span>DNI:</span>
-              <input type="number">
-            </label>
-          </div>
-          <label for="">
-            <span>Domicilio o lugar de recibimiento del pedido:</span>
-            <input type="text">
-          </label>
-          <label for="">
-            <span>Referencia (como es tu casa, hay algo reconocible cerca):</span>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-          </label>
-          <div>
-            <span>Selecciona el dia proximo que quieres que llegue tu pedido:</span>
-            <label for="">Lunes</label>
-            <input type="checkbox">
-            <label for="">Miercoles</label>
-            <input type="checkbox">
-            <label for="">Viernes</label>
-            <input type="checkbox">
-          </div>
-          <div>
-            <span>Verificar si esta correcto tu pedido:</span>
-            <div>
-              <tr>
-                <td>
-                  <img src="" alt="">
-                </td>
-                <td>
-                  <i class="fal fa-times-circle"></i>
-                  <tr>Margarita rosada, embolsado, de tipo asteracea, 35 cm de altura, calidad media. </tr>
-                  <tr>S/. 68.00</tr>
-                  <tr>05</tr>
-                </td>
-              </tr>
-            </div>
-          </div>
-          <div>
-              <div>
-                <p>El precio total de su pedido es: </p>
-                <p>S/. 35.00</p>
-              </div>
-              <div>
-                <p>Correcto:</p>
-                <label for="">
-                  <span>Si</span>
-                  <input type="checkbox" name="" id="">
-                </label>
-                <label for="">
-                  <span>No</span>
-                  <input type="checkbox" name="" id="">
-                </label>
-              </div>
-          </div>
 
-          <div class="Button__Pedir">	
-            <input type="submit" name="" id="" value="Calificar">
-          </div> 
+        <div class="Button__Pedir">
+          <input type="submit" name="" id="" value="Calificar">
+        </div>
 
-        </form>
-      </div>
+      </form>
 
     </main>
 
     <footer>
       <div class="redes_sociales__footer">
         <hr>
-        <ul class="redes_sociales_footer_iconos"> 
+        <ul class="redes_sociales_footer_iconos">
           <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
           <li><a href=""><i class="fab fa-instagram"></i></a></li>
           <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
@@ -807,7 +898,7 @@
           <a href="">Política de Privacidad</a>
         </div>
       </div>
-      
+
 
     </footer>
     <script src="./Menu.js"></script>

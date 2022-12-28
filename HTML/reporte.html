@@ -269,8 +269,8 @@
        border: 1px solid #dbdbdb1a ;
        background: #ececec;
        resize: none;
-       padding: 5px 8px;
-       border-radius: 10px;
+       padding: 6px 8px;
+       border-radius: 5px;
        color: #808080;
        font-size: 1rem;
       }
@@ -288,7 +288,7 @@
       }
       .Options__Select_type_report > label {
         background: #ececec;
-        padding: 11px 11px;
+        padding: 6px 2px 6px 8px;
         display: block;
         color: #808080;
         cursor: pointer;
@@ -296,7 +296,7 @@
         z-index: 2;
         transition: color 200ms ease-in;/* nombre de la propiedad | duración | función | retardo */
         overflow: hidden; /*El contenido es recortado y no se muestran barras de posición.*/
-        border-radius: 15px;
+        border-radius: 10px;
       }
       .Options__Select_type_report > label::before {
         width: 10px;
@@ -315,18 +315,19 @@
         z-index: -1;
       } 
       .Options__Select_type_report > label::after {
-        width: 25px;
-        height: 25px;
+        width: 18px;
+        height: 18px;
         content: '';
         border: 1px solid #dbdbdb;
         background-color: #fff;
         background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
         background-repeat: no-repeat;
         background-position: 1px 2px;
+        background-size: 120%;
         border-radius: 50%;
         z-index: 2;
         position: absolute;
-        right: 5px;
+        right: 2px;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
@@ -356,19 +357,19 @@
         font-size: 1.1rem;
       }
       .Goup_file > input {
-        border-radius: 10px;
+        border-radius: 8px;
         color: #909090;
         outline: none;
         font-size: 1rem;
         background: #ececec;
         cursor: pointer;
-        height: 32px;
+        height: 24px;
       }
       ::-webkit-file-upload-button {
         background: var(--colorNavMovilDesplegable);
         color: #fff;
-        padding: 8px 8px;
-        border-radius: 10px 0 0 10px;
+        padding: 4px 4px 4px 8px;
+        border-radius: 8px 0 0 8px;
         border: none;
         cursor: pointer;
         font-family: "Montserrat", sans-serif;
@@ -847,17 +848,6 @@
           width: 110px;
           font-size: 1.9rem;
         }
-        .opciones-producto {
-          grid-template-columns: 155px 155px 155px;
-          grid-template-rows: 40px;
-          grid-template-areas: "planta maceta tierra";
-          gap: 35px;
-        }
-        .opciones-producto > button {
-          height: 40px;
-          width: 155px;
-          font-size: 1.7rem;
-        }
 
         /*-------------Estilos Contenido Reporte----------*/
         .Presentacion_reporte {
@@ -1095,17 +1085,7 @@
           width: 155px;
           font-size: 2.6rem;
         }
-        .opciones-producto {
-          grid-template-columns: auto auto auto;
-          grid-template-rows: 58px;
-          padding: 0 100px;
-        }
-        .opciones-producto > button {
-          height: 58px;
-          width: 245px;
-          font-size: 2.5rem;
-          border-radius: 2.5rem;
-        }
+        
         /*-------------Estilos Contenido Reporte----------*/
         .Presentacion_reporte {
           margin: 50px 100px 0 100px;
@@ -1344,10 +1324,10 @@
       <form class="Informar_reporte" action="">
         <h3>INFORMAR A MY NATURE</h3>
         <label class="write_inconvenient" for="">
-          <span>Escriba el inconveniente, sugerencia o aporte que tiene:</span>
+          <span>Comente algún inconveniente, sugerencia o aporte:</span>
           <textarea name="" id="" cols="30" rows="10"></textarea>
         </label>
-        <label class="Select_type_report" for="">
+        <div class="Select_type_report">
           <span>Tipo de comentario:</span>
           <div class="Options__Select_type_report">
             <input id="opcion1" name="radio" type="radio"/>
@@ -1361,7 +1341,7 @@
             <input id="opcion3" name="radio" type="radio"/>
             <label for="opcion3">Aporte</label>
           </div>  
-        </label>
+        </div>
         <label class="Goup_file" for="">
           <span>Si es un inconveniente, subir un archivo pdf que contenga las imagenes:
           </span>
