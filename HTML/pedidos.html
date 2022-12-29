@@ -256,7 +256,7 @@
       }
       /*------------ Formulario Pedido------------*/
       .Contenedor_Formulario_Pedido {
-        margin: 15px 20px 0 20px;
+        margin: 15px 16px 0 16px;
         display: grid;
         gap: 10px;
         background: rgba(255, 255, 255, 1);
@@ -276,7 +276,8 @@
       .write_dni,
       .write_address,
       .write_reference,
-      .Select_day_delivery {
+      .Select_day_delivery,
+      .Check_delivery {
         display: grid;
         gap: 8px;
       }
@@ -286,7 +287,8 @@
       .write_dni > span,
       .write_address > span,
       .write_reference > span,
-      .Select_day_delivery > span {
+      .Select_day_delivery > span,
+      .Check_delivery > span {
         color: #808080;
         width: 100%;
         font-size: 1.1rem;
@@ -335,12 +337,146 @@
         border-radius: 8px;
         display: grid;
         text-align: center;
+        transition: 0.5s ease;
+        
       }
       .Options__Select_day_delivery > input:checked ~ label {
         background: var(--colorNavMovilDesplegable);
         color: white;
       }
+      
+      .Products_delivery {
+        background: #ececec;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .Table_cart_Productos_delivery {
+        display: grid;
+        gap: 8PX;
+      } 
+      .Contenedor_Product_delivery {
+        position: relative;
+        display: grid;
+        gap: 5px;
+        border-bottom: 1px solid  var(--colorNavMovilDesplegable);
+        padding-bottom: 5px;
+        height: 150px ;
+      }
+      .Product_image {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+      }
+      .Product_image > a {
+        width: 85px;
+        height: 100px;
+        display: block;
+      }
+      .Product_image > a > img {
+        width: 85px;
+        height: 142px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      .Product_information, 
+      .Product_price_subtotal,
+      .Product_quantity {
+        display: flex;
+        flex-direction: column;
+        padding-left: 95px;
+        position: relative;
+        gap: 2px;
+      }
+      .Product_information {
+        justify-content: flex-end;
+      }
+      .Product_information > i {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .Product_information > a {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--navbarColorInactive);
+        text-decoration: none;
+        width: 90%;
+        min-height: 14px;
+        
+        
+      }
+      .Product_iformation__description {
+        
+      }
+      .Product_iformation__description > span {
+        display: block;
+      }
+      .Product_price {
 
+      }
+      Product_price_subtotal {
+        height: 26px;
+      }
+      .Product_price_subtotal > span {
+        font-weight: 600;
+        color: var(--navbarColorInactive);
+        position: relative;
+        display: flex;
+      }
+      .Product_price {
+        display: flex;
+        gap: 5px;
+      }
+      .Product_price > span:first-child {
+        color: red;
+        font-weight: 500;
+      }
+      .Product_price > span:last-child {
+        text-decoration: line-through;
+        color: grey;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: flex-end;
+        /* display: none; */
+      }
+      .Product_quantity {
+        flex-direction: row;
+        gap: 0px;
+        justify-content: flex-end ;
+        padding-right: 5px;
+      }
+      .Product_quantity > a {
+        padding: 0 8px;
+        width: auto;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        border: 1px solid var(--navbarColorInactive);
+        background-color: #fbfbfb;
+        color: var(--navbarColorInactive);
+        cursor: pointer;
+       
+      }
+      .Product_quantity > a:first-child {
+        border-right: 0;
+        border-radius: 4px 0 0 4px;
+      }
+      .Product_quantity > a:last-child {
+        border-left: 0;
+        border-radius: 0 4px 4px 0;
+        
+      }
+      .Product_quantity > input  {
+        padding: 0 4px;
+        height: 25px;
+        width: 28px;
+        text-align: center;
+        transition: all 0.4s ease-in-out;
+        border: 1px solid var(--navbarColorInactive);
+        font-size: 1rem;
+      }
+      
       /*-------------------Estilos Footer----------------*/
       footer {
         background-color: #f0f2f5;
@@ -830,22 +966,118 @@
           </div>
         </div>
 
-        <div>
+        <div class="Check_delivery">
           <span>Verificar si esta correcto tu pedido:</span>
-          <div>
-            <tr>
-              <td>
-                <img src="" alt="">
-              </td>
-              <td>
-                <i class="fal fa-times-circle"></i>
-                <tr>Margarita rosada, embolsado, de tipo asteracea, 35 cm de altura, calidad media. </tr>
-                <tr>S/. 68.00</tr>
-                <tr>05</tr>
-              </td>
-            </tr>
+          <table class="Products_delivery">
+            <tbody class="Table_cart_Productos_delivery">
+              <tr class="Contenedor_Product_delivery">
+                <td class="Product_image">
+                  <a href="">
+                    <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
+                  </a>
+                </td>
+                <td class="Product_information">
+                  <i class="fal fa-times-circle"></i>
+                  <a href="">Margarita rosada</a>
+                  <div class="Product_iformation__description">
+                    <span>Embolsado,</span>
+                    <span>tipo asteracea,</span>
+                    <span>35 cm de altura,</span>
+                    <span>calidad media.</span>
+                  </div>
+                </td>
+                <td class="Product_price_subtotal">
+                  <span>Precio</span>
+                  <div class="Product_price">
+                    <span>S/. 68.00</span>
+                    <span>S/. 45.00</span>       
+                  </div>
+                               
+                </td>
+                <td class="Product_quantity">
+                  <a href="">
+                    <i class="far fa-minus"></i>
+                  </a>
+                  <input type="tel" min="1">
+                  <a href="">  
+                    <i class="far fa-plus"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr class="Contenedor_Product_delivery">
+                <td class="Product_image">
+                  <a href="">
+                    <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
+                  </a>
+                </td>
+                <td class="Product_information">
+                  <i class="fal fa-times-circle"></i>
+                  <a href="">Margarita rosada</a>
+                  <div class="Product_iformation__description">
+                    <span>Embolsado,</span>
+                    <span>tipo asteracea,</span>
+                    <span>35 cm de altura,</span>
+                    <span>calidad media.</span>
+                  </div>
+                </td>
+                <td class="Product_price_subtotal">
+                  <span>Precio</span>
+                  <div class="Product_price">
+                    <span>S/. 68.00</span>
+                    <span>S/. 45.00</span>       
+                  </div>
+                               
+                </td>
+                <td class="Product_quantity">
+                  <a href="">
+                    <i class="far fa-minus"></i>
+                  </a>
+                  <input type="tel" min="1">
+                  <a href="">  
+                    <i class="far fa-plus"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr class="Contenedor_Product_delivery">
+                <td class="Product_image">
+                  <a href="">
+                    <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
+                  </a>
+                </td>
+                <td class="Product_information">
+                  <i class="fal fa-times-circle"></i>
+                  <a href="">Margarita rosada</a>
+                  <div class="Product_iformation__description">
+                    <span>Embolsado,</span>
+                    <span>tipo asteracea,</span>
+                    <span>35 cm de altura,</span>
+                    <span>calidad media.</span>
+                  </div>
+                </td>
+                <td class="Product_price_subtotal">
+                  <span>Precio</span>
+                  <div class="Product_price">
+                    <span>S/. 68.00</span>
+                    <span>S/. 45.00</span>       
+                  </div>
+                               
+                </td>
+                <td class="Product_quantity">
+                  <a href="">
+                    <i class="far fa-minus"></i>
+                  </a>
+                  <input type="tel" min="1">
+                  <a href="">  
+                    <i class="far fa-plus"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+            
           </div>
         </div>
+
         <div>
             <div>
               <p>El precio total de su pedido es: </p>
