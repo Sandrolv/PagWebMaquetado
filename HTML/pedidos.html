@@ -414,7 +414,7 @@
       .Product_price {
 
       }
-      Product_price_subtotal {
+      .Product_price_subtotal {
         height: 26px;
       }
       .Product_price_subtotal > span {
@@ -476,7 +476,113 @@
         border: 1px solid var(--navbarColorInactive);
         font-size: 1rem;
       }
-      
+
+      .Price_delivery_contenedor {
+
+      }
+      .Price_delivery_contenedor > h1,
+      .Price_delivery_contenedor > span {
+        font-size: 1.1rem;
+        color: #808080;
+        
+      }
+      .Price_delivery{
+        margin: 8px 0;
+      }
+      .Price_delivery_subtotal,
+      .Price_delivery_total {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.1rem;
+        color: #808080;
+        padding: 8px 0px;
+      }
+      .Price_delivery_subtotal {
+        border-bottom: 1px solid #f4f4f4;
+      }
+      .Price_discount_coupon {
+        display: grid;
+        gap: 5px;
+      }
+      .Price_discount_coupon > p {
+        font-size: 1.1rem;
+        color: #808080;
+      } 
+      .Price_discount_coupon> p > input {
+        display: none;
+      }
+      .Price_discount_coupon > p > label{
+        position: relative;
+        z-index: 2;
+      }
+      .Price_discount_coupon > p > label > i {
+        margin: 0 0 0 5px;
+        position: relative;
+        z-index: 1;
+      }
+      .Price_discount_coupon > p > i {
+        float: right;    
+      }
+    
+      .Price_discount_coupon > p > input:checked  ~  
+      label > i {
+        vertical-align: text-bottom;
+        transition: all .1s ease;
+        -webkit-transition: all .1s ease;
+        -moz-transition: all .1s ease;
+        -o-transition: all .1s ease;
+        transform: rotate(180deg);
+      }
+      .Price_discount_coupon > p > input:checked ~ div {
+        
+      }
+
+      .Price_discount_coupon_code {
+        display: flex;
+        justify-content: space-between;
+      }
+      .Price_discount_coupon_code > input {
+        width: 80%;
+        height: 26px;
+        color: #444;
+        background: #fbfbfb;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        box-shadow: none;
+        margin-right: 10px;
+        padding: 6px 8px;
+      } 
+      .Price_discount_coupon_code > button {
+        width: 18%;
+        position: relative;
+        color: #808080;
+        height: 26px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        background: #fff;
+        border: 1px solid #808080;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .Button__Pedir {
+       display: flex;
+       justify-content: center;
+      }
+
+      .Button__Pedir > input {
+        border: none;
+        width: fit-content;
+        padding: 9px 17px;
+        border-radius: 8px;
+        background-color: var(--colorButtonTiFilter);
+        font-size: 1.4rem;
+        box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 20%);
+        cursor: pointer;
+        margin-top: 8px;
+       
+      }
+
       /*-------------------Estilos Footer----------------*/
       footer {
         background-color: #f0f2f5;
@@ -1078,26 +1184,40 @@
           </div>
         </div>
 
-        <div>
-            <div>
-              <p>El precio total de su pedido es: </p>
-              <p>S/. 35.00</p>
+        <div class="Price_delivery_contenedor">
+          <h1>Carrito de compras</h1>
+          <span>3 Productos</span>
+          <div class="Price_delivery">
+            <div class="Price_delivery_subtotal">
+              <p>Subtotal </p>
+              <span>S/. 35.00</span>
             </div>
-            <div>
-              <p>Correcto:</p>
-              <label for="">
-                <span>Si</span>
-                <input type="checkbox" name="" id="">
-              </label>
-              <label for="">
-                <span>No</span>
-                <input type="checkbox" name="" id="">
-              </label>
+            <div class="Price_delivery_total">
+              <p>Total </p>
+              <span>S/. 35.00</span>
             </div>
+          </div>
+            
+          <div class="Price_discount_coupon">
+            <p>¡Tengo cupón de descuento!  
+              <input id="coupon" type="checkbox" name="radio">
+              <label for="coupon">
+                <i class="fas fa-chevron-down"></i>
+              </label>
+              <i class="fal fa-badge-dollar"></i>
+              <div class="Price_discount_coupon_code">
+                <input type="text">
+                <button>Aplicar</button>
+              </div>
+            </p>
+            
+            
+          </div>
+
         </div>
 
         <div class="Button__Pedir">
-          <input type="submit" name="" id="" value="Calificar">
+          <input type="submit" name="" id="" value="Pedir">
         </div>
 
       </form>
