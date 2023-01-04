@@ -204,41 +204,51 @@
         height: 271px;
       }
       /*---------Estilos Informacion contactenos-------*/
-      main > p {
+      /* main > p {
         margin: 12px 20px 0 20px;
         font-size: 1.1rem;
         text-align: center;
-      }
+      } */
       .Contactenos_contenedor {
-        margin: 10px 20px 0 20px;
+        margin: 12px 28px 0 28px;
         display: grid;
         grid-template-rows: auto auto;
         grid-template-columns: 100%;
         justify-items: center;
-        gap: 10px;
+        gap: 12px;
+        order: 2;
       }
       .Contactenos_contenedor > img {
+        border-radius: 50%;
         height: 150px;
-        border-radius: 5px;
+        filter: brightness(85%);
+        order: 1;
       }
-      .Contactenos_informacion {
+      .Contactenos_contenedor > .Contactenos_informacion {
         display: grid;
         gap: 8px;
       }
       .Contactenos_informacion > h2 {
         text-align: center;
+        margin-bottom: 5px;
       }
       .Contactenos_informacion > span {
         display: grid;
         grid-template-columns: 15px auto auto;
         gap: 5px;
+        align-items: center;
       }
       .Contactenos_informacion > span > i {
         font-size: 1.2rem;
         display: flex;
         justify-content: center;
       }
-      .Contactenos_informacion > span:first-child > i {
+      .Contactenos_informacion > span:nth-child(5),
+      .Contactenos_informacion > span:nth-child(6) {
+        align-items: flex-start;
+      }
+      .Contactenos_informacion > span:nth-child(5) > i,
+      .Contactenos_informacion > span:nth-child(6) > i {
         padding-top: 2px;
       }
       .Contactenos_informacion > span > p {
@@ -249,7 +259,6 @@
         font-size: 1.1rem;
         display: flex;
         gap: 3px;
-        text-align: justify;
       }
       .Contactenos_informacion_redes_sociales > a {
         color: black;
@@ -261,8 +270,7 @@
         gap: 10px;
         background: rgba(255, 255, 255, 1);
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        height: auto;
-        padding: 15px 25px;
+        padding: 15px 20px;
       }
       .Contenedor_Formulario_Pedido > h3 {
         text-align: center;
@@ -314,15 +322,16 @@
         width: 100%;
         grid-template-columns: auto auto;
       }
+      .write_reference > textarea  {
+        height: 50px;
+      }
       .Contenedor__Options__Select_day_delivery {
         display: flex;
         justify-content: center;
         gap: 5px;
-        flex-wrap: wrap;
-
       }
       .Options__Select_day_delivery{
-        width: 30%;
+        width: 32%;
         max-width: 100px;
         min-width: 60px;
       }
@@ -334,7 +343,7 @@
         padding: 6px 6px; 
         color: #808080;
         cursor: pointer;
-        border-radius: 8px;
+        border-radius: 6px;
         display: grid;
         text-align: center;
         transition: 0.5s ease;
@@ -344,7 +353,6 @@
         background: var(--colorNavMovilDesplegable);
         color: white;
       }
-      
       .Products_delivery {
         background: #ececec;
         padding: 5px;
@@ -352,7 +360,10 @@
       }
       .Table_cart_Productos_delivery {
         display: grid;
-        gap: 8PX;
+        gap: 5px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 300px;
       } 
       .Contenedor_Product_delivery {
         position: relative;
@@ -360,21 +371,18 @@
         gap: 5px;
         border-bottom: 1px solid  var(--colorNavMovilDesplegable);
         padding-bottom: 5px;
-        height: 150px ;
+        height: 146px ;
       }
       .Product_image {
         position: absolute;
-        display: flex;
-        flex-direction: column;
       }
       .Product_image > a {
-        width: 85px;
-        height: 100px;
-        display: block;
+        width: auto;
+        height: auto;
       }
       .Product_image > a > img {
-        width: 85px;
-        height: 142px;
+        width: 90%;
+        height: 140px;
         object-fit: cover;
         border-radius: 5px;
       }
@@ -383,8 +391,7 @@
       .Product_quantity {
         display: flex;
         flex-direction: column;
-        padding-left: 95px;
-        position: relative;
+        padding-left: 105px;
         gap: 2px;
       }
       .Product_information {
@@ -396,23 +403,28 @@
         top: 0;
       }
       .Product_information > a {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: var(--navbarColorInactive);
         text-decoration: none;
         width: 90%;
         min-height: 14px;
-        
-        
+        display: grid;
       }
+      .Product_information > a > h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--navbarColorInactive);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
       .Product_iformation__description {
-        
+        display: grid;
       }
       .Product_iformation__description > span {
         display: block;
-      }
-      .Product_price {
-
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
       .Product_price_subtotal {
         height: 26px;
@@ -420,8 +432,6 @@
       .Product_price_subtotal > span {
         font-weight: 600;
         color: var(--navbarColorInactive);
-        position: relative;
-        display: flex;
       }
       .Product_price {
         display: flex;
@@ -444,6 +454,7 @@
         gap: 0px;
         justify-content: flex-end ;
         padding-right: 5px;
+        align-items: center;
       }
       .Product_quantity > a {
         padding: 0 8px;
@@ -456,7 +467,6 @@
         background-color: #fbfbfb;
         color: var(--navbarColorInactive);
         cursor: pointer;
-       
       }
       .Product_quantity > a:first-child {
         border-right: 0;
@@ -500,30 +510,16 @@
       .Price_delivery_subtotal {
         border-bottom: 1px solid #f4f4f4;
       }
-      .Price_discount_coupon {
-        display: grid;
-        gap: 5px;
-      }
       .Price_discount_coupon > p {
         font-size: 1.1rem;
         color: #808080;
       } 
-      .Price_discount_coupon> p > input {
+      .Price_discount_coupon > p > input {
         display: none;
-      }
-      .Price_discount_coupon > p > label{
-        position: relative;
-        z-index: 2;
       }
       .Price_discount_coupon > p > label > i {
         margin: 0 0 0 5px;
-        position: relative;
-        z-index: 1;
       }
-      .Price_discount_coupon > p > i {
-        float: right;    
-      }
-    
       .Price_discount_coupon > p > input:checked  ~  
       label > i {
         vertical-align: text-bottom;
@@ -533,18 +529,22 @@
         -o-transition: all .1s ease;
         transform: rotate(180deg);
       }
-      .Price_discount_coupon > p > input:checked ~ div {
-        
+      .Price_discount_coupon > p > input:checked  ~  
+      .Price_discount_coupon_code  {
+        height: 100%;
       }
-
       .Price_discount_coupon_code {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-top: 5px;
+        height: 0px;  
+        overflow: hidden; 
+        transition: height 0.1s linear;
       }
       .Price_discount_coupon_code > input {
-        width: 80%;
         height: 26px;
-        color: #444;
+        color: #808080;
+        font-size: 1rem;
         background: #fbfbfb;
         border: 1px solid #e5e5e5;
         border-radius: 8px;
@@ -553,7 +553,6 @@
         padding: 6px 8px;
       } 
       .Price_discount_coupon_code > button {
-        width: 18%;
         position: relative;
         color: #808080;
         height: 26px;
@@ -563,13 +562,12 @@
         border: 1px solid #808080;
         border-radius: 6px;
         cursor: pointer;
+        padding: 6px 8px;
       }
-
       .Button__Pedir {
        display: flex;
        justify-content: center;
       }
-
       .Button__Pedir > input {
         border: none;
         width: fit-content;
@@ -582,6 +580,7 @@
         margin-top: 8px;
        
       }
+      /*------------Estilos Añadir a la compra----------*/
 
       /*-------------------Estilos Footer----------------*/
       footer {
@@ -990,23 +989,17 @@
         </div>
       </div>
 
-      <p> Gracias por elegir My Nature, aquí tienes como contactarnos 😄:
-
+      <!-- <p> Gracias por elegir My Nature, aquí tienes como contactarnos 😄</p> -->
       <div class="Contactenos_contenedor">
         <img src="https://lh3.google.com/u/0/d/1CGB6zvTQOd6_B44e-41iYzZpYjYL2CNZ=w1031-h998-iv2" alt="">
         <div class="Contactenos_informacion">
-          <h2>Contáctenos</h2>
+          <h2>CONTÁCTENOS</h2>
           <span>
-            <i class="far fa-map-marker-alt"></i>
-            <p>Dirección: Av. Ramiro Priale Priale S/N Miraflores Sapallanga Huancayo Junín Perú</p>
-          </span>
-          <span>
-            <i class="far fa-map-marked-alt"></i>
-            <p>Referencia: Al frente de, al lado de, por el lado de, de color, de tantos pisos....</p>
-          </span>
-          <span>
-            <i class="far fa-phone-volume"></i>
-            <p>923 910 869</p>
+            <i class="fab fa-instagram"></i>
+            <div class="Contactenos_informacion_redes_sociales">
+              <p>Teléfono:</p>
+              <p>923 910 869</p>
+            </div>
           </span>
           <span>
             <i class="far fa-envelope"></i>
@@ -1022,19 +1015,30 @@
               <a href="">MyNature142022</a>
             </div>
           </span>
+          <span>
+            <i class="far fa-map-marker-alt"></i>
+            <p>Dirección: Av. Ramiro Priale Priale S/N Miraflores Sapallanga Huancayo Junín Perú</p>
+          </span>
+          <span>
+            <i class="far fa-map-marked-alt"></i>
+            <p>Referencia: Al frente de, al lado de, por el lado de, de color, de tantos pisos....</p>
+          </span>
         </div>
       </div>
 
       <form class="Contenedor_Formulario_Pedido" action="">
         <h3>HACER PEDIDO</h3>
+
         <label class="write_names" for="">
           <span>Nombre y Apellidos:</span>
           <input type="text">
         </label>
+
         <label class="write_email" for="">
           <span>Email:</span>
           <input type="email">
         </label>
+
         <div class="Contenedor_phone_and_dni">
           <label class="write_phone" for="">
             <span>Celular/Tlf. Fijo:</span>
@@ -1045,10 +1049,12 @@
             <input type="number">
           </label>
         </div>
+
         <label class="write_address" for="">
           <span>Domicilio (lugar de recibimiento del pedido):</span>
           <input type="text">
         </label>
+        
         <label class="write_reference" for="">
           <span>Referencia (como es tu casa, hay algo reconocible cerca):</span>
           <textarea name="" id="" cols="30" rows="10"></textarea>
@@ -1084,12 +1090,14 @@
                 </td>
                 <td class="Product_information">
                   <i class="fal fa-times-circle"></i>
-                  <a href="">Margarita rosada</a>
+                  <a href="">
+                    <h4>Margarita rosada Margarita rosada</h4>
+                  </a>
                   <div class="Product_iformation__description">
-                    <span>Embolsado,</span>
-                    <span>tipo asteracea,</span>
-                    <span>35 cm de altura,</span>
-                    <span>calidad media.</span>
+                    <span>Embolsado</span>
+                    <span>Tipo asteracea</span>
+                    <span>35 cm de altura</span>
+                    <span>Calidad media</span>
                   </div>
                 </td>
                 <td class="Product_price_subtotal">
@@ -1098,7 +1106,6 @@
                     <span>S/. 68.00</span>
                     <span>S/. 45.00</span>       
                   </div>
-                               
                 </td>
                 <td class="Product_quantity">
                   <a href="">
@@ -1118,12 +1125,14 @@
                 </td>
                 <td class="Product_information">
                   <i class="fal fa-times-circle"></i>
-                  <a href="">Margarita rosada</a>
+                  <a href="">
+                    <h4>Margarita rosada Margarita rosada</h4>
+                  </a>
                   <div class="Product_iformation__description">
-                    <span>Embolsado,</span>
-                    <span>tipo asteracea,</span>
-                    <span>35 cm de altura,</span>
-                    <span>calidad media.</span>
+                    <span>Embolsado</span>
+                    <span>Tipo asteracea</span>
+                    <span>35 cm de altura</span>
+                    <span>Calidad media</span>
                   </div>
                 </td>
                 <td class="Product_price_subtotal">
@@ -1132,7 +1141,6 @@
                     <span>S/. 68.00</span>
                     <span>S/. 45.00</span>       
                   </div>
-                               
                 </td>
                 <td class="Product_quantity">
                   <a href="">
@@ -1152,12 +1160,14 @@
                 </td>
                 <td class="Product_information">
                   <i class="fal fa-times-circle"></i>
-                  <a href="">Margarita rosada</a>
+                  <a href="">
+                    <h4>Margarita rosada Margarita rosada</h4>
+                  </a>
                   <div class="Product_iformation__description">
-                    <span>Embolsado,</span>
-                    <span>tipo asteracea,</span>
-                    <span>35 cm de altura,</span>
-                    <span>calidad media.</span>
+                    <span>Embolsado</span>
+                    <span>Tipo asteracea</span>
+                    <span>35 cm de altura</span>
+                    <span>Calidad media</span>
                   </div>
                 </td>
                 <td class="Product_price_subtotal">
@@ -1166,7 +1176,6 @@
                     <span>S/. 68.00</span>
                     <span>S/. 45.00</span>       
                   </div>
-                               
                 </td>
                 <td class="Product_quantity">
                   <a href="">
@@ -1180,10 +1189,7 @@
               </tr>
             </tbody>
           </table>
-            
-          </div>
         </div>
-
         <div class="Price_delivery_contenedor">
           <h1>Carrito de compras</h1>
           <span>3 Productos</span>
@@ -1197,30 +1203,43 @@
               <span>S/. 35.00</span>
             </div>
           </div>
-            
           <div class="Price_discount_coupon">
             <p>¡Tengo cupón de descuento!  
+              
               <input id="coupon" type="checkbox" name="radio">
-              <label for="coupon">
+              <label for="coupon" >
                 <i class="fas fa-chevron-down"></i>
               </label>
-              <i class="fal fa-badge-dollar"></i>
-              <div class="Price_discount_coupon_code">
+              <label class="Price_discount_coupon_code">
                 <input type="text">
                 <button>Aplicar</button>
-              </div>
+              </label>
+              <!-- <i class="fal fa-badge-dollar"></i> -->
             </p>
-            
-            
           </div>
-
         </div>
-
         <div class="Button__Pedir">
-          <input type="submit" name="" id="" value="Pedir">
+          <input type="submit" name="" id="" value="Hacer Pedido">
         </div>
-
       </form>
+   
+      <div>
+        <h1>Añadelo a tu compra</h1>
+        <div>
+          <div>
+            <div class="Productos_adicionales">
+              <p>aqui iran la descricpion de los productos por div</p>
+            </div>
+          </div>
+        </div>
+        <div>
+            <p>Aquidebe estar el slider</p>
+        </div>
+        <span>
+          <a href="index.html">Ver más productos</a> 
+        </span>
+      </div>
+
 
     </main>
 

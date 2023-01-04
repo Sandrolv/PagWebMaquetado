@@ -371,8 +371,9 @@
       .Producto1_right_mobile {
         display: grid;
         grid-template-rows: auto auto;
-        gap: 10px;
-        margin: 10px;
+        gap:  10px;
+        padding: 8px 10px;
+        height: 100%;
       }
       .Producto_informacion {
         width: 100%;
@@ -381,18 +382,21 @@
         gap: 8px;
         align-items: center;
       }
-      .Producto_informacion > button {
+      .Producto_informacion > a {
         border: none;
         background: none;
         cursor: pointer;
         max-width: fit-content;
         text-align: justify;
         display: grid;
+        text-decoration: none;
+        color: black;
       }
-      .Producto_informacion > button > h4 {
+      .Producto_informacion > a > h4 {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        font-size: 1.5rem;
        }
       .Producto_precio__oferta {
         display: flex;
@@ -416,6 +420,7 @@
       .Producto_button {
         display: flex;
         justify-content: end;
+        align-items: center;
       }
       .Producto_button > button {
         height: 34px;
@@ -653,7 +658,7 @@
         }
         .Producto1_right_mobile {
           grid-template-rows: auto 30%;
-          margin: 0;
+          padding: 0;
           gap: 10px;
         }
         .Producto_informacion {
@@ -665,7 +670,7 @@
             "nombre nombre"
             "precio precio"
         }
-        .Producto_informacion > button:nth-child(1){
+        .Producto_informacion > a:nth-child(1){
           grid-area: nombre;
         }
         .Producto_precio__oferta {
@@ -679,7 +684,7 @@
           justify-content: end;
           padding-right: 10px;
         }
-        .Producto_informacion > button:nth-child(1),
+        .Producto_informacion > a:nth-child(1),
         .Producto_informacion > .Producto_precio__oferta > h5 {
           font-size: 1.5rem;
         }
@@ -910,7 +915,7 @@
         .Producto1_imagen > img {
           border-radius: 10px 10px 0 0;
         }
-        .Producto_informacion > button:nth-child(1),
+        .Producto_informacion > a:nth-child(1),
         .Producto_informacion > .Producto_precio__oferta > h5 {
           font-size: 1.6rem;
         }
@@ -1132,7 +1137,7 @@
         .Producto_informacion {
           grid-template-rows:  auto 15% 20px 20px;
         }
-        .Producto_informacion > button:nth-child(1),
+        .Producto_informacion > a:nth-child(1),
         .Producto_informacion > .Producto_precio__oferta > h5{
           font-size: 1.9rem;
         }
@@ -1325,14 +1330,14 @@
 
         <div class="venta-productos">
           <div class="Producto1">
-            <button class="Producto1_imagen">
+            <a class="Producto1_imagen">
               <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
-            </button>
+            </a>
             <div class="Producto1_right_mobile">
               <div class="Producto_informacion">
-                <button>
+                <a href="">
                   <h4>Buganvilla </h4>
-                </button>
+                </a>
                 <div class="Producto_precio__oferta">
                   <h5>S/. 78.00</h5>
                   <h5>S/. 70.00</h5>
@@ -1348,37 +1353,14 @@
             </div>
           </div>
           <div class="Producto1">
-            <button class="Producto1_imagen">
+            <a class="Producto1_imagen">
               <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
-            </button>
+            </a>
             <div class="Producto1_right_mobile">
               <div class="Producto_informacion">
-                <button>
-                  <h4>Buganvilla colas de zorro mapache </h4>
-                </button>
-                <div class="Producto_precio__oferta">
-                  <h5>S/. 78.00</h5>
-                  <h5>S/. 70.00</h5>
-                </div>
-                <p>Rosada</p>
-                <p>Disp. 10</p>
-                <p>Embolsada </p>
-                <p>Al. 35 cm</p>
-              </div>
-              <div class="Producto_button">
-                <button >PEDIR</button>
-              </div>
-            </div>
-          </div>
-          <div class="Producto1">
-            <button class="Producto1_imagen">
-              <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
-            </button>
-            <div class="Producto1_right_mobile">
-              <div class="Producto_informacion">
-                <button>
-                  <h4>Buganvilla colas de zorro mapache </h4>
-                </button>
+                <a href="">
+                  <h4>Buganvilla </h4>
+                </a>
                 <div class="Producto_precio__oferta">
                   <h5>S/. 78.00</h5>
                   <h5>S/. 70.00</h5>
@@ -1394,14 +1376,14 @@
             </div>
           </div>
           <div class="Producto1">
-            <button class="Producto1_imagen">
+            <a class="Producto1_imagen">
               <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
-            </button>
+            </a>
             <div class="Producto1_right_mobile">
               <div class="Producto_informacion">
-                <button>
-                  <h4>Buganvilla colas de zorro mapache </h4>
-                </button>
+                <a href="">
+                  <h4>Buganvilla </h4>
+                </a>
                 <div class="Producto_precio__oferta">
                   <h5>S/. 78.00</h5>
                   <h5>S/. 70.00</h5>
@@ -1417,14 +1399,14 @@
             </div>
           </div>
           <div class="Producto1">
-            <button class="Producto1_imagen">
+            <a class="Producto1_imagen">
               <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
-            </button>
+            </a>
             <div class="Producto1_right_mobile">
               <div class="Producto_informacion">
-                <button>
-                  <h4>Buganvilla colas de zorro mapache </h4>
-                </button>
+                <a href="">
+                  <h4>Buganvilla </h4>
+                </a>
                 <div class="Producto_precio__oferta">
                   <h5>S/. 78.00</h5>
                   <h5>S/. 70.00</h5>
@@ -1440,14 +1422,37 @@
             </div>
           </div>
           <div class="Producto1">
-            <button class="Producto1_imagen">
+            <a class="Producto1_imagen">
               <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
-            </button>
+            </a>
             <div class="Producto1_right_mobile">
               <div class="Producto_informacion">
-                <button>
-                  <h4>Buganvilla colas de zorro mapache </h4>
-                </button>
+                <a href="">
+                  <h4>Buganvilla </h4>
+                </a>
+                <div class="Producto_precio__oferta">
+                  <h5>S/. 78.00</h5>
+                  <h5>S/. 70.00</h5>
+                </div>
+                <p>Rosada</p>
+                <p>Disp. 10</p>
+                <p>Embolsada </p>
+                <p>Al. 35 cm</p>
+              </div>
+              <div class="Producto_button">
+                <button>PEDIR</button>
+              </div>
+            </div>
+          </div>
+          <div class="Producto1">
+            <a class="Producto1_imagen">
+              <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
+            </a>
+            <div class="Producto1_right_mobile">
+              <div class="Producto_informacion">
+                <a href="">
+                  <h4>Buganvilla </h4>
+                </a>
                 <div class="Producto_precio__oferta">
                   <h5>S/. 78.00</h5>
                   <h5>S/. 70.00</h5>
