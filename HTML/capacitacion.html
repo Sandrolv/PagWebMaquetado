@@ -439,6 +439,18 @@
           font-size: 1.7rem;
         }
 
+        .contenedor_general{
+          width: 80%;
+          margin: auto;
+          font-size: 1.7rem;
+          text-align: center;
+        }
+        .contenedor_general h2{
+          font-size: 2rem;
+          padding: 2rem 0;
+          text-align: left;
+        
+        }
 
         .titulo-p1{
           font-size: 18px;
@@ -452,61 +464,33 @@
         .titulo-p1 >h1{
           padding: 20px;
         }
-        .a{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin:0 30px;
-          font-size: 18px;
-          
+        
+        .a, .b, .c, .d, .e{
+          display: grid;
+          grid-template-columns: 60% 40%;
+          grid-gap: 2rem;
+          text-align: left;
         }
-       
-        .a > ul{
-          padding: 10px;
+        .a div ul, .a div ol, .b div ul, .b div ol, .c div ul, .c div ol, .d div ul, .d div ol, .e div ul, .e div ol{
+          padding: 2rem 0 2rem 3rem;
         }
-        .b{
-       
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 0 30px;
-          font-size: 18px;
-        }
-        .b > p,ul{
-          padding: 10px;
-        }
-        .c{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 0 30px;
-          font-size: 18px;
-        }
-        .c > p,ol{
-          padding: 10px;
-        }
-        .d{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 0 30px;
-          font-size: 18px;
-        }
-        .d > p,ol{
-          padding: 10px;
-        }
-        .e{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 0 30px;
-          font-size: 18px;
-        }
-        .e > p,ol{
-          padding: 10px;
+        .a div:nth-child(1), .b div:nth-child(1), .c div:nth-child(1), .d div:nth-child(1), .e div:nth-child(1) {
+          padding-left: 3rem;
         }
         
+        .imagen_contenido {
+          width: 100%;
+          border-radius: 1rem;
+        }
+        .link {
+          margin: 2rem 0;
+        }
+        #sin_puntos{
+          list-style-type: none;
+          padding-left: 0;
+        }
 
+        
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 220px auto;
@@ -703,37 +687,45 @@
 
     <main>
       <div class="index-banner">
+
         <div class="frases-banner">
           <h1>La tierra ríe en las flores.</h1>
           <p>Verde es el color principal del mundo, y a partir del cual surge su hermosura. ¿Ya tienes una flor en casa?</p>
           <a href="#">Contactar</a>
         </div>
       </div>
-
+      <div class="contenedor_general">
       <div class="titulo-p1">
 
             <p>¿No sabes que hacer en algunos casos con las plantas?
               Aqui tienes información que te puede servir 👇</p>
             <h1>MY NATURE TE AYUDA CON: </h1>
       </div>
-            <div class="a">
-              <h2>A. Consideraciones a tener si quiero o cuido una planta en casa</h2>
-              <img class="primera_imagen" src="https://www.buenosaires.gob.ar/sites/gcaba/files/plantarinterna3.jpg" alt="imagenA">
-              <ul>
-                <li>PASO 1: Elegir correctamente el tipo de planta para mi hogar</li>
-                <li>PASO 2: Organizar el sitio donde plantare mis plantas según sus necesidades y características</li>
-                <li>PASO 3: Preparar el suelo</li>
-                <li>PASO 4: Revisar el estado de la planta</li>
-                <li>PASO 5: Sembrar de la manera indicada</li>
-                <li>PASO 6: Crear un acolchado para proteger las semillas</li>
-                <li>PASO 7: Regar abundantemente</li>
-              </ul>
-            </div>
-
-            <div class="b">
-              <h2>B. ¿Que nutrientes de la tierra son buenas para las plantas?</h2>
-              <img class="segunda_imagen" src="https://www.redagricola.com/pe/assets/uploads/2022/06/sebastian-ochoa-nutricion-destacada.jpg" alt="imagenB">
-              <p>Todas las plantas, sean ornamentales u hortícolas, necesitan captar minerales y otros elementos de la tierra para poder crecer correctamente y dar su fruto.</p>
+      <h2>A. Consideraciones a tener si quiero o cuido una planta en casa</h2>
+      <div class="a">
+              <div>
+                <ul id="sin_puntos">
+                  <li>PASO 1: Elegir correctamente el tipo de planta para mi hogar</li>
+                  <li>PASO 2: Organizar el sitio donde plantare mis plantas según sus necesidades y características</li>
+                  <li>PASO 3: Preparar el suelo</li>
+                  <li>PASO 4: Revisar el estado de la planta</li>
+                  <li>PASO 5: Sembrar de la manera indicada</li>
+                  <li>PASO 6: Crear un acolchado para proteger las semillas</li>
+                  <li>PASO 7: Regar abundantemente</li>
+                </ul>
+              </div>
+              <div>
+                <img class="imagen_contenido" src="https://www.buenosaires.gob.ar/sites/gcaba/files/plantarinterna3.jpg" alt="imagenA">
+              </div>
+            
+      </div>
+        <p class="link"><a href="">Para leer la información completa hacer click aqui</a></p>
+      
+      
+      <h2>B. ¿Que nutrientes de la tierra son buenas para las plantas?</h2>
+      <div class="b">
+              <div>
+                <p>Todas las plantas, sean ornamentales u hortícolas, necesitan captar minerales y otros elementos de la tierra para poder crecer correctamente y dar su fruto.</p>
                 <ul>
                   <li>El nitrógeno</li>
                   <li>El potasio</li>
@@ -742,61 +734,80 @@
                   <li>El calcio</li>
                   <li">El magnesio</li>
                 </ul>
-            </div>
+              </div>
+              <div>
+                <img class="imagen_contenido" src="https://www.redagricola.com/pe/assets/uploads/2022/06/sebastian-ochoa-nutricion-destacada.jpg" alt="imagenB">
+              </div>     
+      </div>
+      <p class="link"><a href="">Para leer la información completa hacer click aqui</a></p>
+      
+      <h2>C. ¿Que restos de alimentos puedo ponerle a las plantas?</h2>
+      <div class="c">
+              <div>
+                <p>Fertilizantes naturales y caseros que no deberias de desechar porque a tus plantas les vendria bien en su desarrollo.</p>
+                <ol>
+                  <li>Estiércol de caballo.</li>
+                  <li>Humus de lombriz, el mejor abono natural para plantas.</li>
+                  <li>Té de plátano: fertilizante casero para plantas.</li>
+                  <li>Cáscaras de huevo.</li>
+                  <li>Cenizas de madera.</li>
+                </ol>
+              </div>
+              <div>
+                <img class="imagen_contenido" src="https://www.amigosdelajardineria.com/wp-content/uploads/2016/12/compost.jpg" alt="imagenC">
+              </div>    
+      </div>
+      <p class="link"><a href="">Para leer la información completa hacer click aqui</a></p>
+      <h2>D. 8 trucos caseros de jardinería que mantendrán tus plantas esplendorosas</h2>
+      <div class="d">
+              <div>
+                <p>Ser jardinero no es tarea facil</p> 
+                <ol>
+                  <li>Intenta regar sin cal</li>
+                  <li>Airea la tierra</li>
+                  <li>Estimula el crecimiento de raices nuevas.</li>
+                  <li>Dales más horas de luz.</li>
+                  <li>Usa el bicarbonato</li>
+                  <li>Fabrica repelentes de plagas caseros</li>
+                  <li> Aprovecha nutrientes insospechados.</li>
+                  <li>Hojas mucho más verdes</li>
+                </ol>
+              </div>
+              <div>
+                <img class="imagen_contenido" src="https://www.elmueble.com/medio/2018/12/18/como-transplantar-una-planta-paso-a-paso_4b3005d4_600x600.jpg" alt="imagenD">
+              </div>
+      </div>
+      <p class="link"><a href="">Para leer la información completa hacer click aqui</a></p>
+      <h2>E. 15 consejos de jardineria para principiantes</h2>      
+      <div class="e">
+              <div>
+                <p>Si tan solo hubiera sabido antes de que todo mi sembrio muriese.</p>
+                <ol>
+                  <li>Antes que nada, hay que definir el fin del jardín</li>
+                  <li>Evaluar el clima de la zona</li>
+                  <li>Tener en cuenta la intensidad de luz</li>
+                  <li>Evaluar el sustrato o terreno</li>
+                  <li>Regar las plantas en la frecuencia correcta</li>
+                  <li>Fertilización adecuada</li>
+                  <li>Poda frecuente</li>
+                  <li>Adquirir las herramientas básicas</li>
+                  <li>Tener en cuenta la altura de las plantas</li>
+                  <li>Almacenaje de semillas</li>
+                  <li>Permitir a los insectos vivir en el jardín</li>
+                  <li>Cuidado con las raíces</li>
+                  <li>Cuidado al trasplantar</li>
+                  <li>Atención con las plagas</li>
+                  <li>Llevar una agenda de las plantas</li>
+                </ol> 
+              </div>
+              <div>
+                <img class="imagen_contenido" src="https://www.clikisalud.net/wp-content/uploads/2019/04/consejos-cuidar-piel-jardineria.jpg" alt="imagenE">
+              </div>
+      </div>
+      <p class="link"><a href="">Para leer la información completa hacer click aqui</a></p>
+      
 
-            <div class="c">
-              <h2>C. ¿Que restos de alimentos puedo ponerle a las plantas?</h2>
-              <img class="segunda_imagen" src="https://www.amigosdelajardineria.com/wp-content/uploads/2016/12/compost.jpg" alt="imagenC">
-              <p>Fertilizantes naturales y caseros que no deberias de desechar porque a tus plantas les vendria bien en su desarrollo.</p>
-              <ol>
-                <li>Estiércol de caballo.</li>
-                <li>Humus de lombriz, el mejor abono natural para plantas.</li>
-                <li>Té de plátano: fertilizante casero para plantas.</li>
-                <li>Cáscaras de huevo.</li>
-                <li>Cenizas de madera.</li>
-              </ol>
-            </div>
-            
-            <div class="d">
-              <h2>D. 8 trucos caseros de jardinería que mantendrán tus plantas esplendorosas</h2>
-              <img class="segunda_imagen" src="https://www.elmueble.com/medio/2018/12/18/como-transplantar-una-planta-paso-a-paso_4b3005d4_600x600.jpg" alt="imagenD">
-              <p>Ser jardinero no es tarea facil</p>
-              <ol>
-                <li>Intenta regar sin cal</li>
-                <li>Airea la tierra</li>
-                <li>Estimula el crecimiento de raices nuevas.</li>
-                <li>Dales más horas de luz.</li>
-                <li>Usa el bicarbonato</li>
-                <li>Fabrica repelentes de plagas caseros</li>
-                <li> Aprovecha nutrientes insospechados.</li>
-                <li>Hojas mucho más verdes</li>
-              </ol>
-            </div>
-              
-            <div class="e">
-              <h2>E. 15 consejos de jardineria para principiantes</h2>
-              <img class="segunda_imagen" src="https://www.clikisalud.net/wp-content/uploads/2019/04/consejos-cuidar-piel-jardineria.jpg" alt="imagenE">
-              <p>Si tan solo hubiera sabido antes de que todo mi sembrio muriese.</p>
-              <ol>
-                <li>Antes que nada, hay que definir el fin del jardín</li>
-                <li>Evaluar el clima de la zona</li>
-                <li>Tener en cuenta la intensidad de luz</li>
-                <li>Evaluar el sustrato o terreno</li>
-                <li>Regar las plantas en la frecuencia correcta</li>
-                <li>Fertilización adecuada</li>
-                <li>Poda frecuente</li>
-                <li>Adquirir las herramientas básicas</li>
-                <li>Tener en cuenta la altura de las plantas</li>
-                <li>Almacenaje de semillas</li>
-                <li>Permitir a los insectos vivir en el jardín</li>
-                <li>Cuidado con las raíces</li>
-                <li>Cuidado al trasplantar</li>
-                <li>Atención con las plagas</li>
-                <li>Llevar una agenda de las plantas</li>
-
-              </ol>
-            </div>
-                
+       </div>         
     </main>
 
     <footer>
