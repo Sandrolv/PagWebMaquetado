@@ -156,22 +156,23 @@
       }
       .index-banner {
         background-image:
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url(https://lh3.google.com/u/0/d/1D4AzKfvj-JlVX3RquBOGHOOjon7MMbaW=w1918-h1009-iv1);
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url(https://lh3.google.com/u/0/d/1l8Z59mmL3wzvG9dwsgxYSFPNmWiptPMR=w1362-h1008-iv1);
         background-size: 160%;
         background-position-x: center;
         background-position-y: center;
         background-size: cover;
-        height: 235px;
+        height: 235px; 
         width: 100%;
         display: grid;
         z-index: -2000;
-
       }
       .frases-banner {
-        padding: 0 0 0 20px;
+        padding: 0 0 0 20px; 
         display: grid;
         align-self: center;
+        position: relative;
+        top: -5px;
       }
       .frases-banner > h1 {
         font-size: 1.4rem;
@@ -185,7 +186,7 @@
         color: white;
         font-family: "Abel", sans-serif;
         width: 50%;
-        margin-bottom: 12px;
+        margin-bottom: 12px; 
       }
       .frases-banner > a:nth-child(3) {
         border: 1px solid white;
@@ -204,11 +205,6 @@
         height: 271px;
       }
       /*---------Estilos Informacion contactenos-------*/
-      /* main > p {
-        margin: 12px 20px 0 20px;
-        font-size: 1.1rem;
-        text-align: center;
-      } */
       .Contactenos_contenedor {
         margin: 12px 28px 0 28px;
         display: grid;
@@ -218,11 +214,13 @@
         gap: 12px;
         order: 2;
       }
-      .Contactenos_contenedor > img {
+      .Contactenos_imagen {
+        order: 1;
+      }
+      .Contactenos_imagen > img {
         border-radius: 50%;
         height: 150px;
         filter: brightness(85%);
-        order: 1;
       }
       .Contactenos_contenedor > .Contactenos_informacion {
         display: grid;
@@ -247,8 +245,7 @@
       .Contactenos_informacion > span:nth-child(6) {
         align-items: flex-start;
       }
-      .Contactenos_informacion > span:nth-child(5) > i,
-      .Contactenos_informacion > span:nth-child(6) > i {
+      .Contactenos_informacion > span:nth-child(5) > i {
         padding-top: 2px;
       }
       .Contactenos_informacion > span > p {
@@ -258,7 +255,7 @@
       .Contactenos_informacion_redes_sociales  {
         font-size: 1.1rem;
         display: flex;
-        gap: 3px;
+        gap: 5px;
       }
       .Contactenos_informacion_redes_sociales > a {
         color: black;
@@ -401,6 +398,8 @@
         position: absolute;
         right: 0;
         top: 0;
+        font-size: 1.2rem;
+        padding: 1px;
       }
       .Product_information > a {
         text-decoration: none;
@@ -421,7 +420,6 @@
         display: grid;
       }
       .Product_iformation__description > span {
-        display: block;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -486,15 +484,10 @@
         border: 1px solid var(--navbarColorInactive);
         font-size: 1rem;
       }
-
-      .Price_delivery_contenedor {
-
-      }
       .Price_delivery_contenedor > h1,
       .Price_delivery_contenedor > span {
         font-size: 1.1rem;
         color: #808080;
-        
       }
       .Price_delivery{
         margin: 8px 0;
@@ -553,7 +546,6 @@
         padding: 6px 8px;
       } 
       .Price_discount_coupon_code > button {
-        position: relative;
         color: #808080;
         height: 26px;
         font-size: 1.1rem;
@@ -574,11 +566,10 @@
         padding: 9px 17px;
         border-radius: 8px;
         background-color: var(--colorButtonTiFilter);
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 20%);
         cursor: pointer;
-        margin-top: 8px;
-       
+        margin-top: 5px;
       }
       /*------------Estilos Añadir a la compra----------*/
 
@@ -679,6 +670,201 @@
           width: 80px;
           font-size: 1.4rem;
         }
+
+        /*---------Estilos Informacion contactenos-------*/
+        .Contactenos_contenedor {
+          margin: 18px 13% 0 13%;
+          gap: 15px;
+          font-size: 1.2rem;
+        }
+        .Contactenos_imagen > img {
+          height: 170px;
+        }
+        .Contactenos_contenedor > .Contactenos_informacion {
+          gap: 10px;
+        }
+        .Contactenos_informacion > span {
+          gap: 8px;
+        }
+        .Contactenos_informacion > span > i {
+          font-size: 1.4rem;
+        }
+        .Contactenos_informacion > span > p {
+          font-size: 1.3rem;
+        }
+        .Contactenos_informacion_redes_sociales  {
+          font-size: 1.3rem;
+        }
+        /*------------ Formulario Pedido------------*/
+        .Contenedor_Formulario_Pedido {
+          margin: 18px 10% 0 10%;
+          gap: 13px;
+          padding: 18px 28px;
+        }
+        .Contenedor_Formulario_Pedido > h3 {
+          font-size: 1.8rem;
+        }
+        .write_names,
+        .write_email,
+        .write_phone,
+        .write_dni,
+        .write_address,
+        .write_reference,
+        .Select_day_delivery,
+        .Check_delivery {
+          /* gap: 8px; */
+        }
+        .write_names > span,
+        .write_email > span,
+        .write_phone > span,
+        .write_dni > span,
+        .write_address > span,
+        .write_reference > span,
+        .Select_day_delivery > span,
+        .Check_delivery > span {
+          font-size: 1.3rem;
+        }
+        .write_names > input[type=text],
+        .write_email > input[type=email],
+        .write_phone > input[type=number],
+        .write_dni > input[type=number],
+        .write_address > input[type=text],
+        .write_reference > textarea {
+          padding: 7px 10px;
+          border-radius: 7px;
+          font-size: 1.2rem;
+        }
+        .Contenedor_phone_and_dni {
+          /* gap: 8px; */
+        }
+        .write_reference > textarea  {
+          height: 60px;
+        }
+        .Contenedor__Options__Select_day_delivery {
+          gap: 8px;
+        }
+        .Options__Select_day_delivery{
+          max-width: 140px;
+          min-width: 100px;
+        }
+        .Options__Select_day_delivery > label {
+          padding: 8px 8px; 
+          font-size: 1.2rem;
+          border-radius: 8px;
+        }
+        .Products_delivery {
+          padding: 9px;
+          border-radius: 7px;
+        }
+        .Table_cart_Productos_delivery {
+          /* gap: 5px; */
+          height: 322px;
+        } 
+        .Contenedor_Product_delivery {
+          /* gap: 5px; */
+          /* padding-bottom: 5px; */
+          height: 158px ;
+        }
+
+        .Product_image > a > img {
+          width: 90%;
+          height: 152px;
+          border-radius: 7px;
+        }
+        .Product_information, 
+        .Product_price_subtotal,
+        .Product_quantity {
+          padding-left: 112px;
+          gap: 3px;
+          font-size: 1.2rem;
+        }
+        .Product_information {
+          margin-top: 5px;
+        }
+        .Product_information > i {
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: 1.4rem;
+        }
+        .Product_information > a > h4 {
+          font-size: 1.3rem;
+        }
+        .Product_price_subtotal {
+          height: 33px;
+        }
+        .Product_price {
+          /* gap: 5px; */
+        }
+        .Product_price > span:last-child {
+          font-size: 1rem;
+          /* display: none; */
+        }
+        .Product_quantity {
+          gap: 0px;
+          padding-right: 6px;
+        }
+        .Product_quantity > a {
+          /* padding: 0 8px; */
+          /* height: 25px; */   
+        }
+        .Product_quantity > a:first-child {
+          border-radius: 5px 0 0 5px;
+        }
+        .Product_quantity > a:last-child {
+          border-radius: 0 5px 5px 0;
+        }
+        .Product_quantity > input  {
+          padding: 0 6px;
+          /* height: 25px;
+          width: 28px; */
+          font-size: 1.2rem;
+        }
+        .Price_delivery_contenedor > h1,
+        .Price_delivery_contenedor > span {
+          font-size: 1.3rem;
+        }
+        .Price_delivery{
+          /* margin: 8px 0; */
+        }
+        .Price_delivery_subtotal,
+        .Price_delivery_total {
+          font-size: 1.3rem;
+          /* padding: 8px 0px; */
+        }
+        .Price_delivery_subtotal {
+          /* border-bottom: px solid #f4f4f4; */
+        }
+        .Price_discount_coupon > p {
+          font-size: 1.3rem;
+        } 
+
+        .Price_discount_coupon > p > label > i {
+          margin: 0 0 0 7px;
+        }
+        .Price_discount_coupon_code {
+          margin-top: 7px;
+        }
+        .Price_discount_coupon_code > input {
+          height: 30px;
+          font-size: 1.2rem;
+          border-radius: 10px;
+          margin-right: 12px;
+        
+        } 
+        .Price_discount_coupon_code > button {
+          height: 30px;
+          font-size: 1.3rem;
+          border-radius: 8px;
+          padding: 7px 10px;
+        }
+
+        .Button__Pedir > input {
+          padding: 10px 18px;
+          font-size: 1.6rem;
+          border-radius: 12px;
+        }
+        /*------------Estilos Añadir a la compra----------*/
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 200px auto;
@@ -796,7 +982,59 @@
           width: 110px;
           font-size: 1.9rem;
         }
-
+        /*---------Estilos Informacion contactenos-------*/
+        .Contactenos_contenedor {
+          margin: 25px 15% 0 15%;
+          grid-template-rows: 100%;
+          grid-template-columns: auto auto;
+          gap: 22px;
+          font-size: 1.5rem;
+        }
+        .Contactenos_imagen {
+          order: 1;   
+        }
+        .Contactenos_imagen > img {
+          height: 100%;
+          max-width: 230px;
+          min-width: 230px;
+          width: 100%;
+          display: grid;
+          border-radius: 12px;
+          object-fit: cover;
+         
+        }
+        .Contactenos_contenedor > .Contactenos_informacion {
+          gap: 10px;
+          order: 2;
+          padding: 10px 0;
+        }
+        .Contactenos_informacion > h2 {
+          margin-bottom: 0px;
+          text-align: start;
+        }
+        .Contactenos_informacion > span {
+          gap: 10px;
+        }
+        .Contactenos_informacion > span > i {
+          font-size: 1.6rem;
+        }
+        .Contactenos_informacion > span:nth-child(5) > i {
+        padding-top: 3px;
+        }
+        .Contactenos_informacion > span > p {
+          font-size: 1.5rem;
+        }
+        .Contactenos_informacion_redes_sociales {
+          font-size: 1.5rem;
+        }
+        .Contactenos_informacion_redes_sociales > a {
+          display: grid;
+        }
+        .Contactenos_informacion_redes_sociales > a > p{
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 220px auto;
@@ -879,7 +1117,7 @@
 
         /* -----------------Estilos Banner------------ */
         .index-banner {
-          height: 500px; /*650*/
+          height: 400px; /*650*/
         }
         .frases-banner {
           padding: 0 0 0 100px;
@@ -897,6 +1135,42 @@
           height: 45px;
           width: 155px;
           font-size: 2.6rem;
+        }
+         /*---------Estilos Informacion contactenos-------*/
+         .Contactenos_contenedor {
+          margin: 25px 15% 0 15%;
+          gap: 35px;
+          font-size: 2rem;
+        }
+        .Contactenos_imagen > img {
+          max-width: 300px;
+          min-width: 250px;
+          /* border-radius: 12px; */
+        }
+        .Contactenos_contenedor > .Contactenos_informacion {
+          gap: 12px;
+          padding: 15px 0;
+        }
+        .Contactenos_informacion > h2 {
+          margin-bottom: 5px;
+        }
+        .Contactenos_informacion > span {
+          gap: 20px;
+        }
+        .Contactenos_informacion > span > i {
+          font-size: 2rem;
+        }
+        .Contactenos_informacion > span > i {
+          padding-top: 0px;
+        }
+        .Contactenos_informacion > span:nth-child(5) > i {
+          padding-top: 3px;
+        }
+        .Contactenos_informacion > span > p {
+          font-size: 2rem;
+        }
+        .Contactenos_informacion_redes_sociales {
+          font-size: 2rem;
         }
 
         /*-------------------Estilos Footer----------------*/
@@ -991,7 +1265,9 @@
 
       <!-- <p> Gracias por elegir My Nature, aquí tienes como contactarnos 😄</p> -->
       <div class="Contactenos_contenedor">
-        <img src="https://lh3.google.com/u/0/d/1CGB6zvTQOd6_B44e-41iYzZpYjYL2CNZ=w1031-h998-iv2" alt="">
+        <div class="Contactenos_imagen">
+          <img src="https://lh3.google.com/u/0/d/1CGB6zvTQOd6_B44e-41iYzZpYjYL2CNZ=w1031-h998-iv2" alt="">
+        </div>
         <div class="Contactenos_informacion">
           <h2>CONTÁCTENOS</h2>
           <span>
@@ -1005,14 +1281,18 @@
             <i class="far fa-envelope"></i>
             <div class="Contactenos_informacion_redes_sociales">
               <p>Email:</p>
-              <a href="">MyNature1508@viverokantu.pe</a>
+              <a href="">
+                <p>MyNature1508@viverokantu.pe</p>
+              </a>
             </div>
           </span>
           <span>
             <i class="fab fa-instagram"></i>
             <div class="Contactenos_informacion_redes_sociales">
               <p>Instagram:</p>
-              <a href="">MyNature142022</a>
+              <a href="">
+                <p>MyNature142022</p>
+              </a>
             </div>
           </span>
           <span>

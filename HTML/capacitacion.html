@@ -152,11 +152,12 @@
       /* -----------------Estilos Banner------------ */
       main {
         position: relative;
+        background-color: #f0f2f5;
       }
       .index-banner {
         background-image:
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url(https://lh3.google.com/u/0/d/1D4AzKfvj-JlVX3RquBOGHOOjon7MMbaW=w1918-h1009-iv1);
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url(https://lh3.google.com/u/0/d/1l8Z59mmL3wzvG9dwsgxYSFPNmWiptPMR=w1362-h1008-iv1);
         background-size: 160%;
         background-position-x: center;
         background-position-y: center;
@@ -165,12 +166,13 @@
         width: 100%;
         display: grid;
         z-index: -2000;
-      
       }
       .frases-banner {
         padding: 0 0 0 20px; 
         display: grid;
         align-self: center;
+        position: relative;
+        top: -5px;
       }
       .frases-banner > h1 {
         font-size: 1.4rem;
@@ -300,16 +302,7 @@
           width: 80px;
           font-size: 1.4rem;
         }
-        .opciones-producto {
-          grid-template-columns: 120px 120px 120px;
-          grid-template-rows: 32px;
-          grid-template-areas: "planta maceta tierra";
-        }
-        .opciones-producto > button {
-          width: 120px;
-          height: 32px;
-        }
-       
+
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 200px auto;
@@ -426,17 +419,6 @@
           height: 30px;
           width: 110px;
           font-size: 1.9rem;
-        }
-        .opciones-producto {
-          grid-template-columns: 155px 155px 155px;
-          grid-template-rows: 40px;
-          grid-template-areas: "planta maceta tierra";
-          gap: 35px;
-        }
-        .opciones-producto > button {
-          height: 40px;
-          width: 155px;
-          font-size: 1.7rem;
         }
 
         .contenedor_general{
@@ -573,7 +555,7 @@
         
         /* -----------------Estilos Banner------------ */
         .index-banner {
-          height: 500px; /*650*/
+          height: 400px; /*650*/
         }
         .frases-banner {
           padding: 0 0 0 100px;
@@ -591,17 +573,6 @@
           height: 45px;
           width: 155px;
           font-size: 2.6rem;
-        }
-        .opciones-producto {
-          grid-template-columns: auto auto auto;
-          grid-template-rows: 58px;
-          padding: 0 100px;
-        }
-        .opciones-producto > button {
-          height: 58px;
-          width: 245px;
-          font-size: 2.5rem;
-          border-radius: 2.5rem;
         }
         
         /*-------------------Estilos Footer----------------*/
