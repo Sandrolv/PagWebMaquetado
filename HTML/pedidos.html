@@ -484,6 +484,9 @@
         border: 1px solid var(--navbarColorInactive);
         font-size: 1rem;
       }
+      .Price_delivery_contenedor {
+        margin-top: 5px;    
+      }
       .Price_delivery_contenedor > h1,
       .Price_delivery_contenedor > span {
         font-size: 1.1rem;
@@ -698,21 +701,10 @@
         /*------------ Formulario Pedido------------*/
         .Contenedor_Formulario_Pedido {
           margin: 18px 10% 0 10%;
-          gap: 13px;
           padding: 18px 28px;
         }
         .Contenedor_Formulario_Pedido > h3 {
           font-size: 1.8rem;
-        }
-        .write_names,
-        .write_email,
-        .write_phone,
-        .write_dni,
-        .write_address,
-        .write_reference,
-        .Select_day_delivery,
-        .Check_delivery {
-          /* gap: 8px; */
         }
         .write_names > span,
         .write_email > span,
@@ -738,7 +730,7 @@
           /* gap: 8px; */
         }
         .write_reference > textarea  {
-          height: 60px;
+          height: 62px;
         }
         .Contenedor__Options__Select_day_delivery {
           gap: 8px;
@@ -782,9 +774,6 @@
           margin-top: 5px;
         }
         .Product_information > i {
-          position: absolute;
-          right: 0;
-          top: 0;
           font-size: 1.4rem;
         }
         .Product_information > a > h4 {
@@ -962,7 +951,6 @@
         .nav-right > li > i {
           font-size: 1.8rem;
         }
-
         /* -----------------Estilos Banner------------ */
         .index-banner {
           height: 320px; /*380*/
@@ -986,7 +974,7 @@
         .Contactenos_contenedor {
           margin: 25px 15% 0 15%;
           grid-template-rows: 100%;
-          grid-template-columns: auto auto;
+          grid-template-columns: 230px auto;
           gap: 22px;
           font-size: 1.5rem;
         }
@@ -1035,6 +1023,168 @@
           text-overflow: ellipsis;
           overflow: hidden;
         }
+        /*------------ Formulario Pedido------------*/
+        .Contenedor_Formulario_Pedido {
+          margin: 28px 15% 0 15%;
+          padding: 21px 31px;
+        }
+        .Contenedor_Formulario_Pedido > h3 {
+          font-size: 1.5rem;
+        }
+        .write_names,
+        .write_email,
+        .write_phone,
+        .write_dni,
+        .write_address,
+        .write_reference,
+        .Select_day_delivery,
+        .Check_delivery {
+          gap: 10px;
+        }
+        .write_names > span,
+        .write_email > span,
+        .write_phone > span,
+        .write_dni > span,
+        .write_address > span,
+        .write_reference > span,
+        .Select_day_delivery > span,
+        .Check_delivery > span {
+          font-size: 1.5rem;
+        }
+        .write_names > input[type=text],
+        .write_email > input[type=email],
+        .write_phone > input[type=number],
+        .write_dni > input[type=number],
+        .write_address > input[type=text],
+        .write_reference > textarea {
+          padding: 10px 14px;
+          border-radius: 9px;
+          font-size: 1.4rem;
+        }
+        .Contenedor_phone_and_dni {
+          gap: 12px;
+        }
+        .write_reference > textarea  {
+          height: 74px;
+        }
+        .Contenedor__Options__Select_day_delivery {
+          gap: 10px;
+        }
+        .Options__Select_day_delivery{
+          max-width: 170px;
+          min-width: 130px;
+        }
+        .Options__Select_day_delivery > label {
+          padding: 10px 10px; 
+          font-size: 1.4rem;
+          border-radius: 10px;
+        }
+        .Products_delivery {
+          padding: 12px;
+          border-radius: 9px;
+        }
+        .Table_cart_Productos_delivery {
+          gap: 8px;
+          height: 404px;
+        } 
+        .Contenedor_Product_delivery {
+          gap: 8px;
+          /* padding-bottom: 5px; */
+          height: 198px ;
+        }
+
+        .Product_image > a > img {
+          width: 95%;
+          height: 188px;
+          border-radius: 9px;
+        }
+        .Product_information, 
+        .Product_price_subtotal,
+        .Product_quantity {
+          padding-left: 142px;
+          gap: 4px;
+          font-size: 1.4rem;
+        }
+        .Product_information {
+          margin-top: 7px;
+        }
+        .Product_information > i {
+          font-size: 1.6rem;
+        }
+        .Product_information > a > h4 {
+          font-size: 1.5rem;
+        }
+        .Product_price_subtotal {
+          /* height: 33px; */
+        }
+        .Product_price {
+          gap: 8px;
+        }
+        .Product_price > span:last-child {
+          font-size: 1.2rem;
+          /* display: none; */
+        }
+        .Product_quantity {
+          gap: 0px;
+          padding-right: 8px;
+        }
+        .Product_quantity > a {
+          padding: 0 10px;
+          height: 32px;   
+        }
+        .Product_quantity > a:first-child {
+          border-radius: 6px 0 0 6px;
+        }
+        .Product_quantity > a:last-child {
+          border-radius: 0 6px 6px 0;
+        }
+        .Product_quantity > input  {
+          padding: 0 8px;
+          height: 32px;   
+          width: 38px;
+          font-size: 1.4rem;
+        }
+        .Price_delivery_contenedor > h1,
+        .Price_delivery_contenedor > span {
+          font-size: 1.5rem;
+        }
+        .Price_delivery{
+          margin: 10px 0;
+        }
+        .Price_delivery_subtotal,
+        .Price_delivery_total {
+          font-size: 1.5rem;
+          padding: 10px 0px;
+        }
+        .Price_delivery_subtotal {
+          border-bottom: 2px solid #f4f4f4;
+        }
+        .Price_discount_coupon > p {
+          font-size: 1.5rem;
+        } 
+
+        .Price_discount_coupon_code {
+          margin-top: 10px;
+        }
+        .Price_discount_coupon_code > input {
+          height: 39px;
+          font-size: 1.4rem;
+          border-radius: 12px;
+          margin-right: 14px;
+        
+        } 
+        .Price_discount_coupon_code > button {
+          height: 39px;
+          font-size: 1.5rem;
+          border-radius: 10px;
+          padding: 10px 14px;
+        }
+        .Button__Pedir > input {
+          padding: 12px 20px;
+          font-size: 2rem;
+          border-radius: 14px;
+        }
+        /*------------Estilos Añadir a la compra----------*/
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 220px auto;
@@ -1138,17 +1288,18 @@
         }
          /*---------Estilos Informacion contactenos-------*/
          .Contactenos_contenedor {
-          margin: 25px 15% 0 15%;
+          margin: 40px 23% 0 23%;
+          grid-template-columns: auto auto;
           gap: 35px;
-          font-size: 2rem;
+          font-size: 1.7rem;
+          justify-content: center;
         }
         .Contactenos_imagen > img {
-          max-width: 300px;
-          min-width: 250px;
-          /* border-radius: 12px; */
+          max-width: 250px;
+          min-width: 230px;
+          border-radius: 14px;
         }
         .Contactenos_contenedor > .Contactenos_informacion {
-          gap: 12px;
           padding: 15px 0;
         }
         .Contactenos_informacion > h2 {
@@ -1158,7 +1309,7 @@
           gap: 20px;
         }
         .Contactenos_informacion > span > i {
-          font-size: 2rem;
+          font-size: 1.9rem;
         }
         .Contactenos_informacion > span > i {
           padding-top: 0px;
@@ -1167,12 +1318,162 @@
           padding-top: 3px;
         }
         .Contactenos_informacion > span > p {
-          font-size: 2rem;
+          font-size: 1.7rem;
         }
         .Contactenos_informacion_redes_sociales {
+          font-size: 1.7rem;
+        }
+/*------------ Formulario Pedido------------*/
+        .Contenedor_Formulario_Pedido {
+          margin: 40px 23% 0 23%;
+          padding: 36px 46px;
+        }
+        .Contenedor_Formulario_Pedido > h3 {
           font-size: 2rem;
         }
+        .write_names > span,
+        .write_email > span,
+        .write_phone > span,
+        .write_dni > span,
+        .write_address > span,
+        .write_reference > span,
+        .Select_day_delivery > span,
+        .Check_delivery > span {
+          font-size: 1.7rem;
+        }
+        .write_names > input[type=text],
+        .write_email > input[type=email],
+        .write_phone > input[type=number],
+        .write_dni > input[type=number],
+        .write_address > input[type=text],
+        .write_reference > textarea {
+          padding: 13px 18px;
+          border-radius: 11px;
+          font-size: 1.6rem;
+        }
+        .Contenedor_phone_and_dni {
+          gap: 14px;
+        }
+        .write_reference > textarea  {
+          height: 86px;
+        }
+        .Contenedor__Options__Select_day_delivery {
+          gap: 14px;
+        }
+        .Options__Select_day_delivery{
+          max-width: 200px;
+          min-width: 160px;
+        }
+        .Options__Select_day_delivery > label {
+          padding: 12px 12px; 
+          font-size: 1.6rem;
+          border-radius: 12px;
+        }
+        .Products_delivery {
+          padding: 13px;
+          border-radius: 12px;
+        }
+        .Table_cart_Productos_delivery {
+          height: 614px;
+        } 
 
+
+        .Contenedor_Product_delivery {
+          gap: 8px;
+          /* padding-bottom: 5px; */
+          height: 198px ;
+        }
+        /* .Product_image > a > img {
+          width: 95%;
+          height: 188px;
+          border-radius: 9px;
+        } */
+        /* .Product_information, 
+        .Product_price_subtotal,
+        .Product_quantity {
+          padding-left: 142px;
+          gap: 4px;
+          font-size: 1.4rem;
+        } */
+        .Product_information {
+          margin-top: 8px;
+        }
+        .Product_information > i {
+          font-size: 1.8rem;
+        }
+        /* .Product_information > a > h4 {
+          font-size: 1.5rem;
+        } */
+        .Product_price_subtotal {
+          /* height: 33px; */
+        }
+        /* .Product_price {
+          gap: 8px;
+        } */
+        /* .Product_price > span:last-child {
+          font-size: 1.2rem;
+          
+        } */
+        /* .Product_quantity {
+          gap: 0px;
+          padding-right: 8px;
+        } */
+        /* .Product_quantity > a {
+          padding: 0 10px;
+          height: 32px;   
+        } */
+        /* .Product_quantity > a:first-child {
+          border-radius: 6px 0 0 6px;
+        }
+        .Product_quantity > a:last-child {
+          border-radius: 0 6px 6px 0;
+        }
+        .Product_quantity > input  {
+          padding: 0 8px;
+          height: 32px;   
+          width: 38px;
+          font-size: 1.4rem;
+        } */
+        
+        .Price_delivery_contenedor > h1,
+        .Price_delivery_contenedor > span {
+          font-size: 1.7rem;
+        }
+        .Price_delivery{
+          margin: 12px 0;
+        }
+        .Price_delivery_subtotal,
+        .Price_delivery_total {
+          font-size: 1.7rem;
+          padding: 12px 0px;
+        }
+
+        .Price_discount_coupon > p {
+          font-size: 1.7rem;
+        } 
+
+        .Price_discount_coupon_code {
+          margin-top: 12px;
+        }
+        .Price_discount_coupon_code > input {
+          height: 42px;
+          font-size: 1.6rem;
+          border-radius: 12px;
+          margin-right: 18px;
+        
+        } 
+        .Price_discount_coupon_code > button {
+          height: 42px;
+          font-size: 1.7rem;
+          border-radius: 12px;
+          padding: 13px 18px;
+        }
+        .Button__Pedir > input {
+          padding: 12px 20px;
+          font-size: 2rem;
+          border-radius: 14px;
+        }
+        /*------------Estilos Añadir a la compra----------*/
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 240px auto;
@@ -1362,6 +1663,41 @@
           <span>Verificar si esta correcto tu pedido:</span>
           <table class="Products_delivery">
             <tbody class="Table_cart_Productos_delivery">
+              <tr class="Contenedor_Product_delivery">
+                <td class="Product_image">
+                  <a href="">
+                    <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
+                  </a>
+                </td>
+                <td class="Product_information">
+                  <i class="fal fa-times-circle"></i>
+                  <a href="">
+                    <h4>Margarita rosada Margarita rosada</h4>
+                  </a>
+                  <div class="Product_iformation__description">
+                    <span>Embolsado</span>
+                    <span>Tipo asteracea</span>
+                    <span>35 cm de altura</span>
+                    <span>Calidad media</span>
+                  </div>
+                </td>
+                <td class="Product_price_subtotal">
+                  <span>Precio</span>
+                  <div class="Product_price">
+                    <span>S/. 68.00</span>
+                    <span>S/. 45.00</span>       
+                  </div>
+                </td>
+                <td class="Product_quantity">
+                  <a href="">
+                    <i class="far fa-minus"></i>
+                  </a>
+                  <input type="tel" min="1">
+                  <a href="">  
+                    <i class="far fa-plus"></i>
+                  </a>
+                </td>
+              </tr>
               <tr class="Contenedor_Product_delivery">
                 <td class="Product_image">
                   <a href="">
