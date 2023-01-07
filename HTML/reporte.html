@@ -491,7 +491,6 @@
         display: grid;
         grid-template-columns: 100%;
         align-content: end;
-
       }
       .Informacion_autores  > p:first-child {
         font-size: 1.1rem;
@@ -500,7 +499,6 @@
       .Informacion_autores  > p:last-child {
         font-size: 0.8rem;
       }
-
       /*-------------------Estilos Footer----------------*/
       footer {
         background-color: #f0f2f5;
@@ -846,11 +844,32 @@
         /*-------------Estilos Contenido Reporte----------*/
         .Presentacion_reporte {
           margin: 25px 15% 0 15%;
+          grid-template-rows: 100%;
+          grid-template-columns:  230px auto ;
           gap: 22px;
           font-size: 1.5rem;
         }
+        .Presentacion_reporte > .Reporte_informacion {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 10px 0;
+          order: 2;
+        }
+        .Reporte_informacion > h2 {
+          text-align: start;
+        }
+        .Reporte_informacion > p {
+          text-align: justify;
+        }
         .Presentacion_reporte > img {
-          height: 195px;
+          height: 100%;
+          max-width: 230px;
+          min-width: 230px;
+          border-radius: 12px;
+          object-fit: cover;
+          order: 1;
+     
         }
         /*-------------Formulario Reporte y Calificacion----------*/
         .Informar_reporte, 
@@ -860,7 +879,7 @@
         }
         .Informar_reporte > h3,
         .Contenedor_calificacion > h3 {
-          font-size: 2rem;
+          font-size: 1.8rem;
         }
         .Button__Informar_reporte > input[type="submit"],
         .Button__Calificar > input[type="submit"]  {
@@ -877,7 +896,7 @@
         }
         .write_inconvenient > textarea {
           padding: 10px 14px;
-          border-radius: 12px;
+          border-radius: 9px;
           font-size: 1.4rem;
         }
         .Select_type_report {     
@@ -937,6 +956,7 @@
         /*--------------Solo Formulario Calificacion--------*/
         .Select_stars {
           gap: 17px;
+          margin-bottom: 10px;
         }
         .Select_stars > p:nth-child(1) {
           font-size: 1.5rem;
@@ -1082,136 +1102,133 @@
         
         /*-------------Estilos Contenido Reporte----------*/
         .Presentacion_reporte {
-          margin: 50px 18% 0 18% ;
-          gap: 30px;
-          font-size: 2.4rem;
+          margin: 35px 23% 0 23%;
+          grid-template-columns: auto auto;
+          gap: 35px;
+          justify-content: center;
+        }
+        .Presentacion_reporte > .Reporte_informacion {
+          padding: 15px 0;
+        }
+        .Reporte_informacion > p {
+          font-size: 1.7rem;
         }
         .Presentacion_reporte > img {
-          height: 280px;
+          max-width: 250px;
+          min-width: 230px;
+          border-radius: 14px;
         }
-
+        .Reporte_informacion > h2 {
+          margin-bottom: 5px;
+        }
         /*-------------Formulario Reporte y Calificacion----------*/
         .Informar_reporte, 
         .Contenedor_calificacion  {
-          margin: 52px 18% 0 18%;
-          padding: 51px 61px;
+          margin: 35px 23% 0 23%;
+          padding: 36px 46px;
         }
         .Informar_reporte > h3,
         .Contenedor_calificacion > h3 {
-          font-size: 2.9rem;
+          font-size: 2.2rem;
         }
-        .Button__Informar_reporte > input[type="submit"],
-        .Button__Calificar > input[type="submit"]  {
-          padding: 14px 26px;
-          font-size: 3rem;
-          border-radius: 16px;
-        }
+
         /*-------------Solo Formulario Reporte----------*/
-        .write_inconvenient {
-          gap: 20px;
-        }
         .write_inconvenient > span {
-          font-size: 2.4rem;
+          font-size: 1.7rem;
         }
         .write_inconvenient > textarea {
-          padding: 16px 18px;
-          border-radius: 14px;
-          font-size: 2.3rem;
+          padding: 13px 18px;
+          border-radius: 11px;
+          font-size: 1.6rem;
         }
 
         .Select_type_report > span {
-          font-size: 2.4rem;
+          font-size: 1.7rem;
         }
         .Options__Select_type_report > label {
-          padding: 20px 20px;
-          font-size: 2.2rem;
-          border-radius: 24px;
+          padding: 15px 18px;
+          font-size: 1.6rem;
+          border-radius: 22px;
         }
         .Options__Select_type_report > label::after {
-          width: 48px;
-          height: 48px;
+          width: 35px;
+          height: 35px;
           background-position: 2px 4px;
           background-size: 120%;
-          right: 8px;
         } 
         .Options__Select_type_report > input:checked ~ label::before{
           transform: translate(-50%, -50%) scale3d(162, 162, 1);
         } 
-        .Goup_file{
-          gap: 22px;
-        }
+ 
         .Goup_file > span {
-          font-size: 2.4rem;
+          font-size: 1.7rem;
         }
         .Goup_file > input {
           border-radius: 16px;
-          font-size: 2.2rem;
-          height: 64px;
+          font-size: 1.6rem;
+          height: 49px;
         }
         ::-webkit-file-upload-button {
           border-radius: 16px 0 0 16px;
-          padding: 20px 20px;
+          padding: 16px 16px;
         }
         /*-----------Estilos Informacion Calificacion------*/
         .Informacion_Calificar_Recordar {
-          margin: 52px 24% 0 24%;
-          gap: 20px;
+          margin: 40px 30% 40px 30%;
         }
         .Informacion_Calificar_Recordar > p  {
-          font-size: 2.5rem;
+          font-size: 1.8rem;
         }
         .Recordar_opcion p:nth-child(1)  {
-          font-size: 2.5rem;
+          font-size: 1.8rem;
         }
         .Recordar_opcion p:nth-child(2)  {
-          font-size: 2.5rem;
+          font-size: 1.8rem;
         }
         .Recordar_opcion p:nth-child(3)  {
-          font-size: 2.4rem;
+          font-size: 1.7rem;
 
         }
         /*--------------Solo Formulario Calificacion--------*/
-        .Select_stars {
-          gap: 22px;
-        }
         .Select_stars > p:nth-child(1) {
-          font-size: 2.4rem;
+          font-size: 1.7rem;
         }
         .Stars { /*clasificacion*/
-          font-size: 8rem;
+          font-size: 7rem;
+          margin-bottom: 13px;
+         
         }
         /*--------------Solo Formulario Calificacion--------*/
-        
         main > h1 {
           padding: 10px 0;
           font-size: 3.4rem;
           margin: 40px 0 35px 0;
         }
         .Frases_iconicas {
-          margin: 52px 18% 0 18%;
-          gap: 25px;                
+          margin: 52px 23% 0 23%;
+          gap: 20px;                
         }
         .Frases_iconicas > p {
-          font-size: 2.4rem;
+          font-size: 1.7rem;
           margin-top: 20px;
           margin-bottom: 50px;
         }
         .Autores {
-          grid-template-columns: 28% auto 28%;
+          grid-template-columns: 30% auto 30%;
           gap: 20px;
         }
         .Autores > h4 {
-          font-size: 2.3rem;
+          font-size: 1.8rem;
         }
         .Autores > img {
-          height: 250px;
-          width: 250px;
+          height: 220px;
+          width: 220px;
         }
         .Informacion_autores  > p:first-child {
-          font-size: 2.4rem;
+          font-size: 2rem;
         }
         .Informacion_autores  > p:last-child {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
         }
         
         /*-------------------Estilos Footer----------------*/
@@ -1305,10 +1322,18 @@
       </div>
 
       <div class="Presentacion_reporte"> 
-        <p>My Nature acepta sugerencias, aportes o incomodidades acerca del uso de la aplicación con el fin de hacer que
-          haya una constante mejora en esta misma y así tener usuarios que disfruten de la navegación mientras se
-          informan de lo que ofrecemos.  
-        </p>
+        <div class="Reporte_informacion">
+          <h2>REPORTAR</h2>
+          <p>My Nature acepta inconvenientes, sugerencias o aportes acerca del uso de la aplicación con el fin de hacer que
+            haya una constante mejora en esta misma y así tener usuarios que disfruten de la navegación mientras se
+            informan de lo que ofrecemos.
+          </p>
+          <p>Hoy en día las empresas le dan mayor importancia a lo que piensan sus clientes, si esta empresa no te escucha, tienes
+            todo el derecho de compartir tu mala experiencia ante otras personas o en caso contrario, describir el buen producto,
+            trato o servio que esta ofrece.
+          </p>
+        </div>
+       
         <img src="https://lh3.google.com/u/0/d/1D4jeQeYJ1eNoqH-5RFvOMEwucqQU-_so=w1917-h1008-iv1" alt="">
       </div>
       
@@ -1398,7 +1423,9 @@
 
       <section class="Frases_iconicas">
         <div class="Autores">
-          <h4>No queremos forzar nuestras ideas en los clientes, sino
+          <h4>
+            <i class="fas fa-hand-holding-seedling"></i>
+            No queremos forzar nuestras ideas en los clientes, sino
             simplemente hacer lo que desean.
           </h4>
           <img src="https://lh3.google.com/u/0/d/1Cu9ILXGleBJkg2rHzpATW507x-kcp4BF=w1362-h1008-iv1" alt="">
@@ -1408,7 +1435,10 @@
           </div>
         </div>
         <div class="Autores">
-          <h4>En vez de enfocarte en la competencia, enfócate en el cliente.</h4>
+          <h4>
+            <i class="fas fa-hand-holding-seedling"></i>
+            En lugar de enfocarte en la competencia, enfócate en el cliente.
+          </h4>
           <img src="https://lh3.google.com/u/0/d/1ihlIOBXb0wwVcIgMBguZt94g4GwsYmAy=w1362-h1008-iv1" alt="">
           <div class="Informacion_autores">
             <p>SCOTT COOK</p>
@@ -1416,7 +1446,10 @@
           </div>
         </div>
         <div class="Autores"> 
-          <h4>Tus clientes más insatisfechos son tu mejor fuente de aprendizaje.</h4>
+          <h4>
+            <i class="fas fa-hand-holding-seedling"></i>
+            Tus clientes más insatisfechos son tu mejor fuente de aprendizaje.
+          </h4>
           <img src="https://lh3.google.com/u/0/d/1rfmQF_UGWQ_IZ1fR_rW2-5SfTcRy6v7x=w1362-h1008-iv3" alt="">
           <div class="Informacion_autores">
             <p>BILL GATES</p>
