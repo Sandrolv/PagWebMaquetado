@@ -211,7 +211,7 @@
         grid-template-rows: auto auto;
         grid-template-columns: 100%;
         justify-items: center;
-        gap: 12px;
+        gap: 15px;
         order: 2;
       }
       .Contactenos_imagen {
@@ -220,7 +220,9 @@
       .Contactenos_imagen > img {
         border-radius: 50%;
         height: 150px;
+        width: 150px;
         filter: brightness(85%);
+        object-fit: cover;
       }
       .Contactenos_contenedor > .Contactenos_informacion {
         display: grid;
@@ -358,9 +360,9 @@
       .Table_cart_Productos_delivery {
         display: grid;
         gap: 5px;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        height: 300px;
+        overflow-y: auto; /*scroll si quieres que siempre este la barra, pero auto, casi siempre*/
+        min-height: 146px;
+        max-height: 300px;
       } 
       .Contenedor_Product_delivery {
         position: relative;
@@ -677,11 +679,12 @@
         /*---------Estilos Informacion contactenos-------*/
         .Contactenos_contenedor {
           margin: 18px 13% 0 13%;
-          gap: 15px;
+          gap: 18px;
           font-size: 1.2rem;
         }
         .Contactenos_imagen > img {
           height: 170px;
+          width: 170px;
         }
         .Contactenos_contenedor > .Contactenos_informacion {
           gap: 10px;
@@ -750,7 +753,8 @@
         }
         .Table_cart_Productos_delivery {
           /* gap: 5px; */
-          height: 322px;
+          min-height: 158px;
+          max-height: 322px;
         } 
         .Contenedor_Product_delivery {
           /* gap: 5px; */
@@ -1082,7 +1086,8 @@
         }
         .Table_cart_Productos_delivery {
           gap: 8px;
-          height: 404px;
+          min-height: 198px;
+          max-height: 404px;
         } 
         .Contenedor_Product_delivery {
           gap: 8px;
@@ -1371,10 +1376,8 @@
           border-radius: 12px;
         }
         .Table_cart_Productos_delivery {
-          height: 614px;
+          max-height: 614px;
         } 
-
-
         .Contenedor_Product_delivery {
           gap: 8px;
           /* padding-bottom: 5px; */
