@@ -157,7 +157,7 @@
       .index-banner {
         background-image:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url(https://lh3.google.com/u/0/d/1l8Z59mmL3wzvG9dwsgxYSFPNmWiptPMR=w1362-h1008-iv1);
+        url(https://lh3.google.com/u/0/d/1T_7yQ3xTJCbsRye8sVdC-l1qSyWql_mN=w1441-h1008-iv1);
         background-size: 160%;
         background-position-x: center;
         background-position-y: center;
@@ -228,7 +228,8 @@
         font-size: 1.6rem;
         
       }
-      .contenedor_articulo {
+      .contenedor_articulo,
+      .contenido_articulo {
         display: grid;
         gap: 10px;
       }
@@ -393,7 +394,8 @@
         .contenedor_general > .capacitacion_title > h1 {
           font-size: 1.8rem;
         }
-        .contenedor_articulo {
+        .contenedor_articulo,
+        .contenido_articulo {
           gap: 12px;
         }
         .contenedor_articulo > h2 {
@@ -535,59 +537,57 @@
           width: 110px;
           font-size: 1.9rem;
         }
-
-        .contenedor_general{
-          width: 80%;
-          margin: auto;
-          font-size: 1.7rem;
-          text-align: center;
+        /*---------------Estilos Capacitacion--------------*/
+        .contenedor_general {
+          /* margin: 18px 13% 0 13%; */
+          gap: 20px;
+          padding-bottom: 45px;
         }
-        .contenedor_general h2{
+        .contenedor_general > .capacitacion_title {
+          gap: 14px;
+        }
+        .contenedor_general > .capacitacion_title > p{
+          font-size: 1.5rem;
+        }
+        .contenedor_general > .capacitacion_title > h1 {
           font-size: 2rem;
-          padding: 2rem 0;
-          text-align: left;
-        
         }
-
-        .titulo-p1{
-          font-size: 18px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 40px;
-          margin: 0 30px;
-         
+        .contenido_articulo {
+          grid-template-columns: 60% auto;
+          
         }
-        .titulo-p1 >h1{
-          padding: 20px;
+        .contenedor_articulo,
+        .contenido_articulo {
+          gap: 14px;
         }
-        
-        .a, .b, .c, .d, .e{
-          display: grid;
-          grid-template-columns: 60% 40%;
-          grid-gap: 2rem;
-          text-align: left;
+        .contenedor_articulo > h2 {
+          font-size: 1.6rem;         
         }
-        .a div ul, .a div ol, .b div ul, .b div ol, .c div ul, .c div ol, .d div ul, .d div ol, .e div ul, .e div ol{
-          padding: 2rem 0 2rem 3rem;
+        .contenedor_informacion_contenido {
+          gap: 10px;
+          height: fit-content;
         }
-        .a div:nth-child(1), .b div:nth-child(1), .c div:nth-child(1), .d div:nth-child(1), .e div:nth-child(1) {
-          padding-left: 3rem;
+        .contenedor_informacion_contenido > p,
+        .informacion_contenido {
+          font-size: 1.5rem;
+          gap:6px;
         }
-        
+        .contenedor_general > article:nth-child(2) > 
+        .contenedor_informacion_contenido > ul > li {
+          font-size: 1.3rem;
+        }
         .imagen_contenido {
-          width: 100%;
-          border-radius: 1rem;
+          padding-left: 8px;
+          
         }
-        .link {
-          margin: 2rem 0;
+        .imagen_contenido > img {
+          height: 100%;
+          border-radius: 9px;
         }
-        #sin_puntos{
-          list-style-type: none;
-          padding-left: 0;
+        .link_contenido > a {
+          font-size: 1.3rem;    
         }
 
-        
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 220px auto;
@@ -689,7 +689,66 @@
           width: 155px;
           font-size: 2.6rem;
         }
+
+        /*---------------Estilos Capacitacion--------------*/
+        .contenedor_general {
+          margin: 25px 15% 0 15%;    
+          padding-bottom: 50px;
+          gap: 30px;
+        }
+
+        .contenedor_general > .capacitacion_title > p{
+          font-size: 1.7rem;
+        }
+        .contenedor_general > .capacitacion_title > h1 {
+          font-size: 2.4rem;
+        }
+        .contenido_articulo {
+          grid-template-columns: 70% auto;
+          
+        }
+        .contenedor_articulo{
+          gap: 18px;
+        }
+        .contenido_articulo {
+          gap: 20px;
+          
+        }
+        .contenedor_articulo > h2 {
+          font-size: 1.8rem;         
+        }
+        .contenedor_informacion_contenido {
+          gap: 12px;
+        }
+        .contenedor_informacion_contenido > p,
+        .informacion_contenido {
+          font-size: 1.7rem;
+          gap:7px;
+        }
+        .contenedor_general > article:nth-child(2) > 
+        .contenedor_informacion_contenido > ul > li {
+          font-size: 1.5rem;
+        }
+        .imagen_contenido {
+          padding-left: 20px;
+        }
+        .imagen_contenido > img {
+          height: 100%;
+          border-radius: 12px;
+        }
+        .link_contenido > a {
+          font-size: 1.5rem;    
+        }
+        /* .contenedor_general > article > .contenido_articulo > .imagen_contenido {
+          max-height: 280px;
+        }
+
         
+        .contenedor_general > article:nth-child(6)> .contenido_articulo > .imagen_contenido {
+          height: 100%;
+        }  */
+          
+ 
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 240px auto;
@@ -785,26 +844,27 @@
             <h1>MY NATURE TE AYUDA </h1>
             <p>¿No tienes ni idea de que hacer con las plantas?
               <br>
-              Aquí tienes información que te puede servir.</p>
-            
-            
+              Aquí tienes información que te puede servir.
+            </p>
         </div>
 
         <article class="contenedor_articulo">
           <h2>A. Las consideraciones a tener si cuidas una planta en casa.</h2>
-          <div class="contenedor_informacion_contenido">
-            <ul class="informacion_contenido">
-              <li>PASO 1: Elegir correctamente el tipo de planta para mi hogar</li>
-              <li>PASO 2: Organizar el sitio donde plantare mis plantas según sus necesidades y características</li>
-              <li>PASO 3: Preparar el suelo</li>
-              <li>PASO 4: Revisar el estado de la planta</li>
-              <li>PASO 5: Sembrar de la manera indicada</li>
-              <li>PASO 6: Crear un acolchado para proteger las semillas</li>
-              <li>PASO 7: Regar abundantemente</li>
-            </ul>
-          </div>
-          <div class="imagen_contenido">
-            <img src="https://www.buenosaires.gob.ar/sites/gcaba/files/plantarinterna3.jpg" alt="imagenA">
+          <div class="contenido_articulo">
+            <div class="contenedor_informacion_contenido">
+              <ul class="informacion_contenido">
+                <li>PASO 1: Elegir correctamente el tipo de planta para mi hogar</li>
+                <li>PASO 2: Organizar el sitio donde plantare mis plantas según sus necesidades y características</li>
+                <li>PASO 3: Preparar el suelo</li>
+                <li>PASO 4: Revisar el estado de la planta</li>
+                <li>PASO 5: Sembrar de la manera indicada</li>
+                <li>PASO 6: Crear un acolchado para proteger las semillas</li>
+                <li>PASO 7: Regar abundantemente</li>
+              </ul>
+            </div>
+            <div class="imagen_contenido">
+              <img src="https://www.buenosaires.gob.ar/sites/gcaba/files/plantarinterna3.jpg" alt="imagenA">
+            </div>
           </div>
           <p class="link_contenido">
             <a href="#">Para leer la información completa hacer click aqui</a>
@@ -813,19 +873,22 @@
 
         <article class="contenedor_articulo">
           <h2>B. ¿Que nutrientes de la tierra son buenas para las plantas?</h2>
-          <div class="contenedor_informacion_contenido">
-            <p>Todas las plantas, sean ornamentales u hortícolas, necesitan captar minerales y otros elementos de la tierra para poder crecer correctamente y dar su fruto.</p>
-            <ul class="informacion_contenido">
-              <li>El nitrógeno</li>
-              <li>El potasio</li>
-              <li>El fósforo</li>
-              <li >El azufre</li>
-              <li>El calcio</li>
-              <li>El magnesio</li>
-            </ul>
-          </div>
-          <div class="imagen_contenido">
-            <img src="https://www.redagricola.com/pe/assets/uploads/2022/06/sebastian-ochoa-nutricion-destacada.jpg" alt="imagenB">
+          <div class="contenido_articulo">
+            <div class="contenedor_informacion_contenido">
+              <p>Si alguna vez te hiciste esta pregunta, la respuesta es que todas las plantas, sean ornamentales u hortícolas, necesitan captar ciertos minerales y otros elementos de la tierra para poder crecer correctamente y dar su fruto.</p>
+              <p>Alguno de estos minerales son los siguientes:</p>
+              <ul class="informacion_contenido">
+                <li>El nitrógeno</li>
+                <li>El potasio</li>
+                <li>El fósforo</li>
+                <li >El azufre</li>
+                <li>El calcio</li>
+                <li>El magnesio</li>
+              </ul>
+            </div>
+            <div class="imagen_contenido">
+              <img src="https://lh3.google.com/u/0/d/16KEDmSnjCh2YF7cur8SuAqlx7T1sqOS6=w1441-h1008-iv1" alt="imagenB">
+            </div>
           </div>
           <p class="link_contenido">
             <a href="#">Para leer la información completa hacer click aqui</a>
@@ -834,19 +897,22 @@
 
         <article class="contenedor_articulo">
           <h2>C. ¿Que restos de alimentos puedo ponerle a las plantas?</h2>
-          <div class="contenedor_informacion_contenido">
-            <p>Fertilizantes naturales y caseros que no deberias de desechar porque a tus plantas les vendria bien en su desarrollo.</p>
-            <ol class="informacion_contenido">
-              <li>Estiércol de caballo.</li>
-              <li>Humus de lombriz, el mejor abono natural para plantas.</li>
-              <li>Té de plátano: fertilizante casero para plantas.</li>
-              <li>Cáscaras de huevo.</li>
-              <li>Cenizas de madera.</li>
-            </ol>
+          <div class="contenido_articulo">
+            <div class="contenedor_informacion_contenido">
+              <p>Sabías que hay ciertos fertilizantes naturales y caseros que no deberias de desechar porque a tus plantas les vendria bien en su desarrollo.</p>
+              <p>Alguno de estos fertilizantes son los siguientes:</p>
+              <ol class="informacion_contenido">
+                <li>Estiércol de caballo.</li>
+                <li>Humus de lombriz, el mejor abono natural para plantas.</li>
+                <li>Té de plátano: fertilizante casero para plantas.</li>
+                <li>Cáscaras de huevo.</li>
+                <li>Cenizas de madera.</li>
+              </ol>
+            </div>
+            <div class="imagen_contenido">
+              <img src="https://www.amigosdelajardineria.com/wp-content/uploads/2016/12/compost.jpg" alt="imagenC">
+            </div>   
           </div>
-          <div class="imagen_contenido">
-            <img src="https://www.amigosdelajardineria.com/wp-content/uploads/2016/12/compost.jpg" alt="imagenC">
-          </div>    
           <p class="link_contenido">
             <a href="#">Para leer la información completa hacer click aqui</a>
           </p>
@@ -854,21 +920,23 @@
 
         <article class="contenedor_articulo">
           <h2>D. 8 trucos caseros de jardinería que mantendrán tus plantas esplendorosas.</h2>
-          <div class="contenedor_informacion_contenido">
-            <p>Ser jardinero no es tarea facil</p> 
-            <ol class="informacion_contenido">
-              <li>Intenta regar sin cal</li>
-              <li>Airea la tierra</li>
-              <li>Estimula el crecimiento de raices nuevas.</li>
-              <li>Dales más horas de luz.</li>
-              <li>Usa el bicarbonato</li>
-              <li>Fabrica repelentes de plagas caseros</li>
-              <li> Aprovecha nutrientes insospechados.</li>
-              <li>Hojas mucho más verdes</li>
-            </ol>
-          </div>
-          <div class="imagen_contenido">
-            <img src="https://www.elmueble.com/medio/2018/12/18/como-transplantar-una-planta-paso-a-paso_4b3005d4_600x600.jpg" alt="imagenD">
+          <div class="contenido_articulo">
+            <div class="contenedor_informacion_contenido">
+              <p>Ser jardinero no es tarea fácil, por ello te traemos estos trucos:</p> 
+              <ol class="informacion_contenido">
+                <li>Intenta regar sin cal</li>
+                <li>Airea la tierra</li>
+                <li>Estimula el crecimiento de raices nuevas.</li>
+                <li>Dales más horas de luz.</li>
+                <li>Usa el bicarbonato</li>
+                <li>Fabrica repelentes de plagas caseros</li>
+                <li> Aprovecha nutrientes insospechados.</li>
+                <li>Hojas mucho más verdes</li>
+              </ol>
+            </div>
+            <div class="imagen_contenido">
+              <img src="https://lh3.google.com/u/0/d/11MLktVubYcwZpkxOFpj5gbmWbl70YXcd=w1917-h1008-iv1" alt="imagenD">
+            </div>
           </div>
           <p class="link_contenido">
             <a href="#">Para leer la información completa hacer click aqui</a>
@@ -876,30 +944,32 @@
         </article>
   
         <article class="contenedor_articulo">
-          <h2>E. 15 consejos de jardineria para principiantes.</h2>   
-          <div class="contenedor_informacion_contenido">
-            <p>Si tan solo hubiera sabido antes de que todo mi sembrio muriese.</p>
-            <ol class="informacion_contenido">
-              <li>Antes que nada, hay que definir el fin del jardín</li>
-              <li>Evaluar el clima de la zona</li>
-              <li>Tener en cuenta la intensidad de luz</li>
-              <li>Evaluar el sustrato o terreno</li>
-              <li>Regar las plantas en la frecuencia correcta</li>
-              <li>Fertilización adecuada</li>
-              <li>Poda frecuente</li>
-              <li>Adquirir las herramientas básicas</li>
-              <li>Tener en cuenta la altura de las plantas</li>
-              <li>Almacenaje de semillas</li>
-              <li>Permitir a los insectos vivir en el jardín</li>
-              <li>Cuidado con las raíces</li>
-              <li>Cuidado al trasplantar</li>
-              <li>Atención con las plagas</li>
-              <li>Llevar una agenda de las plantas</li>
-            </ol> 
-          </div>
-          <div class="imagen_contenido">
-            <img src="https://www.clikisalud.net/wp-content/uploads/2019/04/consejos-cuidar-piel-jardineria.jpg" alt="imagenE">
-          </div>
+          <h2>E. 15 consejos de jardineria para principiantes.</h2> 
+          <div class="contenido_articulo">
+            <div class="contenedor_informacion_contenido">
+              <p>A quien no le viene bien unos consejos, y más aún si estas realmente perdido en lo que tienes que hacer.</p>
+              <ol class="informacion_contenido">
+                <li>Antes que nada, hay que definir el fin del jardín</li>
+                <li>Evaluar el clima de la zona</li>
+                <li>Tener en cuenta la intensidad de luz</li>
+                <li>Evaluar el sustrato o terreno</li>
+                <li>Regar las plantas en la frecuencia correcta</li>
+                <li>Fertilización adecuada</li>
+                <li>Poda frecuente</li>
+                <li>Adquirir las herramientas básicas</li>
+                <li>Tener en cuenta la altura de las plantas</li>
+                <li>Almacenaje de semillas</li>
+                <li>Permitir a los insectos vivir en el jardín</li>
+                <li>Cuidado con las raíces</li>
+                <li>Cuidado al trasplantar</li>
+                <li>Atención con las plagas</li>
+                <li>Llevar una agenda de las plantas</li>
+              </ol> 
+            </div>
+            <div class="imagen_contenido">
+              <img src="https://lh3.google.com/u/0/d/1LNSMD8YLkSUgQOqCyoRxWxB6yu95-aTc=w1441-h1008-iv1" alt="imagenE">
+            </div>
+          </div>  
           <p class="link_contenido">
             <a href="#">Para leer la información completa hacer click aqui</a>
           </p>
