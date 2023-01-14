@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Anonymous+Pro&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link 
+      rel="shortcut icon" 
+      href="https://lh3.google.com/u/0/d/1X-df-iUbIcC3TZ8QsAP3nIgZBua9gCBg=w1441-h1008-iv3"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <title>My Nature | Mi Perfil </title>
+    <style>
+      :root {
+        --alertColor: #b4bf35;
+        --navbarColorInactive: #31572c;
+        --navbarColorActive: #4f772d;
+        --colorButtonTiFilter: #d4e09b;
+        --colorCardButton: #03a100;
+        --colorCardButtonOfert: #a13a00;
+        --colorNavMovilDesplegable: #2f3f2d;
+        --colorStarInactive: #5f5050;
+        --colorStarActive: #ffa400;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+      html {
+        font-size: 62.5%;
+      }
+
+      /* -480 */
+
+      .alert {
+        background-color: var(--alertColor);
+        height: 32px;
+        display: flex;
+        align-items: center;
+        font-size: 2.5rem;
+        box-shadow: 0px 0.1px 5px black;
+        z-index: 1000;
+      }
+      .alert > marquee {
+        font-size: 1.5rem;
+      }
+      .nav {
+        width: 100%;
+        padding: 0 10px 0;
+        display: grid;
+        grid-template-rows: 40px;
+        grid-template-columns: 10% auto;
+        gap: 10px;
+        background-color: var(--navbarColorInactive);
+        align-items: center;
+        box-shadow: 0px 0.1px 5px black;
+        position: relative; /*Desplegable*/
+        z-index: 2000;
+      }
+      .nav > span {
+        border: 1px solid #b0bfaf;
+        text-align: center;
+        border-radius: 4px;
+        padding: 2px;
+        background-color: var(--colorNavMovilDesplegable);
+        width: 26px;
+      }
+      .nav > span > i {
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 200;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+      }
+      .nav-left {
+        position: absolute; /*Desplegable*/
+        top: 40px;
+        list-style: none;
+        height: 0px;  /*Desplegable*/
+        overflow: hidden; /*Desplegable*/
+        transition: height 0.3s linear; /*Desplegable*/
+      }
+      .nav-left > li {
+        width: 160px;
+        background-color: var(--colorNavMovilDesplegable);
+      }
+      .nav-left > li:first-child {
+        display: none;
+      }
+      .nav-left > li > a {
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 2px;
+        color: white;
+        padding: 10px 10px 10px 15px;
+        display: block; /*Hace respetar el Padding*/
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+      .nav-left > li:first-child > a:hover {
+        transform: none;
+      }
+      .nav-left > li > a:hover {
+        transform: scale(1.1, 1.1);
+        background-color: var(--navbarColorActive);
+        transition-property: background-color, transform; /*hover*/
+        transition-duration: 500ms;
+      }
+      .nav-left > .nav_left_opcion-select > a {
+        background-color: var(--navbarColorActive);
+      }
+      .nav_left_opcion-sobrante {
+        height: 81px;
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: flex-end;
+        list-style: none;
+      }
+      .nav-right > li:nth-child(1) {
+        display: flex;
+        gap: 5px;
+      }
+      .nav-right > li > img {
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .nav-right > li > a {
+        color: white;
+        cursor: pointer;
+        font-size: 1.4rem;
+        padding-top: 3px;
+        text-decoration: none;
+      }
+      .nav-right > li > i {
+        color: white;
+        cursor: pointer;
+        font-size: 1.6rem;
+      }
+      .mostrar {
+        height: 271px;
+      }
+
+      /*-------------Estilso informacion perfil-----------------*/
+      main {
+        position: relative;
+        background:white;
+        display: grid;
+      }
+      .contenedor_perfil,.contenedor_historial_compras,
+      .contenedor_informacion_personal, .contenedor_informacion_de_cuenta {
+        margin: 12px 28px 0 28px;
+        background: rgb(217, 217, 217,0.4);
+
+        padding: 15px 20px;
+        border-radius: 5px;
+        display: grid;
+        gap: 12px;
+        box-shadow: 1px 1px 2px rgb(0 0 0 / 20%);
+      }    
+      .contenedor_perfil > h1 {
+        text-align: center;
+        font-size: 1.6rem;
+        color: #31572C;
+        font-weight: 500;
+      }
+      .contenedor_informacion_perfil {
+        display: grid;
+        gap: 12px;
+        
+      }
+      .informacion_perfil__imagen {
+        display: grid;
+        justify-content: center;
+      }
+      .informacion_perfil__imagen > img {
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        filter: brightness(85%);
+      }
+      .informacion_perfil__resumen {
+        display: grid;
+        justify-items: center;
+        font-size: 1.1rem;
+        gap: 4px;
+        align-items: center;
+      }
+
+      .resumen__fecha_registro,
+      .resumen__clasificacion_comprador,
+      .resumen__total_inversion {
+        display: flex;
+        justify-content: center;
+        gap: 3px;
+        flex-wrap: wrap;
+      }
+      .resumen__fecha_registro > i {
+        color: #41BAD4;
+        font-size: 1.2rem;
+      }
+      .resumen__clasificacion_comprador > span:nth-child(3)  {
+        color: #D6A932;
+        font-weight: bold;
+      }
+      .resumen__clasificacion_comprador > i {
+        color: #D6A932;
+        font-size: 1.2rem;
+      }
+      .resumen__total_inversion > i {
+        color: #349232;
+        font-size: 1.2rem;
+      }
+
+      /*-------------Estilos Historial-----------------*/
+
+      .contenedor_historial_compras > h3,
+      .contenedor_informacion_personal > h3, .contenedor_informacion_de_cuenta > h3 {
+        text-align: center;
+        color: #31572C;
+        font-weight: 500;
+        font-size: 1.4rem;
+      }
+      .contenedor_historial_compras > div > p {
+        font-size: 1.1rem;
+      }
+      .historial_compras__fecha {
+        display: grid;
+        gap: 8px;
+      }
+      .historial_compras__fecha > select {
+        border: 1px solid #dbdbdb1a;
+        background: white;
+        padding: 6px 8px;
+        border-radius: 5px;
+        color: #3a3a3a;
+        font-size: 1rem;
+        width: 100%;
+      }
+      .historial_compras__pedidos{
+        border-radius: 5px;
+        display: grid;
+        background: white;
+        padding: 10px;
+        gap: 8px;
+      }
+      .pedido {  
+        display: grid;
+        grid-template-columns: auto 40%;
+        gap: 10px;   
+      }
+      .historial_compras__pedidos > .pedido:last-child {
+        border-bottom: none;
+      }
+      .pedido_informacion {
+        margin: 5px 0;
+        display: grid;
+        gap: 5px;
+      }
+      .hcpi__numero_pedido {
+        font-size: 1.1rem;
+      }
+      .hcpi__numero_pedido > span:nth-child(1)  {
+        font-weight: bold;
+      }
+      .hcpi__fecha_pedido {
+        font-weight: 500;
+        color: #777;
+      }
+      .hcpi__producto_pedido {
+        display: none;
+      }
+      .hcpi__producto_pedido > div > span {
+        font-weight: 400;
+        color: #777;
+      }
+      .hcpi__costototal_pedido > span:nth-child(2){
+        font-weight: bold;
+      }
+      .pedido_informacion > span {
+        color: red;
+      }
+      .Button__descargar_pedido{
+       
+        width: 100%;
+        margin-top: 3px;
+      }
+      .Button__descargar_pedido > button{
+        padding: 2px;
+        font-size: 1rem;
+      }
+      .imagen_producto_vendido {
+        position: relative;
+      }
+      .imagen_producto_vendido > img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(85%);
+        border-radius: 5px;
+      }
+      .imagen_producto_vendido > img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(85%);
+      }
+      .imagen_producto_vendido > i {
+        position: absolute;
+        right: 0;
+        top:0;
+        padding: 5px;
+        color: white;
+      }
+      .imagen_producto_vendido > span {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 5px;
+        color: white;
+      }
+      /*---------Estilos Informacion Personal y cuenta------------*/
+      .edit_nombre, .edit_telefono, .edit_dni, 
+      .edit_domicilio,.edit_referencia, .edit_usuario , .edit_email  {
+        display: grid;
+        gap: 8px;
+      }
+      .edit_nombre > span,  .edit_telefono > span, .edit_dni > span, 
+      .edit_domicilio > span,.edit_referencia > span, .edit_usuario > span, .edit_email > span {
+        color: #808080;
+        width: 100%;
+        font-size: 1.1rem;
+      }
+      .contenedor_input {
+        position: relative;
+      }
+      .edit_nombre > div > input, .edit_telefono > div > input,
+      .edit_dni > div> input, .edit_domicilio > div > input,.edit_referencia > div > textarea,
+      .edit_usuario > div > input,.edit_email > div > input {
+        border: 1px solid #dbdbdb1a;
+        background: white;
+        resize: none;
+        padding: 6px 8px;
+        border-radius: 5px;
+        color: #808080;
+        font-size: 1rem;
+        width: 100%;
+      }
+
+      .edit_referencia > div > textarea {
+        height: 50px;
+      }
+      .contenedor_input > i {
+        position: absolute;
+        right: 0;
+        top:  0;
+        padding: 8px;
+      }
+      .contenedor_edit_tlf_dni {
+        display: grid;
+        gap: 8px;
+        width: 100%;
+        grid-template-columns: auto auto;
+      }
+      .Button__actualizar {
+        display: flex;
+        justify-content: center;
+      }
+       .Button__actualizar > input {
+        border: none;
+        width: fit-content;
+        padding: 9px 17px;
+        border-radius: 8px;
+        background-color: var(--colorButtonTiFilter);
+        font-size: 1.3rem;
+        box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 20%);
+        cursor: pointer;
+        margin-top: 5px;
+      }
+      /*--------Estilos Informacion de Cuenta-----------*/ 
+      .contenedor_informacion_de_cuenta {
+        margin-bottom: 35px;
+      }
+      .Button__change_password  {
+        width: fit-content;
+        margin-bottom: 10px;
+      }
+
+      .Button__change_password > input {
+        border: none;
+        background: transparent;
+        text-decoration: underline;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+      .Buttons_cuenta_edit {
+        display: grid;
+        grid-template-rows: auto auto;
+      }
+      /*-------------------Estilos Footer----------------*/
+      footer {
+        background-color: #f0f2f5;
+      }
+      .redes_sociales__footer {
+        display: grid;
+        grid-template-columns: auto 170px auto;
+        align-items: center;
+        gap: 10px; 
+        margin-bottom: 10px;
+      }
+      .redes_sociales__footer > hr{
+        height: 2px;
+        background-color: var(--navbarColorInactive);
+        border:  none;
+      }
+      .redes_sociales_footer_iconos {
+        display: flex;
+        justify-content : center;
+        gap: 4px;
+        list-style: none;
+      }
+      .redes_sociales_footer_iconos > li {
+        height: 35px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .redes_sociales_footer_iconos > li > a > i {
+        font-size: 2.1rem;
+        color: var(--navbarColorInactive);
+      }
+      .informacion__footer {
+        margin: 0 15px;
+        text-align: center;
+        display: grid;  
+        gap: 2px;
+        padding-bottom: 25px;
+      }
+      .informacion__footer > p {
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+      .informacion__footer > p:nth-child(1) {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        color: var(--navbarColorInactive);
+      }
+      .informacion__footer > p:nth-child(7) {
+        margin: 10px 0;
+        font-weight: bold;
+        font-size: 1.6rem;
+        color: var(--navbarColorInactive);
+      }
+      .Politicas_footer {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      .Politicas_footer > a {
+        font-size: 1.3rem;
+        color: black;
+      }
+
+      /*  480 */
+      @media (min-width: 480px) {
+        .nav {
+          padding: 0 18px;
+        }
+        .nav-left > li {
+          width: 180px;
+        }
+        .nav-left > li > a {
+          padding: 10px 10px 10px 20px;
+        }
+        
+
+
+       
+        /*-------------------Estilos Footer----------------*/
+        .redes_sociales__footer {
+          grid-template-columns: auto 200px auto;
+          gap: 12px; 
+          margin-bottom: 14px;
+        }
+        .redes_sociales_footer_iconos {
+          gap: 6px;
+        }
+        .redes_sociales_footer_iconos > li {
+          height: 38px;
+          width: 33px;
+        }
+        .redes_sociales_footer_iconos > li > a > i {
+          font-size: 2.6rem;
+        }  
+        .informacion__footer {
+          gap: 4px;
+          padding-bottom: 28px;
+        }
+        .informacion__footer > p {
+          font-size: 1.2rem;
+        }
+        .informacion__footer > p:nth-child(1) {
+          font-size: 2.6rem;
+          margin-bottom: 12px;
+        }
+        .informacion__footer > p:nth-child(7) {
+          margin: 12px 0;
+          font-size: 1.8rem;
+        }
+        .Politicas_footer {
+          gap: 12px;
+        }
+        .Politicas_footer > a {
+          font-size: 1.4rem;
+        }
+      }
+
+      /*  768 */
+      @media (min-width: 768px) {
+        .alert {
+          height: 36px;
+        }
+        .nav {
+          padding: 0 18px;
+          grid-template-rows: 45px;
+          grid-template-columns: 73% auto;
+          gap: 5px;
+        }
+        .nav > span {
+          display: none;
+        }
+        .nav-left {
+          position: static;
+          display: flex;
+          height: 100%;
+        }
+        .nav-left > li {
+          width: auto;
+          height: 100%;
+          background-color: var(--navbarColorInactive);
+        }
+        .nav-left > li:first-child {
+          display: block;
+          /* margin-right: 3px; */
+        }
+        .nav-left > li:first-child > a  {
+          padding: 0;
+        }
+        .nav-left > li:first-child > a > .image-nav {
+          height: 45px;
+          width: 100px;
+        }
+        .nav-left > li > a {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          font-size: 1.4rem;
+          height: 100%;
+          margin: 0 2px;
+        }
+        .nav-left li:nth-child(2) {
+          display: none;
+        }
+        .nav_left_opcion-sobrante {
+          display: none;
+        }
+        .nav-right > li > img {
+          height: 25px;
+        }
+        .nav-right > li > a {
+          font-size: 1.6rem;
+        }
+        .nav-right > li > i {
+          font-size: 1.8rem;
+        }
+
+        
+        /*-------------------Estilos Footer----------------*/
+        .redes_sociales__footer {
+          grid-template-columns: auto 220px auto;
+          gap: 14px; 
+          margin-bottom: 18px;
+        }
+        .redes_sociales__footer > hr{
+          height: 3px;
+        }
+        .redes_sociales_footer_iconos {
+          gap: 8px;
+        }
+        .redes_sociales_footer_iconos > li {
+          height: 41px;
+          width: 36px;
+        }
+        .redes_sociales_footer_iconos > li > a > i {
+          font-size: 3.1rem;
+        }  
+        .informacion__footer {
+          gap: 6px;
+          padding-bottom: 31px;
+        }
+        .informacion__footer > p {
+          font-size: 1.4rem;
+        }
+        .informacion__footer > p:nth-child(1) {
+          font-size: 3.2rem;
+          margin-bottom: 14px;
+        }
+        .informacion__footer > p:nth-child(7) {
+          margin: 14px 0;
+          font-size: 2.4rem;
+        }
+        .Politicas_footer {
+          gap: 14px;
+        }
+        .Politicas_footer > a {
+          font-size: 1.8rem;
+        }
+      }
+
+      /*  1024 */
+      @media (min-width: 1024px) {
+        .alert {
+          height: 42px;
+        }
+        .alert marquee {
+          font-size: 2rem;
+        }
+        .nav {
+          padding: 0 40px 0;
+          grid-template-rows: 50px;
+          grid-template-columns: 74% auto;
+        }
+        .nav-left > li:first-child {
+          margin-left: 5px;
+          /* margin-right: 3px; */
+        }
+        .nav-left > li:first-child > a > .image-nav {
+          height: 50px;
+          width: 110px;
+        }
+        .nav-left > li > a {
+          font-size: 2rem;   
+        }
+        .nav-right {
+          gap: 12px;
+          padding: 0;
+        }
+        .nav-right > li > img {
+          height: 30px;
+        }
+        .nav-right > li > a {
+          font-size: 2rem;
+        }
+        .nav-right > li > i {
+          font-size: 2rem;
+        }
+        /*-------------------Estilos Footer----------------*/
+        .redes_sociales__footer {
+          grid-template-columns: auto 240px auto;
+          gap: 30px; 
+          margin-bottom: 22px;
+        }
+        .redes_sociales_footer_iconos {
+          gap: 10px;
+        }
+        .redes_sociales_footer_iconos > li {
+          height: 44px;
+          width: 39px;
+        }
+        .redes_sociales_footer_iconos > li > a > i {
+          font-size: 3.3rem;
+        }  
+        .informacion__footer {
+          gap: 7px;
+          padding-bottom: 35px;
+        }
+        .informacion__footer > p {
+          font-size: 1.5rem;
+        }
+        .informacion__footer > p:nth-child(1) {
+          font-size: 3.6rem;
+          margin-bottom: 16px;
+        }
+        .informacion__footer > p:nth-child(7) {
+          margin: 16px 0;
+          font-size: 2.8rem;
+        }
+        .Politicas_footer {
+          gap: 16px;
+        }
+        .Politicas_footer > a {
+          font-size: 2.2rem;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <header class="alert">
+      <marquee>
+        Primera compra? Descuento de un 5% en toda la compra realizada y
+        descuentos especiales para revendedores. Contactenos Ya!!
+      </marquee>
+    </header>
+
+    <nav class="nav">
+      <span><i class="fas fa-bars" id="btnNav"></i></span>
+      <ul class="nav-left" id="MenuNav">
+        <li >
+          <a href="/HTML/index.html">
+            <img
+              class="image-nav"
+              height="30px"
+              src="https://static.vecteezy.com/system/resources/thumbnails/007/534/194/small/nature-concept-banner-with-lush-green-foliage-illustration-vector.jpg"
+            />
+          </a>  
+        </li>
+        <li><a href="/HTML/index.html">INICIO</a></li>
+        <li><a href="/HTML/nosotros.html">NOSOTROS</a></li>
+        <li><a href="/HTML/reporte.html">REPORTE</a></li>
+        <li><a href="/HTML/pedidos.html">PEDIDOS</a></li>
+        <li><a href="/HTML/capacitacion.html">CAPACITACIÓN</a></li>
+        <li class="nav_left_opcion-sobrante"></li>
+      </ul>
+
+      <ul class="nav-right">
+        <li>
+          <img
+            src="https://xsgames.co/randomusers/assets/avatars/male/54.jpg"
+          />
+          <a href="/HTML/log_perfil/perfil_user.html">Iniciar Sesión</a>
+        </li>
+        <li><i class="fal fa-shopping-cart"></i></li>
+        <li><i class="fal fa-bell"></i></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="contenedor_perfil">
+        <h1>Bienvenido a tu perfil, Eduardo JRF.</h1>
+        <div class="contenedor_informacion_perfil">
+          <div class="informacion_perfil__imagen">
+            <img src="https://lh3.google.com/u/0/d/1oYixVroq1M91pUldO0KZ6I5scxNJQ0jf=w1917-h1008-iv1" alt="">
+          </div>
+          <div class="informacion_perfil__resumen">
+            <div class="resumen__fecha_registro">
+              <i class="fal fa-clock"></i>
+              <span>Te uniste el </span>
+              <span> 15/12/2015</span>
+            </div>
+            <div class="resumen__clasificacion_comprador">
+              <i class="fal fa-medal"></i>
+              <span>Aún eres un comprador </span>
+              <span> novato </span>
+            </div>
+            <div class="resumen__total_inversion">
+              <i class="fal fa-usd-circle"></i>
+              <span>Invertiste </span>
+              <span> S/. 50.00</span>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <div class="contenedor_historial_compras">
+        <h3>HISTORIAL DE COMPRAS</h3>
+        <div class="historial_compras__fecha">
+          <p>Selecciona un periodo para ver tus pedidos</p>
+          <select name="" id="">
+            <option value="0">Mes actual</option>
+            <option value="1">Últimos 30 días</option>
+            <option value="3">Últimos 3 meses</option>
+            <option value="6">Últimos 6 meses</option>
+            <option value="12">Último año</option>
+            <option value="todo">Todo</option>
+          </select>
+          <p>Estas son tus compras del ultimo mes:</p>
+        </div>
+        
+        <div class="historial_compras__pedidos">
+          <div class="pedido">
+            <div class="pedido_informacion">
+              <div class="hcpi__numero_pedido">
+                <span>Pedido Nº: </span>
+                <span>1245053178772-01</span>
+              </div>
+              <div class="hcpi__fecha_pedido">
+                <span>Fecha de compra: </span>
+                <span>03/03/2018</span>
+              </div>
+              <div class="hcpi__producto_mas_pedido">
+                <span> Más pedido: </span>
+                <span> Eriocactus cluster </span>
+              </div>
+              <div class="Button__descargar_pedido">
+                  <button>Descargar</button>
+              </div>
+            </div>
+            <div class="imagen_producto_vendido">
+              <img src="https://lh3.google.com/u/0/d/1r62gP5ARnfNqN1zbtfGWYe8a-8mLrcLv=w1441-h1008-iv1" alt="">
+              <i class="fas fa-times-circle"></i>
+            </div>
+          </div>
+          <div class="pedido">
+            <div class="pedido_informacion">
+              <div class="hcpi__numero_pedido">
+                <span>Pedido Nº: </span>
+                <span>1245053178772-09</span>
+              </div>
+              <div class="hcpi__fecha_pedido">
+                <span>Fecha de compra: </span>
+                <span>03/01/2023</span>
+              </div>
+              <div class="hcpi__producto_mas_pedido">
+                <span> Más pedido: </span>
+                <span> Cerezo  </span>
+              </div>
+              <div class="hcpi__costototal_pedido">
+                <span>Total: </span>
+                <span>S/. 24.50</span>
+              </div>
+              <div class="Button__descargar_pedido">
+                  <button>Descargar</button>
+              </div>
+            </div>
+            <div class="imagen_producto_vendido">
+              <img src="https://lh3.google.com/u/0/d/1LKthZU56eDpo_OHUQU4zfWnBFChB7pQ_=w1363-h861-iv1" alt="">
+              <i class="fas fa-times-circle"></i>
+            </div>
+          </div>
+          <div class="pedido">
+            <div class="pedido_informacion">
+              <div class="hcpi__numero_pedido">
+                <span>Pedido Nº: </span>
+                <span>1245053178772-02</span>
+              </div>
+              <div class="hcpi__fecha_pedido">
+                <span>Fecha de compra: </span>
+                <span>06/09/2020</span>
+              </div>
+              <div class="hcpi__producto_mas_pedido">
+                <span> Más pedido: </span>
+                <span> Hortensia  </span>
+              </div>
+              <div class="hcpi__costototal_pedido">
+                <span>Total: </span>
+                <span>S/. 24.50</span>
+              </div>
+              <div class="Button__descargar_pedido">
+                  <button>Descargar</button>
+              </div>
+            </div>
+            <div class="imagen_producto_vendido">
+              <img src="https://lh3.google.com/u/0/d/1uXbbdqZTlx0QMDnGICMKvAnK50sbEL0j=w1363-h861-iv1" alt="">
+              <i class="fas fa-times-circle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contenedor_informacion_personal" action="">
+        <h3>INFORMACIÓN PERSONAL</h3>
+        <label class="edit_nombre" for="">
+          <span>Nombre y Apellidos del comprador:</span>
+          <div class="contenedor_input">
+            <input type="text">
+            <i class="fal fa-edit"></i>
+          </div>
+        </label>
+
+        <div class="contenedor_edit_tlf_dni">
+          <label class="edit_telefono" for="">
+            <span>Celular/Tlf. Fijo:</span>
+            <div class="contenedor_input"> 
+              <input type="number">
+              <i class="fal fa-edit"></i>
+            </div>
+          </label>
+          <label class="edit_dni" for="">
+            <span>DNI:</span>
+            <div class="contenedor_input">
+              <input type="number">
+              <i class="fal fa-edit"></i>
+            </div>
+          </label>
+        </div>
+
+        <label class="edit_domicilio" for="">
+          <span>Domicilio o lugar de recibimiento del pedido:</span>
+          <div class="contenedor_input">
+            <input type="text">
+            <i class="fal fa-edit"></i>
+          </div>
+        </label>
+
+        <label class="edit_referencia" for="">
+          <span>Referencia (como es tu casa, hay algo reconocible cerca):</span>
+          <div class="contenedor_input">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <i class="fal fa-edit"></i>
+          </div>
+        </label>
+
+        <div class="Button__actualizar">
+          <input type="submit" name="" id="" value="Actualizar">
+        </div>
+      </form>
+      
+      <form class="contenedor_informacion_de_cuenta" action="">
+        <h3>INFORMACIÓN DE CUENTA</h3>
+        <label class="edit_usuario" for="">
+          <span>Usuario:</span>
+          <div class="contenedor_input">
+            <input type="text">
+            <i class="fal fa-edit"></i>
+          </div>
+        </label>
+        <label class="edit_email" for="">
+          <span>Email:</span>
+          <div class="contenedor_input">
+            <input type="text">
+            <i class="fal fa-edit"></i>
+          </div>
+        </label>
+        <div class="Buttons_cuenta_edit">
+          <div class="Button__change_password">
+            <input type="submit" name="" id="" value="Cambiar Contraseña aquí">
+          </div>
+          <div class="Button__actualizar">
+            <input type="submit" name="" id="" value="Actualizar">
+          </div>
+        </div>
+      </form>
+
+
+    </main>
+
+    <footer>
+      <div class="redes_sociales__footer">
+        <hr>
+        <ul class="redes_sociales_footer_iconos"> 
+          <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href=""><i class="fab fa-instagram"></i></a></li>
+          <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+          <li><a href=""><i class="fal fa-envelope"></i></a></li>
+          <li><a href=""><i class="fab fa-twitter"></i></a></li>
+        </ul>
+        <hr>
+      </div>
+
+      <div class="informacion__footer">
+        <p>MY NATURE</p>
+        <p>CONTACTENOS</p>
+        <p>Direccion: Av. Ramiro Priale Priale S/N Miraflores Sapallanga</p>
+        <p>Referencia: A la vuelta de la esquina cruzando el parque central de miraflores</p>
+        <p>923 910 869</p>
+        <p>Email: MyNatureEsVida1508@viverokantu.pe</p>
+        <p> © Copyright 2022 MyNature Inc.</p>
+        <div class="Politicas_footer">
+          <a href="">Información legal</a>
+          <a href="">Política de Privacidad</a>
+        </div>
+      </div>
+      
+
+    </footer>
+    <script src="/HTML/Menu.js"></script>
+
+  </body>
+</html>
