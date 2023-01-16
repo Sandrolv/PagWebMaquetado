@@ -34,57 +34,48 @@
     
 
       /*sssssssssssss*/
-      .Select_day_delivery {
-        display: grid;
-        gap: 8px;
-        grid-template-rows: auto auto;
+      input:read-write {
+        background-color: green;
       }
-      .Select_day_delivery > span {
-        color: #808080;
-        width: 100%;
-        font-size: 1.1rem;
-      }
-      .Contenedor__Options__Select_day_delivery {
-        display: block;
-        justify-content: center;
-        gap: 5px;
 
+      input:read-only {
+          background-color: rgba(0, 150, 150, 0.25);
       }
-      .Options__Select_day_delivery > label{   
-        background-color: aqua;
-        padding: 10px;
-        display: block;
+
+      @media (min-width: 480px) {
+        input:read-only {
+        background-color: green;
+        }
+
+        input:read-write {
+          background-color: rgba(0, 150, 150, 0.25);
+      }
+      
       }
       
       
     </style>
   </head>
   <body>
-    <div class="cont-btn">
-      <button>Click Me</button>
-      <div class="cajita"></div>
-      <a href="#">hola</a>
-    </div>
+
 
     <main>
-      <div  class="Select_day_delivery" >
-        <span>Selecciona el día próximo que quieres que llegue tu pedido:</span>
-       
-          <div class="Options__Select_day_delivery">
-            <input id="opcion1" name="radio" type="radio">
-            <label for="opcion1">Lunes</label>
-          </div>
-          <div class="Options__Select_day_delivery">
-            <input id="opcion2" name="radio" type="radio">
-            <label for="opcion2">Miercoles</label>
-          </div>
-          <div class="Options__Select_day_delivery">
-            <input id="opcion3" name="radio" type="radio">
-            <label for="opcion3">Viernes</label>
-          </div>
-       
-
-      </div>
+      <div class="s-95 m-50 s-to-center">
+        <h2 class="center">:read-only, :read-write</h2>
+        <div class="form__item">
+            <label>Correo electrónico</label>
+            <input type="email">
+        </div>
+        <div class="form__item">
+            <label>Empresa</label>
+            <input type="text" readonly value="EDteam">
+        </div>
+        
+        <div class="form__item">
+            <label>¿EDteam es genial?</label>
+            <input type="text" disabled value="¡Claro que sí!">
+        </div>
+    </div>
     </main>
   </body>
 </html>
