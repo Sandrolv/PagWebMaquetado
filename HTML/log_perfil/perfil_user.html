@@ -51,7 +51,7 @@
       }
       .alert {
         background-color: var(--alertColor);
-        height: 32px;
+        height: 36px;
         display: flex;
         align-items: center;
         font-size: 2.5rem;
@@ -65,7 +65,7 @@
         width: 100%;
         padding: 0 10px 0;
         display: grid;
-        grid-template-rows: 40px;
+        grid-template-rows: 45px;
         grid-template-columns: 10% auto;
         gap: 10px;
         background-color: var(--navbarColorInactive);
@@ -73,6 +73,7 @@
         box-shadow: 0px 0.1px 5px black;
         position: relative; /*Desplegable*/
         z-index: 2000;
+        
       }
       .nav > span {
         border: 1px solid #b0bfaf;
@@ -81,6 +82,7 @@
         padding: 2px;
         background-color: var(--colorNavMovilDesplegable);
         width: 26px;
+        margin-top: 2px;
       }
       .nav > span > i {
         color: white;
@@ -92,11 +94,14 @@
       }
       .nav-left {
         position: absolute; /*Desplegable*/
-        top: 40px;
+        top: 45px;
         list-style: none;
         height: 0px;  /*Desplegable*/
         overflow: hidden; /*Desplegable*/
         transition: height 0.3s linear; /*Desplegable*/
+      }
+      .mostrar {
+        height: 271px;
       }
       .nav-left > li {
         width: 160px;
@@ -130,38 +135,88 @@
       .nav_left_opcion-sobrante {
         height: 81px;
       }
+
       .nav-right {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 12px;
         justify-content: flex-end;
         list-style: none;
+        position: relative;
       }
       .nav-right > li:nth-child(1) {
         display: flex;
         gap: 5px;
       }
-      .nav-right > li > img {
-        height: 20px;
-        border-radius: 50%;
-        cursor: pointer;
+      .opciones_perfil {
+        position: absolute; /*Desplegable*/
+        top: 45px;
+        list-style: none;
+        height: 0px;  /*Desplegable*/
+        overflow: hidden; /*Desplegable*/
+        transition: height 0.3s linear; /*Desplegable*/
       }
-      .nav-right > li > a {
-        color: white;
-        cursor: pointer;
-        font-size: 1.4rem;
-        padding-top: 3px;
-        text-decoration: none;
-      }
-      .nav-right > li > i {
-        color: white;
-        cursor: pointer;
-        font-size: 1.6rem;
-      }
-      .mostrar {
+      .mostrar2 {
         height: 271px;
       }
 
+      .user_sesion > .contenedor_sesion {
+        font-size: 0.9rem;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+        display: grid;
+      }
+
+      .user_sesion > .contenedor_sesion >span {
+        display: none;
+      }
+      .contenedor_iniciales_perfil {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        justify-content: center;
+      }
+      .contenedor_iniciales_perfil > span > i {
+        padding-top: 2px;
+        padding-left: 3px;
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+      .circulo_fondo {
+        background-color: #fff;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        color: var(--colorStarInactive);
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .nav-right > li > .user_sesion > a > i:first-child  {
+        font-size: 2rem;
+      }
+      .nav-right > li > .user_sesion > a > span {
+        /* display: block;
+        width: 100%;
+        display: none; */
+
+      }
+      .nav-right > li > .user_sesion > a {
+        color: white;
+        cursor: pointer;
+        font-size: 1.4rem;
+        text-decoration: none;
+      }
+  
+
+      .nav-right > li > i {
+        color: white;
+        cursor: pointer;
+        font-size: 2rem;
+      }
+      
       /*-------------Estilso informacion perfil-----------------*/
       main {
         position: relative;
@@ -690,7 +745,7 @@
         .nav {
           padding: 0 18px;
           grid-template-rows: 45px;
-          grid-template-columns: 73% auto;
+          grid-template-columns: 80% auto;
           gap: 5px;
         }
         .nav > span {
@@ -721,7 +776,7 @@
           display: flex;
           align-items: center;
           padding: 10px;
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           height: 100%;
           margin: 0 2px;
         }
@@ -731,10 +786,10 @@
         .nav_left_opcion-sobrante {
           display: none;
         }
-        .nav-right > li > img {
-          height: 25px;
+        .nav-right > li > .user_sesion > a > i {
+          font-size: 2.5rem;
         }
-        .nav-right > li > a {
+        .nav-right > li > .user_sesion > a {
           font-size: 1.6rem;
         }
         .nav-right > li > i {
@@ -812,11 +867,11 @@
           gap: 12px;
           padding: 0;
         }
-        .nav-right > li > img {
+        /* .nav-right > li > img {
           height: 30px;
-        }
-        .nav-right > li > a {
-          font-size: 2rem;
+        } */
+        .nav-right > li > .user_sesion > a {
+          font-size: 1.8rem;
         }
         .nav-right > li > i {
           font-size: 2rem;
@@ -891,14 +946,46 @@
       </ul>
 
       <ul class="nav-right">
-        <li>
-          <img
-            src="https://xsgames.co/randomusers/assets/avatars/male/54.jpg"
-          />
-          <a href="/HTML/log_perfil/perfil_user.html">Iniciar Sesión</a>
-        </li>
         <li><i class="fal fa-shopping-cart"></i></li>
         <li><i class="fal fa-bell"></i></li>
+        <li>
+          <div class="user_sesion">
+            <a style="display: none;" href="/HTML/log_perfil/login_user.html">
+              <i class="fal fa-user-circle"></i>
+              <span>Iniciar Sesión</span>
+            </a>
+            <div class="contenedor_sesion">
+              <div class="contenedor_iniciales_perfil">
+                <div class="circulo_fondo">
+                  <span>EJ</span>
+                </div>
+                <span id="btndespops">
+                  <i class="fas fa-chevron-down"></i>
+                </span>
+              </div>
+              <span>
+                Mi Cuenta
+              </span>
+            </div>
+            <div class="opciones_perfil" id="opscuenta">
+              <div>¡Hola Javier ERF!</div>
+              <div>
+                <i class="fal fa-user-circle"></i>
+                <a href="">Mi perfil</a>
+              </div>
+              <div>
+                <i class="fal fa-file-alt"></i>
+                <a href="">Mi historial</a>
+              </div>
+              <div>
+                <i class="far fa-sign-out"></i>
+                <a href="">Cerrar Sesión</a>
+              </div>
+            </div>
+          </div>
+          
+        </li>
+        
       </ul>
     </nav>
 
