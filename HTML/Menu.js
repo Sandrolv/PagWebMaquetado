@@ -7,7 +7,9 @@ btnNav.addEventListener('click', function(){
 
 let btndespops = document.getElementById('btndespops');
 let opscuenta = document.getElementById('opscuenta');
+let dropdownmenu = document.getElementById('dropdownmenu');
 btndespops.addEventListener('click', function(){
     'use strict';
     opscuenta.classList.toggle('mostrar2');
+    dropdownmenu.classList.toggle('dropdownmenu');
 });

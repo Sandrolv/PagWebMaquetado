@@ -144,22 +144,23 @@
         list-style: none;
         position: relative;
       }
-      .nav-right > li:nth-child(1) {
-        display: flex;
-        gap: 5px;
+      .nav-right > li > i {
+        color: white;
+        cursor: pointer;
+        font-size: 2rem;
       }
-      .opciones_perfil {
-        position: absolute; /*Desplegable*/
-        top: 45px;
-        list-style: none;
-        height: 0px;  /*Desplegable*/
-        overflow: hidden; /*Desplegable*/
-        transition: height 0.3s linear; /*Desplegable*/
+      .user_sesion {
+     
       }
-      .mostrar2 {
-        height: 271px;
+      .nav-right > li > .user_sesion > a {
+        color: white;
+        cursor: pointer;
+        font-size: 1.4rem;
+        text-decoration: none;
       }
-
+      .nav-right > li > .user_sesion > a > i:first-child  {
+        font-size: 2rem;
+      }
       .user_sesion > .contenedor_sesion {
         font-size: 0.9rem;
         color: white;
@@ -167,21 +168,12 @@
         text-decoration: none;
         display: grid;
       }
-
-      .user_sesion > .contenedor_sesion >span {
-        display: none;
-      }
+      
       .contenedor_iniciales_perfil {
         display: flex;
-        gap: 4px;
+        gap: 8px;
         align-items: center;
         justify-content: center;
-      }
-      .contenedor_iniciales_perfil > span > i {
-        padding-top: 2px;
-        padding-left: 3px;
-        font-size: 1.3rem;
-        font-weight: 600;
       }
       .circulo_fondo {
         background-color: #fff;
@@ -194,28 +186,99 @@
         align-items: center;
         justify-content: center;
       }
-      .nav-right > li > .user_sesion > a > i:first-child  {
-        font-size: 2rem;
+      .circulo_fondo > span {
+        user-select: none ;
       }
-      .nav-right > li > .user_sesion > a > span {
-        /* display: block;
-        width: 100%;
-        display: none; */
-
+      .contenedor_iniciales_perfil > span > i {
+        padding: 2px 0 0 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+        transition: all .1s ease;
+        -webkit-transition: all .1s ease;
+        -moz-transition: all .1s ease;
+        -o-transition: all .1s ease;
+        transition: all .1s ease;
       }
-      .nav-right > li > .user_sesion > a {
-        color: white;
-        cursor: pointer;
+      .dropdownmenu {
+   
+        transition: all .1s ease;
+        -webkit-transition: all .1s ease;
+        -moz-transition: all .1s ease;
+        -o-transition: all .1s ease;
+        transition: all .1s ease;
+        transform: rotate(180deg);
+      }
+      .user_sesion > .contenedor_sesion >span {
+        display: none;
+      }
+      .menu_perfil {
+        position: absolute; /*Desplegable*/
+        top: 40px;
+        right: 0;
+        list-style: none;
+        border-radius: 8px;
+        min-width: 241px;
+        background: #fff;
+        line-height: 30px;
+        display: none; /*Desplegable*/
+        transition: height 0.3s linear; /*Desplegable*/
+      }
+      .mostrar2 {
+        display: grid;
+      }
+      .menu_perfil::after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 87%;
+        margin-left: -8px;
+        right: 0;
+        width: 0; 
+        height: 0; 
+        border-bottom: 8px solid #fff;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+      }
+      .menu_perfil > .opcion_header {
+        background-color: #f1f1f1;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        font-weight: 700;
+        padding: 11px;
+        padding-left: 15px;
         font-size: 1.4rem;
+      }
+      .opcion_perfil {
+        padding: 10px;
+        padding-left: 15px;
+        border-bottom: 1px solid #f1f1f1;
+        display: flex;
+        align-items: center;
+      }
+      .menu_perfil > div:last-child {
+        border-bottom: none;
+      }
+      .opcion_perfil > i {
+        height: 24px;
+        width: 24px;
+        margin-right: 5px;
+        position: relative;
+        font-size: 2.4rem;
+        
+      }
+      .menu_perfil > div:nth-child(3) > i {
+        font-size: 2.5rem;
+      }
+      .menu_perfil > div:last-child > i {
+        font-size: 2.2rem;
+      }
+      .opcion_perfil > a {
+        color: #444;
+        font-size: 14px;
+        font-weight: 400;
         text-decoration: none;
       }
-  
 
-      .nav-right > li > i {
-        color: white;
-        cursor: pointer;
-        font-size: 2rem;
-      }
       
       /*-------------Estilso informacion perfil-----------------*/
       main {
@@ -954,34 +1017,44 @@
               <i class="fal fa-user-circle"></i>
               <span>Iniciar Sesión</span>
             </a>
-            <div class="contenedor_sesion">
+            <div class="contenedor_sesion" id="btndespops">
               <div class="contenedor_iniciales_perfil">
                 <div class="circulo_fondo">
-                  <span>EJ</span>
+                  <span none  >EJ</span>
                 </div>
-                <span id="btndespops">
-                  <i class="fas fa-chevron-down"></i>
+                <span >
+                  <i id="dropdownmenu" class="fas fa-chevron-down"></i>
                 </span>
               </div>
               <span>
                 Mi Cuenta
               </span>
             </div>
-            <div class="opciones_perfil" id="opscuenta">
-              <div>¡Hola Javier ERF!</div>
-              <div>
+            
+            <!-- <details>
+              <summary> Intranet</summary>
+              <p>Cats bajo</p>
+            </details> -->
+
+       
+            <div class="menu_perfil" id="opscuenta">
+              <div class="opcion_header">¡Hola Javier ERF!</div>
+              <div class="opcion_perfil">
                 <i class="fal fa-user-circle"></i>
                 <a href="">Mi perfil</a>
               </div>
-              <div>
+              <div class="opcion_perfil">
                 <i class="fal fa-file-alt"></i>
                 <a href="">Mi historial</a>
               </div>
-              <div>
-                <i class="far fa-sign-out"></i>
+              <div class="opcion_perfil">
+                <i class="fal fa-sign-out-alt"></i>
                 <a href="">Cerrar Sesión</a>
               </div>
             </div>
+          
+            
+       
           </div>
           
         </li>
