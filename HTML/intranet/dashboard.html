@@ -5,152 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" />
-
-  <style>
-    :root {
-      --alertColor: #b4bf35;
-      --navbarColorInactive: #31572c;
-      --navbarColorActive: #4f772d;
-      --colorButton: #d4e09b;
-      --colorCardButton: #03a100;
-      --colorBackgroundColor: #03a100cc;
-      --colorCardButtonOfert: #a13a00;
-      --colorNavMovilDesplegable: #2f3f2d;
-      --colorFontGray: #666666;
-    }
-
-    .border {
-      border: 1px solid black;
-    }
-
-    body {
-      height: 100vh;
-      margin: 0;
-      background-color: #E5E5E5;
-    }
-
-    html {
-      font-size: 62.5%;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    i,
-    span {
-      margin: 0;
-      color: var(--colorFontGray);
-    }
-
-    .contenedor {
-      height: 100%;
-    }
-
-    /* header */
-    .contenedor>.headerArea {
-      padding: 10px 10px 5px 10px;
-    }
-
-    .headerArea>.headerContainer {
-      height: 70px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #FFFFFF;
-      box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: calc(70px / 10 * 3);
-      padding: 0 30px;
-    }
-
-    .headerContainer>h1 {
-      font-size: 4rem;
-    }
-
-    .headerContainer>.headerRight {
-      display: flex;
-      gap: 35px;
-      align-items: center;
-    }
-
-    .headerRight>.notification>i {
-      position: relative;
-      font-size: 2.2rem;
-    }
-
-    .headerRight>.notification>i>span {
-      font-size: 1.4rem;
-      position: absolute;
-      top: -2px;
-      right: -14px;
-      color: white;
-      background-color: var(--colorBackgroundColor);
-      padding: 1px 10px;
-      border-radius: 8px;
-    }
-
-    .headerRight>.headerUser {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .headerUser>i:nth-child(1) {
-      font-size: 2.2rem;
-    }
-
-    .headerUser>i:nth-child(3) {
-      font-size: 1.5rem;
-    }
-
-    .headerUser>p {
-      font-size: 2.2rem;
-    }
-
-    /* fin del header */
-
-
-    /* r3sp0ns1 */
-    @media (max-width:1366px) {
-
-      /* inicio Header */
-      .headerArea>.headerContainer {
-        height: 40px;
-        border-radius: calc(40px / 10 * 3);
-        padding: 0 20px;
-      }
-
-      .headerContainer>h1 {
-        font-size: 2.5rem;
-      }
-
-      .headerRight>.notification>i {
-        font-size: 1.5rem;
-      }
-
-      .headerRight>.notification>i>span {
-        font-size: 1rem;
-        padding: 1px 8px;
-      }
-
-      .headerUser>i:nth-child(1) {
-        font-size: 1.5rem;
-      }
-
-      /* fin Header */
-    }
-  </style>
+  <link rel="stylesheet" href="./styles/dashboard.css">
+  <title>Document</title>
 </head>
 
 <body>
-  <div class="contenedor">
+  <div class="contenedor display">
     <header class="headerArea">
       <div class="headerContainer">
         <h1>MY NATURE</h1>
@@ -167,9 +28,55 @@
           </div>
         </div>
       </div>
-
     </header>
-
+    <nav class="navbarArea">
+      <div class="navbarContainer">
+        <div class="navTitle">
+          <i class="fad fa-th"></i>
+          <p>Life and Planst</p>
+        </div>
+        <div class="navUser">
+          <img src="https://avatars.dicebear.com/api/miniavs/Violeta.svg" alt="">
+          <p>Amanda Brand</p>
+          <i class="fad fa-angle-down"></i>
+        </div>
+        <div class="navOptions">
+          <a href="#" class="listOption"><i class="fas fa-hand-holding-seedling"></i>
+            <p>Gestion de Plantas</p>
+          </a>
+          <a href="#" class="listOption"><i class="fas fa-hand-holding-magic"></i>
+            <p>Categorias</p>
+          </a>
+          <a href="#" class="listOption"><i class="fas fa-hand-holding-usd"></i>
+            <p>Ventas</p>
+          </a>
+          <a href="#" class="listOption"><i class="fas fa-hand-holding-box"></i>
+            <p>Proveedores</p>
+          </a>
+          <a href="#" class="listOption"><i class="fas fa-hands-usd"></i>
+            <p>Ingresos</p>
+          </a>
+          <a href="#" class="listOption"><i class="fas fa-handshake"></i>
+            <p>Clientes</p>
+          </a>
+        </div>
+        <div class="navAccess">
+          <p>Accesos</p>
+          <a href="#" class="listAccess"><i class="fas fa-users"></i>
+            <p>Vendedores</p>
+          </a>
+          <a href="#" class="listAccess"><i class="fas fa-person-carry"> </i>
+            <p> Distribuidores</p>
+          </a>
+          <a href="#" class="listAccess"><i class="fas fa-flower-tulip"></i>
+            <p>Floricultores</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="message noDisplay">
+    <p>Esta pagina no esta disponible para esta resolucion</p>
   </div>
 </body>
 
