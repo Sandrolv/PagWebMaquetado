@@ -43,10 +43,9 @@
       }
 
       /* -480 */
-
       .alert {
         background-color: var(--alertColor);
-        height: 32px;
+        height: 36px;
         display: flex;
         align-items: center;
         font-size: 2.5rem;
@@ -60,7 +59,7 @@
         width: 100%;
         padding: 0 10px 0;
         display: grid;
-        grid-template-rows: 40px;
+        grid-template-rows: 45px;
         grid-template-columns: 10% auto;
         gap: 10px;
         background-color: var(--navbarColorInactive);
@@ -68,6 +67,7 @@
         box-shadow: 0px 0.1px 5px black;
         position: relative; /*Desplegable*/
         z-index: 2000;
+        
       }
       .nav > span {
         border: 1px solid #b0bfaf;
@@ -76,6 +76,7 @@
         padding: 2px;
         background-color: var(--colorNavMovilDesplegable);
         width: 26px;
+        margin-top: 2px;
       }
       .nav > span > i {
         color: white;
@@ -87,11 +88,14 @@
       }
       .nav-left {
         position: absolute; /*Desplegable*/
-        top: 40px;
+        top: 45px;
         list-style: none;
         height: 0px;  /*Desplegable*/
         overflow: hidden; /*Desplegable*/
         transition: height 0.3s linear; /*Desplegable*/
+      }
+      .mostrar {
+        height: 271px;
       }
       .nav-left > li {
         width: 160px;
@@ -125,34 +129,156 @@
       .nav_left_opcion-sobrante {
         height: 81px;
       }
+
       .nav-right {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 12px;
         justify-content: flex-end;
         list-style: none;
+        position: relative;
       }
-      .nav-right > li:nth-child(1) {
-        display: flex;
-        gap: 5px;
-      }
-      .nav-right > li > img {
-        height: 20px;
-        border-radius: 50%;
+      .nav-right > li > .contenedor_avisos > i,
+      .nav-right > li > a > i {
+        color: white;
         cursor: pointer;
+        font-size: 2rem;
       }
-      .nav-right > li > a {
+      .user_sesion {
+   
+      }
+      .nav-right > li > .user_sesion > a {
         color: white;
         cursor: pointer;
         font-size: 1.4rem;
-        padding-top: 3px;
         text-decoration: none;
+        position: relative;
+        top: 1px;
+
       }
-      .nav-right > li > i {
+      .nav-right > li > .user_sesion > a > i {
+        font-size: 2.1rem;
+      
+      }
+      .nav-right > li > .user_sesion > a > span {
+      }
+      .user_sesion > .contenedor_sesion {
         color: white;
         cursor: pointer;
-        font-size: 1.6rem;
+        text-decoration: none;
+        display: grid;
       }
+      
+      .contenedor_iniciales_perfil {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+      }
+      .circulo_fondo {
+        background-color: #fff;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        color: var(--navbarColorInactive);
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .circulo_fondo > span {
+        user-select: none ;
+      }
+      .contenedor_iniciales_perfil > span > i {
+        padding: 2px 0 0 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+        transition: all .1s ease;
+        -webkit-transition: all .1s ease;
+        -moz-transition: all .1s ease;
+        -o-transition: all .1s ease;
+        transition: all .1s ease;
+      }
+      .dropdownmenu {
+        transition: all .1s ease;
+        -webkit-transition: all .1s ease;
+        -moz-transition: all .1s ease;
+        -o-transition: all .1s ease;
+        transition: all .1s ease;
+        transform: rotate(180deg);
+      }
+      .user_sesion > .contenedor_sesion > span,
+      .nav-right > li > .contenedor_avisos > span,
+      .nav-right > li > a > span {
+        display: none;
+      }
+      .menu_perfil {
+        position: absolute; /*Desplegable*/
+        top: 40px;
+        right: 0;
+        list-style: none;
+        border-radius: 10px;
+        min-width: 201px;
+        background: #fff;
+        line-height: 30px;
+        display: none; /*Desplegable*/
+        transition: height 0.3s linear; /*Desplegable*/
+      }
+      .mostrar2 {
+        display: grid;
+      }
+      .menu_perfil::after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 87%;
+        margin-left: -8px;
+        right: 0;
+        width: 0; 
+        height: 0; 
+        border-bottom: 8px solid #fff;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+      }
+      .menu_perfil > .opcion_header {
+        background-color: #f1f1f1;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        font-weight: 700;
+        padding: 11px;
+        padding-left: 15px;
+        font-size: 1.4rem;
+      }
+      .opcion_perfil {
+        padding: 10px;
+        padding-left: 15px;
+        border-bottom: 1px solid #f1f1f1;
+        display: flex;
+        align-items: center;
+      }
+      .menu_perfil > div:last-child {
+        border-bottom: none;
+      }
+      .opcion_perfil > i {
+        height: 24px;
+        width: 24px;
+        margin-right: 5px;
+        position: relative;
+        font-size: 2.4rem;   
+      }
+      .menu_perfil > div:nth-child(3) > i {
+        font-size: 2.5rem;
+      }
+      .menu_perfil > div:last-child > i {
+        font-size: 2.2rem;
+      }
+      .opcion_perfil > a {
+        color: #444;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+      }
+
 
       /* -----------------Estilos Banner------------ */
       main {
@@ -241,9 +367,7 @@
       .opciones-producto > .btn_producto-select {
         background-color: var(--navbarColorActive);
       }
-      .mostrar {
-        height: 271px;
-      }
+      
 
       /*-------------------Estilos Filtro----------------*/
       .parte_ventas_principal {
@@ -549,6 +673,9 @@
         .nav-left > li > a {
           padding: 10px 10px 10px 20px;
         }
+        .menu_perfil {
+          min-width: 221px;
+        }
         
         /* -----------------Estilos Banner------------ */
         .index-banner {
@@ -764,12 +891,12 @@
       /*  768 */
       @media (min-width: 768px) {
         .alert {
-          height: 36px;
+          height: 38px;
         }
         .nav {
           padding: 0 18px;
-          grid-template-rows: 45px;
-          grid-template-columns: 73% auto;
+          grid-template-rows: 50px;
+          grid-template-columns: 72% auto;
           gap: 5px;
         }
         .nav > span {
@@ -793,14 +920,14 @@
           padding: 0;
         }
         .nav-left > li:first-child > a > .image-nav {
-          height: 45px;
-          width: 100px;
+          height: 50px;
+          width: 95px;
         }
         .nav-left > li > a {
           display: flex;
           align-items: center;
-          padding: 10px;
-          font-size: 1.4rem;
+          padding: 6px;
+          font-size: 1.5rem;
           height: 100%;
           margin: 0 2px;
         }
@@ -810,15 +937,54 @@
         .nav_left_opcion-sobrante {
           display: none;
         }
-        .nav-right > li > img {
-          height: 25px;
+
+        .nav-right {
+          gap: 12px;
         }
-        .nav-right > li > a {
-          font-size: 1.6rem;
+        .nav-right > li > .contenedor_avisos > i,
+        .nav-right > li > a > i {
+          font-size: 2.1rem;
         }
-        .nav-right > li > i {
-          font-size: 1.8rem;
+        .user_sesion {
         }
+        .nav-right > li > .user_sesion > a {
+          font-size: 1.5rem;
+        }
+        .nav-right > li > .user_sesion > a > i {
+          font-size: 2.2rem;
+        }
+        .circulo_fondo {
+          width: 26px;
+          height: 26px;
+          font-size: 1.4rem;
+        }
+        .contenedor_iniciales_perfil > span > i {
+          padding: 2px 0 0 0;
+          font-size: 1.4rem;
+        }
+        .user_sesion > .contenedor_sesion >span {
+          /* display: none; */
+        }
+        .menu_perfil {
+          border-radius: 12px;
+          min-width: 241px;
+        }
+        .menu_perfil > .opcion_header {
+          font-size: 1.5rem;
+        }
+        .opcion_perfil > i {
+          font-size: 2.5rem;   
+        }
+        .menu_perfil > div:nth-child(3) > i {
+          font-size: 2.5rem;
+        }
+        .menu_perfil > div:last-child > i {
+          font-size: 2.3rem;
+        }
+        .opcion_perfil > a {
+          font-size: 1.5rem;
+        }
+        
 
         /* -----------------Estilos Banner------------ */
         .index-banner {
@@ -1001,39 +1167,90 @@
       /*  1024 */
       @media (min-width: 1024px) {
         .alert {
-          height: 42px;
+          height: 40px;
         }
         .alert marquee {
-          font-size: 2rem;
+          font-size: 1.7rem;
         }
         .nav {
           padding: 0 40px 0;
-          grid-template-rows: 50px;
+          grid-template-rows: 60px;
           grid-template-columns: 74% auto;
         }
         .nav-left > li:first-child {
           margin-left: 5px;
-          /* margin-right: 3px; */
         }
         .nav-left > li:first-child > a > .image-nav {
-          height: 50px;
-          width: 110px;
+          height: 60px;
+          width: 120px;
         }
         .nav-left > li > a {
-          font-size: 2rem;   
+          font-size: 1.8rem;   
         }
         .nav-right {
-          gap: 12px;
-          padding: 0;
+          gap: 14px;
         }
-        .nav-right > li > img {
-          height: 30px;
-        }
+        .nav-right > li > .contenedor_avisos,
         .nav-right > li > a {
-          font-size: 2rem;
+          display: grid;
+          gap: 4px;
+          justify-items: center;
+          top: 1px;
+          text-decoration: none;
         }
-        .nav-right > li > i {
-          font-size: 2rem;
+        .nav-right > li > .contenedor_avisos > i ,
+        .nav-right > li > a > i {
+          font-size: 2.4rem;
+
+        }
+        .nav-right > li > .user_sesion > a {
+          font-size: 1.7rem;
+        }
+        .nav-right > li > .user_sesion > a > i {
+          font-size: 2.4rem;
+        }
+        .contenedor_sesion {
+          display: grid;
+          gap: 3px;
+        }
+        .circulo_fondo {
+          width: 26px;
+          height: 26px;
+          font-size: 1.4rem;
+        }
+        .contenedor_iniciales_perfil {
+          gap: 4px;
+        }
+        .contenedor_iniciales_perfil > span > i {
+          padding: 2px 0 0 0;
+          font-size: 1.4rem;
+        }
+        .user_sesion > .contenedor_sesion >span,
+        .nav-right > li > .contenedor_avisos > span,
+        .nav-right > li > a > span {
+          font-size: 0.9rem;
+          color: #fff;
+          display: grid; 
+          user-select: none;
+        }
+        .menu_perfil {
+          border-radius: 12px;
+          min-width: 241px;
+        }
+        .menu_perfil > .opcion_header {
+          font-size: 1.5rem;
+        }
+        .opcion_perfil > i {
+          font-size: 2.5rem;   
+        }
+        .menu_perfil > div:nth-child(3) > i {
+          font-size: 2.5rem;
+        }
+        .menu_perfil > div:last-child > i {
+          font-size: 2.3rem;
+        }
+        .opcion_perfil > a {
+          font-size: 1.5rem;
         }
 
         /* -----------------Estilos Banner------------ */
@@ -1229,7 +1446,7 @@
       <span><i class="fas fa-bars" id="btnNav"></i></span>
       <ul class="nav-left" id="MenuNav">
         <li >
-          <a href="./index.html">
+          <a href="/HTML/index.html">
             <img
               class="image-nav"
               height="30px"
@@ -1237,23 +1454,71 @@
             />
           </a>  
         </li>
-        <li class="nav_left_opcion-select"><a href="./index.html">INICIO</a></li>
-        <li><a href="./nosotros.html">NOSOTROS</a></li>
-        <li><a href="./reporte.html">REPORTE</a></li>
-        <li><a href="./pedidos.html">PEDIDOS</a></li>
-        <li><a href="./capacitacion.html">CAPACITACIÓN</a></li>
+        <li><a href="/HTML/index.html">INICIO</a></li>
+        <li><a href="/HTML/nosotros.html">NOSOTROS</a></li>
+        <li><a href="/HTML/reporte.html">REPORTE</a></li>
+        <li><a href="/HTML/pedidos.html">PEDIDOS</a></li>
+        <li><a href="/HTML/capacitacion.html">CAPACITACIÓN</a></li>
         <li class="nav_left_opcion-sobrante"></li>
       </ul>
 
       <ul class="nav-right">
         <li>
-          <img
-            src="https://xsgames.co/randomusers/assets/avatars/male/54.jpg"
-          />
-          <a href="./log_perfil/perfil_user.html">Iniciar Sesión</a>
+          <a href="">
+            <i class="fal fa-shopping-cart"></i>
+            <span>Carrito</span>
+          </a>
         </li>
-        <li><i class="fal fa-shopping-cart"></i></li>
-        <li><i class="fal fa-bell"></i></li>
+        <li>
+          <div class="contenedor_avisos">
+            <i class="fal fa-bell"></i>
+            <span>Avisos</span>
+          </div>
+        </li>
+        <li>
+          <div  class="user_sesion">
+            <a style="display: none;"  href="/HTML/log_perfil/login_user.html">
+              <i class="fal fa-user-circle"></i>
+              <span>Iniciar Sesión</span>
+            </a>
+            <div class="contenedor_sesion" id="btndespops">
+              <div class="contenedor_iniciales_perfil">
+                <div class="circulo_fondo">
+                  <span>EJ</span>
+                </div>
+                <span >
+                  <i id="dropdownmenu" class="fas fa-chevron-down"></i>
+                </span>
+              </div>
+              <span>
+                Mi Cuenta
+              </span>
+            </div>
+            
+            <!-- <details>
+              <summary> Intranet</summary>
+              <p>Cats bajo</p>
+            </details> -->
+
+            <div class="menu_perfil" id="opscuenta">
+              <div class="opcion_header">¡Hola Javier ERF!</div>
+              <div class="opcion_perfil">
+                <i class="fal fa-user-circle"></i>
+                <a href="/HTML/user/perfil_user.html">Mi perfil</a>
+              </div>
+              <div class="opcion_perfil">
+                <i class="fal fa-file-alt"></i>
+                <a href="/HTML/user/historial_user.html">Mi historial</a>
+              </div>
+              <div class="opcion_perfil">
+                <i class="fal fa-sign-out-alt"></i>
+                <a href="">Cerrar Sesión</a>
+              </div>
+            </div>    
+          </div>
+          
+        </li>
+        
       </ul>
     </nav>
 
