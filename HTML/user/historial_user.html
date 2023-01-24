@@ -46,9 +46,10 @@
 
       /* -480 */
       body {
+        background-color: #f0f2f5;
         position: relative;
         z-index: -10000;
-      
+        overflow: visible;
       }
       .alert {
         background-color: var(--alertColor);
@@ -68,13 +69,11 @@
         display: grid;
         grid-template-rows: 45px;
         grid-template-columns: 10% auto;
-        gap: 10px;
         background-color: var(--navbarColorInactive);
         align-items: center;
         box-shadow: 0px 0.1px 5px black;
         position: relative; /*Desplegable*/
         z-index: 2000;
-        
       }
       .nav > span {
         border: 1px solid #b0bfaf;
@@ -105,18 +104,15 @@
         height: 100vh;
         background: #000000cb;
         z-index: 1;
-
-
       }
       .mostrar {
         left: 0;
       }
       .parar {
-        overflow: hidden;
+        overflow: hidden ;
       }
       .nav-left > li {
-        margin-right: 38vw;
-
+        width: 218px;
         background-color: var(--colorNavMovilDesplegable);
         line-height: 30px;
         padding: 0 16px 0 10px ;
@@ -124,26 +120,19 @@
       .nav-left > li:first-child {
         height: 71px;
         position: relative;
-       
         display: flex;
-        align-items: center;
         padding: 0;
-        background: #284e1c;
       }
-    
       .nav-left > li:first-child > a {
-        /* display: none; */
         padding: 0;
         height: 71px;
         width: 100%;
       }
       .nav-left > li:first-child > a > img {
-        /* display: none; */
         height: 100%;
         width: 100%;
         object-fit: cover;
         overflow: hidden;
-        filter: brightness(90%);
         border-bottom: 1px solid #e5e5e5;
       }
       .nav-left > li:nth-child(2){
@@ -151,16 +140,19 @@
       }
       .close_navleft {
         position: absolute;
-        z-index: 1;
-        height: 25px;
-        width: 25px;
-        top: 50%;
-        transform: translateY(-50%);
-        right: -42px;
+        height: 100vh;
+        width: calc(100vw - 218px);
+        right: calc(218px - 100vw);
+        top: 0;
         color: #fff;
         font-size: 2.5rem;
         padding: 2px;
         z-index: 2;
+      }
+      .close_navleft > i {
+        position: absolute;
+        top: 20px;
+        left: 20px;
         cursor: pointer;
       }
       .nav-left > li > a {
@@ -174,7 +166,6 @@
         font-weight: 300;
         align-items: center;
         gap: 10px;
-        
       }
       .nav-left > li:first-child > a:hover {
         transform: none;
@@ -185,13 +176,9 @@
         transition-property: background-color, transform; /*hover*/
         transition-duration: 300ms;
       }
-      .nav-left > .nav_left_opcion-select > a {
-        background-color: var(--navbarColorActive);
-      }
       .nav_left_opcion-sobrante {
         height: 100%;
       }
-
       .nav-right {
         display: flex;
         align-items: center;
@@ -206,9 +193,6 @@
         cursor: pointer;
         font-size: 2rem;
       }
-      .user_sesion {
-   
-      }
       .nav-right > li > .user_sesion > a {
         color: white;
         cursor: pointer;
@@ -220,7 +204,6 @@
       }
       .nav-right > li > .user_sesion > a > i {
         font-size: 2.1rem;
-      
       }
       .nav-right > li > .user_sesion > a > span {
       }
@@ -230,7 +213,6 @@
         text-decoration: none;
         display: grid;
       }
-      
       .contenedor_iniciales_perfil {
         display: flex;
         gap: 8px;
@@ -341,7 +323,7 @@
         text-decoration: none;
       }
 
-      /*-------------Estilso informacion perfil-----------------*/
+      /*-------------Estilos informacion perfil-----------------*/
       main {
         position: relative;
         background-color: #f0f2f5;
@@ -411,7 +393,6 @@
       .clasi_comprador > label > div{
         position: relative;
       }
-       
       .clasi_comprador > label > div {
         display: none;
         position: absolute;
@@ -427,7 +408,6 @@
       }
       .clasi_comprador > input:hover ~ label > i {
         font-weight: bold;
-        
       }
       .clasi_comprador > label > i {
         font-size: 1.4rem;
@@ -438,10 +418,8 @@
         cursor: pointer;
        
       }
-
       .contenedor_clasif_compr {
         display: flex;
-        
       }
       .contenedor_clasif_compr::after {
         content: '';
@@ -475,7 +453,6 @@
         font-size: 1.4rem;
         line-height: 25px;
       }
-
       .contenedor_clasif_compr > div:nth-child(1) > span {
         text-align: start;
         display: flex;
@@ -512,10 +489,10 @@
       }
 
       /*-------------Estilos Historial-----------------*/
-      .contenedor_historial_compras {
+      .parte1_historial_compras {
         /* height: auto; */
       }
-      .contenedor_historial_compras > h2 {
+      .tit_hist_comp > h2 {
         padding: 12px 0 12px;
         text-align: center;
         color: var(--navbarColorInactive);
@@ -523,12 +500,10 @@
         font-size: 1.6rem;
         background-color: #dbdbdb;
       }
-      .contenedor_historial_compras > div > p {
+      .cont_selec_fecha > div > p, 
+      .historial_compras__pedidos > p {
         font-size: 1.4rem;
         color: #777;
-      }
-      .contenedor_historial_compras > div > p:last-child {
-        margin-top: 10px;
       }
       .historial_compras__fecha {
         display: grid;
@@ -560,10 +535,20 @@
         z-index: -5;
         font-size: 1.5rem;
       }
+      .mensaje_sin_resultado {
+        display: flex;
+        padding-bottom: 10px;
+        padding-top: 6px;
+        justify-content: center;
+        margin: 30px 0;
+        font-weight: 700;
+        font-size: 1.5rem;
+        /* display: none; */
+      }
       .historial_compras__pedidos{
         display: grid;
         gap: 20px;
-        margin: 12px 16px;
+        margin: 16px 16px 12px;
         /* display: none; */
       }
       .pedido {  
@@ -571,7 +556,7 @@
         background-color: #ffffff70;
         border-radius: 8px;
         align-items: center;
-        padding: 10px 20px;
+        padding: 20px 20px 10px 20px;
         /* grid-template-columns: auto 40%; */
         /* gap: 10px;    */
       }
@@ -583,7 +568,10 @@
         line-height: 25px;
         color: #444;
       }
-      .hcpi__numero_pedido > span:nth-child(1)  {
+      .hcpi__numero_pedido > span:first-child,
+      .hcpi__fecha_pedido > span:first-child, 
+      .hcpi__producto_mas_pedido > span:first-child,
+      .hcpi__costototal_pedido > span:last-child  {
         font-weight: 700;
       }
       .hcpi__fecha_pedido, .hcpi__producto_mas_pedido {
@@ -593,12 +581,6 @@
         font-size: 1.6rem;
         line-height: 16px;
         color: #777;
-      }
-      .hcpi__fecha_pedido > span:first-child, .hcpi__producto_mas_pedido > span:first-child{
-        font-weight: 700;
-      }
-      .hcpi__costototal_pedido > span:last-child {
-        font-weight: 700;
       }
       .Button__descargar_pedido{
         width: 100%;
@@ -618,73 +600,36 @@
         transition: all .5s ease;
         margin-top: 8px;
       }
-      .imagen_producto_vendido {
-        height: 100%;
-        position: relative;
-      }
       .imagen_producto_vendido > img {
         display: none;
-        height: 100%;
-        width: 100%;     
-        object-fit: cover;
-        filter: brightness(85%);
-        border-radius: 5px;
       }
       .imagen_producto_vendido > i {
         display: none;
-        position: absolute;
-        right: 0;
-        top:0;
-        padding: 5px;
-        color: white;
-      }
-      .imagen_producto_vendido > span {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        padding: 5px;
-        color: white;
-      }
-      
-
-      .mensaje_sin_resultado {
-        display: flex;
-        padding-bottom: 10px;
-        padding-top: 6px;
-        justify-content: center;
-        margin: 30px 0;
-        font-weight: 700;
-        font-size: 1.5rem;
-        /* display: none; */
       }
       .cont_other_tlf_gmail {
-       
-        padding: 20px 0 0;
-        border-top: 1px solid #e5e5e5;
-       
-        background-color: #fff;
+        margin-top: 20px;
       }
       .other_tlf_gmail {
-        padding: 0 15px 0;
-        padding-bottom: 20px;
+        background-color: #fff;
+        border-top: 1px solid #e5e5e5;
+        padding: 30px 20px 30px;
         border-bottom: 1px solid #e5e5e5;
       }
       .other_tlf_gmail > h4 {
         color: var(--navbarColorInactive);
-        font-size: 17px;
+        font-size: 1.7rem;
         margin-bottom: 14px;
         line-height: 1.2;
+  
       }
       .other_tlf_gmail > p {
-        font-size: 15px;
-     
+        font-size: 1.5rem;
       }
       .other_tlf_gmail__input {
         margin-top: 20px;
-       
       }
       .other_tlf_gmail__input > input {
-        font-size: 14px;
+        font-size: 1.4rem;
         margin-bottom: 16px;
         border: 1px solid #0000001a;
         background: #ffffffcc;
@@ -705,12 +650,11 @@
         width: 160px;
         border: none;
         padding: 15px 14px 16px;
-        font-size: 15px;
+        font-size: 1.5rem;
         text-align: center;
         cursor: pointer;
         margin-top: 5px;
       }
-
       .aviso_probl_hist {
         background-color: #f0f2f5;
         padding: 20px 15px 35px 15px;
@@ -718,13 +662,11 @@
         text-align: justify;
       }
       .aviso_probl_hist > span:last-child > a {
-        color: #000;
+        color: var(--navbarColorInactive);
         font-weight: bold;
       }
-      
 
       /*-------------------Estilos Footer----------------*/
-
       footer {
         background-color: #f0f2f5;
       }
@@ -794,18 +736,75 @@
         .nav {
           padding: 0 18px;
         }
-        .nav-left > li {
-          /* width: 180px; */
-        }
-        .nav-left > li > a {
-          padding: 10px 10px 10px 20px;
-        }
         .menu_perfil {
           min-width: 221px;
         }
-        /*-------------Estilos informacion perfil-----------------*/
 
+        /*-------------Estilos Historial-----------------*/
+        .historial_compras__fecha {
+          margin:  0 20px;
+        }
+        .historial_compras__pedidos{
+          margin: 16px 20px 12px;
+        }
+        .hcpi__fecha_pedido, .hcpi__producto_mas_pedido {
+          margin-bottom: 6px;
+        } 
+        .other_tlf_gmail {
+          padding: 30px 40px 30px;
+        }                                                                                                     
+        .aviso_probl_hist {
+          padding: 20px 40px 35px 40px;
+        }
+        .coniumag {
+          display: flex;
+          gap: 5px;
+          /* gap: 10px; */
+         
+          height: 112px;
+          
+        }
+        .sdsadas {
+          min-width: 322px;
+          max-width: 322px;
+        }
+
+        .pedido {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          overflow: hidden;
+          /* height: 222px; */
+          /* padding: 10px 0 10px 20px; */
+        }
+        .pedido_informacion {
+          width: 100%;
+        }
+        .imagen_producto_vendido {
+          display: grid;
+          width: 100%;
+          height: 112px;
+          position: relative;
         
+        }
+        .imagen_producto_vendido > img {
+          display: grid;
+          height: 100%;
+          height: inherit;
+          width: 100%;
+          object-fit: cover;
+          filter: brightness(70%);
+          border-radius: 5px;
+       
+        }
+        .imagen_producto_vendido > i {
+          display: block;
+          position: absolute;
+          top: -18px;
+          right: -15px;
+          color: rgb(112 112 112);
+          font-size: 1.6rem;
+        }
 
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
@@ -874,20 +873,23 @@
           background-color: var(--navbarColorInactive);
           margin-right: 0;
           padding: 0;
+          line-height: 50px;
         }
         .nav-left > li:first-child {
           display: block;
-          /* margin-right: 3px; */
+          height: auto;
         }
         .nav-left > li:first-child > a  {
           padding: 0;
-          display: grid;
+          height: 50px;
+          width: auto;
         }
         .nav-left > li:first-child > a > .image-nav {
-          height: 50px;
-          width: 95px;
-          display: grid;
+          height: 48px;
+          width: 115px;
+          display: block;
           border-bottom: 0;
+          border: none;
         }
         .close_navleft {
           display: none;
@@ -909,15 +911,12 @@
         .nav_left_opcion-sobrante {
           display: none;
         }
-
         .nav-right {
           gap: 12px;
         }
         .nav-right > li > .contenedor_avisos > i,
         .nav-right > li > a > i {
           font-size: 2.1rem;
-        }
-        .user_sesion {
         }
         .nav-right > li > .user_sesion > a {
           font-size: 1.5rem;
@@ -933,9 +932,6 @@
         .contenedor_iniciales_perfil > span > i {
           padding: 2px 0 0 0;
           font-size: 1.4rem;
-        }
-        .user_sesion > .contenedor_sesion >span {
-          /* display: none; */
         }
         .menu_perfil {
           border-radius: 12px;
@@ -956,7 +952,166 @@
         .opcion_perfil > a {
           font-size: 1.5rem;
         }
-        
+
+        /*-------------Estilos Historial-----------------*/
+        .cont_hist_comp {
+          display: grid;
+          grid-template-columns: 53% auto;
+          gap: 10px;
+          margin-bottom: 35px;
+        }
+        .parte1_historial_compras {
+          margin: 0 5px 0 32px;
+        }
+        .cont_selec_fecha {
+          /* width: 40vw; */
+        }
+        .tit_hist_comp > h2 {
+          margin: 0 0 20px 0;
+          /* padding: 12px 0 12px;
+          margin: 0 0 14px 0;
+          font-size: 1.6rem; */
+        }
+        .contenedor_historial_compras > div > p {
+          /* font-size: 1.4rem; */
+        }
+        .contenedor_historial_compras > div > p:last-child {
+          /* margin-top: 10px; */
+        }
+        .historial_compras__fecha {
+          /* gap: 10px; */
+          /* margin:  0 0 0 28px; */
+          margin: 0 5px 12px 0;
+        }
+        .Opciones_fecha_pedido > select {
+          /* padding: 10px 16px;
+          border-radius: 12px;
+          font-size: 1.5rem; */
+        }
+        .Opciones_fecha_pedido > i {
+          /* padding: 0 16px;
+          font-size: 1.5rem; */
+        }
+        .historial_compras__pedidos{
+          /* gap: 20px; */
+          margin: 0 0 12px 0;
+        }
+        .pedido {  
+          width: 47vw;
+          /* overflow: hidden;
+          flex-wrap: wrap; */
+          /* border-radius: 8px;
+          padding: 10px 20px; */
+        }
+        .pedido_informacion {
+          /* max-width: 310px; */
+          /* height: 192px; */
+          /* margin: 5px 0;
+          gap: 5px;
+          font-size: 1.8rem;
+          line-height: 25px; */
+        }
+    
+        .hcpi__fecha_pedido, .hcpi__producto_mas_pedido {
+          /* margin-bottom: 6px; */
+        } 
+        .hcpi__fecha_pedido > span, .hcpi__producto_mas_pedido > span {
+          /* font-size: 1.6rem;
+          line-height: 16px; */
+        }
+        .Button__descargar_pedido{
+          /* margin-top: 3px; */
+        }
+        .Button__descargar_pedido > button{
+          /* border: 1px solid #51a546;
+          font-size: 1.8rem;
+          line-height: 25px;
+          padding: 11px 15px 11px;
+          margin-top: 8px; */
+        }
+        /* .imagen_producto_vendido {
+          
+          position: relative;
+          height: 10px;
+          width: 10px;     
+        }
+        .imagen_producto_vendido > img {
+          
+          height: 10px;
+          width: 10px;     
+          object-fit: cover;
+          filter: brightness(85%);
+          border-radius: 5px;
+        }
+        .imagen_producto_vendido > i {
+          display: none;
+          position: absolute;
+          right: 0;
+          top:0;
+          padding: 5px;
+          color: white;
+        }
+        .imagen_producto_vendido > span {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          padding: 5px;
+          color: white;
+        } */
+        .mensaje_sin_resultado {
+          /* padding-bottom: 10px;
+          padding-top: 6px;
+          margin: 30px 0;
+          font-size: 1.5rem; */
+        }
+        .cont_other_tlf_gmail {
+          height: fit-content;
+          margin: 0 32px 0 5px;
+          /* width: 47vw; */
+          
+          /* padding: 20px 0 0;
+          border-top: 1px solid #e5e5e5; */
+        }
+        .other_tlf_gmail {
+          padding: 20px 25px 20px;
+          border: none;
+          border-radius: 8px;
+          /* padding: 0 40px 20px; */
+          /* padding-bottom: 20px;
+          border-bottom: 1px solid #e5e5e5; */
+        }
+        .other_tlf_gmail > h4 {
+          /* font-size: 17px;
+          margin-bottom: 14px;
+          line-height: 1.2; */
+        }
+        .other_tlf_gmail > p {
+          /* font-size: 15px; */
+        }
+        .other_tlf_gmail__input {
+          /* margin-top: 20px; */
+        }
+        .other_tlf_gmail__input > input {
+          /* font-size: 14px;
+          margin-bottom: 16px;
+          border: 1px solid #0000001a;
+          border-radius: 12px;
+          height: 40px;
+          padding: 8px 10px; */
+        }
+        .Btn_agr_other_tlf_email > button {
+          /* border-radius: 6px;
+          width: 160px;
+          padding: 15px 14px 16px;
+          font-size: 15px;
+          margin-top: 5px; */
+        }
+        .aviso_probl_hist {
+          /* padding: 20px 40px 35px 40px; */
+          /* font-size: 1.4rem; */
+          padding: 20px 5px 0 5px;
+        }
+
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 220px auto;
@@ -1016,8 +1171,8 @@
           margin-left: 5px;
         }
         .nav-left > li:first-child > a > .image-nav {
-          height: 60px;
-          width: 120px;
+          height: 58px;
+          width: 140px;
         }
         .nav-left > li > a {
           font-size: 1.8rem;   
@@ -1087,6 +1242,172 @@
         .opcion_perfil > a {
           font-size: 1.5rem;
         }
+        .cont_hist_comp {
+          display: grid;
+          grid-template-columns: 53% auto;
+          gap: 10px;
+          margin-bottom: 35px;
+        }
+
+        /*-------------Estilos Historial-----------------*/
+        .cont_hist_comp {
+          display: flex;
+          justify-content: center;
+
+        }
+        .parte1_historial_compras {
+          width: 100%;
+          min-width: 450px;
+          max-width: 650px;
+        }
+        .cont_selec_fecha {
+          
+          /* width: 40vw; */
+        }
+        .tit_hist_comp > h2 {
+          /* margin: 0 0 20px 0; */
+          /* padding: 12px 0 12px;
+          margin: 0 0 14px 0;
+          font-size: 1.6rem; */
+        }
+        .contenedor_historial_compras > div > p {
+          /* font-size: 1.4rem; */
+        }
+        .contenedor_historial_compras > div > p:last-child {
+          /* margin-top: 10px; */
+        }
+        .historial_compras__fecha {
+          /* gap: 10px; */
+          /* margin:  0 0 0 28px; */
+          /* margin: 0 16px 12px 32px; */
+        }
+        .Opciones_fecha_pedido > select {
+          /* padding: 10px 16px;
+          border-radius: 12px;
+          font-size: 1.5rem; */
+        }
+        .Opciones_fecha_pedido > i {
+          /* padding: 0 16px;
+          font-size: 1.5rem; */
+        }
+        .historial_compras__pedidos{
+          /* gap: 20px; */
+          /* margin: 0 16px 12px 32px; */
+        }
+        .pedido {  
+          width: 100%;
+          /* width: 47vw; */
+          /* border-radius: 8px;
+          padding: 10px 20px; */
+          
+        }
+        
+        .pedido_informacion {
+          /* margin: 5px 0;
+          gap: 5px;
+          font-size: 1.8rem;
+          line-height: 25px; */
+        }
+    
+        .hcpi__fecha_pedido, .hcpi__producto_mas_pedido {
+          /* margin-bottom: 6px; */
+        } 
+        .hcpi__fecha_pedido > span, .hcpi__producto_mas_pedido > span {
+          /* font-size: 1.6rem;
+          line-height: 16px; */
+        }
+        .Button__descargar_pedido{
+          /* margin-top: 3px; */
+        }
+        .Button__descargar_pedido > button{
+          /* border: 1px solid #51a546;
+          font-size: 1.8rem;
+          line-height: 25px;
+          padding: 11px 15px 11px;
+          margin-top: 8px; */
+        }
+        /* .imagen_producto_vendido {
+          height: 100%;
+          position: relative;
+        }
+        .imagen_producto_vendido > img {
+          display: none;
+          height: 100%;
+          width: 100%;     
+          object-fit: cover;
+          filter: brightness(85%);
+          border-radius: 5px;
+        }
+        .imagen_producto_vendido > i {
+          display: none;
+          position: absolute;
+          right: 0;
+          top:0;
+          padding: 5px;
+          color: white;
+        }
+        .imagen_producto_vendido > span {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          padding: 5px;
+          color: white;
+        } */
+        .mensaje_sin_resultado {
+          /* padding-bottom: 10px;
+          padding-top: 6px;
+          margin: 30px 0;
+          font-size: 1.5rem; */
+        }
+        .cont_other_tlf_gmail {
+          min-width: 390px;
+          max-width: 590px;
+          /* height: fit-content;
+          margin: 0 32px 0 16px; */
+          /* width: 47vw; */
+          
+          /* padding: 20px 0 0;
+          border-top: 1px solid #e5e5e5; */
+        }
+        .other_tlf_gmail {
+          /* padding: 20px 25px 20px;
+          border: none;
+          border-radius: 8px; */
+          /* padding: 0 40px 20px; */
+          /* padding-bottom: 20px;
+          border-bottom: 1px solid #e5e5e5; */
+        }
+        .other_tlf_gmail > h4 {
+          /* font-size: 17px;
+          margin-bottom: 14px;
+          line-height: 1.2; */
+        }
+        .other_tlf_gmail > p {
+          /* font-size: 15px; */
+        }
+        .other_tlf_gmail__input {
+          /* margin-top: 20px; */
+        }
+        .other_tlf_gmail__input > input {
+          /* font-size: 14px;
+          margin-bottom: 16px;
+          border: 1px solid #0000001a;
+          border-radius: 12px;
+          height: 40px;
+          padding: 8px 10px; */
+        }
+        .Btn_agr_other_tlf_email > button {
+          /* border-radius: 6px;
+          width: 160px;
+          padding: 15px 14px 16px;
+          font-size: 15px;
+          margin-top: 5px; */
+        }
+        .aviso_probl_hist {
+          /* padding: 20px 40px 35px 40px; */
+          /* font-size: 1.4rem; */
+          /* padding: 20px 5px 0 5px; */
+        }
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 240px auto;
@@ -1145,11 +1466,11 @@
             <img
               class="image-nav"
               height="30px"
-              src="https://lh3.google.com/u/0/d/1aOyE9HOlqn2k2pInaZtK8Roboq4xNZ5j=w1640-h1008-iv2"
+              src="https://static.vecteezy.com/system/resources/thumbnails/007/534/194/small/nature-concept-banner-with-lush-green-foliage-illustration-vector.jpg"
             />
           </a>
-          <div class="close_navleft">
-            <i class="fal fa-times"  id="Desaparecer"></i>
+          <div class="close_navleft" id="Desaparecer">
+            <i class="fal fa-times"  ></i>
           </div>
         </li>
         <li><a href="/HTML/index.html"><i class="fal fa-home-alt"></i>INICIO</a></li>
@@ -1196,7 +1517,6 @@
               <summary> Intranet</summary>
               <p>Cats bajo</p>
             </details> -->
-
             <div class="menu_perfil" id="opscuenta">
               <div class="opcion_header">¡Hola Javier ERF!</div>
               <div class="opcion_perfil">
@@ -1280,160 +1600,174 @@
         </div> 
         <img src="https://lh3.google.com/u/0/d/185o2wWE9YSY7kr0VK5KYt3TGNfo5MvzJ=w1917-h1008-iv3">
       </div>
-      <div class="contenedor_historial_compras">
+      <div class="tit_hist_comp">
         <h2>HISTORIAL DE COMPRAS</h2>
-        <div class="historial_compras__fecha">
-          <p>Selecciona un periodo para ver tus pedidos</p>
-          <div class="Opciones_fecha_pedido">
-            <select name="" id="">
-            <option value="0">Mes actual</option>
-            <option value="1">Últimos 30 días</option>
-            <option value="3">Últimos 3 meses</option>
-            <option value="6">Últimos 6 meses</option>
-            <option value="12">Último año</option>
-            <option value="todo">Todo</option>
-            </select>
-            <i class="fas fa-chevron-down"></i>
+        <div class="cont_hist_comp">
+          <div class="parte1_historial_compras">
+            <div class="cont_selec_fecha">
+              <div class="historial_compras__fecha">
+                <p>Selecciona un periodo para ver tus pedidos</p>
+                <div class="Opciones_fecha_pedido">
+                  <select name="" id="">
+                  <option value="0">Mes actual</option>
+                  <option value="1">Últimos 30 días</option>
+                  <option value="3">Últimos 3 meses</option>
+                  <option value="6">Últimos 6 meses</option>
+                  <option value="12">Último año</option>
+                  <option value="todo">Todo</option>
+                  </select>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="">
+                <div class="mensaje_sin_resultado">¡No tienes pedidos!</div>
+              </div>
+            </div>
+            <!-- style="display: none;" -->
+            <div class="historial_compras__pedidos">
+              <p>Estas son tus compras del último mes:</p>
+              <div class="pedido">
+                <div class="pedido_informacion">
+                  
+                  <div class="coniumag">
+                    <div class="sdsadas">
+                      <div class="hcpi__numero_pedido">
+                        <span>Pedido Nº: </span>
+                        <span>1245053178772-01</span>
+                      </div>
+                      <div class="hcpi__fecha_pedido">
+                        <span>Fecha de compra: </span>
+                        <span>Jueves 03/Mar/2018</span>
+                      </div>
+                      <div class="hcpi__producto_mas_pedido">
+                        <span> Mayor adquisición: </span>
+                        <span> Eriocactus cluster </span>
+                      </div>
+                      <div class="hcpi__costototal_pedido">
+                        <span>Total: </span>
+                        <span>S/. 24.50</span>
+                      </div>
+                    </div>
+                    <div class="imagen_producto_vendido">
+                      <img src="https://lh3.google.com/u/0/d/1r62gP5ARnfNqN1zbtfGWYe8a-8mLrcLv=w1441-h1008-iv1" alt="">
+                      <i class="fas fa-times-circle"></i>
+                    </div>
+                  </div>
+                  <div class="Button__descargar_pedido">
+                      <button>Descargar</button>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="pedido">
+                <div class="pedido_informacion">
+                  <div class="hcpi__numero_pedido">
+                    <span>Pedido Nº: </span>
+                    <span>1245053178772-09</span>
+                  </div>
+                  <div class="hcpi__fecha_pedido">
+                    <span>Fecha de compra: </span>
+                    <span>03/01/2023</span>
+                  </div>
+                  <div class="hcpi__producto_mas_pedido">
+                    <span> Mayor adquisición: </span>
+                    <span> Cerezo  </span>
+                  </div>
+                  <div class="hcpi__costototal_pedido">
+                    <span>Total: </span>
+                    <span>S/. 24.50</span>
+                  </div>
+                  <div class="Button__descargar_pedido">
+                      <button>Descargar</button>
+                  </div>
+                </div>
+                <div class="imagen_producto_vendido">
+                  <img src="https://lh3.google.com/u/0/d/1LKthZU56eDpo_OHUQU4zfWnBFChB7pQ_=w1363-h861-iv1" alt="">
+                  <i class="fas fa-times-circle"></i>
+                </div>
+              </div>
+              <div class="pedido">
+                <div class="pedido_informacion">
+                  <div class="hcpi__numero_pedido">
+                    <span>Pedido Nº: </span>
+                    <span>1245053178772-02</span>
+                  </div>
+                  <div class="hcpi__fecha_pedido">
+                    <span>Fecha de compra: </span>
+                    <span>06/09/2020</span>
+                  </div>
+                  <div class="hcpi__producto_mas_pedido">
+                    <span> Mayor adquisición: </span>
+                    <span> Hortensia  </span>
+                  </div>
+                  <div class="hcpi__costototal_pedido">
+                    <span>Total: </span>
+                    <span>S/. 24.50</span>
+                  </div>
+                  <div class="Button__descargar_pedido">
+                      <button>Descargar</button>
+                  </div>
+                </div>
+                <div class="imagen_producto_vendido">
+                  <img src="https://lh3.google.com/u/0/d/1uXbbdqZTlx0QMDnGICMKvAnK50sbEL0j=w1363-h861-iv1" alt="">
+                  <i class="fas fa-times-circle"></i>
+                </div>
+              </div>
+              <div class="pedido">
+                <div class="pedido_informacion">
+                  <div class="hcpi__numero_pedido">
+                    <span>Pedido Nº: </span>
+                    <span>1245053178772-09</span>
+                  </div>
+                  <div class="hcpi__fecha_pedido">
+                    <span>Fecha de compra: </span>
+                    <span>03/01/2023</span>
+                  </div>
+                  <div class="hcpi__producto_mas_pedido">
+                    <span> Mayor adquisición: </span>
+                    <span> Cerezo</span>
+                  </div>
+                  <div class="hcpi__costototal_pedido">
+                    <span>Total: </span>
+                    <span>S/. 24.50</span>
+                  </div>
+                  <div class="Button__descargar_pedido">
+                      <button>Descargar</button>
+                  </div>
+                </div>
+                <div class="imagen_producto_vendido">
+                  <img src="https://lh3.google.com/u/0/d/1LKthZU56eDpo_OHUQU4zfWnBFChB7pQ_=w1363-h861-iv1" alt="">
+                  <i class="fas fa-times-circle"></i>
+                </div>
+              </div>
+            </div>
           </div>
-          <p style="display: none;">Estas son tus compras del último mes:</p>
+          <div class="cont_other_tlf_gmail">
+            <div class="other_tlf_gmail">
+              <h4>¿También quieres recibir tus recibos de compra por otro gmail o número de teléfono?</h4>
+              <p> Agrégalos y recibe en tu inbox cada uno de tus pedidos realizados.</p>
+              <div class="other_tlf_gmail__input">
+                <input type="number" placeholder="Ingrese tu DNI o número de documento">
+                <input type="number" placeholder="Ingrese tu otro número de teléfono">
+                <input type="email" placeholder="Ingrese tu otro gmail">
+                <div class="Btn_agr_other_tlf_email">
+                  <button>Agregar</button>
+                </div>
+               
+              </div>
+            </div>
+            <div class="aviso_probl_hist">
+              <span>En caso de que aparezca algún problema con respecto al historial de 
+                de tus pedidos (no mostrarse, información incompleta u otro), comunicarse
+                con el personal para que pueda ayudarlo o solucionar el problema, </span>
+              <span>
+                <a href="/HTML/reporte.html">click aquí.</a>
+              </span>
+            </div>
+          </div>
         </div>
-        <div style="display: none;" class="historial_compras__pedidos">
-          <div class="pedido">
-            <div class="pedido_informacion">
-              <div class="hcpi__numero_pedido">
-                <span>Pedido Nº: </span>
-                <span>1245053178772-01</span>
-              </div>
-              <div class="hcpi__fecha_pedido">
-                <span>Fecha de compra: </span>
-                <span>Jueves 03/Mar/2018</span>
-              </div>
-              <div class="hcpi__producto_mas_pedido">
-                <span> Mayor adquisición: </span>
-                <span> Eriocactus cluster </span>
-              </div>
-              <div class="hcpi__costototal_pedido">
-                <span>Total: </span>
-                <span>S/. 24.50</span>
-              </div>
-              <div class="Button__descargar_pedido">
-                  <button>Descargar</button>
-              </div>
-            </div>
-            <div class="imagen_producto_vendido">
-              <img src="https://lh3.google.com/u/0/d/1r62gP5ARnfNqN1zbtfGWYe8a-8mLrcLv=w1441-h1008-iv1" alt="">
-              <i class="fas fa-times-circle"></i>
-            </div>
-          </div>
-          <div class="pedido">
-            <div class="pedido_informacion">
-              <div class="hcpi__numero_pedido">
-                <span>Pedido Nº: </span>
-                <span>1245053178772-09</span>
-              </div>
-              <div class="hcpi__fecha_pedido">
-                <span>Fecha de compra: </span>
-                <span>03/01/2023</span>
-              </div>
-              <div class="hcpi__producto_mas_pedido">
-                <span> Mayor adquisición: </span>
-                <span> Cerezo  </span>
-              </div>
-              <div class="hcpi__costototal_pedido">
-                <span>Total: </span>
-                <span>S/. 24.50</span>
-              </div>
-              <div class="Button__descargar_pedido">
-                  <button>Descargar</button>
-              </div>
-            </div>
-            <div class="imagen_producto_vendido">
-              <img src="https://lh3.google.com/u/0/d/1LKthZU56eDpo_OHUQU4zfWnBFChB7pQ_=w1363-h861-iv1" alt="">
-              <i class="fas fa-times-circle"></i>
-            </div>
-          </div>
-          <div class="pedido">
-            <div class="pedido_informacion">
-              <div class="hcpi__numero_pedido">
-                <span>Pedido Nº: </span>
-                <span>1245053178772-02</span>
-              </div>
-              <div class="hcpi__fecha_pedido">
-                <span>Fecha de compra: </span>
-                <span>06/09/2020</span>
-              </div>
-              <div class="hcpi__producto_mas_pedido">
-                <span> Mayor adquisición: </span>
-                <span> Hortensia  </span>
-              </div>
-              <div class="hcpi__costototal_pedido">
-                <span>Total: </span>
-                <span>S/. 24.50</span>
-              </div>
-              <div class="Button__descargar_pedido">
-                  <button>Descargar</button>
-              </div>
-            </div>
-            <div class="imagen_producto_vendido">
-              <img src="https://lh3.google.com/u/0/d/1uXbbdqZTlx0QMDnGICMKvAnK50sbEL0j=w1363-h861-iv1" alt="">
-              <i class="fas fa-times-circle"></i>
-            </div>
-          </div>
-          <div class="pedido">
-            <div class="pedido_informacion">
-              <div class="hcpi__numero_pedido">
-                <span>Pedido Nº: </span>
-                <span>1245053178772-09</span>
-              </div>
-              <div class="hcpi__fecha_pedido">
-                <span>Fecha de compra: </span>
-                <span>03/01/2023</span>
-              </div>
-              <div class="hcpi__producto_mas_pedido">
-                <span> Mayor adquisición: </span>
-                <span> Cerezo</span>
-              </div>
-              <div class="hcpi__costototal_pedido">
-                <span>Total: </span>
-                <span>S/. 24.50</span>
-              </div>
-              <div class="Button__descargar_pedido">
-                  <button>Descargar</button>
-              </div>
-            </div>
-            <div class="imagen_producto_vendido">
-              <img src="https://lh3.google.com/u/0/d/1LKthZU56eDpo_OHUQU4zfWnBFChB7pQ_=w1363-h861-iv1" alt="">
-              <i class="fas fa-times-circle"></i>
-            </div>
-          </div>
-        </div>
-        <div class="">
-          <div class="mensaje_sin_resultado">¡No tienes pedidos!</div>
-        </div>
-        <div class="cont_other_tlf_gmail">
-          <div class="other_tlf_gmail">
-            <h4>¿También quieres recibir tus recibos de compra por otro gmail o número de teléfono?</h4>
-            <p> Agrégalos y recibe en tu inbox cada uno de tus pedidos realizados.</p>
-            <div class="other_tlf_gmail__input">
-              <input type="number" placeholder="Ingrese tu DNI o número de documento">
-              <input type="number" placeholder="Ingrese tu otro número de teléfono">
-              <input type="email" placeholder="Ingrese tu otro gmail">
-              <div class="Btn_agr_other_tlf_email">
-                <button>Agregar</button>
-              </div>
-             
-            </div>
-          </div>
-          <div class="aviso_probl_hist">
-
-            <span>En caso de que aparezca algún problema con respecto al historial de 
-              de tus pedidos (no mostrarse, información incompleta u otro), comunicarse
-              con el personal para que pueda ayudarlo o solucionar el problema, </span>
-            <span>
-              <a href="/HTML/reporte.html">click aquí.</a>
-            </span>
-          </div>
-        </div>
+        
+       
       </div>
     </main>
     <footer>

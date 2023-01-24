@@ -7,7 +7,6 @@ btnNav.addEventListener('click', function(){
     idbody.classList.toggle('parar');
 });
 
-
 let btndespops = document.getElementById('btndespops');
 let opscuenta = document.getElementById('opscuenta');
 let dropdownmenu = document.getElementById('dropdownmenu');
@@ -22,4 +21,5 @@ let Desaparecer = document.getElementById('Desaparecer');
 Desaparecer.addEventListener('click', function(){
     'use strict';
     MenuNav.classList.toggle('mostrar');
+    idbody.classList.toggle('parar');
 });
