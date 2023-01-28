@@ -697,6 +697,12 @@
         height: 40px;
         padding: 8px 10px;
         color: #444;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .other_tlf_gmail__input > input::placeholder {
+        color:  rgb(192, 192, 192);
       }
       .Btn_agr_other_tlf_email {
         display: grid;
@@ -1281,9 +1287,6 @@
         }
         .other_tlf_gmail > p {
           font-size: 1.7rem; 
-        }
-        .other_tlf_gmail__input > input {
-          font-size: 1.6rem;
         }
         .Btn_agr_other_tlf_email > button {
           font-size: 1.7rem;

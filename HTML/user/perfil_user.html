@@ -545,7 +545,7 @@
         display: none;
       }
       .opciones_info_cuenta > div > .opcion_inf__label {
-        margin: 15px 0 15px 16px;
+        margin: 10px 0 10px 16px;
         padding: 5px;
         border-left: 3px solid #31572c24;
         background: #e7e7e7;;
@@ -553,7 +553,7 @@
         line-height: 30px;
       } 
       .opciones_info_cuenta > div > .opcion_cuent__label {
-        margin: 15px 16px 15px 0;
+        margin: 10px 16px 10px 0;
         padding: 5px;
         border-right: 3px solid #31572c24;
         background: #e7e7e7;
@@ -569,20 +569,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-    
-        
-      }
-   
-      .opcion_inf, .opcion_cuent  {
-        font-size: 1.4rem;
-        display: none;
-        background: #fff;
       }
       .opc_seleccionado > div {
         display: block;
         margin: 10px 16px;
         width: calc(100vw - 32px);
-        
+       
       }
       .opc_seleccionado > input:nth-child(1):checked ~ .opcion_inf__label {
         border-left: 3px solid var(--navbarColorInactive);
@@ -607,10 +599,50 @@
         display: block;
       }
       .opcion_inf, .opcion_cuent {
+        font-size: 1.4rem;
+        display: none;
+        background: #fff;
         border : 1px solid #e3e4e6;
         padding: 20px;
         border-radius: 2px;
+        position: relative;
       }
+
+      .opcion_inf::before,
+      .opcion_cuent::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid #e3e4e6;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+      }
+      .opcion_inf::after,
+      .opcion_cuent::after {
+        content: '';
+        position: absolute;
+        top: -8px;
+        width: 0;
+        height: 0;
+        border-bottom: 8px solid #fff;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+      }
+      .opcion_inf::before {
+        left:  78px;
+      }
+      .opcion_cuent::before {
+        right:  78px;
+      }
+      .opcion_inf::after {
+        left: 80px;
+      }
+      .opcion_cuent::after {
+        right:  80px;
+      }
+
       .opcion_inf > div,
       .opcion_inf > div > div,
       .opcion_cuent > div {
@@ -680,6 +712,12 @@
         height: 40px;
         padding: 8px 10px;
         color: #444;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .other_tlf_gmail__input > input::placeholder {
+        color:  rgb(192, 192, 192);
       }
       .Btn_agr_other_tlf_email {
         display: grid;
@@ -863,9 +901,6 @@
           "opcion1 informacion "
           "opcion2 informacion "
           ". informacion ";
-       
-          min-width: 510px;
-          /* height: 530px; */
           justify-content: flex-start;
           margin-top: 20px;
         }
@@ -895,13 +930,33 @@
         .opc_seleccionado > input:nth-child(3):hover ~ .opcion_cuent__label  {
           border-left: 3px solid var(--navbarColorInactive);
           border-right: none;
-    
         }
-
         .opcion_inf, .opcion_cuent {
           border-radius: 4px;
         }
-
+        .opcion_inf::before,
+        .opcion_cuent::before {
+          left: -20px;
+          border-right: 10px solid #e3e4e6;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+        }
+        .opcion_inf::after,
+        .opcion_cuent::after {
+          left: -15px;
+          border-right: 8px solid #fff;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+        }
+        .opcion_inf::before,
+        .opcion_inf::after {
+          top: 8px;
+        }
+        .opcion_cuent::before,
+        .opcion_cuent::after {
+          top: 58px;
+        }
+ 
         /**/
 
         .other_tlf_gmail {
@@ -1186,6 +1241,12 @@
           font-size: 1.5rem;
           border : 2px solid #e3e4e6;
         }
+  
+        .opcion_inf::after,
+        .opcion_cuent::after {
+          left: -14px;
+ 
+        }
         .opc_seleccionado > div {
           width: 100%;
           margin: 0 14px 0 14px;
@@ -1193,9 +1254,8 @@
 
         /**/
 
-    
         .cont_other_tlf_gmail {
-          width: calc(38vw - 42px) ;
+          width: calc(38vw - 20px) ;
           height: fit-content;
           margin: 0 20px 0 5px;
         }
@@ -1206,19 +1266,19 @@
           border : 2px solid #e3e4e6;
         }
         .other_tlf_gmail > h4 {
-          font-size: 1.8rem;
-        }
-        .other_tlf_gmail > p {
-          font-size: 1.7rem; 
-        }
-        .other_tlf_gmail__input > input {
-          font-size: 1.6rem;
-        }
-        .Btn_agr_other_tlf_email > button {
           font-size: 1.7rem;
         }
-        .aviso_probl_hist {
+        .other_tlf_gmail > p {
+          font-size: 1.6rem; 
+        }
+        .other_tlf_gmail__input > input {
+          font-size: 1.5rem;
+        }
+        .Btn_agr_other_tlf_email > button {
           font-size: 1.6rem;
+        }
+        .aviso_probl_hist {
+          font-size: 1.5rem;
           padding: 20px 5px 0 5px;
         }
 
@@ -1361,12 +1421,14 @@
         /*-------------Estilos Historial-----------------*/
         .cont_general {
           justify-content: center;
+          
         }
         .cont_general > h2 {
           font-size: 1.9rem;
         }
         .cont_gen_perfil {
           max-width: 740px;
+          width: auto;
         }
         .icon_perfil > div:first-child {
           width: 55px;
@@ -1430,9 +1492,7 @@
         .other_tlf_gmail > p {
           font-size: 1.7rem; 
         }
-        .other_tlf_gmail__input > input {
-          font-size: 1.6rem;
-        }
+ 
         .Btn_agr_other_tlf_email > button {
           font-size: 1.7rem;
         }
