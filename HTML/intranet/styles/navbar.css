@@ -123,6 +123,7 @@ span {
   width: fit-content;
   left: 5px;
   top: 62px;
+  z-index: 1;
 }
 
 .navbarArea a,

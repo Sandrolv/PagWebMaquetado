@@ -1,0 +1,136 @@
+/* section del centro xd */
+/* buscar */
+.contenedor>.section {
+  grid-area: section;
+  overflow-y: auto;
+  display: grid;
+  grid-template-rows: 65px auto auto;
+  padding: 10px 20px 0 0;
+  margin-left: 100px;
+}
+
+.section>.buscarDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+}
+
+.buscarDashboard>p,
+.buscarDashboard>input {
+  font-size: 2rem;
+}
+
+.buscarDashboard>input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 350px;
+}
+
+/* fin buscar */
+/* cardsDashBoards */
+.cardsDashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(326px, 1fr));
+  justify-items: center;
+}
+
+.cardsDashboard>.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px 20px;
+  width: 90%;
+  min-width: 326px;
+  box-sizing: border-box;
+  position: relative;
+  gap: 10px;
+  height: fit-content;
+}
+
+.card>.cardCircle {
+  position: absolute;
+  background-color: var(--colorBackgroundColor);
+  display: flex;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  right: 5px;
+  top: 5px;
+}
+
+.card:nth-child(2)>.cardCircle {
+  background-color: #7f5f16;
+}
+
+.card:nth-child(2)>p {
+  color: #7f5f16;
+}
+
+.card:nth-child(3)>.cardCircle {
+  background-color: #dbb95f;
+}
+
+.card:nth-child(3)>p {
+  color: #dbb95f;
+}
+
+.card:nth-child(4)>.cardCircle {
+  background-color: #422e13;
+}
+
+.card:nth-child(4)>p {
+  color: #422e13;
+}
+
+.cardCircle>i {
+  font-size: 2.8rem;
+  color: white;
+}
+
+.card>h1 {
+  font-size: 2rem;
+}
+
+.card>strong {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.card>p {
+  font-size: 1.8rem;
+  color: var(--colorBackgroundColor);
+}
+
+.card>span {
+  font-size: 1.6rem;
+}
+
+
+/* fin cardsDashboards */
+
+/* fin del section del centro xd */
+
+/* graficos dashboard */
+.graficosDashboard {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  justify-items: center;
+}
+
+.graficosDashboard>.contCanvas {
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+/* fin graficos dashboard */
