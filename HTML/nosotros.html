@@ -372,55 +372,50 @@
       }
 
       /*---------Estilos informacion Nosotros------------*/
-      .nosotros_informacion {
+      .cont_gen_inf {
+        background: #f0f2f5;
+        margin: 18px 0 35px 0;
         display: grid;
-        
+        gap: 14px;
       }
-      .imagen_large {
-        width: 100%;
-        filter: brightness(75%);
-        margin: 5px 0;
+      .cont_gen_inf > div:nth-child(2) > .img_inf,
+      .cont_gen_inf > div:nth-child(4) > .img_inf {
+        justify-content: end;
       }
-      .Second_row_images,
-      .First_row_images {
-        width: 100%;
+      .cont_inf {
+        display: grid;
+        gap: 12px;
+      }
+      .img_inf {
+        order: 2;
+      }
+      .inf {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 12px 0 5px 0;
-      }
-      .imagen_left,
-      .imagen_right {
-        height: 50%;
-        width: 20%;
-        filter: brightness(75%);
-      }
-      .imagen_vivero {
-        height: 100%;
-        width: 50%;
-      }
-      .nosotros_informacion > figure:nth-child(3) > .imagen_left,
-      .nosotros_informacion > figure:nth-child(3) > .imagen_right {
-        height: 70%;
-      }
-    
-      .nosotros_informacion__parte1,
-      .nosotros_informacion__parte2,
-      .nosotros_informacion__parte3 {
-        text-align: center;
+        flex-direction: column;
+        gap: 12px;
+        order: 1;
         margin: 0 20px;
-        font-size: 1.4rem;
       }
-      .nosotros_informacion__parte1 > h2,
-      .nosotros_informacion__parte2 > h2,
-      .nosotros_informacion__parte3 > h2 {
-        margin: 18px 0 8px 0;
+      .inf > h2 {
         font-size: 1.8rem;
-        font-weight: bold;
+        text-align: center;
       }
-      .nosotros_informacion__parte3 {
-        margin-bottom: 35px;
+      .inf > p {
+        font-size: 1.4rem;
+        text-align: justify;
+      } 
+      .informacion {
       }
+      .img_inf {
+        display: flex;
+      }
+      .img_inf > img {
+        width: 85%;
+        filter: brightness(70%);
+        margin: 15px 0;
+  
+      }
+
       /*-------------------Estilos Footer----------------*/
       footer {
         overflow: hidden;
@@ -529,32 +524,51 @@
           width: 105px;
           font-size: 1.7rem;
         }
-         /*---------Estilos informacion Nosotros------------*/
-        .imagen_large {
-          margin: 0;
+
+        /*---------Estilos informacion Nosotros------------*/
+        .cont_gen_inf {
+          margin: 20px 0 40px 0;
+          gap: 16px;
         }
-        .Second_row_images,
-        .First_row_images {
-          margin: 15px 0 8px 0;
+        .cont_gen_inf > div:nth-child(2) > .img_inf,
+        .cont_gen_inf > div:nth-child(4) > .img_inf {
+          /* justify-content: end; */
         }
-        .nosotros_informacion__parte1 > h2:first-child {
-          margin: 20px 0 10px 0;
+        .cont_inf {
+          gap: 14px;
         }
-        .nosotros_informacion__parte1,
-        .nosotros_informacion__parte2,
-        .nosotros_informacion__parte3 {
-          margin: 0 25px;
+        .img_inf {
+          /* order: 2; */
         }
-        .nosotros_informacion__parte1 > h2,
-        .nosotros_informacion__parte2 > h2,
-        .nosotros_informacion__parte3 > h2 {
-          margin: 18px 0 10px 0;
+        .inf {
+          gap: 14px;
+          /* order: 1; */
+          margin: 0 40px;
+        }
+        .cont_gen_inf > div:nth-child(2) > .inf,
+        .cont_gen_inf > div:nth-child(4) > .inf {
+          /* align-items: start; */
+        }
+        .inf > h2 {
           font-size: 1.9rem;
+          /* text-align: center; */
         }
-        .nosotros_informacion__parte3 {
-          margin-bottom: 40px;
+        .inf > p {
+          font-size: 1.5rem;
+          /* text-align: justify; */
+        } 
+        .informacion {
         }
-      
+        .img_inf {
+          /* display: flex; */
+  
+        }
+        .img_inf > img {
+          width: 100%;
+          height: 225px;
+        }
+
+
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 200px auto;
@@ -725,36 +739,11 @@
           width: 115px;
           font-size: 1.9rem;
         }
-        
-        /*---------Estilos informacion Nosotros------------*/     
-        .imagen_large {
-          display: none;
-        }
-        .Second_row_images,
-        .First_row_images {
-          margin: 18px 0 10px 0;
-        }
-        .nosotros_informacion__parte1 > h2:first-child {
-          margin: 22px 0 12px 0;
-        }
-        .nosotros_informacion__parte1,
-        .nosotros_informacion__parte2,
-        .nosotros_informacion__parte3 {
-          margin: 0 32px;
-          font-size: 1.6rem;
-        }
-        .nosotros_informacion__parte1 > h2,
-        .nosotros_informacion__parte2 > h2,
-        .nosotros_informacion__parte3 > h2 {
-          font-size: 2rem;
-          margin: 18px 0 12px 0;
-        }
-        .nosotros_informacion__parte3 {
-          margin-bottom: 45px;
-        }
 
-       /*-------------------Estilos Footer----------------*/
-       .redes_sociales__footer {
+        /*---------Estilos informacion Nosotros------------*/ 
+   
+        /*-------------------Estilos Footer----------------*/
+        .redes_sociales__footer {
           grid-template-columns: auto 220px auto;
           gap: 14px; 
           margin-bottom: 18px;
@@ -913,31 +902,7 @@
         }
 
         /*---------Estilos informacion Nosotros------------*/     
- 
-        .imagen_vivero{
-          max-width: 650px;
-        }
-        .Second_row_images,
-        .First_row_images {
-          margin: 25px 0 10px 0;
-        }
-        .nosotros_informacion__parte1,
-        .nosotros_informacion__parte2,
-        .nosotros_informacion__parte3 {
-          margin: 0 23% 0 23%;
-          font-size: 1.8rem;
-        }
-        .nosotros_informacion__parte1 > h2 {
-          margin: 35px 0 18px 0
-        }
-        .nosotros_informacion__parte2 > h2,
-        .nosotros_informacion__parte3 > h2 {
-          margin: 20px 0 18px 0;
-        }
-        .nosotros_informacion__parte3 {
-          margin-bottom: 50px;
-        }
-
+       
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 240px auto;
@@ -1101,66 +1066,74 @@
         </div>
       </div>
 
-      <div class="nosotros_informacion"> 
-        <div class="nosotros_informacion__parte1">
-          <h2>¿QUIENES SOMOS?</h2>
-          <p>
-            Vivero MyNature es heredero de dicha tradición y tratamos de llevar a nuestros clientes el significado y
-            la acción de las plantas sobre la vida de las personas y el medioambiente convirtiendo nuestro entorno en
-            un lugar mas placentero y lleno de vida para las generaciones actuales y futuras disfruten de una mejor
-            calidad de vida a través de ambientes sanos y agradables. 
-          </p>
-          <h2>¿A DONDE QUEREMOS LLEGAR?</h2>
-          <p>
-            Ser una empresa reconocida en la región Junín mediante el aporte e importancia que le damos al sector de 
-            la floricultura, llevándolo a un nivel distinto donde se utilice las tecnologías de información y 
-            comunicación. El mundo necesita personas que empiecen a preocuparse por la existencia de plantas en cada 
-            uno de los hogares. 
-          </p>
+      <div class="cont_gen_inf"> 
+        <div class="cont_inf">
+          <div class="img_inf">
+            <img src="https://lh3.google.com/u/0/d/1iQkk7U-nMVYlvOEdvV2zJTDmpfdwnJPF=w1640-h1008-iv1" alt="">
+          </div>
+          <div class="inf">
+            <h2>¿POR QUE ELEGIMOS LAS PLANTAS?</h2>
+            <p>
+              Las plantas están tomando mayor importancia a nivel mundial dado que las forestaciones, contaminaciones y
+              malos hábitos del ser humano están haciendo que se reduzcan en grandes cantidades, haciendo que la capa de 
+              ozono pase a desgastarse, que los rayos ultravioleta lleguen a los seres vivos y haya muchos cambios 
+              climáticos, pero si logramos que las personas tengan al menos una planta en sus hogares, reduciremos estas 
+              consecuencias. Además de que purifican el aire, aromatiza los lugares donde crecen, previenen problemas respiratorios, 
+              combaten la polución, aumentan la productividad, disminuyen el estrés, decoran tu hogar y te empoderan.
+            </p>
+          </div>
         </div>
-        <img class="imagen_large" src="https://lh3.google.com/u/0/d/1dM2iKu2T-7IpiLvf0Uhd5EoZRFHPdvOR=w1441-h1008-iv5" alt="">
-        <figure class="First_row_images">
-          <img class="imagen_left" src="https://lh3.google.com/u/0/d/1bBTgT8YvO8eJKCrwnrN6gS-ud_XHR88e=w1441-h1008-iv1" alt="">
-          <img class="imagen_vivero" src="https://lh3.google.com/u/0/d/10QrQpEsiZ9VZEBEP2FhmlwUmmdg10ohH=w1441-h1008-iv1"/>
-          <img class="imagen_right" src="https://lh3.google.com/u/0/d/1hNY4XVMO0aWcsD9O9BFUNXIWSWhqF_ty=w1917-h1008-iv1" alt="">  
-        </figure>
-        <div class="nosotros_informacion__parte2">
-          <h2>HISTORIA</h2>
-          <p>
-            My Nature nació de la idea de crear un mundo mejor, lleno de plantas donde brindemos a las futuras
-            generaciones un ambiente agradable y beneficioso para sus cuerpos.El dia 15 de Octubre de 2022 un grupo 
-            de jovenes al termina su carrera universitaria empezaron a dar vida la idea de crear un entorno 
-            tecnologico que ayude a los floricultores a alcanzar a una mayor cantidad de personas. Logrando ....
-          </p>
-          <br>
-          <p>
-            El dia 15 de Octubre de 2022 un grupo de jóvenes al terminar su carrera universitaria empezaron a dar vida 
-            la idea de crear un entorno tecnológico que ayude a los floricultores a alcanzar a una mayor cantidad de 
-            personas. Logrando ....
-          </p>
+
+        <div class="cont_inf">        
+          <div class="inf">
+            <h2>¿QUIENES SOMOS?</h2>
+            <p>
+              Vivero MyNature es heredero de dicha tradición y tratamos de llevar a nuestros clientes el significado y
+              la acción de las plantas sobre la vida de las personas y el medioambiente convirtiendo nuestro entorno en
+              un lugar mas placentero y lleno de vida para las generaciones actuales y futuras disfruten de una mejor
+              calidad de vida a través de ambientes sanos y agradables. 
+            </p>
+          </div>
+          <div class="img_inf">
+            <img src="https://lh3.google.com/u/0/d/1yUo2TmaHaIbqK4tEP1rkg9D1t4xtQk-S=w1640-h1008-iv1" alt="">
+          </div>
         </div>
-        <img class="imagen_large" src="https://lh3.google.com/u/0/d/1hXZf55WP0PdhznF6CPwIb8JLxwx1zvhY=w1441-h1008-iv4" alt="">
-        <figure class="Second_row_images">
-          <img class="imagen_left" src="https://lh3.google.com/u/0/d/1iPdMXxmz1eblyD_JQf8OiN_eUbxrjCdL=w1441-h1008-iv1" alt="">
-          <img class="imagen_vivero" src="https://lh3.google.com/u/0/d/1UOjiZNAg47mafrHsDES8BC2BrwFF_Ww3=w1362-h1008-iv1"/>
-          <img class="imagen_right" src="https://lh3.google.com/u/0/d/1fiSSo7W4NAkZBtubA6a1Vmp71UyNVzdc=w1441-h1008-iv4" alt="">  
-        </figure>
-        <div class="nosotros_informacion__parte3">
-          <h2>¿POR QUE ELEGIMOS LAS PLANTAS?</h2>
-          <p>
-            Las plantas hoy en dia cada vez están tomando mayor importancia a nivel mundial dado que las forestaciones,
-            contaminaciones y malos hábitos del ser humano están haciendo que se reduzcan en grandes cantidades y que la
-            capa de ozono este desgastándose de manera constante, consiguiendo que los rayos ultravioleta lleguen a los
-            seres vivos y haya muchos cambios climáticos, pero si logramos que las personas tengan al menos una planta 
-            en sus hogares, reduciremos las consecuencias.
-          </p>
-          <br>
-          <p>
-            Las plantas purifican el aire y contrarrestan las inconscientes acciones negativas medioambientales que 
-            realizamos, además de aromatiza los lugares donde crecen, previenen problemas respiratorios, combaten la 
-            polución, aumentan la productividad, disminuyen el estrés, decoran tu hogar y te empoderan.
-          </p>
+
+        <div class="cont_inf">
+          <div class="img_inf">
+            <img src="https://lh3.google.com/u/0/d/13uIlAU5iMytwawHdW0pvO8EhtMH26bgq=w1640-h1008-iv1" alt="">
+          </div>
+          <div class="inf">
+            <h2>¿A DONDE QUEREMOS LLEGAR?</h2>
+            <p>
+              Ser una empresa reconocida en la región Junín mediante el aporte e importancia que le damos al sector de 
+              la floricultura, llevándolo a un nivel distinto donde se utilice las tecnologías de información y 
+              comunicación. El mundo necesita personas que empiecen a preocuparse por la existencia de plantas en cada 
+              uno de los hogares. 
+            </p>
+          </div>
         </div>
+
+        <div class="cont_inf">
+          <div class="inf">
+            <h2>HISTORIA</h2>
+            <p>
+              My Nature nació de la idea de crear un mundo mejor, lleno de plantas donde brindemos a las futuras
+              generaciones un ambiente agradable y beneficioso para sus cuerpos.El dia 15 de Octubre de 2022 un grupo 
+              de jovenes al termina su carrera universitaria empezaron a dar vida la idea de crear un entorno 
+              tecnologico que ayude a los floricultores a alcanzar a una mayor cantidad de personas. Logrando ....
+            </p>
+            <p>
+              El dia 15 de Octubre de 2022 un grupo de jóvenes al terminar su carrera universitaria empezaron a dar vida 
+              la idea de crear un entorno tecnológico que ayude a los floricultores a alcanzar a una mayor cantidad de 
+              personas. Logrando ....
+            </p>
+          </div>
+          <div class="img_inf">
+            <img src="https://lh3.google.com/u/0/d/1oPb0Es-ZhpJhZbqW4xu_KX80lKeEVS8u=w1640-h1008-iv1" alt="">
+          </div>
+        </div>
+
 
       </div>
     </main>
