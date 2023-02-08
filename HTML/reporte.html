@@ -375,40 +375,86 @@
 
       /*-------------Estilos Contenido Reporte----------*/
       .Presentacion_reporte {
-        margin: 12px 20px 0 20px;
+        margin: 18px 0 60px;
         display: grid;
         gap: 15px;
         text-align: center;
         justify-items: center;
-        font-size: 1.1rem;
       }
-      .Presentacion_reporte > .Reporte_informacion {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
+      .Reporte_informacion {
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
       }
-      .Presentacion_reporte > img {
-        border-radius: 50%;
-        height: 150px;
+      .Reporte_informacion > h2 {
+        font-size: 1.8rem;
+      }
+      .Reporte_informacion > p {
+        font-size: 1.4rem;
+        text-align: justify;
+      }
+      .Reporte_img {
+        width: 100%;
+        padding: 0 20px;
+        display: none;
+        /* display: grid; */
+        margin-bottom: 15px;
+      }
+      .Reporte_img > img {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
         filter: brightness(85%);
+        border-radius: 5px 0 5px 0;
+        opacity: 0.9;
       }
+      /* main > figure:nth-child(4) {
+        height:  200px;
+        position: relative;
+        top: -25px;
+      }
+      .Reporte_img > img:nth-child(2) {
+        position: absolute;
+        right: 0;
+        top: 95px;
+        z-index: 5;
+      }
+      .Reporte_img > img:nth-child(3) {
+        display: none;
+      } */
+    
       /*-------------Formulario Reporte y Calificacion----------*/
       .Informar_reporte, 
       .Contenedor_calificacion  {
-        margin: 15px 20px 0 20px;
         display: grid;
-        gap: 10px;
+        gap: 12px;
         background: rgba(255, 255, 255, 1);
-        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
         height: auto;
-        padding: 15px 25px;
+        padding: 20px 20px 22px;
+        position: relative;
+      }
+      .Informar_reporte::after {
+        content: "";
+        width: 85px;
+        height: 55px;
+        background-image: url(https://lh3.google.com/u/0/d/1z2mUBCTqAh8eENWu6raEHrvS2EgsVRvx=w1050-h1009-iv2);
+        background-size: cover;
+        position: absolute;
+        display: inline-block;
+        z-index: 10;
+        right: 10px;
+        top: -55px;
+        filter: brightness(85%);
+        opacity: 0.9;
       }
       .Informar_reporte > h3,
       .Contenedor_calificacion > h3 {
         text-align: center;
         color: #31572C;
-        font-weight: 500;
-        font-size: 1.4rem;
+        font-weight: 600;
+        font-size: 1.6rem;
       }
       .Button__Informar_reporte,
       .Button__Calificar {
@@ -419,48 +465,50 @@
       .Button__Calificar > input[type="submit"]  {
         border: none;
         width: fit-content;
-        padding: 9px 17px;
+        padding: 11px 19px;
         border-radius: 8px;
         background-color: var(--colorButtonTiFilter);
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 20%);
         cursor: pointer;
-        margin-top: 8px;
+        margin-top: 12px;
       }
+
       /*-------------Solo Formulario Reporte----------*/
       .write_inconvenient {
         display: grid;
-        gap: 8px;
+        gap: 10px;
       }
       .write_inconvenient > span {
         color: #808080;
         text-align: justify;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
       }
       .write_inconvenient > textarea {
        border: 1px solid #dbdbdb1a ;
-       background: #ececec;
+       background: #ececec9c;
        resize: none;
-       padding: 6px 8px;
+       padding: 10px;
        border-radius: 5px;
        color: #808080;
-       font-size: 1rem;
+       font-size: 1.3rem;
       }
       .Select_type_report {     
         display: grid;
-        gap: 8px;
+        gap: 10px;
       }
       .Select_type_report > span {
         color: #808080;
         width: 100%;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
       }
       .Options__Select_type_report {
         position: relative;
       }
       .Options__Select_type_report > label {
-        background: #ececec;
-        padding: 8px 2px 8px 8px;
+        background: #ececec9c;
+        font-size: 1.3rem;
+        padding: 10px 10px 10px 14px;
         display: block;
         color: #808080;
         cursor: pointer;
@@ -468,7 +516,7 @@
         z-index: 2;
         transition: color 200ms ease-in;/* nombre de la propiedad | duración | función | retardo */
         overflow: hidden; /*El contenido es recortado y no se muestran barras de posición.*/
-        border-radius: 13px;
+        border-radius: 14px;
       }
       .Options__Select_type_report > label::before {
         width: 10px;
@@ -487,8 +535,8 @@
         z-index: -1;
       } 
       .Options__Select_type_report > label::after {
-        width: 18px;
-        height: 18px;
+        width: 22px;
+        height: 22px;
         content: '';
         border: 1px solid #dbdbdb;
         background-color: #fff;
@@ -499,7 +547,7 @@
         border-radius: 50%;
         z-index: 2;
         position: absolute;
-        right: 4px;
+        right: 5px;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
@@ -521,27 +569,27 @@
       } 
       .Goup_file{
         display: grid;
-        gap: 10px;
+        gap: 12px;
       }
       .Goup_file > span {
         color: #808080;
         text-align: justify;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
       }
       .Goup_file > input {
-        border-radius: 8px;
+        border-radius: 10px;
         color: #909090;
         outline: none;
-        font-size: 1rem;
-        background: #ececec;
+        font-size: 1.3rem;
+        background: #ececec9c;
         cursor: pointer;
-        height: 28px;
+        height: 36px;
       }
       ::-webkit-file-upload-button {
         background: var(--colorNavMovilDesplegable);
         color: #fff;
-        padding: 4px 4px 4px 8px;
-        border-radius: 8px 0 0 8px;
+        padding: 8px 8px 8px 10px;
+        border-radius: 10px 0 0 10px;
         border: none;
         cursor: pointer;
         font-family: "Montserrat", sans-serif;
@@ -549,39 +597,49 @@
       }
       /*-----------Estilos Informacion Calificacion------*/
       .Informacion_Calificar_Recordar {
-        margin: 15px 20% 0 20%;
+        margin: 0 ;
+        padding: 25px 20px;
         display: grid;
+        gap: 7px;
+        justify-content: center;
+      }
+      .Informacion_Calificar_Recordar > div {
+        display: grid;
+        justify-content: center;
         gap: 5px;
-        
       }
       .Informacion_Calificar_Recordar > p  {
         text-align: center;
         margin-bottom: 7px;
-        font-weight: 300;
-        font-size: 1.2rem;
+        font-weight: 500;
+        font-size: 1.4rem;
       }
       .Recordar_opcion {
         display: grid;
-        grid-template-columns: 45% 10% 45%;
+        min-width: 240px;
+        max-width: 297px; 
+        grid-template-columns: minmax(108px, 135px) minmax(24px, 27px) minmax(108px, 135px);
       }
       .Recordar_opcion p:nth-child(1)  {
         text-align: left;
-        font-size: 1.2rem;
-        display: grid;
+        font-size: 1.5rem;
+        display: block;
         align-items: center;
+        width: 100%;
       }
       .Recordar_opcion p:nth-child(2)  {
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         display: grid;
         align-items: center;
       }
       .Recordar_opcion p:nth-child(3)  {
         text-align: right;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         display: grid;
         align-items: center;
       }
+
       /*--------------Solo Formulario Calificacion--------*/
       .Select_stars {
         display: grid;
@@ -590,7 +648,7 @@
       .Select_stars > p:nth-child(1) {
         color: #808080;
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
       }
       .Stars { /*clasificacion*/
         direction: rtl;
@@ -598,7 +656,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        font-size: 3rem;
+        font-size: 3.4rem;
       }
       .Stars > input[type="radio"] {
         display: none;
@@ -619,8 +677,8 @@
       .Stars > input[type="radio"]:checked ~ label {
         color: var(--colorStarActive);
       }
+
       /*--------------Solo Formulario Calificacion--------*/
-      
       main > h1 {
         margin: 25px 0 20px 0;
         text-align: center;
@@ -632,11 +690,11 @@
       .Frases_iconicas {
         margin: 15px 20px 0 20px;
         display: grid;
-        gap: 10px;                
+        gap: 12px;                
       }
       .Frases_iconicas > p {
-        text-align: center;
-        font-size: 1.1rem;
+        text-align: justify;
+        font-size: 1.4rem;
         margin-top: 7px;
         margin-bottom: 35px;
       }
@@ -645,12 +703,10 @@
         grid-template-columns: 23% auto 23%;
         justify-items: center;
         gap: 5px;
-
       }
       .Autores > h4 {
         text-align: left;
-        font-size: 0.9rem;
-        
+        font-size: 1.2rem;
       }
       .Autores > img {
         border-radius: 50%;
@@ -665,13 +721,13 @@
         align-content: end;
       }
       .Informacion_autores  > p:first-child {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         font-weight: 500;
       }
       .Informacion_autores  > p:last-child {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
       }
-      /*-------------------Estilos Footer----------------*/
+      
       /*-------------------Estilos Footer----------------*/
       footer {
         overflow: hidden;
@@ -783,50 +839,70 @@
         }
         /*-------------Estilos Contenido Reporte----------*/
         .Presentacion_reporte {
-          margin: 18px 10% 0 10%;
           gap: 18px;
-          font-size: 1.3rem;
+          margin: 20px 0 70px;
         }
-        
-        .Presentacion_reporte > img {
+    
+        /* .Presentacion_reporte > img {
           height: 170px;
+        } */
+        .Reporte_informacion {
+          margin: 0 25px;
+        }
+        .Reporte_informacion > h2 {
+        font-size: 1.9rem;
+        }
+        .Reporte_informacion > p {
+          font-size: 1.5rem;
         }
         /*-------------Formulario Reporte y Calificacion----------*/
         .Informar_reporte, 
         .Contenedor_calificacion  {
-          margin: 18px 10% 0 10%;
-          padding: 18px 28px;
+          padding: 25px 25px;
+          gap: 14px;
         }
         .Informar_reporte > h3,
         .Contenedor_calificacion > h3 {
-          font-size: 1.8rem;
+          font-size: 1.9rem;
+        }
+        .Informar_reporte::after {
+          width: 90px;
+          height: 58px;
+          top: -58px;
+
         }
         .Button__Informar_reporte > input[type="submit"],
         .Button__Calificar > input[type="submit"]  {
           padding: 10px 18px;
-          font-size: 1.6rem;
+          font-size: 1.7rem;
           border-radius: 12px;
         }
         /*-------------Solo Formulario Reporte----------*/
+        .write_inconvenient {
+          gap: 12px;
+        }
         .write_inconvenient > span {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
         }
         .write_inconvenient > textarea {
           padding: 7px 10px;
           /* border-radius: 10px; */
-          font-size: 1.2rem;
+          font-size: 1.4rem;
+        }
+        .Select_type_report {
+          gap: 12px;
         }
         .Select_type_report > span {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
         }
         .Options__Select_type_report > label {
           padding: 9px 14px;
-          font-size: 1.2rem;
+          font-size: 1.4rem;
           border-radius: 15px;
         }
         .Options__Select_type_report > label::after {
-          width: 21px;
-          height: 21px;
+          width: 23px;
+          height: 23px;
           background-position: 1px 2px;
           right: 5px;
         } 
@@ -834,36 +910,44 @@
           transform: translate(-50%, -50%) scale3d(112, 112, 1);
         }
         .Goup_file{
-          gap: 13px;
+          gap: 14px;
         }
         .Goup_file > span {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
         }
         .Goup_file > input {
           border-radius: 12px;
-          font-size: 1.2rem;
-          height: 33px;
+          font-size: 1.4rem;
+          height: 38px;
         }
         ::-webkit-file-upload-button {
           border-radius: 12px 0 0 12px;
           padding: 5px 11px;
         }
         /*-----------Estilos Informacion Calificacion------*/
-        .Informacion_Calificar_Recordar {
-          margin: 18px 20% 0 20%;     
-          gap: 8px;
+        .Informacion_Calificar_Recordar {  
+          padding: 27px 22px;
+          gap: 9px;
+        }
+        .Informacion_Calificar_Recordar > div {
+          gap: 7px;
+        }
+        .Recordar_opcion {
+          min-width: 280px;
+          max-width: 337px; 
+          grid-template-columns: minmax(128px, 155px) minmax(24px, 27px) minmax(128px, 155px);
         }
         .Informacion_Calificar_Recordar > p  {
           font-size: 1.5rem;
         }
         .Recordar_opcion p:nth-child(1)  {
-          font-size: 1.4rem;
+          font-size: 1.6rem;
         }
         .Recordar_opcion p:nth-child(2)  {
-          font-size: 1.4rem;
+          font-size: 1.6rem;
         }
         .Recordar_opcion p:nth-child(3)  {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
 
         }
         /*--------------Solo Formulario Calificacion--------*/
@@ -871,10 +955,10 @@
           gap: 13px;
         }
         .Select_stars > p:nth-child(1) {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
         }
         .Stars { /*clasificacion*/
-          font-size: 4rem;
+          font-size: 4.2rem;
         }
         /*--------------Solo Formulario Calificacion--------*/
         
@@ -883,11 +967,11 @@
           font-size: 2.2rem;
         }
         .Frases_iconicas {
-          margin: 18px 10% 0 10%;
+          margin: 18px 25px 0 25px;
           gap: 13px;                
         }
         .Frases_iconicas > p {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
           margin-top: 10px;
           margin-bottom: 40px;
         }
@@ -896,17 +980,17 @@
           gap: 10px;
         }
         .Autores > h4 {
-          font-size: 1.1rem;
+          font-size: 1.3rem;
         }
         .Autores > img {
           height: 140px;
           width: 140px;
         }
         .Informacion_autores  > p:first-child {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
         }
         .Informacion_autores  > p:last-child {
-          font-size: 1rem;
+          font-size: 1.1rem;
         }
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
@@ -1081,26 +1165,33 @@
 
         /*-------------Estilos Contenido Reporte----------*/
         .Presentacion_reporte {
-          margin: 25px 15% 0 15%;
+          margin: 25px 5% 0 5%;
           grid-template-rows: 100%;
           grid-template-columns:  230px auto ;
           gap: 22px;
-          font-size: 1.5rem;
         }
-        .Presentacion_reporte > .Reporte_informacion {
+         .Reporte_informacion {
           display: flex;
           flex-direction: column;
           gap: 10px;
           padding: 10px 0;
+          margin: 0;
           order: 2;
         }
         .Reporte_informacion > h2 {
           text-align: start;
+          font-size: 2rem;
         }
         .Reporte_informacion > p {
-          text-align: justify;
+          font-size: 1.6rem;
         }
-        .Presentacion_reporte > img {
+        .Reporte_img {
+          display: block;
+          margin: 0;
+          padding: 0;
+        }
+        .Reporte_img > img {
+         
           height: 100%;
           max-width: 230px;
           min-width: 230px;
@@ -1112,109 +1203,122 @@
         /*-------------Formulario Reporte y Calificacion----------*/
         .Informar_reporte, 
         .Contenedor_calificacion  {
-          margin: 28px 15% 0 15%;
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+          margin: 28px 5% 0 5%;
           padding: 21px 31px;
+          gap: 16px;
         }
         .Informar_reporte > h3,
         .Contenedor_calificacion > h3 {
-          font-size: 1.8rem;
+          font-size: 2rem;
+        }
+        .Informar_reporte::after {
+          display: none;
         }
         .Button__Informar_reporte > input[type="submit"],
         .Button__Calificar > input[type="submit"]  {
           padding: 12px 20px;
-          font-size: 2rem;
+          font-size: 1.9rem;
           border-radius: 14px;
         }
         /*-------------Solo Formulario Reporte----------*/
         .write_inconvenient {
-          gap: 10px;
+          gap: 14px;
         }
         .write_inconvenient > span {
-          font-size: 1.5rem;
+          font-size: 1.6rem;
         }
         .write_inconvenient > textarea {
           padding: 10px 14px;
           border-radius: 9px;
-          font-size: 1.4rem;
+          font-size: 1.5rem;
         }
         .Select_type_report {     
-          gap: 10px;
+          gap: 14px;
         }
         .Select_type_report > span {
-          font-size: 1.5rem;
+          font-size: 1.6rem;
         }
         .Options__Select_type_report > label {
           padding: 12px 17px;
-          font-size: 1.4rem;
-          border-radius: 20px;
+          font-size: 1.5rem;
+          border-radius: 18px;
         }
         .Options__Select_type_report > label::after {
-          width: 30px;
-          height: 30px;
+          width: 28px;
+          height: 28px;
           background-position: 3px 4px;
           background-size: 110%;
           right: 6px;
         } 
-        /* .Options__Select_type_report > input:checked ~ label::before{
-          transform: translate(-50%, -50%) scale3d(112, 112, 1);
-        } */
         .Goup_file{
-          gap: 17px;
+          gap: 19px;
         }
         .Goup_file > span {
-          font-size: 1.5rem;
+          font-size: 1.6rem;
         }
         .Goup_file > input {
           border-radius: 14px;
-          font-size: 1.4rem;
+          font-size: 1.5rem;
           height: 42px;
         }
         ::-webkit-file-upload-button {
           border-radius: 14px 0 0 14px;
           padding: 13px 13px;
         }
+
         /*-----------Estilos Informacion Calificacion------*/
         .Informacion_Calificar_Recordar {
-          margin: 28px 22% 0 22%;  
+          margin: 28px 12% 0 12%;  
           gap: 15px;
+          padding: 27px 22px;
+        }
+        .Informacion_Calificar_Recordar > div {
+          gap: 10px;
         }
         .Informacion_Calificar_Recordar > p  {
           font-size: 1.6rem;
         }
+        .Recordar_opcion {
+          min-width: 400px;
+          max-width: 377px; 
+          grid-template-columns: minmax(178px, 185px) minmax(44px, 47px) minmax(178px, 185px);
+        }
         .Recordar_opcion p:nth-child(1)  {
-          font-size: 1.6rem;
+          font-size: 1.7rem;
         }
         .Recordar_opcion p:nth-child(2)  {
-          font-size: 1.6rem;
+          font-size: 1.7rem;
         }
         .Recordar_opcion p:nth-child(3)  {
-          font-size: 1.5rem;
+          font-size: 1.6rem;
 
         }
+
         /*--------------Solo Formulario Calificacion--------*/
         .Select_stars {
           gap: 17px;
           margin-bottom: 10px;
         }
         .Select_stars > p:nth-child(1) {
-          font-size: 1.5rem;
+          font-size: 1.6rem;
         }
         .Stars { /*clasificacion*/
           font-size: 5rem;
         }
-        /*--------------Solo Formulario Calificacion--------*/
         
+        /*--------------Solo Formulario Calificacion--------*/
         main > h1 {
           padding: 8px 0;
           font-size: 2.4rem;
           margin: 30px 0 25px 0;
         }
         .Frases_iconicas {
-          margin: 28px 15% 0 15%;
+          margin: 28px 5% 0 5%;
           gap: 17px;                
         }
         .Frases_iconicas > p {
-          font-size: 1.5rem;
+          font-size: 1.6rem;
           margin-top: 15px;
           margin-bottom: 45px;
         }
@@ -1223,14 +1327,14 @@
           gap: 15px;
         }
         .Autores > h4 {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
         }
         .Autores > img {
           height: 170px;
           width: 170px;
         }
         .Informacion_autores  > p:first-child {
-          font-size: 1.5rem;
+          font-size: 1.6rem;
         }
         .Informacion_autores  > p:last-child {
           font-size: 1.2rem;
@@ -1259,7 +1363,6 @@
         .informacion__footer {
           gap: 6px;
           padding-bottom: 31px;
-          
         }
         .informacion__footer > p {
           font-size: 1.4rem;
@@ -1395,11 +1498,16 @@
         }
         
         /*-------------Estilos Contenido Reporte----------*/
+        main > div:nth-child(2),
+        main > div:nth-child(4) {
+          display: grid;
+          justify-content: center;
+        }
         .Presentacion_reporte {
-          margin: 35px 23% 0 23%;
+          max-width: 950px;
+          margin: 30px 32px 0;
           grid-template-columns: auto auto;
           gap: 35px;
-          justify-content: center;
         }
         .Presentacion_reporte > .Reporte_informacion {
           padding: 15px 0;
@@ -1418,7 +1526,8 @@
         /*-------------Formulario Reporte y Calificacion----------*/
         .Informar_reporte, 
         .Contenedor_calificacion  {
-          margin: 35px 23% 0 23%;
+          max-width: 950px;
+          margin: 35px 32px 0;
           padding: 36px 46px;
         }
         .Informar_reporte > h3,
@@ -1435,7 +1544,6 @@
           border-radius: 11px;
           font-size: 1.6rem;
         }
-
         .Select_type_report > span {
           font-size: 1.7rem;
         }
@@ -1445,15 +1553,14 @@
           border-radius: 22px;
         }
         .Options__Select_type_report > label::after {
-          width: 35px;
-          height: 35px;
+          width: 32px;
+          height: 32px;
           background-position: 2px 4px;
           background-size: 120%;
         } 
         .Options__Select_type_report > input:checked ~ label::before{
           transform: translate(-50%, -50%) scale3d(162, 162, 1);
         } 
- 
         .Goup_file > span {
           font-size: 1.7rem;
         }
@@ -1466,12 +1573,15 @@
           border-radius: 16px 0 0 16px;
           padding: 16px 16px;
         }
+
         /*-----------Estilos Informacion Calificacion------*/
-        .Informacion_Calificar_Recordar {
-          margin: 40px 30% 40px 30%;
-        }
         .Informacion_Calificar_Recordar > p  {
-          font-size: 1.8rem;
+          font-size: 1.9rem;
+        }
+        .Recordar_opcion {
+          min-width: 450px;
+          max-width: 467px; 
+          grid-template-columns: minmax(198px, 205px) minmax(54px, 57px) minmax(198px, 205px);
         }
         .Recordar_opcion p:nth-child(1)  {
           font-size: 1.8rem;
@@ -1499,8 +1609,9 @@
           margin: 40px 0 35px 0;
         }
         .Frases_iconicas {
-          margin: 52px 23% 0 23%;
-          gap: 20px;                
+          margin: 52px 32px 0 ;
+          gap: 20px;  
+          max-width: 950px;          
         }
         .Frases_iconicas > p {
           font-size: 1.7rem;
@@ -1553,7 +1664,6 @@
           width: 89%;
           height: 95%;
           min-width: 457px;
-        
         }
         .cont_inf_footer > div:first-child  {
           display: flex;
@@ -1688,148 +1798,154 @@
         </div>
       </div>
 
-      <div class="Presentacion_reporte"> 
-        <div class="Reporte_informacion">
-          <h2>REPORTAR</h2>
-          <p>My Nature acepta inconvenientes, sugerencias o aportes acerca del uso de la aplicación con el fin de hacer que
-            haya una constante mejora en esta misma y así tener usuarios que disfruten de la navegación mientras se
-            informan de lo que ofrecemos.
-          </p>
-          <p>Hoy en día las empresas le dan mayor importancia a lo que piensan sus clientes, si esta empresa no te escucha, tienes
-            todo el derecho de compartir tu mala experiencia ante otras personas o en caso contrario, describir el buen producto,
-            trato o servio que esta ofrece.
-          </p>
+      <div>
+        <div class="Presentacion_reporte"> 
+          <div class="Reporte_informacion">
+            <h2>REPORTAR</h2>
+            <p>My Nature acepta todos los inconvenientes, sugerencias o aportes acerca del uso de la aplicación con el fin de hacer que
+              haya una constante mejora en esta misma y así tener usuarios que disfruten de la navegación mientras se
+              informan de lo que ofrecemos.
+            </p>
+            <p>Hoy en día las empresas le dan mayor importancia a lo que piensan sus clientes, si esta empresa no te escucha, tienes
+              todo el derecho de compartir tu mala experiencia ante otras personas o en caso contrario, describir el buen producto,
+              trato o servio que esta ofrece.
+            </p>
+          </div>
+          <div class="Reporte_img">
+            <img src="https://lh3.google.com/u/0/d/1V7YLHai_Hen-Ah9h-h5gMOUWla-C77Ky=w1049-h1008-iv1" alt="">
+          </div>
         </div>
-       
-        <img src="https://lh3.google.com/u/0/d/1D4jeQeYJ1eNoqH-5RFvOMEwucqQU-_so=w1917-h1008-iv1" alt="">
-      </div>
-      
-      <form class="Informar_reporte" action="">
-        <h3>INFORMAR A MY NATURE</h3>
-        <label class="write_inconvenient" for="">
-          <span>Comente algún inconveniente, sugerencia o aporte:</span>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-        </label>
-        <div class="Select_type_report">
-          <span>Tipo de comentario:</span>
-          <div class="Options__Select_type_report">
-            <input id="opcion1" name="radio" type="radio"/>
-            <label for="opcion1">Inconveniente</label>
+        
+        <form class="Informar_reporte" action="">
+          <h3>INFORMAR A MY NATURE</h3>
+          <label class="write_inconvenient" for="">
+            <span>Escribe si tienes algún inconveniente, sugerencia o aporte:</span>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </label>
+          <div class="Select_type_report">
+            <span>Tipo de comentario:</span>
+            <div class="Options__Select_type_report">
+              <input id="opcion1" name="radio" type="radio"/>
+              <label for="opcion1">Inconveniente</label>
+            </div>
+            <div class="Options__Select_type_report">
+              <input id="opcion2" name="radio" type="radio"/>
+              <label for="opcion2">Sugerencia</label>
+            </div>
+            <div class="Options__Select_type_report">
+              <input id="opcion3" name="radio" type="radio"/>
+              <label for="opcion3">Aporte</label>
+            </div>  
           </div>
-          <div class="Options__Select_type_report">
-            <input id="opcion2" name="radio" type="radio"/>
-            <label for="opcion2">Sugerencia</label>
+          <label class="Goup_file" for="">
+            <span>Si es un inconveniente, subir un archivo pdf que contenga las imagenes:
+            </span>
+            <input type="file" >
+          </label>
+          <div class="Button__Informar_reporte">
+            <input type="submit" name="" id="" value="Informar">
           </div>
-          <div class="Options__Select_type_report">
-            <input id="opcion3" name="radio" type="radio"/>
-            <label for="opcion3">Aporte</label>
+        </form>
+  
+        <div class="Informacion_Calificar_Recordar">
+          <p>RECUERDA QUE PUEDES CALIFICAR LA PÁGINA WEB</p>
+          <div>
+            <div class="Recordar_opcion">
+              <p>⭐</p>
+              <p>=</p>
+              <p>Pésima ☹️</p>
+            </div>
+            <div class="Recordar_opcion">
+              <p>⭐⭐</p>
+              <p>=</p>
+              <p>Mala 🙁</p>
+            </div>
+            <div class="Recordar_opcion">
+              <p>⭐⭐⭐</p>
+              <p>=</p>
+              <p>Regular 😶</p>
+            </div>
+            <div class="Recordar_opcion">
+              <p>⭐⭐⭐⭐</p>
+              <p>=</p>
+              <p>Buena 🙂</p>
+            </div>
+            <div class="Recordar_opcion">
+              <p>⭐⭐⭐⭐⭐</p>
+              <p>=</p>
+              <p>Excelente 😀</p>
+            </div> 
+          </div>
+        </div>
+  
+        <form class="Contenedor_calificacion" action="">
+          <h3>CALIFICAR A MY NATURE</h3>
+          <label class="Select_stars" for="">
+            <p>Ser siempre calificados nos da la oportunidad de poder mejorar!</p>
+            <p class="Stars">
+              <input id="radio1" type="radio" name="estrellas" value="5"> 
+              <label  for="radio1" class="fas fa-star"></label>
+              <input id="radio2" type="radio"  name="estrellas" value="4">
+              <label  for="radio2" class="fas fa-star"></label>
+              <input id="radio3"  type="radio" name="estrellas" value="3">
+              <label  for="radio3" class="fas fa-star"></label>
+              <input id="radio4" type="radio"  name="estrellas" value="2">
+              <label  for="radio4" class="fas fa-star"></label>      
+              <input id="radio5" type="radio" name="estrellas" value="1">
+              <label  for="radio5" class="fas fa-star" ></label>                
+            </p>
+          </label>
+          <div class="Button__Calificar">	
+            <input type="submit" name="" id="" value="Calificar">
           </div>  
-        </div>
-        <label class="Goup_file" for="">
-          <span>Si es un inconveniente, subir un archivo pdf que contenga las imagenes:
-          </span>
-          <input type="file" >
-        </label>
-        <div class="Button__Informar_reporte">
-          <input type="submit" name="" id="" value="Informar">
-        </div>
-      </form>
-
-      <div class="Informacion_Calificar_Recordar">
-        <p>RECUERDA QUE PUEDES CALIFICAR LA PÁGINA WEB</p>
-        <div class="Recordar_opcion">
-          <p>⭐</p>
-          <p>=</p>
-          <p>Pésima ☹️</p>
-        </div>
-        <div class="Recordar_opcion">
-          <p>⭐⭐</p>
-          <p>=</p>
-          <p>Mala 🙁</p>
-        </div>
-        <div class="Recordar_opcion">
-          <p>⭐⭐⭐</p>
-          <p>=</p>
-          <p>Regular 😶</p>
-        </div>
-        <div class="Recordar_opcion">
-          <p>⭐⭐⭐⭐</p>
-          <p>=</p>
-          <p>Buena 🙂</p>
-        </div>
-        <div class="Recordar_opcion">
-          <p>⭐⭐⭐⭐⭐</p>
-          <p>=</p>
-          <p>Excelente 😀</p>
-        </div> 
+        </form>
       </div>
-
-      <form class="Contenedor_calificacion" action="">
-        <h3>CALIFICAR A MY NATURE</h3>
-        <label class="Select_stars" for="">
-          <p>Ser siempre calificados nos da la oportunidad de poder mejorar!</p>
-          <p class="Stars">
-            <input id="radio1" type="radio" name="estrellas" value="5"> 
-            <label  for="radio1" class="fas fa-star"></label>
-            <input id="radio2" type="radio"  name="estrellas" value="4">
-            <label  for="radio2" class="fas fa-star"></label>
-            <input id="radio3"  type="radio" name="estrellas" value="3">
-            <label  for="radio3" class="fas fa-star"></label>
-            <input id="radio4" type="radio"  name="estrellas" value="2">
-            <label  for="radio4" class="fas fa-star"></label>      
-            <input id="radio5" type="radio" name="estrellas" value="1">
-            <label  for="radio5" class="fas fa-star" ></label>                
-          </p>
-        </label>
-        <div class="Button__Calificar">	
-          <input type="submit" name="" id="" value="Calificar">
-        </div>  
-      </form>
-
       <h1>FRASES ICÓNICAS</h1>
-
-      <section class="Frases_iconicas">
-        <div class="Autores">
-          <h4>
-            <i class="fas fa-hand-holding-seedling"></i>
-            No queremos forzar nuestras ideas en los clientes, sino
-            simplemente hacer lo que desean.
-          </h4>
-          <img src="https://lh3.google.com/u/0/d/1Cu9ILXGleBJkg2rHzpATW507x-kcp4BF=w1362-h1008-iv1" alt="">
-          <div class="Informacion_autores">
-            <p>LAURA ASHLEY</p>
-            <p>NACIÓ - LUNES, SEPTIEMBRE 07, 1925</p>
+      <div>
+        <section class="Frases_iconicas">
+          <div class="Autores">
+            <h4>
+              <i class="fas fa-hand-holding-seedling"></i>
+              No queremos forzar nuestras ideas en los clientes, sino
+              simplemente hacer lo que desean.
+            </h4>
+            <img src="https://lh3.google.com/u/0/d/1Cu9ILXGleBJkg2rHzpATW507x-kcp4BF=w1362-h1008-iv1" alt="">
+            <div class="Informacion_autores">
+              <p>LAURA ASHLEY</p>
+              <p>NACIÓ - LUNES, SEPTIEMBRE 07, 1925</p>
+            </div>
           </div>
-        </div>
-        <div class="Autores">
-          <h4>
-            <i class="fas fa-hand-holding-seedling"></i>
-            En lugar de enfocarte en la competencia, enfócate en el cliente.
-          </h4>
-          <img src="https://lh3.google.com/u/0/d/1ihlIOBXb0wwVcIgMBguZt94g4GwsYmAy=w1362-h1008-iv1" alt="">
-          <div class="Informacion_autores">
-            <p>SCOTT COOK</p>
-            <p>NACIÓ - SÁBADO, JULIO 26, 1952</p>
+          <div class="Autores">
+            <h4>
+              <i class="fas fa-hand-holding-seedling"></i>
+              En lugar de enfocarte en la competencia, enfócate en el cliente.
+            </h4>
+            <img src="https://lh3.google.com/u/0/d/1ihlIOBXb0wwVcIgMBguZt94g4GwsYmAy=w1362-h1008-iv1" alt="">
+            <div class="Informacion_autores">
+              <p>SCOTT COOK</p>
+              <p>NACIÓ - SÁBADO, JULIO 26, 1952</p>
+            </div>
           </div>
-        </div>
-        <div class="Autores"> 
-          <h4>
-            <i class="fas fa-hand-holding-seedling"></i>
-            Tus clientes más insatisfechos son tu mejor fuente de aprendizaje.
-          </h4>
-          <img src="https://lh3.google.com/u/0/d/1rfmQF_UGWQ_IZ1fR_rW2-5SfTcRy6v7x=w1362-h1008-iv3" alt="">
-          <div class="Informacion_autores">
-            <p>BILL GATES</p>
-            <p>NACIÓ - VIERNES, OCTUBRE 28, 1955</p>
+          <div class="Autores"> 
+            <h4>
+              <i class="fas fa-hand-holding-seedling"></i>
+              Tus clientes más insatisfechos son tu mejor fuente de aprendizaje.
+            </h4>
+            <img src="https://lh3.google.com/u/0/d/1rfmQF_UGWQ_IZ1fR_rW2-5SfTcRy6v7x=w1362-h1008-iv3" alt="">
+            <div class="Informacion_autores">
+              <p>BILL GATES</p>
+              <p>NACIÓ - VIERNES, OCTUBRE 28, 1955</p>
+            </div>
           </div>
-        </div>
-        <p>Hay que ser muy conscientes de que tu satisfacción no depende solo 
-          del producto o servicio en sí. Tus expectativas que tengas de la adquisición,
-          el servicio al cliente ofrecido antes, durante y después de la compra también juegan un
-          papel fundamental en esta y son elementos que debemos cuidar en nuestra empresa y por 
-          ello apreciamos realmente tu opinión.
-        </p>
-      </section>
+          <p>Hay que ser muy conscientes de que tu satisfacción no depende solo 
+            del producto o servicio en sí. Tus expectativas que tengas de la adquisición,
+            el servicio al cliente ofrecido antes, durante y después de la compra también juegan un
+            papel fundamental en esta y son elementos que debemos cuidar en nuestra empresa y por 
+            ello apreciamos realmente tu opinión.
+          </p>
+        </section>
+      </div>
+   
     
      
     </main>
