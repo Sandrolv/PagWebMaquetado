@@ -497,6 +497,7 @@
       }
       .opciones__cont_perfil {
         display: grid;
+        grid-template-columns: 100%;
         gap: 5px;
       }
       .icon_perfil {
@@ -545,7 +546,7 @@
         display: none;
       }
       .opciones_info_cuenta > div > .opcion_inf__label {
-        margin: 10px 0 10px 16px;
+        margin: 10px 0;
         padding: 5px;
         border-left: 3px solid #31572c24;
         background: #e7e7e7;;
@@ -553,7 +554,7 @@
         line-height: 30px;
       } 
       .opciones_info_cuenta > div > .opcion_cuent__label {
-        margin: 10px 16px 10px 0;
+        margin: 10px 0;
         padding: 5px;
         border-right: 3px solid #31572c24;
         background: #e7e7e7;
@@ -568,11 +569,11 @@
       .opc_seleccionado {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
       }
       .opc_seleccionado > div {
         display: block;
-        margin: 10px 16px;
+        padding: 5px 0;
         width: calc(100vw - 32px);
        
       }
@@ -654,6 +655,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+     
       }
       .label__opcion_inf {
         display: block;
@@ -896,7 +898,7 @@
         }
         .opc_seleccionado {
           display: grid;
-          grid-template-columns: 180px  calc( 100vw - 180px );
+          grid-template-columns: 180px  calc( 100% - 180px );
           grid-template-rows: 50px 50px auto;
           grid-template-areas:
           "opcion1 informacion "
@@ -910,9 +912,9 @@
          
         }
         .opc_seleccionado > div {
-          width: calc( 100vw - 214px );
+          width: 100%;
           grid-area: informacion;
-          margin: 0 20px 0 14px;
+          padding: 0 20px 0 14px;
         }
 
         .opc_seleccionado > input:nth-child(1):checked ~ .opcion_inf__label {
@@ -1198,9 +1200,10 @@
           font-size: 1.8rem;  
         }
         .cont_gen_perfil {
-          width: calc(62vw - 5px);
+          width: 62%;
         }
         .opciones__cont_perfil {
+      
         }
         .icon_perfil {
           margin-left: 29px;
@@ -1217,7 +1220,7 @@
           font-size: 1.7rem;
         }
         .opciones_info_cuenta  {
-          width: calc(62vw - 5px);
+          /* width: calc(62vw - 5px); */
         }
         .opciones_info_cuenta > div > label  {
           font-size: 1.5rem;
@@ -1234,7 +1237,7 @@
         }
         .opc_seleccionado {
           display: grid;
-          grid-template-columns: 185px  calc(62vw - 218px);
+          grid-template-columns: 185px  calc(100% - 185px);
           margin-top: 25px;
           min-width: 400px;
         }
@@ -1250,15 +1253,15 @@
         }
         .opc_seleccionado > div {
           width: 100%;
-          margin: 0 14px 0 14px;
+          padding: 0 14px 0 14px;
         }
 
         /**/
 
         .cont_other_tlf_gmail {
-          width: calc(38vw - 20px) ;
+          width: calc(38%) ;
           height: fit-content;
-          margin: 0 20px 0 5px;
+          padding: 0 20px 0 5px;
         }
         .other_tlf_gmail {
           padding: 25px 30px 25px;
@@ -1361,7 +1364,6 @@
         .nav-right > li > .contenedor_avisos > i ,
         .nav-right > li > a > i {
           font-size: 2.4rem;
-
         }
         .nav-right > li > .user_sesion > a {
           font-size: 1.7rem;
@@ -1429,7 +1431,6 @@
         }
         .cont_gen_perfil {
           max-width: 740px;
-          width: auto;
         }
         .icon_perfil > div:first-child {
           width: 55px;
