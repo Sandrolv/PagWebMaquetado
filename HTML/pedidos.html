@@ -197,12 +197,10 @@
         text-decoration: none;
         position: relative;
         top: 1px;
-
       }
       .nav-right > li > .user_sesion > a > i {
         font-size: 2.1rem;
       }
-
       .user_sesion > .contenedor_sesion {
         color: white;
         cursor: pointer;
@@ -374,184 +372,93 @@
         justify-content: center;
       }
 
-      /*---------Estilos Informacion contactenos-------*/
-      .Contactenos_contenedor {
-        margin: 12px 28px 0 28px;
+      /*-------------Estilos Pedidos------------------*/
+      .cont_gen_pedidos {
+        margin-top: 18px;
         display: grid;
-        grid-template-rows: auto auto;
-        grid-template-columns: 100%;
-        justify-items: center;
-        gap: 15px;
-        order: 2;
       }
-      .Contactenos_imagen {
-        order: 1;
-      }
-      .Contactenos_imagen > img {
-        border-radius: 50%;
-        height: 150px;
-        width: 150px;
-        filter: brightness(85%);
-        object-fit: cover;
-      }
-      .Contactenos_contenedor > .Contactenos_informacion {
-        display: grid;
-        gap: 8px;
-      }
-      .Contactenos_informacion > h2 {
+      .cont_gen_pedidos > h1 {
+        font-size: 1.8rem;
         text-align: center;
-        margin-bottom: 5px;
       }
-      .Contactenos_informacion > span {
-        display: grid;
-        grid-template-columns: 15px auto auto;
-        gap: 5px;
-        align-items: center;
+      .cont_productos {
+        order: 2; 
       }
-      .Contactenos_informacion > span > i {
-        font-size: 1.2rem;
-        display: flex;
-        justify-content: center;
-      }
-      .Contactenos_informacion > span:nth-child(5),
-      .Contactenos_informacion > span:nth-child(6) {
-        align-items: flex-start;
-      }
-      .Contactenos_informacion > span:nth-child(5) > i {
-        padding-top: 2px;
-      }
-      .Contactenos_informacion > span > p {
-        font-size: 1.1rem;
-        text-align: justify;
-      }
-      .Contactenos_informacion_redes_sociales  {
-        font-size: 1.1rem;
-        display: flex;
-        gap: 5px;
-      }
-      .Contactenos_informacion_redes_sociales > a {
-        color: black;
-      }
-      /*------------ Formulario Pedido------------*/
-      .Contenedor_Formulario_Pedido {
-        margin: 15px 16px 0 16px;
-        display: grid;
-        gap: 10px;
-        background: rgba(255, 255, 255, 1);
-        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        padding: 15px 20px;
-      }
-      .Contenedor_Formulario_Pedido > h3 {
+      .cont_productos_vacio {
         text-align: center;
-        color: #31572C;
-        font-weight: 500;
-        font-size: 1.4rem;
-      }
-      .write_names,
-      .write_email,
-      .write_phone,
-      .write_dni,
-      .write_address,
-      .write_reference,
-      .Select_day_delivery,
-      .Check_delivery {
-        display: grid;
-        gap: 8px;
-      }
-      .write_names > span,
-      .write_email > span,
-      .write_phone > span,
-      .write_dni > span,
-      .write_address > span,
-      .write_reference > span,
-      .Select_day_delivery > span,
-      .Check_delivery > span {
-        color: #808080;
-        width: 100%;
-        font-size: 1.1rem;
-      }
-      .write_names > input[type=text],
-      .write_email > input[type=email],
-      .write_phone > input[type=number],
-      .write_dni > input[type=number],
-      .write_address > input[type=text],
-      .write_reference > textarea {
-        border: 1px solid #dbdbdb1a ;
-        background: #ececec;
-        resize: none;
-        padding: 6px 8px;
-        border-radius: 5px;
-        color: #808080;
-        font-size: 1rem;
-        width: 100%;
-      }
-      .Contenedor_phone_and_dni {
-        display: grid;
-        gap: 8px;
-        width: 100%;
-        grid-template-columns: auto auto;
-      }
-      .write_reference > textarea  {
-        height: 50px;
-      }
-      .Contenedor__Options__Select_day_delivery {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-      }
-      .Options__Select_day_delivery{
-        width: 32%;
-        max-width: 100px;
-        min-width: 60px;
-      }
-      .Options__Select_day_delivery > input[type="radio"] {
+        padding: 20px 15px;
+        line-height: 17px;
         display: none;
       }
-      .Options__Select_day_delivery > label {
-        background: #ececec;
-        padding: 6px 6px; 
-        color: #808080;
-        cursor: pointer;
-        border-radius: 6px;
-        display: grid;
-        text-align: center;
-        transition: 0.5s ease;
-        
+      .cont_productos_vacio > i {
+        width: 54px;
+        height: 49px;
+        display: block;
+        margin: 10px auto;
+        font-size: 4.5rem;
       }
-      .Options__Select_day_delivery > input:checked ~ label {
-        background: var(--colorNavMovilDesplegable);
+      .cont_productos_vacio > h2 {
+        margin: 10px 0;
+        font-weight: bold;
+        line-height: 20px;
+      }
+      .cont_productos_vacio > p {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: #777;
+        padding-top: 10px;
+        padding-bottom: 12px;
+      }
+      .cont_productos_vacio > div {
+        justify-content: center;
+        display: flex;
+        height: 60px;
+      }
+      .cont_productos_vacio > div > a {
+        display: grid;
+        align-items: center;
+        background: #422E13;
+        border-radius: 6px;
+        border: none;
+        font-size: 1.4rem;
+        width: 183px;
+        padding: 10px 0;
+        text-decoration: none;
         color: white;
+        margin-top: 15px;
       }
       .Products_delivery {
-        background: #ececec;
-        padding: 5px;
-        border-radius: 5px;
+       display: grid;
+        padding: 15px 0;
+        width: 100%;
       }
       .Table_cart_Productos_delivery {
         display: grid;
-        gap: 5px;
-        overflow-y: auto; /*scroll si quieres que siempre este la barra, pero auto, casi siempre*/
-        min-height: 146px;
-        max-height: 300px;
+        gap: 10px;
       } 
       .Contenedor_Product_delivery {
         position: relative;
         display: grid;
         gap: 5px;
-        border-bottom: 1px solid  var(--colorNavMovilDesplegable);
-        padding-bottom: 5px;
-        height: 146px ;
+        background-color: #ffffff70;
+        padding: 20px 25px 15px 16px;
+        width: 100%;
       }
       .Product_image {
         position: absolute;
+        left: 16px;
+        top: 20px;
       }
       .Product_image > a {
-        width: auto;
-        height: auto;
+        display: block;
+        height: 185px;
+        width: 115px;
       }
       .Product_image > a > img {
-        width: 90%;
-        height: 140px;
+        /* width: 90%; */
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         border-radius: 5px;
       }
@@ -560,17 +467,20 @@
       .Product_quantity {
         display: flex;
         flex-direction: column;
-        padding-left: 105px;
+        padding-left: 125px;
         gap: 2px;
+      }
+      .Product_information {
+        gap: 5px;
       }
       .Product_information {
         justify-content: flex-end;
       }
       .Product_information > i {
         position: absolute;
-        right: 0;
-        top: 0;
-        font-size: 1.2rem;
+        right: 12px;
+        top: 12px;
+        font-size: 1.8rem;
         padding: 1px;
       }
       .Product_information > a {
@@ -580,27 +490,28 @@
         display: grid;
       }
       .Product_information > a > h4 {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         font-weight: 600;
         color: var(--navbarColorInactive);
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
       }
-
       .Product_iformation__description {
         display: grid;
       }
       .Product_iformation__description > span {
+        font-size: 1.4rem;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
       }
       .Product_price_subtotal {
-        height: 26px;
+        /* height: 26px; */
       }
       .Product_price_subtotal > span {
         font-weight: 600;
+        font-size: 1.4rem;
         color: var(--navbarColorInactive);
       }
       .Product_price {
@@ -610,11 +521,12 @@
       .Product_price > span:first-child {
         color: red;
         font-weight: 500;
+        font-size: 1.4rem;
       }
       .Product_price > span:last-child {
         text-decoration: line-through;
         color: grey;
-        font-size: 0.8rem;
+        font-size: 1.1rem;
         display: flex;
         align-items: flex-end;
         /* display: none; */
@@ -623,15 +535,17 @@
         flex-direction: row;
         gap: 0px;
         justify-content: flex-end ;
-        padding-right: 5px;
+        padding: 10px 0 0;
         align-items: center;
       }
       .Product_quantity > a {
         padding: 0 8px;
-        width: auto;
-        height: 25px;
+        width: 34px;
+        height: 35px;
+        font-size: 1.2rem;
         display: flex;
         align-items: center;
+        justify-content: center;
         text-decoration: none;
         border: 1px solid var(--navbarColorInactive);
         background-color: #fbfbfb;
@@ -645,41 +559,58 @@
       .Product_quantity > a:last-child {
         border-left: 0;
         border-radius: 0 4px 4px 0;
-        
       }
       .Product_quantity > input  {
         padding: 0 4px;
-        height: 25px;
-        width: 28px;
+        height: 35px;
+        width: 35px;
         text-align: center;
         transition: all 0.4s ease-in-out;
         border: 1px solid var(--navbarColorInactive);
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
-      .Price_delivery_contenedor {
-        margin-top: 5px;    
+
+      .cont_ct {
+        width: 100%;
+        padding: 0 16px;
+        margin: 15px 0;
+        order: 1 ;
       }
-      .Price_delivery_contenedor > h1,
-      .Price_delivery_contenedor > span {
-        font-size: 1.1rem;
+      .ct_cant_productos {
+        font-size: 1.4rem;
         color: #808080;
+      }
+      .ct_cant_productos > p {
+        font-weight: bold;
       }
       .Price_delivery{
         margin: 8px 0;
       }
       .Price_delivery_subtotal,
+      .Price_delivery_domicilio, 
       .Price_delivery_total {
         display: flex;
         justify-content: space-between;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         color: #808080;
-        padding: 8px 0px;
+        padding: 14px 0px;
       }
-      .Price_delivery_subtotal {
-        border-bottom: 1px solid #f4f4f4;
+      .Price_delivery_subtotal ,
+      .Price_delivery_domicilio > span,
+      .Price_delivery_total {
+        font-weight: 600;
       }
-      .Price_discount_coupon > p {
-        font-size: 1.1rem;
+      .Price_delivery_subtotal,
+      .Price_delivery_domicilio, 
+      .cont_ct {
+        border-bottom: 1px solid #e1e1e1;
+      }
+      .Price_discount_coupon {
+        padding-bottom: 20px;
+      }
+      .Price_discount_coupon > p:first-child {
+        font-size: 1.4rem;
+        font-weight: bold;
         color: #808080;
       } 
       .Price_discount_coupon > p > input {
@@ -687,11 +618,8 @@
       }
       .Price_discount_coupon > p > label > i {
         margin: 0 0 0 5px;
-        transition: all .1s ease;
-        -webkit-transition: all .1s ease;
-        -moz-transition: all .1s ease;
-        -o-transition: all .1s ease;
-        transition: all .1s ease;
+        font-size: 1.4rem;
+        font-weight: 600;
       }
       .Price_discount_coupon > p > input:checked  ~  
       label > i {
@@ -704,31 +632,34 @@
       }
       .Price_discount_coupon > p > input:checked  ~  
       .Price_discount_coupon_code  {
-        height: 100%;
+        height: 42px;
+        transition: all 0.1s;
       }
       .Price_discount_coupon_code {
-        display: grid;
-        grid-template-columns: auto auto;
-        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
         height: 0px;  
         overflow: hidden; 
-        transition: height 0.1s linear;
+        transition: all 0.1s;
+        gap: 10px;
+        width: 100%;
       }
       .Price_discount_coupon_code > input {
-        height: 26px;
+        height: 42px;
         color: #808080;
-        font-size: 1rem;
-        background: #fbfbfb;
+        font-size: 1.3rem;
+        
         border: 1px solid #e5e5e5;
         border-radius: 8px;
         box-shadow: none;
-        margin-right: 10px;
         padding: 6px 8px;
+        width: 100%;
       } 
       .Price_discount_coupon_code > button {
         color: #808080;
-        height: 26px;
-        font-size: 1.1rem;
+        height: 40px;
+        font-size: 1.4rem;
         font-weight: 700;
         background: #fff;
         border: 1px solid #808080;
@@ -736,23 +667,42 @@
         cursor: pointer;
         padding: 6px 8px;
       }
-      .Button__Pedir {
-       display: flex;
-       justify-content: center;
+      .msg-cupon {
+        font-weight: 400;
+        font-size: 12px;
+        color: #a2a2a2;
+        text-align: initial;
+        padding: 0;
+        padding-top: 10px;
       }
-      .Button__Pedir > input {
+      .btn_pedido {
+        order: 3;
+        padding: 0 16px;
+      }
+      .btn_pedido > button {
+        width: 100%;
+        padding: 15px 14px 16px;
+        border-radius: 5px;
         border: none;
-        width: fit-content;
-        padding: 9px 17px;
-        border-radius: 8px;
-        background-color: var(--colorButtonTiFilter);
-        font-size: 1.3rem;
-        box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 20%);
+        background-color: #445142;
+        color: white;
+        font-size: 1.5rem;
         cursor: pointer;
-        margin-top: 5px;
       }
-      /*------------Estilos Añadir a la compra----------*/
-
+      .cart_m_produc {
+        order: 4;
+        display: none;
+      }
+      .cont_gen_pedidos > span {
+        order: 5;
+        text-align: center;
+        margin: 10px 0 20px 0;
+        font-size: 1.4rem;
+      }
+      .cont_gen_pedidos > span > a {
+        color:#31572c;
+      }
+    
       /*-------------------Estilos Footer----------------*/
       footer {
         overflow: hidden;
@@ -863,130 +813,87 @@
           font-size: 1.7rem;
         }
 
-        /*---------Estilos Informacion contactenos-------*/
-        .Contactenos_contenedor {
-          margin: 18px 13% 0 13%;
-          gap: 18px;
-          font-size: 1.2rem;
+        /*-------------Estilos Pedidos------------------*/
+        .cont_gen_pedidos {
+          margin-top: 20px;     
         }
-        .Contactenos_imagen > img {
-          height: 170px;
-          width: 170px;
+        .cont_gen_pedidos > h1 {
+          font-size: 1.9rem;
         }
-        .Contactenos_contenedor > .Contactenos_informacion {
-          gap: 10px;
+        .cont_productos_vacio {
+          padding: 20px 20px;
         }
-        .Contactenos_informacion > span {
-          gap: 8px;
+        .cont_productos_vacio > i {
+          width: 60px;
+          height: 53px;
+          font-size: 5rem;
         }
-        .Contactenos_informacion > span > i {
-          font-size: 1.4rem;
+        .cont_productos_vacio > h2 {
+          font-size: 1.6rem;
         }
-        .Contactenos_informacion > span > p {
-          font-size: 1.3rem;
+        .cont_productos_vacio > p {
+          font-size: 1.6rem;
         }
-        .Contactenos_informacion_redes_sociales  {
-          font-size: 1.3rem;
-        }
-        /*------------ Formulario Pedido------------*/
-        .Contenedor_Formulario_Pedido {
-          margin: 18px 10% 0 10%;
-          padding: 18px 28px;
-        }
-        .Contenedor_Formulario_Pedido > h3 {
-          font-size: 1.8rem;
-        }
-        .write_names > span,
-        .write_email > span,
-        .write_phone > span,
-        .write_dni > span,
-        .write_address > span,
-        .write_reference > span,
-        .Select_day_delivery > span,
-        .Check_delivery > span {
-          font-size: 1.3rem;
-        }
-        .write_names > input[type=text],
-        .write_email > input[type=email],
-        .write_phone > input[type=number],
-        .write_dni > input[type=number],
-        .write_address > input[type=text],
-        .write_reference > textarea {
-          padding: 7px 10px;
-          border-radius: 7px;
-          font-size: 1.2rem;
-        }
-        .Contenedor_phone_and_dni {
-          /* gap: 8px; */
-        }
-        .write_reference > textarea  {
+        .cont_productos_vacio > div {
           height: 62px;
         }
-        .Contenedor__Options__Select_day_delivery {
-          gap: 8px;
-        }
-        .Options__Select_day_delivery{
-          max-width: 140px;
-          min-width: 100px;
-        }
-        .Options__Select_day_delivery > label {
-          padding: 8px 8px; 
-          font-size: 1.2rem;
-          border-radius: 8px;
-        }
-        .Products_delivery {
-          padding: 9px;
-          border-radius: 7px;
+        .cont_productos_vacio > div > a {
+          font-size: 1.5rem;
         }
         .Table_cart_Productos_delivery {
-          /* gap: 5px; */
-          min-height: 158px;
-          max-height: 322px;
+          gap: 12px;
         } 
         .Contenedor_Product_delivery {
-          /* gap: 5px; */
-          /* padding-bottom: 5px; */
-          height: 158px ;
+          gap: 8px;
+          padding: 20px 30px 15px 20px;
         }
-
+        .Product_image {
+          left: 20px;
+          top: 20px;
+        }
+        .Product_image > a {
+          height: 201px;
+          width: 130px;
+        }
         .Product_image > a > img {
-          width: 90%;
-          height: 152px;
-          border-radius: 7px;
+          border-radius: 8px;
         }
         .Product_information, 
         .Product_price_subtotal,
         .Product_quantity {
-          padding-left: 112px;
-          gap: 3px;
-          font-size: 1.2rem;
-        }
-        .Product_information {
-          margin-top: 5px;
+          padding-left: 143px;
         }
         .Product_information > i {
-          font-size: 1.4rem;
+          right: 14px;
+          top: 14px;
+          font-size: 1.9rem;
+        }
+        .Product_information > a {
+          text-decoration: none;
+          width: 90%;
+          min-height: 14px;
+          display: grid;
         }
         .Product_information > a > h4 {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
         }
-        .Product_price_subtotal {
-          height: 33px;
+        .Product_iformation__description > span {
+          font-size: 1.5rem;
+        }
+        .Product_price_subtotal > span {
+          font-size: 1.5rem;
         }
         .Product_price {
-          /* gap: 5px; */
+          gap: 7px;
+        }
+        .Product_price > span:first-child {
+          font-size: 1.5rem;
         }
         .Product_price > span:last-child {
-          font-size: 1rem;
-          /* display: none; */
-        }
-        .Product_quantity {
-          gap: 0px;
-          padding-right: 6px;
+          font-size: 1.2rem;
         }
         .Product_quantity > a {
-          /* padding: 0 8px; */
-          /* height: 25px; */   
+          font-size: 1.3rem;
         }
         .Product_quantity > a:first-child {
           border-radius: 5px 0 0 5px;
@@ -995,56 +902,56 @@
           border-radius: 0 5px 5px 0;
         }
         .Product_quantity > input  {
-          padding: 0 6px;
-          /* height: 25px;
-          width: 28px; */
-          font-size: 1.2rem;
-        }
-        .Price_delivery_contenedor > h1,
-        .Price_delivery_contenedor > span {
+          width: 36px;
           font-size: 1.3rem;
         }
-        .Price_delivery{
-          /* margin: 8px 0; */
+        .cont_ct {
+          padding: 0 20px;
+          margin: 17px 0;
+        }
+        .ct_cant_productos {
+          font-size: 1.5rem;
         }
         .Price_delivery_subtotal,
+        .Price_delivery_domicilio, 
         .Price_delivery_total {
-          font-size: 1.3rem;
-          /* padding: 8px 0px; */
+          font-size: 1.5rem;
         }
-        .Price_delivery_subtotal {
-          /* border-bottom: px solid #f4f4f4; */
+        .Price_discount_coupon {
+          padding-bottom: 22px;
         }
-        .Price_discount_coupon > p {
-          font-size: 1.3rem;
+        .Price_discount_coupon > p:first-child {
+          font-size: 1.5rem;
         } 
-
         .Price_discount_coupon > p > label > i {
-          margin: 0 0 0 7px;
+          font-size: 1.5rem;
         }
+  
         .Price_discount_coupon_code {
-          margin-top: 7px;
+          margin-top: 12px;
         }
         .Price_discount_coupon_code > input {
-          height: 30px;
-          font-size: 1.2rem;
-          border-radius: 10px;
-          margin-right: 12px;
-        
+          font-size: 1.4rem;
         } 
         .Price_discount_coupon_code > button {
-          height: 30px;
+          font-size: 1.5rem;
+          padding: 8px 10px;
+        }
+        .msg-cupon {
           font-size: 1.3rem;
-          border-radius: 8px;
-          padding: 7px 10px;
+        }
+        .btn_pedido {
+          padding: 0 20px;
+        }
+        .btn_pedido > button {
+          padding: 16px 14px 17px;
+          border-radius: 6px;
+          font-size: 1.6rem;
+        }
+        .cont_gen_pedidos > span {
+          font-size: 1.5rem;
         }
 
-        .Button__Pedir > input {
-          padding: 10px 18px;
-          font-size: 1.6rem;
-          border-radius: 12px;
-        }
-        /*------------Estilos Añadir a la compra----------*/
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 200px auto;
@@ -1215,219 +1122,9 @@
           font-size: 1.9rem;
         }
         
-        /*---------Estilos Informacion contactenos-------*/
-        .Contactenos_contenedor {
-          margin: 25px 15% 0 15%;
-          grid-template-rows: 100%;
-          grid-template-columns: 230px auto;
-          gap: 22px;
-          font-size: 1.5rem;
-        }
-        .Contactenos_imagen {
-          order: 1;   
-        }
-        .Contactenos_imagen > img {
-          height: 100%;
-          
-          width: 100%;
-          border-radius: 12px;
-          object-fit: cover;
-        }
-        .Contactenos_contenedor > .Contactenos_informacion {
-          gap: 10px;
-          order: 2;
-          padding: 10px 0;
-        }
-        .Contactenos_informacion > h2 {
-          margin-bottom: 0px;
-          text-align: start;
-        }
-        .Contactenos_informacion > span {
-          gap: 10px;
-        }
-        .Contactenos_informacion > span > i {
-          font-size: 1.6rem;
-        }
-        .Contactenos_informacion > span:nth-child(5) > i {
-        padding-top: 3px;
-        }
-        .Contactenos_informacion > span > p {
-          font-size: 1.5rem;
-        }
-        .Contactenos_informacion_redes_sociales {
-          font-size: 1.5rem;
-        }
-        .Contactenos_informacion_redes_sociales > a {
-          display: grid;
-        }
-        .Contactenos_informacion_redes_sociales > a > p{
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-        }
-        /*------------ Formulario Pedido------------*/
-        .Contenedor_Formulario_Pedido {
-          margin: 28px 15% 0 15%;
-          padding: 21px 31px;
-        }
-        .Contenedor_Formulario_Pedido > h3 {
-          font-size: 1.8rem;
-        }
-        .write_names,
-        .write_email,
-        .write_phone,
-        .write_dni,
-        .write_address,
-        .write_reference,
-        .Select_day_delivery,
-        .Check_delivery {
-          gap: 10px;
-        }
-        .write_names > span,
-        .write_email > span,
-        .write_phone > span,
-        .write_dni > span,
-        .write_address > span,
-        .write_reference > span,
-        .Select_day_delivery > span,
-        .Check_delivery > span {
-          font-size: 1.5rem;
-        }
-        .write_names > input[type=text],
-        .write_email > input[type=email],
-        .write_phone > input[type=number],
-        .write_dni > input[type=number],
-        .write_address > input[type=text],
-        .write_reference > textarea {
-          padding: 10px 14px;
-          border-radius: 9px;
-          font-size: 1.4rem;
-        }
-        .Contenedor_phone_and_dni {
-          gap: 12px;
-        }
-        .write_reference > textarea  {
-          height: 74px;
-        }
-        .Contenedor__Options__Select_day_delivery {
-          gap: 10px;
-        }
-        .Options__Select_day_delivery{
-          max-width: 170px;
-          min-width: 130px;
-        }
-        .Options__Select_day_delivery > label {
-          padding: 10px 10px; 
-          font-size: 1.4rem;
-          border-radius: 10px;
-        }
-        .Products_delivery {
-          padding: 12px;
-          border-radius: 9px;
-        }
-        .Table_cart_Productos_delivery {
-          gap: 8px;
-          min-height: 198px;
-          max-height: 404px;
-        } 
-        .Contenedor_Product_delivery {
-          gap: 8px;
-          /* padding-bottom: 5px; */
-          height: 198px ;
-        }
-
-        .Product_image > a > img {
-          width: 95%;
-          height: 188px;
-          border-radius: 9px;
-        }
-        .Product_information, 
-        .Product_price_subtotal,
-        .Product_quantity {
-          padding-left: 142px;
-          gap: 4px;
-          font-size: 1.4rem;
-        }
-        .Product_information {
-          margin-top: 7px;
-        }
-        .Product_information > i {
-          font-size: 1.6rem;
-        }
-        .Product_information > a > h4 {
-          font-size: 1.5rem;
-        }
-        .Product_price_subtotal {
-          /* height: 33px; */
-        }
-        .Product_price {
-          gap: 8px;
-        }
-        .Product_price > span:last-child {
-          font-size: 1.2rem;
-          /* display: none; */
-        }
-        .Product_quantity {
-          gap: 0px;
-          padding-right: 8px;
-        }
-        .Product_quantity > a {
-          padding: 0 10px;
-          height: 32px;   
-        }
-        .Product_quantity > a:first-child {
-          border-radius: 6px 0 0 6px;
-        }
-        .Product_quantity > a:last-child {
-          border-radius: 0 6px 6px 0;
-        }
-        .Product_quantity > input  {
-          padding: 0 8px;
-          height: 32px;   
-          width: 38px;
-          font-size: 1.4rem;
-        }
-        .Price_delivery_contenedor > h1,
-        .Price_delivery_contenedor > span {
-          font-size: 1.5rem;
-        }
-        .Price_delivery{
-          margin: 10px 0;
-        }
-        .Price_delivery_subtotal,
-        .Price_delivery_total {
-          font-size: 1.5rem;
-          padding: 10px 0px;
-        }
-        .Price_delivery_subtotal {
-          border-bottom: 2px solid #f4f4f4;
-        }
-        .Price_discount_coupon > p {
-          font-size: 1.5rem;
-        } 
-
-        .Price_discount_coupon_code {
-          margin-top: 10px;
-        }
-        .Price_discount_coupon_code > input {
-          height: 39px;
-          font-size: 1.4rem;
-          border-radius: 12px;
-          margin-right: 14px;
         
-        } 
-        .Price_discount_coupon_code > button {
-          height: 39px;
-          font-size: 1.5rem;
-          border-radius: 10px;
-          padding: 10px 14px;
-        }
-        .Button__Pedir > input {
-          padding: 12px 20px;
-          font-size: 2rem;
-          border-radius: 14px;
-        }
-        /*------------Estilos Añadir a la compra----------*/
+       
+
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 220px auto;
@@ -1450,8 +1147,7 @@
         }
         .informacion__footer {
           gap: 6px;
-          padding-bottom: 31px;
-          
+          padding-bottom: 31px;       
         }
         .informacion__footer > p {
           font-size: 1.4rem;
@@ -1586,188 +1282,8 @@
           font-size: 2.1rem;
         }
         
-         /*---------Estilos Informacion contactenos-------*/
-         .Contactenos_contenedor {
-          margin: 35px 23% 0 23%;
-          grid-template-columns: auto auto;
-          gap: 35px;
         
-          justify-content: center;
-        }
-        .Contactenos_imagen > img {
-          max-width: 250px;
-          min-width: 230px;
-          border-radius: 14px;
-        }
-        .Contactenos_contenedor > .Contactenos_informacion {
-          padding: 15px 0;
-        }
-        .Contactenos_informacion > h2 {
-          margin-bottom: 5px;
-        }
-        .Contactenos_informacion > span {
-          gap: 20px;
-        }
-        .Contactenos_informacion > span > i {
-          font-size: 1.9rem;
-        }
-        .Contactenos_informacion > span > i {
-          padding-top: 0px;
-        }
-        .Contactenos_informacion > span:nth-child(5) > i {
-          padding-top: 3px;
-        }
-        .Contactenos_informacion > span > p {
-          font-size: 1.7rem;
-        }
-        .Contactenos_informacion_redes_sociales {
-          font-size: 1.7rem;
-        }
 
-        /*------------ Formulario Pedido------------*/
-        .Contenedor_Formulario_Pedido {
-          margin: 35px 23% 0 23%;
-          padding: 36px 46px;
-        }
-        .Contenedor_Formulario_Pedido > h3 {
-          font-size: 2.2rem;
-        }
-        .write_names > span,
-        .write_email > span,
-        .write_phone > span,
-        .write_dni > span,
-        .write_address > span,
-        .write_reference > span,
-        .Select_day_delivery > span,
-        .Check_delivery > span {
-          font-size: 1.7rem;
-        }
-        .write_names > input[type=text],
-        .write_email > input[type=email],
-        .write_phone > input[type=number],
-        .write_dni > input[type=number],
-        .write_address > input[type=text],
-        .write_reference > textarea {
-          padding: 13px 18px;
-          border-radius: 11px;
-          font-size: 1.6rem;
-        }
-        .Contenedor_phone_and_dni {
-          gap: 14px;
-        }
-        .write_reference > textarea  {
-          height: 86px;
-        }
-        .Contenedor__Options__Select_day_delivery {
-          gap: 14px;
-        }
-        .Options__Select_day_delivery{
-          max-width: 200px;
-          min-width: 160px;
-        }
-        .Options__Select_day_delivery > label {
-          padding: 12px 12px; 
-          font-size: 1.6rem;
-          border-radius: 12px;
-        }
-        .Products_delivery {
-          padding: 13px;
-          border-radius: 12px;
-        }
-        .Table_cart_Productos_delivery {
-          max-height: 614px;
-        } 
-        .Contenedor_Product_delivery {
-          gap: 8px;
-          /* padding-bottom: 5px; */
-          height: 198px ;
-        }
-        /* .Product_image > a > img {
-          width: 95%;
-          height: 188px;
-          border-radius: 9px;
-        } */
-        /* .Product_information, 
-        .Product_price_subtotal,
-        .Product_quantity {
-          padding-left: 142px;
-          gap: 4px;
-          font-size: 1.4rem;
-        } */
-        .Product_information {
-          margin-top: 8px;
-        }
-        .Product_information > i {
-          font-size: 1.8rem;
-        }
-        /* .Product_information > a > h4 {
-          font-size: 1.5rem;
-        } */
-        .Product_price_subtotal {
-          /* height: 33px; */
-        }
-        /* .Product_price {
-          gap: 8px;
-        } */
-        /* .Product_price > span:last-child {
-          font-size: 1.2rem;
-          
-        } */
-        /* .Product_quantity {
-          gap: 0px;
-          padding-right: 8px;
-        } */
-        /* .Product_quantity > a {
-          padding: 0 10px;
-          height: 32px;   
-        } */
-        /* .Product_quantity > a:first-child {
-          border-radius: 6px 0 0 6px;
-        }
-        .Product_quantity > a:last-child {
-          border-radius: 0 6px 6px 0;
-        }
-        .Product_quantity > input  {
-          padding: 0 8px;
-          height: 32px;   
-          width: 38px;
-          font-size: 1.4rem;
-        } */
-        
-        .Price_delivery_contenedor > h1,
-        .Price_delivery_contenedor > span {
-          font-size: 1.7rem;
-        }
-        .Price_delivery{
-          margin: 12px 0;
-        }
-        .Price_delivery_subtotal,
-        .Price_delivery_total {
-          font-size: 1.7rem;
-          padding: 12px 0px;
-        }
-
-        .Price_discount_coupon > p {
-          font-size: 1.7rem;
-        } 
-
-        .Price_discount_coupon_code {
-          margin-top: 12px;
-        }
-        .Price_discount_coupon_code > input {
-          height: 42px;
-          font-size: 1.6rem;
-          border-radius: 12px;
-          margin-right: 18px;
-        } 
-        .Price_discount_coupon_code > button {
-          height: 42px;
-          font-size: 1.7rem;
-          border-radius: 12px;
-          padding: 13px 18px;
-        }
-
-        /*------------Estilos Añadir a la compra----------*/
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
           grid-template-columns: auto 240px auto;
@@ -1932,102 +1448,20 @@
       </div>
 
       <!-- <p> Gracias por elegir My Nature, aquí tienes como contactarnos 😄</p> -->
-      <div class="Contactenos_contenedor">
-        <div class="Contactenos_imagen">
-          <img src="https://lh3.google.com/u/0/d/1CGB6zvTQOd6_B44e-41iYzZpYjYL2CNZ=w1031-h998-iv2" alt="">
-        </div>
-        <div class="Contactenos_informacion">
-          <h2>CONTÁCTENOS</h2>
-          <span>
-            <i class="fab fa-instagram"></i>
-            <div class="Contactenos_informacion_redes_sociales">
-              <p>Teléfono:</p>
-              <p>923 910 869</p>
-            </div>
-          </span>
-          <span>
-            <i class="far fa-envelope"></i>
-            <div class="Contactenos_informacion_redes_sociales">
-              <p>Email:</p>
-              <a href="">
-                <p>MyNature1508@viverokantu.pe</p>
-              </a>
-            </div>
-          </span>
-          <span>
-            <i class="fab fa-instagram"></i>
-            <div class="Contactenos_informacion_redes_sociales">
-              <p>Instagram:</p>
-              <a href="">
-                <p>MyNature142022</p>
-              </a>
-            </div>
-          </span>
-          <span>
-            <i class="far fa-map-marker-alt"></i>
-            <p>Dirección: Av. Ramiro Priale Priale S/N Miraflores Sapallanga Huancayo Junín Perú</p>
-          </span>
-          <span>
-            <i class="far fa-map-marked-alt"></i>
-            <p>Referencia: Al frente de, al lado de, por el lado de, de color, de tantos pisos....</p>
-          </span>
-        </div>
-      </div>
 
-      <form class="Contenedor_Formulario_Pedido" action="">
-        <h3>HACER PEDIDO</h3>
-
-        <label class="write_names" for="">
-          <span>Nombre y Apellidos:</span>
-          <input type="text">
-        </label>
-
-        <label class="write_email" for="">
-          <span>Email:</span>
-          <input type="email">
-        </label>
-
-        <div class="Contenedor_phone_and_dni">
-          <label class="write_phone" for="">
-            <span>Celular/Tlf. Fijo:</span>
-            <input type="number">
-          </label>
-          <label class="write_dni" for="">
-            <span>DNI:</span>
-            <input type="number">
-          </label>
-        </div>
-
-        <label class="write_address" for="">
-          <span>Domicilio (lugar de recibimiento del pedido):</span>
-          <input type="text">
-        </label>
-        
-        <label class="write_reference" for="">
-          <span>Referencia (como es tu casa, hay algo reconocible cerca):</span>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-        </label>
-
-        <div class="Select_day_delivery" >
-          <span>Selecciona el día próximo que quieres que llegue tu pedido:</span>
-          <div class="Contenedor__Options__Select_day_delivery">
-            <div class="Options__Select_day_delivery">
-              <input id="opcion1" name="radio" type="radio">
-              <label for="opcion1">Lunes</label>
-            </div>
-            <div class="Options__Select_day_delivery">
-              <input id="opcion2" name="radio" type="radio">
-              <label for="opcion2">Miercoles</label>
-            </div>
-            <div class="Options__Select_day_delivery">
-              <input id="opcion3" name="radio" type="radio">
-              <label for="opcion3">Viernes</label>
+      <div class="cont_gen_pedidos">
+        <h1>CARRITO DE COMPRAS</h1>
+        <div class="cont_productos">
+          <div class="cont_productos_vacio">
+            <i class="fal fa-shopping-cart"></i>
+            <h2>"Tu carrito de compras está vacío"</h2>
+            <p>"Aún no has agregado productos a tu carrito de compras. Visita nuestra
+              página principal y descubre todo lo que tenemos para ti."
+            </p>
+            <div>
+              <a href="">Ver productos</a>
             </div>
           </div>
-        </div>
-
-        <div class="Check_delivery">
-          <span>Verificar si esta correcto tu pedido:</span>
           <table class="Products_delivery">
             <tbody class="Table_cart_Productos_delivery">
               <tr class="Contenedor_Product_delivery">
@@ -2173,24 +1607,31 @@
             </tbody>
           </table>
         </div>
-        <div class="Price_delivery_contenedor">
-          <h1>Carrito de compras</h1>
-          <span>3 Productos</span>
+        <div class="cont_ct">
+          
+          <div class="ct_cant_productos">
+            <p>Cantidad de productos: </p>
+            <span> 3 productos</span>
+          </div>
+          
           <div class="Price_delivery">
             <div class="Price_delivery_subtotal">
               <p>Subtotal </p>
               <span>S/. 35.00</span>
             </div>
+            <div class="Price_delivery_domicilio">
+              <p>Despacho a domicilio </p>
+              <span>S/. 15.00</span>
+            </div>
             <div class="Price_delivery_total">
               <p>Total </p>
-              <span>S/. 35.00</span>
+              <span>S/. 50.00</span>
             </div>
           </div>
           <div class="Price_discount_coupon">
             <p>¡Tengo cupón de descuento!  
-              
               <input id="coupon" type="checkbox" name="radio">
-              <label for="coupon" >
+              <label for="coupon">
                 <i class="fas fa-chevron-down"></i>
               </label>
               <label class="Price_discount_coupon_code">
@@ -2199,29 +1640,45 @@
               </label>
               <!-- <i class="fal fa-badge-dollar"></i> -->
             </p>
+            <p class="msg-cupon">
+              *Los cupones de descuento son entregados luego de sobrepasas un gasto de S/.250 al mes.
+            </p>
           </div>
+        </div> 
+        <div class="btn_pedido">
+          <button>Realizar pedido</button>
         </div>
-        <div class="Button__Pedir">
-          <input type="submit" name="" id="" value="Hacer Pedido">
-        </div>
-      </form>
-   
-      <div>
-        <h1>Añadelo a tu compra</h1>
-        <div>
+
+
+
+        <div class="cart_m_produc">
+          <h1>Añadelo a tu compra</h1>
           <div>
-            <div class="Productos_adicionales">
-              <p>aqui iran la descricpion de los productos por div</p>
+            <div>
+              <div class="Productos_adicionales">
+                <p>aqui iran la descricpion de los productos por div</p>
+              </div>
             </div>
           </div>
+          <div>
+              <p>Aquidebe estar el slider</p>
+          </div>
+          <span>
+            <a href="index.html">Ver más productos</a> 
+          </span>
         </div>
-        <div>
-            <p>Aquidebe estar el slider</p>
-        </div>
+
         <span>
-          <a href="index.html">Ver más productos</a> 
-        </span>
+          <a href="/HTML/index.html">Ver más productos</a>
+        </span> 
+       
       </div>
+
+      
+
+      
+   
+      
 
 
     </main>
