@@ -384,27 +384,36 @@
       .cont_productos {
         order: 2; 
       }
+      .cont_gen_carr_vacio {
+        display: none;
+      }
       .cont_productos_vacio {
         text-align: center;
-        padding: 20px 15px;
+        padding: 18px 16px;
         line-height: 17px;
-        display: none;
+      }
+      .cont_productos_vacio > h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
       }
       .cont_productos_vacio > i {
         width: 54px;
         height: 49px;
-        display: block;
-        margin: 10px auto;
+        display: flex;
+        margin: 20px auto;
         font-size: 4.5rem;
+        justify-content: center;
+        align-items: center;
       }
       .cont_productos_vacio > h2 {
         margin: 10px 0;
         font-weight: bold;
         line-height: 20px;
+        font-size: 1.5rem;
       }
       .cont_productos_vacio > p {
         font-weight: 500;
-        font-size: 15px;
+        font-size: 1.4rem;
         line-height: 18px;
         color: #777;
         padding-top: 10px;
@@ -429,20 +438,33 @@
         margin-top: 15px;
       }
       .Products_delivery {
-       display: grid;
-        padding: 15px 0;
+        display: grid;
+        padding: 5px 0 15px ;
         width: 100%;
       }
       .Table_cart_Productos_delivery {
         display: grid;
         gap: 10px;
-      } 
+      }
+      .in_prod  {
+        width: 100%;
+        display: block;
+      }
+      .in_prod > span {
+        padding: 0 16px 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--navbarColorInactive);
+        width: 100%;
+        display: block;
+
+      }
       .Contenedor_Product_delivery {
         position: relative;
         display: grid;
         gap: 5px;
-        background-color: #ffffff70;
-        padding: 20px 25px 15px 16px;
+        background-color: #ffffffb3;
+        padding: 20px 16px 15px 16px;
         width: 100%;
       }
       .Product_image {
@@ -478,10 +500,11 @@
       }
       .Product_information > i {
         position: absolute;
-        right: 12px;
+        right: 14px;
         top: 12px;
         font-size: 1.8rem;
         padding: 1px;
+        cursor: pointer;
       }
       .Product_information > a {
         text-decoration: none;
@@ -537,6 +560,7 @@
         justify-content: flex-end ;
         padding: 10px 0 0;
         align-items: center;
+ 
       }
       .Product_quantity > a {
         padding: 0 8px;
@@ -548,7 +572,7 @@
         justify-content: center;
         text-decoration: none;
         border: 1px solid var(--navbarColorInactive);
-        background-color: #fbfbfb;
+        background: #fff;
         color: var(--navbarColorInactive);
         cursor: pointer;
       }
@@ -563,22 +587,23 @@
       .Product_quantity > input  {
         padding: 0 4px;
         height: 35px;
-        width: 35px;
+        width: 38px;
         text-align: center;
         transition: all 0.4s ease-in-out;
         border: 1px solid var(--navbarColorInactive);
         font-size: 1.2rem;
+        background: #fff;
       }
 
       .cont_ct {
         width: 100%;
-        padding: 0 16px;
+    
         margin: 15px 0;
         order: 1 ;
       }
       .ct_cant_productos {
         font-size: 1.4rem;
-        color: #808080;
+        margin: 0 16px;  
       }
       .ct_cant_productos > p {
         font-weight: bold;
@@ -592,8 +617,8 @@
         display: flex;
         justify-content: space-between;
         font-size: 1.4rem;
-        color: #808080;
-        padding: 14px 0px;
+        background: #fff;
+        padding: 14px 16px;
       }
       .Price_delivery_subtotal ,
       .Price_delivery_domicilio > span,
@@ -601,9 +626,11 @@
         font-weight: 600;
       }
       .Price_delivery_subtotal,
-      .Price_delivery_domicilio, 
+      .Price_delivery_domicilio {
+        border-bottom: 1px solid #f4f4f4;
+      }
       .cont_ct {
-        border-bottom: 1px solid #e1e1e1;
+        border-bottom: 1px solid #b9b9b961;
       }
       .Price_discount_coupon {
         padding-bottom: 20px;
@@ -611,7 +638,9 @@
       .Price_discount_coupon > p:first-child {
         font-size: 1.4rem;
         font-weight: bold;
-        color: #808080;
+        margin: 14px 16px 0;
+        color: #00000087;
+
       } 
       .Price_discount_coupon > p > input {
         display: none;
@@ -620,6 +649,7 @@
         margin: 0 0 0 5px;
         font-size: 1.4rem;
         font-weight: 600;
+        cursor: pointer;
       }
       .Price_discount_coupon > p > input:checked  ~  
       label > i {
@@ -632,13 +662,13 @@
       }
       .Price_discount_coupon > p > input:checked  ~  
       .Price_discount_coupon_code  {
+        margin: 10px 0;
         height: 42px;
         transition: all 0.1s;
       }
       .Price_discount_coupon_code {
         display: flex;
         align-items: center;
-        margin-top: 10px;
         height: 0px;  
         overflow: hidden; 
         transition: all 0.1s;
@@ -648,16 +678,15 @@
       .Price_discount_coupon_code > input {
         height: 42px;
         color: #808080;
-        font-size: 1.3rem;
-        
+        font-size: 1.4rem;
         border: 1px solid #e5e5e5;
         border-radius: 8px;
         box-shadow: none;
-        padding: 6px 8px;
+        padding: 6px 10px;
         width: 100%;
       } 
       .Price_discount_coupon_code > button {
-        color: #808080;
+        color: #2f3f2d;
         height: 40px;
         font-size: 1.4rem;
         font-weight: 700;
@@ -670,10 +699,9 @@
       .msg-cupon {
         font-weight: 400;
         font-size: 12px;
-        color: #a2a2a2;
         text-align: initial;
-        padding: 0;
-        padding-top: 10px;
+        padding: 0 16px;
+        margin-top: 8px;
       }
       .btn_pedido {
         order: 3;
@@ -689,20 +717,22 @@
         font-size: 1.5rem;
         cursor: pointer;
       }
-      .cart_m_produc {
+      .con_fn_pedido {
         order: 4;
-        display: none;
       }
-      .cont_gen_pedidos > span {
-        order: 5;
+      .con_fn_pedido > span {
+        display: flex;
+        justify-content: center;
         text-align: center;
         margin: 10px 0 20px 0;
         font-size: 1.4rem;
       }
-      .cont_gen_pedidos > span > a {
+      .con_fn_pedido > span > a {
         color:#31572c;
       }
-    
+      .cart_m_produc {
+        display: none;
+      }
       /*-------------------Estilos Footer----------------*/
       footer {
         overflow: hidden;
@@ -820,8 +850,17 @@
         .cont_gen_pedidos > h1 {
           font-size: 1.9rem;
         }
+        .cont_gen_carr_vacio {
+          /* display: grid; */
+          width: 100%;
+          justify-content: center;
+        }
         .cont_productos_vacio {
-          padding: 20px 20px;
+          padding: 20px;
+          max-width: 450px;
+        }
+        .cont_productos_vacio > h1 {
+          font-size: 1.9rem;
         }
         .cont_productos_vacio > i {
           width: 60px;
@@ -832,7 +871,7 @@
           font-size: 1.6rem;
         }
         .cont_productos_vacio > p {
-          font-size: 1.6rem;
+          font-size: 1.5rem;
         }
         .cont_productos_vacio > div {
           height: 62px;
@@ -843,9 +882,22 @@
         .Table_cart_Productos_delivery {
           gap: 12px;
         } 
+        .in_prod  {
+        width: 100%;
+        display: block;
+        }
+        .in_prod > span {
+          padding: 0 20px 10px;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: var(--navbarColorInactive);
+          width: 100%;
+          display: block;
+
+        }
         .Contenedor_Product_delivery {
           gap: 8px;
-          padding: 20px 30px 15px 20px;
+          padding: 20px 20px 15px 20px;
         }
         .Product_image {
           left: 20px;
@@ -864,7 +916,7 @@
           padding-left: 143px;
         }
         .Product_information > i {
-          right: 14px;
+          right: 16px;
           top: 14px;
           font-size: 1.9rem;
         }
@@ -892,8 +944,12 @@
         .Product_price > span:last-child {
           font-size: 1.2rem;
         }
+        .Product_quantity {
+          padding: 8px 0 0;
+        }
         .Product_quantity > a {
           font-size: 1.3rem;
+          height: 37px;
         }
         .Product_quantity > a:first-child {
           border-radius: 5px 0 0 5px;
@@ -902,42 +958,42 @@
           border-radius: 0 5px 5px 0;
         }
         .Product_quantity > input  {
-          width: 36px;
+          width: 40px;
+          height: 37px;
           font-size: 1.3rem;
         }
         .cont_ct {
-          padding: 0 20px;
           margin: 17px 0;
         }
         .ct_cant_productos {
           font-size: 1.5rem;
+          margin: 0 20px;
         }
         .Price_delivery_subtotal,
         .Price_delivery_domicilio, 
         .Price_delivery_total {
           font-size: 1.5rem;
+          padding: 14px 20px;
         }
         .Price_discount_coupon {
           padding-bottom: 22px;
         }
         .Price_discount_coupon > p:first-child {
           font-size: 1.5rem;
+          margin: 14px 20px 0;
         } 
         .Price_discount_coupon > p > label > i {
           font-size: 1.5rem;
         }
-  
-        .Price_discount_coupon_code {
-          margin-top: 12px;
-        }
         .Price_discount_coupon_code > input {
-          font-size: 1.4rem;
+          font-size: 1.5rem;
         } 
         .Price_discount_coupon_code > button {
           font-size: 1.5rem;
           padding: 8px 10px;
         }
         .msg-cupon {
+          padding: 0 20px;
           font-size: 1.3rem;
         }
         .btn_pedido {
@@ -1122,8 +1178,112 @@
           font-size: 1.9rem;
         }
         
+        /*-------------Estilos Pedidos------------------*/
+        .cont_gen_pedidos {
+          margin-top: 25px;
+          margin-bottom: 45px;
+          grid-template-columns: auto minmax( auto , 330px) ;
+          grid-template-areas: 
+          "productos titulo"
+          "productos costo"
+          "productos pedir"
+          "productos ."
+          "vacio vacio";
+        }
+        .cont_gen_pedidos > h1 {
+          grid-area: titulo;
+          display: block;
+          width: 100%;
+          font-size: 2rem;
+        }
+        .cont_gen_carr_vacio {
+          grid-area: vacio;
+        }
+        .cont_productos_vacio {
+          padding: 25px;
+        }
+        .cont_productos_vacio > h1 {
+          font-size: 2rem;
+        }
+        .cont_productos_vacio > i {
+          width: 70px;
+          height: 63px;
+          font-size: 5.5rem;
+        }
+        .cont_productos_vacio > h2 {
+          font-size: 1.7rem;
+        }
+        .cont_productos_vacio > p {
+          font-size: 1.6rem;
+        }
+        .cont_productos_vacio > div > a {
+          font-size: 1.6rem;
+        }
+        .cont_productos {
+          grid-area: productos;
+          margin: 0 20px;
+        }
+        .Products_delivery {
+          padding: 0;
+        }
+        .cont-in_prod {
+          display: none;
+        }
+        .Contenedor_Product_delivery {
+          border: 1px solid #e5e5e5;
+          border-radius: 8px;
+          padding: 25px 30px 15px 15px;
+        }
+        .Product_image {
+          left: 15px;
+          top: 25px;
+        }
+        .Product_information > i {
+          font-size: 2rem;
+          right: 14px;
+          top: 14px;
+        }
+        .Product_information > a > h4,
+        .Product_price_subtotal > span {
+          font-size: 1.6rem;
+        }
+        .cont_ct {
+          grid-area: costo;
+          max-width: 330px;
+          padding: 0 20px 0 0;
+          border-bottom: 0px;
+          margin-top: 10px;
+        }
+        .Price_delivery {
+          margin: 10px 3px;
+        }
+        .Price_delivery_subtotal {
+          border-radius: 5px 5px 0 0;
+        } 
+        .Price_delivery_total {
+          border-radius: 0 0 5px 5px ;
+        }
+        .con_fn_pedido {
+          grid-area: pedir;
+          max-width: 330px;
+        }
+        .ct_cant_productos {
+          margin: 0 5px;
+        }
+        .Price_discount_coupon > p:first-child {
+          margin: 14px 5px 0;
+        }
+        .msg-cupon {
+          padding: 0 5px;
+        }
+        .con_fn_pedido {
+           margin: 0 20px 0 0;
+        }
+        .btn_pedido {
+          padding: 0;
+        }
+         
         
-       
 
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
@@ -1282,7 +1442,111 @@
           font-size: 2.1rem;
         }
         
-        
+        /*-------------Estilos Pedidos------------------*/
+        .cont_gen_pedidos {
+          grid-template-columns: minmax( auto , 825px) minmax( auto , 410px) ;
+          justify-content: center;
+         }
+         .cont_ct,  .con_fn_pedido {
+          max-width: 410px;
+         }
+        .cont_gen_pedidos {
+          margin-top: 30px;     
+        }
+        .cont_gen_pedidos > h1 {
+          font-size: 2.1rem;
+          margin-bottom: 5px;
+        }
+        .cont_productos_vacio{
+          padding: 30px 0;
+        }
+        .cont_productos_vacio > h1 {
+          font-size: 2.4rem;
+        }
+        .cont_productos_vacio > i {
+          width: 80px;
+          height: 73px;
+          font-size: 6rem;
+          margin: 25px auto ;
+        }
+        .cont_productos_vacio > h2 {
+          font-size: 1.8rem;
+        }
+        .cont_productos_vacio > p {
+          font-size: 1.7rem;
+        }
+        .cont_productos_vacio > div > a {
+          font-size: 1.7rem;
+        }
+        .Contenedor_Product_delivery {
+          gap: 8px;
+        }
+        .Product_information > i {
+          font-size: 2.2rem;
+        }
+        .Product_information > a > h4 {
+          font-size: 1.7rem;
+        }
+        .Product_iformation__description > span {
+          font-size: 1.6rem;
+        }
+        .Product_price_subtotal > span {
+          font-size: 1.7rem;
+        }
+        .Product_price > span:first-child {
+          font-size: 1.6rem;
+        }
+        .Product_price > span:last-child {
+          font-size: 1.3rem;
+        }
+        .Product_quantity > a {
+          font-size: 1.4rem;
+          width: 36px;
+          height: 38px;
+        }
+        .Product_quantity > input  {
+          width: 42px;
+          height: 38px;
+          font-size: 1.3rem;
+          padding: 0 5px;
+        }
+        .Price_delivery {
+          margin: 14px 3px;
+        }
+        .ct_cant_productos {
+          font-size: 1.7rem;
+        }
+        .Price_delivery_subtotal,
+        .Price_delivery_domicilio, 
+        .Price_delivery_total {
+          font-size: 1.6rem;
+        }
+        .Price_discount_coupon {
+          padding-bottom: 26px;
+        }
+        .Price_discount_coupon > p:first-child {
+          font-size: 1.6rem;
+        } 
+        .Price_discount_coupon > p > label > i {
+          font-size: 1.6rem;
+        }
+        .Price_discount_coupon_code > input {
+          font-size: 1.7rem;
+          padding: 6px 12px;
+        } 
+        .Price_discount_coupon_code > button {
+          font-size: 1.6rem;
+        }
+        .msg-cupon {
+          font-size: 1.4rem;
+        }
+        .btn_pedido > button {
+          font-size: 1.7rem;
+        }
+        .con_fn_pedido > span {
+          font-size: 1.5rem;
+        }
+
 
         /*-------------------Estilos Footer----------------*/
         .redes_sociales__footer {
@@ -1451,8 +1715,9 @@
 
       <div class="cont_gen_pedidos">
         <h1>CARRITO DE COMPRAS</h1>
-        <div class="cont_productos">
+        <div class="cont_gen_carr_vacio">
           <div class="cont_productos_vacio">
+            <h1>CARRITO DE COMPRAS</h1>
             <i class="fal fa-shopping-cart"></i>
             <h2>"Tu carrito de compras está vacío"</h2>
             <p>"Aún no has agregado productos a tu carrito de compras. Visita nuestra
@@ -1462,8 +1727,13 @@
               <a href="">Ver productos</a>
             </div>
           </div>
+        </div>
+        
+
+        <div class="cont_productos">
           <table class="Products_delivery">
             <tbody class="Table_cart_Productos_delivery">
+              <tr class="cont-in_prod"><td class="in_prod"><span>Lista de productos escogidos:</span></td></tr>
               <tr class="Contenedor_Product_delivery">
                 <td class="Product_image">
                   <a href="">
@@ -1498,7 +1768,7 @@
                     <i class="far fa-plus"></i>
                   </a>
                 </td>
-              </tr>
+              </tr>            
               <tr class="Contenedor_Product_delivery">
                 <td class="Product_image">
                   <a href="">
@@ -1608,7 +1878,6 @@
           </table>
         </div>
         <div class="cont_ct">
-          
           <div class="ct_cant_productos">
             <p>Cantidad de productos: </p>
             <span> 3 productos</span>
@@ -1639,17 +1908,22 @@
                 <button>Aplicar</button>
               </label>
               <!-- <i class="fal fa-badge-dollar"></i> -->
+             
             </p>
             <p class="msg-cupon">
               *Los cupones de descuento son entregados luego de sobrepasas un gasto de S/.250 al mes.
             </p>
           </div>
         </div> 
-        <div class="btn_pedido">
-          <button>Realizar pedido</button>
+        <div class="con_fn_pedido">
+          <div class="btn_pedido">
+            <button>Realizar pedido</button>
+          </div>
+          <span>
+            <a href="/HTML/index.html">Ver más productos</a>
+          </span> 
         </div>
-
-
+       
 
         <div class="cart_m_produc">
           <h1>Añadelo a tu compra</h1>
@@ -1668,9 +1942,7 @@
           </span>
         </div>
 
-        <span>
-          <a href="/HTML/index.html">Ver más productos</a>
-        </span> 
+      
        
       </div>
 
