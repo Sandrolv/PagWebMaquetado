@@ -328,11 +328,11 @@
         background-position-x: center;
         background-position-y: center;
         background-size: cover;
-        height: 235px; 
         width: 100%;
         display: grid;
         z-index: -2000;
-      
+        padding: 25px 0 20px;
+        gap: 30px;
       }
       .frases-banner {
         padding: 0 0 0 20px; 
@@ -340,27 +340,27 @@
         align-self: center;
       }
       .frases-banner > h1 {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         color: white;
         font-family: "Anonymous Pro", monospace;
         margin-bottom: 8px;
-        width: 90%;
+        width: 95%;
       }
       .index-banner > .frases-banner > p {
-        font-size: 1.2rem;
+        font-size: 1.7rem;
         color: white;
         font-family: "Abel", sans-serif;
-        width: 50%;
+        width: 80%;
         margin-bottom: 12px; 
       }
       .frases-banner > a:nth-child(3) {
         border: 1px solid white;
-        height: 22px;
-        width: 70px;
+        height: 30px;
+        width: 95px;
         background-color: transparent;
         font-family: "Anonymous Pro", monospace;
         color: white;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         text-decoration: none;
         display: flex;
         align-items: center;
@@ -395,7 +395,7 @@
         font-weight: 200;
         height: 28px;
         width: 115px;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         border-radius: 2rem;
         border: none;
       }
@@ -412,41 +412,44 @@
         margin: 0 20px;
       }
       .filtros-producto > p {
-        margin-bottom: 12px;
-        margin-top: 12px;
-        font-size: 1.1rem;
+        margin-bottom: 14px;
+        margin-top: 14px;
+        font-size: 1.4rem;
         text-align: justify;
       }
       .search-principal {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 5px 0;
       }
       .search-principal_buscar_con_lupa {
         position: relative;
       }
       .search-principal_buscar_con_lupa > input:nth-child(1){
         width: 150px;
-        height: 24px;
-        padding: 5px 5px 5px 20px;
-        border-radius: 8px;
+
+        padding: 8px 8px 8px 30px;
+        border-radius: 12px;
         border: none;
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        font-size: 1.4rem;
       }
       .search-principal_buscar_con_lupa > i {
         position: absolute;
-        left: 7px;
+        left: 10px;
         top: 50%;
         transform: translateY(-50%);
+        font-size: 1.4rem;
       }
       .search-principal > input:nth-child(2) {
-        width: 64px;
-        height: 24px;
-        border-radius: 8px;
+        width: 75px;
+        height: 34px;
+        border-radius: 12px;
         border: none;
         background-color: var(--colorButtonTiFilter);
-        font-size: 1.3rem;
-        margin-left: 10px;
+        font-size: 1.5rem;
+        margin-left: 15px;
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
         cursor: pointer;
       }
@@ -455,22 +458,27 @@
         flex-wrap: wrap;
         gap: 15px;
         justify-content: center;
+        margin-top: 20px;
       }
       /* .form-filtros > div:nth-child(3){
         display: none;
       } */
+      .filtros {
+        padding: 0 5px;
+      }
       .filtros > p {
         font-weight: bold;
-        font-size: 1.2rem;
-        margin-bottom: 3px;
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+        margin-left: 5px;
       }
       .filtros > input:nth-child(2) {
-        width: 150px;
-        height: 25px;
-        border-radius: 8px;
+        width: 160px;
+
+        border-radius: 12px;
         border: none;
-        padding: 5px 10px 5px 12px;
-        font-size: 1rem;
+        padding: 9px 10px 9px 12px;
+        font-size: 1.3rem;
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
       }
       .botones-filtro {
@@ -478,15 +486,15 @@
         width: 100%;
         justify-content: center;
         gap: 15px;
-        margin-top: 5px;
+        margin-top: 10px;
       }
       .botones-filtro > input {
         width: 100px;
-        height: 24px;
-        border-radius: 8px;
+        height: 34px;
+        border-radius: 12px;
         border: none;
         background-color: var(--colorButtonTiFilter) ;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
         cursor: pointer;
       }
@@ -497,8 +505,9 @@
         text-align: center;
         background-color: var(--navbarColorInactive);
         color: white;
-        padding: 5px 0;
+        padding: 8px 0;
         font-family: "Abel", sans-serif;
+        font-size: 1.8rem;
       }
       .venta-productos {
         display: flex;
@@ -508,7 +517,7 @@
       .Producto1 {
         height: 170px;
         width: 100%;
-        margin: 0 5%;
+        margin: 0 16px;
         background: rgba(255, 255, 255, 1);
         border-radius: 5px;
         display: grid;
@@ -524,9 +533,11 @@
       }
       .Producto1_imagen {
         display: grid;
+        height: 100%;
       }
       .Producto1_imagen > img {
-        height: 170px;
+        max-height: 171px;
+        height: 100%;
         width: 100%;
         object-fit: cover;
         border-radius: 5px 0 0 5px;
@@ -534,16 +545,16 @@
       }
       .Producto1_right_mobile {
         display: grid;
-        grid-template-rows: auto auto;
+        grid-template-rows: auto 34px;
         gap:  10px;
-        padding: 8px 10px;
+        padding: 8px 10px 8px 5px;
         height: 100%;
       }
       .Producto_informacion {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 5px;
         align-items: center;
       }
       .Producto_informacion > a {
@@ -570,16 +581,16 @@
       }
       .Producto_precio__oferta > h5:nth-child(1) {
         color: red;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
       .Producto_precio__oferta > h5:nth-child(2) {
         text-decoration: line-through;
         color: grey;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         /* display: none; */
       }
       .Producto_informacion > p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
       .Producto_button {
         display: flex;
@@ -594,6 +605,7 @@
         color: white;
         border-radius: 5px;
         cursor: pointer;
+        font-size: 1.4rem;
       }
       /*----------------Estilos Paginacion---------------*/
       .Paginacion_Productos{
@@ -601,7 +613,6 @@
         display: flex;
         gap: 5px;
         justify-content: center;
-        font-size: 1.3rem;
       }
       .Paginacion_Productos > a > p {
         display: none;
@@ -611,6 +622,7 @@
         font-size: 1.6rem;
       }
       .Paginacion_opcion {
+        font-size: 1.4rem;
         border: 1px solid var(--navbarColorInactive);
         height: 36px;
         padding: 0 2%;
@@ -722,86 +734,83 @@
         
         /* -----------------Estilos Banner------------ */
         .index-banner {
-          height: 230px;
+          padding: 25px 0 25px;
+          gap: 35px;
         }
         .frases-banner {
           padding: 0 0 0 40px;
         }
         .frases-banner > h1 {
-          font-size: 1.9rem;
+          font-size: 2rem;
         }
         .index-banner > .frases-banner > p {
-          font-size: 1.4rem;
+          font-size: 1.8rem;
           margin-bottom: 14px;
           width: 40%;
         }
         .frases-banner > a:nth-child(3) {
-          height: 25px;
-          width: 80px;
-          font-size: 1.4rem;
+          height: 32px;
+          width: 105px;
+          font-size: 1.7rem;
         }
         .opciones-producto {
           grid-template-columns: 120px 120px 120px;
-          grid-template-rows: 32px;
+          grid-template-rows: 34px;
           grid-template-areas: "planta maceta tierra";
         }
         .opciones-producto > button {
           width: 120px;
-          height: 32px;
+          height: 34px;
+          font-size: 1.5rem;
         }
 
         /*------------------------------- Estilos filtro --------------------- */
         .filtros-producto  {
-          margin: 0 40px;
+          margin: 0 25px;
         }
         .filtros-producto > p {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
           margin-bottom: 15px;
           margin-top: 15px;
           text-align: center;
         }
         .filtros-producto > p:nth-child(1) {
-          text-align: center;
+          margin-top: 18px;
         }
         .search-principal_buscar_con_lupa > input:nth-child(1){
           width: 180px;
-          height: 32px;
-          border-radius: 12px;
-          padding-left: 25px;
+          padding: 9px 8px 9px 30px;
+          padding-left: 32px;
+          font-size: 1.5rem;
         }
         .search-principal_buscar_con_lupa > i {
-          left: 8px;
-          font-size: 1.2rem;
+          left: 10px;
+          font-size: 1.5rem;
         }
         .search-principal > input:nth-child(2) {
+          height: 37px;
           width: 80px;
-          height: 32px;
           border-radius: 12px;
-          font-size: 1.45rem;
-          margin-left: 13px;
+          font-size: 1.6rem;
         }
         .form-filtros {
           gap: 18px;
         }
         .filtros > p {
-          font-size: 1.4rem;
-          margin-bottom: 5px;
+          font-size: 1.5rem;
+          margin-bottom: 7px;
         }
         .filtros > input:nth-child(2) {
           width: 170px;
-          height: 32px;
+    
           border-radius: 12px;
-          font-size: 1.2rem;
+          font-size: 1.4rem;
           padding-left: 14px;
-        }
-        .botones-filtro {
-          margin-top: 7px;
         }
         .botones-filtro > input {
           width: 120px;
-          height: 32px;
-          border-radius: 12px;
-          font-size: 1.45rem;
+          font-size: 1.6rem;
+          height: 36px;
         }
 
         /*-------------------Estilos Producto----------------*/
@@ -812,8 +821,8 @@
         .venta-productos {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          gap: 10px;
-          margin: 0 5%; 
+          gap: 15px;
+          margin: 0 20px; 
         }
         .Producto1 {        
           height: 320px;
@@ -822,7 +831,7 @@
           grid-template-rows: 50% auto;
           margin: 0;
           align-items: stretch;
-          gap: 7px;        
+          gap: 12px;        
         }
         .Producto1_imagen {
           grid-template-rows: 100%;
@@ -837,10 +846,10 @@
           gap: 10px;
         }
         .Producto_informacion {
-          padding: 0 10px;
+          padding: 0 15px;
           display: grid;
           grid-template-columns: 50% auto;
-          grid-template-rows:  auto 15% 15px 15px;
+          grid-template-rows: 20% 25% 15px 15px;
           grid-template-areas:
             "nombre nombre"
             "precio precio"
@@ -851,20 +860,20 @@
         .Producto_precio__oferta {
           grid-area: precio;
           justify-content: space-between;
-          padding-right: 10px;
         }
         .Producto_informacion > p:nth-child(4),
         .Producto_informacion > p:nth-child(6) {
           display: flex;
           justify-content: end;
-          padding-right: 10px;
         }
-        .Producto_informacion > a:nth-child(1),
-        .Producto_informacion > .Producto_precio__oferta > h5 {
+        .Producto_informacion > a > h4  {
+          font-size: 1.6rem;
+        }
+        .Producto_precio__oferta > h5:nth-child(1) {
           font-size: 1.5rem;
         }
-        .Producto_informacion > p {
-          font-size: 1.25rem;
+        .Producto_precio__oferta > h5:nth-child(2) {
+          font-size: 1.3rem;
         }
         .Producto_button > button {
           border-radius: 0 0 8px 8px;
@@ -877,7 +886,6 @@
         .Paginacion_Productos{
           margin: 40px 0;
           gap: 10px;
-          font-size: 1.7rem;
         }
         .Paginacion_Productos > span {
           font-size: 1.8rem;
@@ -886,10 +894,12 @@
           height: 39px;
           border-radius: 4px;
           padding: 0 9px;
+          font-size: 1.5rem;
         }
         .Paginacion_Productos > a:first-child,
         .Paginacion_Productos > a:last-child{
           padding: 0 4px;
+          font-size: 1.5rem;
         }
 
         /*-------------------Estilos Footer----------------*/
@@ -1046,31 +1056,32 @@
 
         /* -----------------Estilos Banner------------ */
         .index-banner {
-          height: 320px; /*380*/
+          padding: 35px 0;
+          gap: 45px;
         }
         .frases-banner {
           padding: 0 0 0 60px;
         }
         .frases-banner > h1 {
-          font-size: 2.4rem;
+          font-size: 2.2rem;
         }
         .index-banner > .frases-banner > p {
           font-size: 2rem;
           margin-bottom: 20px;
         }
         .frases-banner > a:nth-child(3) {
-          height: 30px;
-          width: 110px;
+          height: 35px;
+          width: 115px;
           font-size: 1.9rem;
         }
         .opciones-producto {
           grid-template-columns: 155px 155px 155px;
-          grid-template-rows: 40px;
+          grid-template-rows: 38px;
           grid-template-areas: "planta maceta tierra";
           gap: 35px;
         }
         .opciones-producto > button {
-          height: 40px;
+          height: 38px;
           width: 155px;
           font-size: 1.7rem;
         }
@@ -1080,24 +1091,22 @@
           margin: 0 60px;
         }
         .filtros-producto > p {
-          font-size: 1.5rem;
+          font-size: 1.6rem;
           margin-bottom: 18px;
           margin-top: 18px;
         }
         .search-principal_buscar_con_lupa > input:nth-child(1){
           width: 210px;
-          height: 35px;
           border-radius: 14px;
-          padding-left: 30px;
-          font-size: 1.5rem;
+          padding-left: 34px;
+          font-size: 1.6rem;
         }
         .search-principal_buscar_con_lupa > i {
-          left: 11px;
-          font-size: 1.2rem;
+          left: 12px;
+          font-size: 1.6rem;
         }
         .search-principal > input:nth-child(2) {
-          width: 85px;
-          height: 35px;
+          width: 90px;
           border-radius: 14px;
           font-size: 1.7rem;
           margin-left: 16px;
@@ -1105,15 +1114,17 @@
         .form-filtros {
           gap: 20px;
         }
+        .filtros-producto > p:nth-child(1) {
+          margin-top: 23px;
+        }
         .filtros > p {
           font-size: 1.6rem;
           margin-bottom: 7px;
         }
         .filtros > input:nth-child(2) {
           width: 200px;
-          height: 35px;
           border-radius: 14px;
-          font-size: 1.4rem;
+          font-size: 1.5rem;
           padding-left: 16px;
         }
         .botones-filtro {
@@ -1122,7 +1133,7 @@
         }
         .botones-filtro > input {
           width: 130px;
-          height: 35px;
+          height: 37px;
           border-radius: 14px;
           font-size: 1.7rem;
         }
@@ -1144,12 +1155,17 @@
         .Producto1_imagen > img {
           border-radius: 10px 10px 0 0;
         }
-        .Producto_informacion > a:nth-child(1),
-        .Producto_informacion > .Producto_precio__oferta > h5 {
+        .Producto_informacion > a > h4  {
+          font-size: 1.7rem;
+        }
+        .Producto_precio__oferta > h5:nth-child(1) {
           font-size: 1.6rem;
         }
+        .Producto_precio__oferta > h5:nth-child(2) {
+          font-size: 1.4rem;
+        }
         .Producto_informacion > p {
-          font-size: 1.35rem;
+          font-size: 1.5rem;
         }
         .Producto_button > button {
           border-radius: 0 0 10px 10px;
@@ -1159,7 +1175,6 @@
         /*----------------Estilos Paginacion---------------*/
         .Paginacion_Productos{
           margin: 45px 0;
-          font-size: 1.9rem;
         }
         .Paginacion_Productos > a > p {
           display: flex;
@@ -1173,11 +1188,12 @@
         .Paginacion_opcion {
           height: 42px;
           padding: 0 10px;
+          font-size: 1.6rem;
         }
         .Paginacion_Productos > a:first-child,
         .Paginacion_Productos > a:last-child{
           gap: 5px;
-          font-size: 1.5rem;
+          font-size: 1.6rem;
         }
 
         /*-------------------Estilos Footer----------------*/
@@ -1318,94 +1334,87 @@
 
         /* -----------------Estilos Banner------------ */
         .index-banner {
-          height: 500px; /*650*/
+          padding: 60px 0 0;
+          gap: 30px;
         }
         .frases-banner {
           padding: 0 0 0 100px;
         }
         .frases-banner > h1 {
-          font-size: 3.6rem;
+          font-size: 2.4rem;
         }
         .index-banner > .frases-banner > p {
-          font-size: 2.8rem;
+          font-size: 2.2rem;
           width: 30%;
           margin-bottom: 25px;
         }
         .frases-banner > a:nth-child(3) {
           border: 2px solid white;
-          height: 45px;
-          width: 155px;
-          font-size: 2.6rem;
+          height: 38px;
+          width: 130px;
+          font-size: 2.1rem;
         }
         .opciones-producto {
           grid-template-columns: auto auto auto;
-          grid-template-rows: 58px;
-          padding: 0 100px;
+          grid-template-rows: 42px;
+          padding: 40px 100px 50px;
         }
         .opciones-producto > button {
-          height: 58px;
-          width: 245px;
-          font-size: 2.5rem;
+          height: 42px;
+          width: 170px;
+          font-size: 2rem;
           border-radius: 2.5rem;
         }
 
         /*------------------------------- Estilos filtro --------------------- */
         .filtros-producto  {
-          margin: 0 100px;
+          margin: 0 70px;
+        }
+        .filtros-producto > p:nth-child(1) {
+          margin-top: 28px;
         }
         .filtros-producto > p {
-          font-size: 2.4rem;
+          font-size: 1.7rem;
           margin-bottom: 24px;
           margin-top: 24px;
         }
         .search-principal_buscar_con_lupa > input:nth-child(1){
-          width: 280px;
-          height: 50px;
-          border-radius: 16px;
+          width: 220px;
           padding-left: 40px;
-          font-size: 2.4rem;
+          font-size: 1.7rem;
         }
         .search-principal_buscar_con_lupa > i {
           left: 13px;
-          font-size: 1.8rem;
+          font-size: 1.7rem;
         }
         .search-principal > input:nth-child(2) {
-          width: 140px;
-          height: 50px;
-          border-radius: 16px;
-          font-size: 2.4rem;
+          width: 100px;
+          height: 38px;
+          font-size: 1.8rem;
           margin-left: 20px;
         }
-        .form-filtros {
-          gap: 40px;
-        }
         .filtros > p {
-          font-size: 2.2rem;
-          margin-bottom: 9px;
+          font-size: 1.7rem;
+          margin-bottom: 11px;
         }
         .filtros > input:nth-child(2) {
-          width: 270px;
-          height: 50px;
-          border-radius: 16px;
-          font-size: 2.4rem;
+          font-size: 1.6rem;
           padding-left: 18px;
         }
         .botones-filtro {
-          margin-top: 8px;
+          margin-top: 20px;
           gap: 40px;
-          margin-top: 0px;
         }
         .botones-filtro > input {
-          width: 180px;
-          height: 50px;
           border-radius: 16px;
-          font-size: 2.5rem;
+          font-size: 1.8rem;
+          width: 150px;
         }
 
         /*-------------------Estilos Producto----------------*/
         .parte_ventas_principal > h1 {
           padding: 10px 0;
-          font-size: 3.4rem;
+          font-size: 2.8rem;
           margin: 40px 0 35px 0;
         }
         .venta-productos {
@@ -1413,21 +1422,27 @@
           gap: 20px;
         }
         .Producto1 {
-          height: 400px;
+          height: 380px;
           border-radius: 12px;   
         }
         .Producto1_imagen > img {
           border-radius: 12px 12px 0 0;
+          max-height: none;
         }
         .Producto_informacion {
-          grid-template-rows:  auto 15% 20px 20px;
+          grid-template-rows: 20% 25% 20px 20px;
         }
-        .Producto_informacion > a:nth-child(1),
-        .Producto_informacion > .Producto_precio__oferta > h5{
-          font-size: 1.9rem;
+        .Producto_informacion > a > h4 {
+          font-size: 1.8rem;
+        }
+        .Producto_precio__oferta > h5:nth-child(1) {
+          font-size: 1.7rem;
+        }
+        .Producto_precio__oferta > h5:nth-child(2) {
+          font-size: 1.5rem;
         }
         .Producto_informacion > p {
-          font-size: 1.65rem;
+          font-size: 1.6rem;
         }
 
         .Producto_button > button {
@@ -1438,7 +1453,6 @@
         /*----------------Estilos Paginacion---------------*/
         .Paginacion_Productos{
           margin: 50px 0;
-          font-size: 2.1rem;
         }
         .Paginacion_Productos > a > p {
           font-size: 1.8rem;
@@ -1446,13 +1460,14 @@
         .Paginacion_opcion {
           height: 50px;
           padding: 0 12px;
+          font-size: 1.7rem;
         }
         .Paginacion_Productos > span {
           font-size: 2.4rem;
         }
         .Paginacion_Productos > a:first-child,
         .Paginacion_Productos > a:last-child{
-          font-size: 1.6rem;
+          font-size: 1.7rem;
           padding: 0 8px;
         }
         
@@ -1613,7 +1628,7 @@
       <div class="index-banner">
         <div class="frases-banner">
           <h1>Tu naturaleza, mi naturaleza.</h1>
-          <p>Tener una planta en casa podria salvar el mundo ¿Lo imaginas?</p>
+          <p>Tener una planta en casa podria salvar el planeta y mejorar la calidad de vida ¿Lo imaginas?</p>
           <a href="#">Contactar</a>
         </div>
         <div class="opciones-producto">
@@ -1633,7 +1648,7 @@
             </label>
             <input type="submit" value="Buscar">
           </form>
-          <p>Puedes hacer tu búsqueda más específica incluyendo algunos filtros. Elige alguno de los siguientes 👇: </p>
+          <p>Puedes hacer tu búsqueda más específica incluyendo algunos filtros 👇: </p>
           <form action="" class="form-filtros">
             <label class="filtros" for="">
               <p>Tipo</p>
@@ -1686,6 +1701,29 @@
         <h1>CATÁLOGO DE PLANTAS</h1>
 
         <div class="venta-productos">
+          <div class="Producto1">
+            <a class="Producto1_imagen">
+              <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
+            </a>
+            <div class="Producto1_right_mobile">
+              <div class="Producto_informacion">
+                <a href="">
+                  <h4>Buganvilla </h4>
+                </a>
+                <div class="Producto_precio__oferta">
+                  <h5>S/. 78.00</h5>
+                  <h5>S/. 70.00</h5>
+                </div>
+                <p>Rosada</p>
+                <p>Disp. 10</p>
+                <p>Embolsada </p>
+                <p>Al. 35 cm</p>
+              </div>
+              <div class="Producto_button">
+                <button>PEDIR</button>
+              </div>
+            </div>
+          </div>
           <div class="Producto1">
             <a class="Producto1_imagen">
               <img src="https://lh3.google.com/u/0/d/1JCPkih2zvUDeJxD4XnCSKduBPoF9QLhk=w1917-h1008-iv1" alt="">
